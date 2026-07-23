@@ -128,7 +128,12 @@ export default async function ArticlePage({ params }: { params: Params }) {
               <MDXRemote
                 source={a.content}
                 components={mdxComponents}
-                options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+                options={{
+                  mdxOptions: { remarkPlugins: [remarkGfm] },
+                  // Our MDX is first-party, version-controlled content — allow JSX
+                  // expression props (chart data). blockDangerousJS stays on (default).
+                  blockJS: false,
+                }}
               />
             </div>
 
