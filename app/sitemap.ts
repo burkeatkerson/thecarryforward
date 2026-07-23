@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles();
   return [
     { url: SITE_URL, changeFrequency: "weekly", priority: 1 },
+    { url: `${SITE_URL}/the-index`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${SITE_URL}/glossary`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/about`, changeFrequency: "yearly", priority: 0.3 },
     ...clusters.map((c) => ({

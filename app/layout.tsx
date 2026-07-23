@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Newsreader, Libre_Franklin } from "next/font/google";
+import { Newsreader, Libre_Franklin, Spline_Sans_Mono } from "next/font/google";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
-const serif = Newsreader({
+const newsreader = Newsreader({
   subsets: ["latin"],
   style: ["normal", "italic"],
-  variable: "--font-serif",
+  variable: "--font-newsreader",
   display: "swap",
 });
 
-const sans = Libre_Franklin({
+const franklin = Libre_Franklin({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-franklin",
+  display: "swap",
+});
+
+const splineMono = Spline_Sans_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-spline-mono",
   display: "swap",
 });
 
@@ -35,7 +42,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+    <html
+      lang="en"
+      className={`${newsreader.variable} ${franklin.variable} ${splineMono.variable}`}
+    >
       <body>
         {children}
         <Analytics />

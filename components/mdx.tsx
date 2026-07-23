@@ -6,7 +6,7 @@ import { slugify } from "@/lib/content";
 export function KeyTakeaway({ children }: { children: React.ReactNode }) {
   return (
     <aside className="takeaway">
-      <span className="kicker">Key takeaway</span>
+      <span className="kicker">↳ Key takeaway</span>
       {children}
     </aside>
   );
@@ -21,14 +21,15 @@ export function Callout({
 }) {
   return (
     <aside className="callout">
-      <span className="kicker">{label}</span>
+      <span className="kicker">↳ {label}</span>
       {children}
     </aside>
   );
 }
 
-/* ——— Charts: single-series ink bars, newspaper style ———
-   Accessible: values are rendered as visible text; an sr-only table mirrors the data. */
+/* ——— Charts: ink-on-paper bars in a bordered, auto-numbered figure ———
+   Single series; the `highlight` index (optional) is drawn in the accent ink.
+   Values render as visible mono text; the aria-label mirrors the data. */
 
 export type BarDatum = { label: string; value: number; display?: string };
 
@@ -37,32 +38,57 @@ export function BarChart({
   data,
   note,
   unit = "",
+  highlight,
 }: {
   title: string;
   data: BarDatum[];
   note?: string;
   unit?: string;
+  highlight?: number;
 }) {
   const max = Math.max(...data.map((d) => Math.abs(d.value)), 1);
   return (
     <figure className="figure">
-      <figcaption>{title}</figcaption>
-      <div role="img" aria-label={`${title}. ${data.map((d) => `${d.label}: ${d.display ?? `${d.value}${unit}`}`).join("; ")}.`}>
-        {data.map((d) => {
-          const pct = Math.max((Math.abs(d.value) / max) * 100, 1);
+      <figcaption>
+        <span className="fig-title">{title}</span>
+        {unit ? <span>{unit}</span> : null}
+      </figcaption>
+      <div
+        role="img"
+        aria-label={`${title}. ${data
+          .map((d) => `${d.label}: ${d.display ?? `${d.value}${unit}`}`)
+          .join("; ")}.`}
+      >
+        {data.map((d, i) => {
+          const pct = Math.max((Math.abs(d.value) / max) * 100, 1.5);
           const display = d.display ?? `${d.value}${unit}`;
-          const inside = pct > 55;
+          const hot = i === highlight;
           return (
-            <div className="barchart-row" key={d.label} aria-hidden="true">
-              <span className="barchart-label">{d.label}</span>
-              <span className="barchart-track">
-                <span className="barchart-bar" style={{ width: `${pct}%` }} />
+            <div
+              key={d.label}
+              aria-hidden="true"
+              className="grid grid-cols-[minmax(5.5rem,11rem)_1fr] items-center gap-3 py-[0.32rem]"
+            >
+              <span
+                className={`text-right font-serif text-[0.85rem] leading-tight ${
+                  hot ? "font-semibold text-accent" : "text-ink-soft"
+                }`}
+              >
+                {d.label}
+              </span>
+              <span className="relative h-4">
                 <span
-                  className="barchart-value"
+                  className={`absolute inset-y-0 left-0 ${hot ? "bg-accent" : "bg-ink"}`}
+                  style={{ width: `${pct}%` }}
+                />
+                <span
+                  className={`absolute top-1/2 -translate-y-1/2 whitespace-nowrap font-mono text-[0.66rem] ${
+                    pct > 55 ? "text-paper" : hot ? "text-accent" : "text-ink-mute"
+                  }`}
                   style={
-                    inside
-                      ? { right: `${100 - pct + 1.5}%`, color: "var(--paper)" }
-                      : { left: `calc(${pct}% + 0.45rem)` }
+                    pct > 55
+                      ? { right: `${100 - pct + 1.5}%` }
+                      : { left: `calc(${pct}% + 0.5rem)` }
                   }
                 >
                   {display}

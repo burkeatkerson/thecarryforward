@@ -104,27 +104,58 @@ export default async function ArticlePage({ params }: { params: Params }) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
           />
         ) : null}
-        <div className="article-shell">
-          <div className="article-main">
+        <div className="mx-auto max-w-[1120px] px-5 pt-11 sm:px-10">
+          <article className="sheet px-6 py-10 sm:px-14 sm:py-12">
             <Breadcrumbs
               crumbs={[
-                { name: "Home", href: "/" },
+                { name: "Front Page", href: "/" },
                 { name: c.name, href: `/${cluster}` },
                 { name: a.title, href: `/${cluster}/${slug}` },
               ]}
             />
-            <header className="article-head">
-              <span className="kicker">
-                {a.type === "guide" ? "Guide" : "Brief"} · {a.readingMinutes} min read
-              </span>
-              <h1>{a.title}</h1>
-              <p className="dek">{a.description}</p>
-              <p className="meta">
-                Published {formatDate(a.date)}
-                {a.updated ? ` · Updated ${formatDate(a.updated)}` : ""}
+
+            {/* Head, centered on the reading measure */}
+            <header className="mx-auto mt-7 max-w-[680px]">
+              <p className="kicker mb-3.5 text-xs text-accent">
+                {c.name} · {a.type === "guide" ? "Guide" : "Brief"}
               </p>
+              <h1 className="font-serif text-[34px] font-semibold leading-[1.05] tracking-[-0.01em] sm:text-[48px]">
+                {a.title}
+              </h1>
+              <p className="mt-4 font-serif text-xl italic leading-normal text-ink-soft">
+                {a.description}
+              </p>
+              <div className="kicker mt-5 flex flex-wrap justify-between gap-2 border-y border-ink py-2.5 font-medium text-[11px] text-ink-mute">
+                <span>By The Carryforward Desk</span>
+                <span>
+                  {a.readingMinutes} min read · {formatDate(a.date)}
+                  {a.updated ? ` · Updated ${formatDate(a.updated)}` : ""}
+                </span>
+              </div>
             </header>
-            <div className="prose">
+
+            {/* On this page — compact, above the fold, no sticky rail on the sheet */}
+            {headings.length > 3 ? (
+              <nav
+                aria-label="On this page"
+                className="toc mx-auto mt-6 max-w-[680px] border border-line px-5 py-4"
+              >
+                <p className="kicker mb-2 text-[10px] text-ink-mute">On this page</p>
+                <ol className="columns-1 gap-x-8 font-serif text-[15px] leading-[1.85] text-ink-soft sm:columns-2">
+                  {headings
+                    .filter((h) => h.depth === 2)
+                    .map((h) => (
+                      <li key={h.id}>
+                        <a href={`#${h.id}`} className="hover:text-accent">
+                          {h.text}
+                        </a>
+                      </li>
+                    ))}
+                </ol>
+              </nav>
+            ) : null}
+
+            <div className="prose mx-auto mt-8 max-w-[680px]">
               <MDXRemote
                 source={a.content}
                 components={mdxComponents}
@@ -138,66 +169,79 @@ export default async function ArticlePage({ params }: { params: Params }) {
             </div>
 
             {a.faq.length > 0 ? (
-              <section className="faq" aria-label="Frequently asked questions">
-                <h2>Frequently asked questions</h2>
-                <dl>
-                  {a.faq.map((f) => (
-                    <div key={f.q}>
-                      <dt>{f.q}</dt>
-                      <dd>{f.a}</dd>
+              <section
+                aria-label="Frequently asked questions"
+                className="mx-auto mt-10 max-w-[680px] border-t-2 border-ink pt-5"
+              >
+                <h2 className="kicker text-xs">Frequently asked questions</h2>
+                <dl className="mt-3">
+                  {a.faq.map((f, i) => (
+                    <div
+                      key={f.q}
+                      className={i > 0 ? "mt-4 border-t border-line-faint pt-4" : undefined}
+                    >
+                      <dt className="font-serif text-lg font-semibold leading-snug">{f.q}</dt>
+                      <dd className="mt-1.5 font-serif text-base leading-relaxed text-ink-soft">
+                        {f.a}
+                      </dd>
                     </div>
                   ))}
                 </dl>
               </section>
             ) : null}
 
-            <nav className="pager" aria-label="More in this topic">
+            {/* Prev / next within the section */}
+            <nav
+              aria-label="More in this section"
+              className="no-print mx-auto mt-10 flex max-w-[680px] justify-between gap-6 border-t border-line pt-5"
+            >
               {prev ? (
-                <Link href={`/${cluster}/${prev.slug}`} className="prev">
-                  <span className="kicker">← Previous in {c.shortName}</span>
-                  <span className="pager-title">{prev.title}</span>
+                <Link href={`/${cluster}/${prev.slug}`} className="group max-w-[45%]">
+                  <span className="kicker text-[10px] text-ink-mute">← Previous in {c.shortName}</span>
+                  <span className="mt-1 block font-serif text-base font-semibold leading-tight group-hover:text-accent">
+                    {prev.title}
+                  </span>
                 </Link>
               ) : (
                 <span />
               )}
               {next ? (
-                <Link href={`/${cluster}/${next.slug}`} className="next">
-                  <span className="kicker">Next in {c.shortName} →</span>
-                  <span className="pager-title">{next.title}</span>
+                <Link href={`/${cluster}/${next.slug}`} className="group ml-auto max-w-[45%] text-right">
+                  <span className="kicker text-[10px] text-ink-mute">Next in {c.shortName} →</span>
+                  <span className="mt-1 block font-serif text-base font-semibold leading-tight group-hover:text-accent">
+                    {next.title}
+                  </span>
                 </Link>
               ) : null}
             </nav>
 
+            {/* Keep reading */}
             {related.length > 0 ? (
-              <section className="related" aria-label="Related reading">
-                <h2>Related reading</h2>
-                <ul>
+              <section
+                aria-label="Keep reading"
+                className="no-print mx-auto mt-9 max-w-[680px] border-t-2 border-ink pt-5"
+              >
+                <h2 className="kicker mb-3.5 text-[11px] text-ink-mute">Keep reading</h2>
+                <div className="grid gap-5 sm:grid-cols-2">
                   {related.map((r) => (
-                    <li key={`${r.cluster}/${r.slug}`}>
-                      <Link href={`/${r.cluster}/${r.slug}`}>{r.title}</Link>
-                      <span className="meta">
+                    <Link
+                      key={`${r.cluster}/${r.slug}`}
+                      href={`/${r.cluster}/${r.slug}`}
+                      className="group border-t border-line pt-2.5"
+                    >
+                      <span className="kicker text-[10px] text-accent">
                         {clusters.find((x) => x.slug === r.cluster)?.shortName} ·{" "}
-                        {r.type === "guide" ? "Guide" : "Brief"} · {r.readingMinutes} min
+                        {r.type === "guide" ? "Guide" : "Brief"}
                       </span>
-                    </li>
+                      <span className="mt-1.5 block font-serif text-xl font-semibold leading-tight group-hover:text-accent">
+                        {r.title}
+                      </span>
+                    </Link>
                   ))}
-                </ul>
+                </div>
               </section>
             ) : null}
-          </div>
-
-          {headings.length > 2 ? (
-            <nav className="toc" aria-label="On this page">
-              <h2>On this page</h2>
-              <ul>
-                {headings.map((h) => (
-                  <li key={h.id} className={h.depth === 3 ? "depth-3" : undefined}>
-                    <a href={`#${h.id}`}>{h.text}</a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          ) : null}
+          </article>
         </div>
       </main>
       <SiteFooter />

@@ -3,9 +3,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { clusters, getCluster } from "@/lib/clusters";
-import { getClusterArticles } from "@/lib/content";
+import { getClusterArticles, type ArticleMeta } from "@/lib/content";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -28,6 +27,41 @@ export async function generateMetadata({
     alternates: { canonical: `/${c.slug}` },
     openGraph: { title: `${c.name} — ${SITE_NAME}`, description: c.description },
   };
+}
+
+function ResultRow({ a }: { a: ArticleMeta }) {
+  return (
+    <li className="border-b border-line">
+      <Link href={`/${a.cluster}/${a.slug}`} className="group flex gap-4 py-5 sm:gap-5">
+        <div className="hidden w-[70px] flex-none sm:block" aria-hidden="true">
+          {a.type === "guide" ? (
+            <div className="flex h-[52px] items-end gap-[3px]">
+              <div className="h-full flex-1 bg-ink" />
+              <div className="h-[62%] flex-1 bg-ink" />
+              <div className="h-[60%] flex-1 bg-ink" />
+              <div className="h-[36%] flex-1 bg-accent" />
+            </div>
+          ) : (
+            <div className="border border-line py-2.5 text-center">
+              <span className="font-mono text-[22px] leading-none text-ink-faint">§</span>
+            </div>
+          )}
+        </div>
+        <div className="flex-1">
+          <p className="kicker mb-1 font-medium text-[10px] text-ink-mute">
+            {a.type === "guide" ? "Guide" : "Brief"} · {a.readingMinutes} min
+            {a.type === "guide" ? " · In depth" : ""}
+          </p>
+          <h3 className="font-serif text-2xl font-semibold leading-[1.05] group-hover:text-accent">
+            {a.title}
+          </h3>
+          <p className="mt-1.5 font-serif text-sm leading-normal text-ink-soft">
+            {a.description}
+          </p>
+        </div>
+      </Link>
+    </li>
+  );
 }
 
 export default async function HubPage({
@@ -59,58 +93,96 @@ export default async function HubPage({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <div className="wide">
-          <Breadcrumbs
-            crumbs={[
-              { name: "Home", href: "/" },
-              { name: c.name, href: `/${c.slug}` },
-            ]}
-          />
-          <header className="hub-head">
-            <span className="kicker">{c.tagline}</span>
-            <h1>{c.name}</h1>
-            <p>{c.description}</p>
-          </header>
-          <div className="hub-columns">
-            <section aria-label="Guides">
-              <div className="section-head" style={{ paddingTop: "1.2rem" }}>
-                <h2>In depth</h2>
-                <span className="rule-fill" />
+        <div className="mx-auto max-w-[1120px] px-5 pt-11 sm:px-10">
+          <div className="sheet px-7 py-9 sm:px-11 sm:py-10">
+            <div className="flex flex-wrap items-end justify-between gap-3 border-b-2 border-ink pb-4">
+              <div>
+                <p className="kicker mb-1.5 text-[10px] font-medium">
+                  <Link href="/" className="text-accent hover:text-accent-deep">
+                    ← Front Page
+                  </Link>
+                </p>
+                <h1 className="font-serif text-4xl font-semibold leading-none sm:text-[42px]">
+                  {c.name}
+                </h1>
               </div>
-              <ul className="hub-list">
-                {guides.map((a) => (
-                  <li className="hub-item" key={a.slug}>
-                    <span className="kicker">
-                      Guide · {a.readingMinutes} min read
-                    </span>
-                    <h3>
-                      <Link href={`/${c.slug}/${a.slug}`}>{a.title}</Link>
-                    </h3>
-                    <p>{a.description}</p>
+              <span className="kicker font-normal text-[11px] text-ink-mute">
+                {articles.length} pieces · {guides.length} guides · {briefs.length} briefs
+              </span>
+            </div>
+            <p className="mt-4 max-w-[62ch] font-serif text-lg italic leading-normal text-ink-soft">
+              {c.description}
+            </p>
+
+            <div className="mt-7 grid gap-9 lg:grid-cols-[196px_1fr]">
+              {/* Rail */}
+              <aside className="no-print hidden lg:block">
+                <p className="kicker border-b border-ink pb-1.5 text-[10px]">In this section</p>
+                <div className="mt-2.5 space-y-1 font-serif text-sm leading-loose text-ink-soft">
+                  <div className="flex justify-between">
+                    <span>Guides</span>
+                    <span className="font-mono text-[11px] text-ink-faint">{guides.length}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Briefs</span>
+                    <span className="font-mono text-[11px] text-ink-faint">{briefs.length}</span>
+                  </div>
+                </div>
+                <p className="kicker mt-7 border-b border-ink pb-1.5 text-[10px]">Other sections</p>
+                <ul className="mt-2.5 font-serif text-sm leading-loose text-ink-soft">
+                  {clusters
+                    .filter((x) => x.slug !== c.slug)
+                    .map((x) => {
+                      const n = getClusterArticles(x.slug).length;
+                      return (
+                        <li key={x.slug} className="flex justify-between gap-2">
+                          <Link href={`/${x.slug}`} className="hover:text-accent">
+                            {x.shortName}
+                          </Link>
+                          <span className="font-mono text-[11px] text-ink-faint">{n}</span>
+                        </li>
+                      );
+                    })}
+                </ul>
+                <p className="kicker mt-7 border-b border-ink pb-1.5 text-[10px]">Reference</p>
+                <ul className="mt-2.5 font-serif text-sm leading-loose text-ink-soft">
+                  <li>
+                    <Link href="/the-index" className="hover:text-accent">
+                      The full index
+                    </Link>
                   </li>
-                ))}
-              </ul>
-            </section>
-            <aside className="hub-side" aria-label="Briefs">
-              <h2>Briefs &amp; answers</h2>
-              <ul>
-                {briefs.map((a) => (
-                  <li key={a.slug}>
-                    <Link href={`/${c.slug}/${a.slug}`}>{a.title}</Link>
+                  <li>
+                    <Link href="/glossary" className="hover:text-accent">
+                      Glossary
+                    </Link>
                   </li>
-                ))}
-              </ul>
-              <h2 style={{ marginTop: "2rem" }}>Other topics</h2>
-              <ul>
-                {clusters
-                  .filter((x) => x.slug !== c.slug)
-                  .map((x) => (
-                    <li key={x.slug}>
-                      <Link href={`/${x.slug}`}>{x.name}</Link>
-                    </li>
+                </ul>
+              </aside>
+
+              {/* Results */}
+              <div>
+                <div className="flex items-baseline justify-between border-b border-line pb-2">
+                  <span className="kicker font-normal text-[11px] text-ink-mute">
+                    In depth · {guides.length} guides
+                  </span>
+                </div>
+                <ul>
+                  {guides.map((a) => (
+                    <ResultRow key={a.slug} a={a} />
                   ))}
-              </ul>
-            </aside>
+                </ul>
+                <div className="mt-8 flex items-baseline justify-between border-b border-line pb-2">
+                  <span className="kicker font-normal text-[11px] text-ink-mute">
+                    Briefs &amp; answers · {briefs.length}
+                  </span>
+                </div>
+                <ul>
+                  {briefs.map((a) => (
+                    <ResultRow key={a.slug} a={a} />
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </main>
