@@ -65,7 +65,9 @@ export default function AboutPage() {
                   professional relationship. The articles describe rules of general application;
                   whether and how they apply to a particular taxpayer depends on facts we
                   don&rsquo;t have. Bring the questions this site raises to a qualified
-                  professional who has yours.
+                  professional who has yours. The full statement is in our{" "}
+                  <a href="/terms">Terms of Use &amp; Disclaimers</a>; how we handle (or rather,
+                  avoid handling) your information is in the <a href="/privacy">Privacy Policy</a>.
                 </p>
                 <h2>Why &ldquo;The Carryforward&rdquo;?</h2>
                 <p>

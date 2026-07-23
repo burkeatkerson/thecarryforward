@@ -296,6 +296,25 @@ export default async function ArticlePage({ params }: { params: Params }) {
               ) : null}
             </nav>
 
+            {/* Standing disclaimer */}
+            <aside
+              aria-label="Disclaimer"
+              className="mx-auto mt-10 max-w-[680px] border border-line px-5 py-4"
+            >
+              <p className="kicker mb-1.5 text-[10px] text-ink-mute">A note on reliance</p>
+              <p className="font-serif text-[13px] italic leading-relaxed text-ink-mute">
+                This article is educational material about rules of general application, current
+                as of its revision date; it is not tax, legal, or accounting advice, and reading
+                it creates no professional relationship. Facts, elections, and later changes in
+                law alter outcomes. Apply nothing here without advice from a qualified
+                professional who knows your situation. See our{" "}
+                <Link href="/terms" className="text-accent hover:underline">
+                  full disclaimers
+                </Link>
+                .
+              </p>
+            </aside>
+
             {/* Keep reading */}
             {related.length > 0 ? (
               <section

@@ -51,13 +51,31 @@ export function SiteFooter() {
                     About &amp; standards
                   </Link>
                 </li>
+                <li>
+                  <Link href="/terms" className="text-ink-soft hover:text-accent">
+                    Terms &amp; disclaimers
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy" className="text-ink-soft hover:text-accent">
+                    Privacy
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
           <p className="mt-8 border-t border-line pt-4 font-serif text-[13px] italic leading-relaxed text-ink-mute">
             © {new Date().getFullYear()} {SITE_NAME}. Educational material only — nothing here is
-            tax, legal, or accounting advice. Consult a qualified professional about your own
-            facts. We do not sell tax studies, and no provider pays for placement.
+            tax, legal, or accounting advice, and reading it creates no professional
+            relationship. Consult a qualified professional about your own facts. We do not sell
+            tax studies, and no provider pays for placement.{" "}
+            <Link href="/terms" className="text-accent hover:underline">
+              Terms &amp; disclaimers
+            </Link>{" "}
+            ·{" "}
+            <Link href="/privacy" className="text-accent hover:underline">
+              Privacy
+            </Link>
           </p>
         </div>
       </div>
