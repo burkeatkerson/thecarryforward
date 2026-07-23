@@ -1,0 +1,111 @@
+---
+title: "Tax credits versus deductions: the arithmetic, the character, and the strategy"
+description: "A credit reduces tax dollar-for-dollar; a deduction reduces taxable income, so its value depends on your marginal rate. Here is the full picture — including refundability, carryforwards, and when a deduction actually wins."
+date: "2026-01-13"
+type: "guide"
+tags: ["credits-vs-deductions", "fundamentals", "depreciation"]
+faq:
+  - q: "Is a tax credit better than a tax deduction?"
+    a: "Dollar for dollar, yes. A credit reduces tax liability directly, while a deduction reduces taxable income, so a deduction is worth only your marginal rate times its face amount. A $10,000 credit saves $10,000 of tax; a $10,000 deduction saves $2,100 at a 21% corporate rate. But deductions can win on timing, refundability of unused amounts, and freedom from credit-specific limits."
+  - q: "What happens to a tax credit you cannot use this year?"
+    a: "Most business credits are nonrefundable but carry over. General business credits under Section 38, including the research credit, carry back one year and forward twenty under Section 39. Unused amounts are not lost unless the carryforward period expires or an ownership change triggers a Section 383 limitation."
+  - q: "Can you claim both a deduction and a credit for the same expense?"
+    a: "Sometimes, but the Code usually claws part of it back. Section 280C historically required reducing the research deduction by the credit amount, or electing a reduced credit instead. Under current law the interaction runs through Section 174A deductions and the 280C(c) election. Double benefits are the exception, not the rule."
+  - q: "Does the AMT limit tax credits?"
+    a: "For corporations, the corporate AMT (the 15% book-minimum tax on very large companies) allows general business credits to offset up to roughly 75% of tax. For individuals, general business credits cannot reduce tax below tentative minimum tax under Section 38(c). Credit users with AMT exposure should model the limitation before counting on the full benefit."
+---
+
+Ask what a tax incentive is worth and the answer depends on a single distinction that trips up even experienced operators: whether it is a credit or a deduction. A credit reduces your tax bill dollar-for-dollar. A deduction reduces the income on which tax is computed, so it is worth only your marginal rate times its face amount. A $100,000 research credit saves $100,000 of tax. A $100,000 depreciation deduction saves $21,000 for a C corporation at the flat 21% rate — and somewhere between $10,000 and $37,000 for a pass-through owner, depending on bracket.
+
+That is the arithmetic. But the arithmetic is the least interesting third of the story. Credits and deductions also differ in character — refundability, carryforwards, and the limitations that attach to each — and in strategy, where timing can make a nominally weaker deduction beat a nominally stronger credit.
+
+<KeyTakeaway>
+  <p>A credit offsets tax directly; a deduction offsets income, so its value equals its face amount times your marginal rate. Credits usually win per dollar, but deductions win when they arrive sooner, face fewer limitations, or land in high-rate years.</p>
+</KeyTakeaway>
+
+## The arithmetic: value per dollar
+
+Start with the mechanics. Taxable income times rate equals tax; credits then subtract from tax. A deduction operates before the multiplication, a credit after it.
+
+**The table below shows what $100,000 of each is worth at common marginal rates.**
+
+| Marginal rate | Value of a $100,000 deduction | Value of a $100,000 credit | Credit advantage |
+| --- | --- | --- | --- |
+| 21% (C corporation) | $21,000 | $100,000 | 4.8× |
+| 24% (individual, mid-bracket) | $24,000 | $100,000 | 4.2× |
+| 29.6% (37% bracket with 20% QBI deduction) | $29,600 | $100,000 | 3.4× |
+| 37% (top individual bracket) | $37,000 | $100,000 | 2.7× |
+| 0% (loss-year company) | $0 today (NOL carryforward) | $0 today (credit carryforward) | Neither helps now |
+
+Two things fall out of the table. First, the lower your rate, the more lopsided the comparison — a credit is nearly five times as valuable as a deduction to a C corporation. Second, in a loss year neither produces cash today; both become carryforwards, and the comparison shifts to which carryforward is more durable and less restricted.
+
+The specialty-tax world runs on both sides of this line. The [research credit](/rd-tax-credit/what-is-the-rd-tax-credit) under Section 41 is a credit: 20% of qualified research expenses over a base amount under the regular method, or 14% over half the prior-three-year average under the alternative simplified credit. [Cost segregation](/cost-segregation/what-is-cost-segregation) produces deductions: it reclassifies building components into shorter recovery periods so depreciation arrives sooner. Section 179D was a deduction; Section 45L is a credit. Knowing which is which is the first step in valuing any study a provider proposes.
+
+## Character: refundable, nonrefundable, and what happens to the leftovers
+
+Face value assumes you can use the benefit. Character determines whether you can.
+
+### Refundable versus nonrefundable
+
+A refundable credit pays out even when it exceeds your tax liability — the government cuts a check. Very few business credits are refundable. The research credit is not; neither are the general business credits as a class. The notable quasi-exceptions are elective-pay ("direct pay") treatment for certain IRA energy credits available to tax-exempt and governmental entities, transferability of certain energy credits for cash under Section 6418, and the research credit's payroll tax offset — a qualified small business (under $5 million in gross receipts, no gross receipts before the five-taxable-year window) may apply up to $500,000 of research credit against payroll taxes under Section 41(h), which functions like refundability for pre-profit startups.
+
+Deductions have no refundable analogue, but they have something close: a deduction that exceeds income creates a net operating loss, which carries forward indefinitely under Section 172 (limited to 80% of taxable income in the year used).
+
+### Carryforwards
+
+Nonrefundable does not mean use-it-or-lose-it. General business credits carry back one year and forward twenty under Section 39. A research credit generated in 2026 remains usable through 2046. NOLs generated after 2017 never expire. In both cases the benefit survives; what erodes is its present value, which is the strategic point taken up below.
+
+### Limitations that attach to credits specifically
+
+Credits come with strings deductions largely avoid. Section 38(c) prevents general business credits from reducing an individual's tax below tentative minimum tax, and caps the offset against large liabilities (75% of tax above $25,000). Corporations subject to the corporate alternative minimum tax face an analogous ceiling. And after an ownership change, Section 383 limits the use of pre-change credit carryforwards in the same way Section 382 limits pre-change NOLs — a detail that surfaces constantly in [M&A due diligence](/fundamentals/tax-incentive-due-diligence-mna) and can turn a seller's headline credit balance into a trickle of annual usability.
+
+Deductions have their own guardrails — the Section 461(l) excess business loss limitation for noncorporate taxpayers, basis and at-risk rules, the passive activity rules of Section 469 — but nothing as targeted as the credit-specific machinery.
+
+### The double-benefit problem
+
+The Code dislikes paying twice for the same dollar of expense. Section 280C is the canonical example: a taxpayer claiming the research credit must reduce its deduction (now, under Section 174A, its current expensing) by the credit amount, or elect a reduced credit — 79% of the full credit for a C corporation — and keep the full deduction. The election matters most for pass-throughs and for state conformity. The broader lesson: whenever a study promises both a deduction and a credit on the same spend, ask which section claws one back.
+
+## Strategy: when the weaker instrument wins
+
+Per dollar, the credit wins. Per decision, it depends. Three situations reverse the ranking.
+
+### Timing: a deduction now can beat a credit later
+
+Depreciation is the clearest case. [Cost segregation](/cost-segregation/what-is-cost-segregation) does not create a single dollar of new deduction over a building's life — total depreciation is fixed at basis. What it creates is acceleration, and with 100% bonus depreciation permanently restored for qualified property acquired after January 19, 2025, the acceleration can be dramatic: five- and fifteen-year property identified in a study may be fully deducted in year one. A $500,000 first-year deduction at 37% is $185,000 of cash tax saved now. A $185,000 nonrefundable credit stuck behind a Section 38(c) limitation, usable in dribs over a decade, is worth materially less in present-value terms despite identical nominal value. As [depreciation basics](/fundamentals/depreciation-basics) covers in detail, deferral is the whole game — and deductions are often the better deferral instrument.
+
+### Rate arbitrage
+
+A deduction's value floats with your marginal rate; a credit's does not. A company expecting to move from a low-income year into high-rate profitability may prefer to push deductions forward (slower depreciation elections, capitalizing under the Section 174A election) and let them land against high-rate income, while a credit is worth the same 100 cents whenever used — minus the time value lost waiting.
+
+### Usability
+
+A startup with no income tax liability gets nothing today from either instrument — except that the payroll tax offset makes the research credit immediately cashable for qualifying small businesses, flipping the usual analysis. Conversely, a profitable company bumping against AMT-style limitations may find deductions the only benefit it can actually absorb this year.
+
+<Callout label="Practice note">
+  <p>Model credits and deductions in after-tax, present-value dollars against your actual liability profile before commissioning any study. A provider quoting "benefit identified" in nominal terms is quoting the wrong number.</p>
+</Callout>
+
+## Where the specialty topics sit
+
+**A quick map of the major specialty incentives by instrument type.**
+
+| Incentive | Instrument | Key character traits |
+| --- | --- | --- |
+| Section 41 research credit | Credit | Nonrefundable; 1-back/20-forward; 280C haircut or election; payroll offset for QSBs |
+| Section 174A expensing | Deduction | Immediate for domestic R&E after 2024; election to amortize over 60+ months |
+| Cost segregation / bonus depreciation | Deduction | Pure acceleration; 100% bonus for property acquired after Jan 19, 2025; recapture on sale |
+| Section 179D energy-efficient buildings | Deduction | Terminates for construction beginning after June 30, 2026 |
+| Section 45L energy-efficient homes | Credit | Terminates for homes acquired after June 30, 2026 |
+| IRA energy credits (48E, 45X, etc.) | Credit | Some transferable for cash; elective pay for exempt entities |
+
+Note how [Section 174](/section-174/section-174-explained) sits on the deduction side of the ledger while the Section 41 credit it feeds sits on the other — the same research payroll can generate both, connected by 280C. The 2022–2024 capitalization era made this interaction painful; the OBBBA's restoration of domestic expensing for tax years beginning after 2024 made it merely intricate.
+
+## When the whole framework does not matter
+
+Neutrality demands the caveat. None of this matters if the underlying claim is weak. A credit that fails exam is worth less than zero — you repay it with interest and possibly a 20% accuracy-related penalty under Section 6662. The IRS challenges research credits on documentation and business-component grounds, cost segregation on classification, and energy incentives on certification. The instrument-type analysis assumes a defensible claim; [audit-ready documentation](/fundamentals/audit-readiness-documentation) is what makes that assumption true.
+
+It also does not matter for taxpayers with structurally no ability to use either instrument — perpetual-loss companies outside the payroll-offset window, or exempt entities outside elective-pay eligibility. For them, the right answer to most incentive pitches is "not yet."
+
+## The bottom line
+
+Credits beat deductions per dollar, always, by a factor equal to the inverse of your marginal rate. Deductions beat credits when timing, rates, or limitations tilt the field. The professional habit worth building is refusing to compare the two at face value: convert everything to after-tax present value against your own liability forecast, and the right answer usually announces itself.

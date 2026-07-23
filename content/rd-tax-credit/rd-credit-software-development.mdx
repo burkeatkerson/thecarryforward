@@ -1,0 +1,48 @@
+---
+title: "When software development qualifies for the research credit"
+description: "Commercial software development routinely passes the Section 41 four-part test; internal-use software must also clear the high-threshold-of-innovation test of Treas. Reg. §1.41-4(c)(6). Where the lines fall."
+date: "2026-04-21"
+type: "brief"
+tags: ["software", "section-41", "four-part-test", "qres"]
+faq:
+  - q: "Does software development qualify for the R&D tax credit?"
+    a: "Yes, when it satisfies the four-part test — technical uncertainty about capability, method, or design, resolved through a process of experimentation grounded in computer science. Software sold, leased, licensed, or used to interact with third parties is tested under the ordinary rules; internal-use software faces an additional three-prong high-threshold-of-innovation test."
+  - q: "What is internal-use software for the research credit?"
+    a: "Under Treas. Reg. §1.41-4(c)(6), software developed primarily for the taxpayer's general and administrative functions — financial management, HR management, and support services. Software developed to be sold or licensed, or to enable third parties to interact with the taxpayer or its systems, is not internal-use software."
+  - q: "What is the high threshold of innovation test?"
+    a: "Internal-use software qualifies only if it is innovative (intended to produce a substantial and economically significant reduction in cost or improvement in speed), involves significant economic risk that substantial committed resources might not be recovered within a reasonable period because of technical risk, and is not commercially available for the taxpayer's intended use without significant modification."
+---
+
+Software development is the largest single source of research credit claims, and most of it is analyzed under the ordinary rules: does the work pass [the four-part test](/rd-tax-credit/four-part-test-explained)? For software that is sold, licensed, or used to interact with customers, that is the whole question. For **internal-use software** — the back-office kind — Section 41(d)(4)(E) adds a statutory presumption of exclusion, rebutted only by the three-prong **high-threshold-of-innovation test** of Treas. Reg. §1.41-4(c)(6).
+
+<KeyTakeaway>
+  <p>Commercial and customer-facing software is tested under the ordinary four-part test; only software developed primarily for the taxpayer's own general and administrative functions must additionally be innovative, involve significant economic risk, and be commercially unavailable. Routine implementation and configuration qualifies under neither standard.</p>
+</KeyTakeaway>
+
+## The ordinary case: development that qualifies, and development that does not
+
+Software qualifies where the team faced genuine capability, method, or design uncertainty and resolved it through systematic evaluation of alternatives — architecture prototypes benchmarked against defined performance targets, algorithm development where accuracy or latency requirements exceeded known approaches, novel data-model work to reconcile constraints no reference design covered. Failed branches, load-test results, and design-review records are the evidence; the sprint archive usually contains all of it, if preserved. Cloud compute consumed in development and test environments adds [creditable expense](/rd-tax-credit/qualified-research-expenses) alongside developer wages.
+
+What does not qualify, in any setting: implementing a vendor package according to its documentation, configuration and data migration, UI reskins and cosmetic work, routine bug fixes and maintenance after release (research after commercial production), and building to a well-understood pattern — a conventional CRUD application is engineering effort, not technical uncertainty. Agile process is neither qualification nor disqualification; the question is whether the tickets record experiments or merely tasks.
+
+## The internal-use gate: what counts as IUS
+
+The 2016 final regulations narrowed internal-use software to software developed **primarily for general and administrative functions**: financial management, human resources management, and support services (payroll, ERP financials, HRIS, internal helpdesk tooling). Three important carve-outs mean much modern development escapes the label:
+
+- Software **developed to be commercially sold, leased, licensed, or marketed** is not IUS.
+- Software **enabling third parties to interact** with the taxpayer — customer portals, ordering systems, APIs consumed by partners — is not IUS.
+- **Dual-function** software is presumed IUS, but a third-party subset (or, failing that, a safe harbor crediting 25% of the dual-function costs where third-party use is at least 10%) can be carved out.
+
+Intent is measured at the outset of development, not by later use.
+
+## The high threshold of innovation
+
+Genuine IUS qualifies only if, in addition to the four-part test, all three prongs are met:
+
+1. **Innovative.** The software is intended to result in a reduction in cost or improvement in speed, or other measurable improvement, that is *substantial and economically significant* to the taxpayer's business.
+2. **Significant economic risk.** The taxpayer commits substantial resources and there is *substantial uncertainty, because of technical risk*, that the resources will be recovered within a reasonable period. Business risk — will users adopt it — does not count; the uncertainty must be capability- or method-type technical uncertainty. Design uncertainty alone is generally insufficient here, a deliberately higher bar than the ordinary test.
+3. **Not commercially available.** No off-the-shelf product could be used for the intended purpose without modifications that would themselves satisfy the first two prongs.
+
+In practice, the prong that fails is the second. Most internal tools are built with confidence that they *can* be built; the open question is scope and cost, which is not technical risk. An honest claim inventory usually places heavily customized ERP work outside the credit and keeps genuinely novel internal platforms — a bespoke fraud-detection engine, say, where known techniques demonstrably could not meet the requirement — inside it.
+
+Two adjacent traps close the analysis. Development performed offshore is excluded as foreign research no matter how it scores on these tests, and custom development performed *for* a client under contract must survive the [funded research exclusion](/rd-tax-credit/funded-research-exclusion) before anyone's credit is counted. Component-level reporting of software claims — including the IUS flag — now appears on the return itself under [Form 6765 Section G](/rd-tax-credit/form-6765-section-g).

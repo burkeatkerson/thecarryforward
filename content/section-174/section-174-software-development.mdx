@@ -1,0 +1,44 @@
+---
+title: "Why software development was swept into Section 174 — and what 174A changes"
+description: "The TCJA made every software development cost a Section 174 SRE expenditure by statute, forcing capitalization in 2022–2024. Section 174A restores expensing for domestic software work, but the statutory sweep itself survives."
+date: "2026-02-24"
+type: "brief"
+tags: ["software", "section-174", "section-174a", "sre-costs"]
+faq:
+  - q: "Is software development still a Section 174 cost after the OBBBA?"
+    a: "Yes. The statutory rule treating any software development cost as a research or experimental expenditure survives. What changed is the consequence: domestic software development is now immediately deductible under Section 174A for tax years beginning after 2024, while foreign software development still amortizes over 15 years."
+  - q: "Why did software companies get hit so hard in 2022–2024?"
+    a: "Because the TCJA classified all software development as an SRE expenditure with no uncertainty analysis, and SRE costs had to be capitalized over five years with only a half-year deducted in year one. A company deducting 10% of its engineering payroll in the year paid saw taxable income spike even when cash economics were unchanged."
+  - q: "Are bug fixes and maintenance Section 174 costs?"
+    a: "Generally no. The sweep covers development — planning, design, coding, and testing through readiness for intended use, plus enhancements adding functionality. Routine maintenance, bug fixes that do not add capability, configuration of purchased software, training, and hosting fees fall outside development and remain ordinary Section 162 expenses."
+---
+
+For tax years beginning after 2021, the Code contains a sentence with outsized consequences: any amount paid or incurred in connection with the development of any software is treated as a research or experimental expenditure. No uncertainty test, no experimentation analysis — software development is Section 174 by definition. During 2022–2024, that meant mandatory capitalization; since the OBBBA, it means domestic software work is expensed under Section 174A while foreign work stays on a 15-year schedule.
+
+<KeyTakeaway>
+  <p>The TCJA's categorical inclusion of software development in Section 174 survives the OBBBA. Domestic software development is now deductible immediately under Section 174A; foreign development still amortizes over 15 years, and the sweep continues to feed the Section 41 credit analysis.</p>
+</KeyTakeaway>
+
+## How the sweep worked, and why it hurt
+
+Before 2022, software developers lived comfortably under Rev. Proc. 2000-50, which permitted current deduction of software development costs whether or not they satisfied the Section 174 uncertainty standard. The TCJA revoked that comfort prospectively and replaced it with the opposite categorical rule. The drafters' logic was administrative: rather than litigate which sprints involved genuine technical uncertainty, treat the whole category as research.
+
+Combined with mandatory capitalization, the sweep produced the sharpest cash-tax shock of the amortization era. A software company's dominant cost — engineering compensation — went from fully deductible to 10% deductible in year one (five-year amortization, half-year convention). Notice 2023-63 confirmed the breadth: the capitalized pool included not just coders' salaries but allocable overhead, and covered internal-use software, websites, and apps alongside products for sale. Profitable software companies saw taxable income multiples of book income; pre-revenue startups saw taxable income appear where losses used to be. The worked numbers are in [our Section 174 pillar guide](/section-174/section-174-explained).
+
+The boundaries mattered and still do. "Development" runs from planning through testing until the software is ready for its intended use, plus later enhancements that add functionality. Outside it: routine maintenance, bug fixes without enhancement, data conversion, training, configuration of purchased software short of customization-as-development, and hosting or SaaS fees for software merely used. During the capitalization years the IRS watched for development recast as "maintenance"; those characterizations still govern the 2022–2024 balances moving through [the transition rules](/section-174/section-174-transition-rules).
+
+## What Section 174A changes — and what it doesn't
+
+For tax years beginning after December 31, 2024, domestic software development is immediately deductible under Section 174A, with an optional election to capitalize over at least 60 months. For a U.S.-based engineering organization, the practical effect is a return to the pre-2022 cash-tax world.
+
+Three things did not change:
+
+- **The classification itself.** Software development remains statutorily an R&E expenditure. That matters because classification, not deduction timing, drives the remaining consequences.
+- **Foreign development.** Work performed by engineers outside the United States — offshore subsidiaries, foreign contract development shops, employees working remotely abroad — remains a foreign SRE expenditure amortized over 15 years under Section 174. For distributed engineering teams, the domestic/foreign split is now the whole ballgame; see [the foreign research brief](/section-174/foreign-research-15-year).
+- **Credit coordination.** Section 174 eligibility remains the gateway to the Section 41 research credit, but the sweep does not make all software work creditable — Section 41(d)'s four-part test, and the heightened internal-use software standards, still apply. A company's deductible software pool will exceed its credit-qualified pool, often substantially. See [what the R&D credit is](/rd-tax-credit/what-is-the-rd-tax-credit).
+
+<Callout label="When it doesn't matter">
+  <p>For a purely domestic software company with no credit claim and no 2022–2024 stranded balance, the sweep is now close to academic — development costs and ordinary expenses both deduct currently. The classification regains its bite the moment a foreign contractor is engaged or a credit study begins.</p>
+</Callout>
+
+The residue of the amortization era — unamortized 2022–2024 software costs — comes back through the one- or two-year catch-up or, for small businesses, amended returns; the modeling lives in [the transition rules guide](/section-174/section-174-transition-rules).

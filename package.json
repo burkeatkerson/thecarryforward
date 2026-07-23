@@ -1,0 +1,26 @@
+{
+  "name": "thecarryforward",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Carryforward — neutral, educational resource for specialty tax topics.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "next": "^15.3.4",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,84 @@
+---
+title: "Qualified research expenses: what counts and what to keep"
+description: "Only four cost categories generate the Section 41 credit: wages, supplies, 65% of contract research, and computer rental. Here is each category in depth, with the substantiation each one demands."
+date: "2026-02-24"
+type: "guide"
+tags: ["qres", "section-41", "audit-defense", "four-part-test"]
+faq:
+  - q: "What expenses qualify for the R&D tax credit?"
+    a: "Four categories only: taxable wages for employees performing, directly supervising, or directly supporting qualified research; supplies used and consumed in the research; 65% of amounts paid to contractors for qualified research (75% for qualified research consortia); and amounts paid for the rental or lease of computers, which covers most research cloud-computing costs."
+  - q: "What is the substantially-all rule for R&D credit wages?"
+    a: "If at least 80% of an employee's services for the year are qualified services, 100% of that employee's wages count as QREs. Below 80%, wages must be allocated, and only the qualified portion counts. The rule works only in the taxpayer's favor — it rounds up to all, never down to nothing."
+  - q: "Do cloud computing costs count as QREs?"
+    a: "Often, yes. Amounts paid for the rental or lease of computers used in qualified research — the statutory home for AWS, Azure, and GCP charges — qualify when the computers are operated by someone other than the taxpayer, located off the taxpayer's premises, and the taxpayer is not the primary user. Development and testing environments typically qualify; production hosting for customers does not."
+  - q: "Why is contract research limited to 65%?"
+    a: "Section 41(b)(3) allows only 65% of payments to third parties for qualified research, a rough statutory haircut reflecting that contractor invoices include profit and overhead a taxpayer's own wage base would not. The taxpayer must also bear financial risk and retain substantial rights in the results, or the amount is excluded entirely."
+---
+
+Passing the [four-part test](/rd-tax-credit/four-part-test-explained) establishes that an activity is qualified research. It does not establish that any particular dollar generates credit. Section 41(b) recognizes exactly four categories of qualified research expenses — in-house wages, supplies, contract research at 65 cents on the dollar, and computer rental — and everything else, however essential to the research, is excluded. No rent, no overhead, no depreciation, no equipment purchases, no fringe benefits outside the Section 3401(a) wage base.
+
+The categories are narrow but deep. Most claims are 70% to 90% wages, which is why wage allocation is both the biggest number and the biggest exam target.
+
+<KeyTakeaway>
+  <p>QREs come in four statutory flavors — wages, supplies, 65% of contract research, and computer rental — each with its own qualification rules and its own documentation burden. Wages dominate most claims, and the 80% substantially-all rule and the contract-research rights-and-risk analysis are where the money is won or lost.</p>
+</KeyTakeaway>
+
+## The four categories at a glance
+
+**The table below summarizes the statutory categories, their haircuts, and the records that carry them on exam.**
+
+| Category | Statutory basis | Included at | Typical share of claim | Core documentation |
+| --- | --- | --- | --- | --- |
+| Wages for qualified services | §41(b)(2)(A)(i) | 100% (with allocation) | 70–90% | W-2 Box 1 wages, time records or project allocations, org charts, job descriptions |
+| Supplies | §41(b)(2)(A)(ii) | 100% | 5–15% | Invoices, GL detail, project-level consumption records |
+| Contract research | §41(b)(3) | 65% (75% consortia; 100% certain energy consortia) | 5–20% | Contracts showing risk and rights, invoices, contractor statements of work |
+| Computer rental / cloud | §41(b)(2)(A)(iii) | 100% | 0–10% | Cloud billing detail split by environment, usage reports |
+
+## Wages: the substantially-all rule and the three qualified services
+
+Wages qualify only for **qualified services**, of which there are exactly three: engaging in qualified research, directly supervising it, and directly supporting it.
+
+- **Engaging** is the scientist, engineer, or developer doing the work.
+- **Direct supervision** means immediate, first-line supervision of the research — the engineering manager reviewing designs and directing experiments. It does not run up the chain: a VP who supervises the supervisor is out, however technical her background. Higher-level managers qualify only for time spent personally performing or first-line supervising research.
+- **Direct support** covers services in direct support of the research: the machinist fabricating an experimental prototype part, the technician cleaning research equipment, the lab assistant preparing samples. It does not cover general and administrative functions — payroll, HR, facilities — even when they serve the research department exclusively.
+
+"Wages" means the Section 3401(a) income-tax-withholding base — essentially W-2 Box 1. Pre-tax 401(k) deferrals, health premiums, and employer payroll taxes are outside it; taxable bonuses and non-qualified stock compensation reported in Box 1 are inside it. For self-employed individuals and partners, earned income stands in for wages.
+
+### The 80% rule
+
+Treas. Reg. §1.41-2(d)(2) provides the substantially-all rule: if at least 80% of an employee's services (measured by time, or another reasonable basis consistently applied) are qualified services, *all* of the employee's wages are QREs. An engineer at 85% research time contributes 100% of her Box 1 wages. The rule is one-directional — an employee at 60% contributes 60%, not zero.
+
+The rule is generous but demands support. Claiming a developer at 100% via the 80% rule invites the examiner to test whether the remaining activities — standups about production incidents, customer escalations, maintenance sprints — really stayed under 20%. Time-tracking systems are the gold standard; in their absence, contemporaneous project allocations built from sprint records, calendars, and manager interviews are defensible if built honestly and near the time. Allocations reconstructed years later fared poorly in *Siemer Milling* and its successors — see [audit defense](/rd-tax-credit/rd-credit-audit-defense).
+
+## Supplies: consumed, not capitalized
+
+Supplies are tangible property used in the conduct of qualified research, other than land, improvements to land, and **property subject to depreciation**. That last clause excludes the research equipment itself — the test rig, the oscilloscope, the 3D printer are all out (their cost is recovered through depreciation, and since 2025 may be deductible under [Section 174A](/section-174/section-174a-explained) or bonus depreciation, but never as a QRE).
+
+What is in: materials consumed in building and testing prototypes, wafers scrapped in process trials, batches of experimental formulation destroyed in testing, extraordinary utilities directly attributable to research (rarely worth the fight for ordinary usage). The high-value fact pattern is the manufacturer whose prototype or first-article units consume significant raw material: where the pilot-model reasoning of *TG Missouri* and the Section 174 pilot-model regulations applies, the materials in experimental units can be substantial QREs. But if the "prototype" is sold to a customer and the taxpayer never bore the risk of scrapping it, expect a challenge — and if the unit becomes depreciable property in the taxpayer's hands, the exclusion bites.
+
+Documentation is invoice-level: general ledger detail tying purchases to research projects, scrap and consumption records, and a clean line between production inventory and research consumption.
+
+## Contract research: 65%, rights, and risk
+
+Payments to a third party for qualified research performed on the taxpayer's behalf count at **65%** (75% for payments to qualified research consortia; 100% for certain payments to eligible small businesses, universities, and federal laboratories for energy research). Two conditions, both drawn from Treas. Reg. §1.41-2(e), decide whether the payment counts at all:
+
+1. **Financial risk.** The payment must be contingent on the success of the research — the taxpayer must pay whether or not the research succeeds? No: the *performer* qualifies when paid regardless of success; the *funding* taxpayer claims the expense precisely because it bears the cost of failure. If the taxpayer pays only for successful results, it has purchased a product, not research.
+2. **Substantial rights.** The taxpayer must retain substantial rights in the research results. Exclusive rights are not required — non-exclusive rights to use the results without paying for them suffice — but a taxpayer that walks away with nothing but a deliverable it must license back has a problem.
+
+This is the mirror image of the [funded research exclusion](/rd-tax-credit/funded-research-exclusion): in any two-party research arrangement, the rights-and-risk analysis generally assigns the credit to one side or the other. Both sides claiming the same dollars is the fact pattern examiners look for, which is why the contract itself — not the invoices — is the controlling document. Fixed-price versus time-and-materials terms, IP assignment clauses, and acceptance provisions should be read before the claim is built, not after the IDR arrives.
+
+One more constraint: prepaid contract research is creditable only when the research is actually performed, under the Section 461 principles imported by §1.41-2(e)(2).
+
+## Computer rental and cloud costs
+
+Section 41(b)(2)(A)(iii) covers amounts paid for the right to use computers in qualified research, where the computer is owned and operated by someone else, located off the taxpayer's premises, and the taxpayer is not its primary user. Written for 1980s time-sharing, the provision now describes public cloud infrastructure almost perfectly, and IaaS charges for research use are routinely claimed here.
+
+The qualifier that matters is *used in the conduct of qualified research*. Compute consumed by development, testing, staging, model training, and simulation environments qualifies; compute that hosts the production application for paying customers does not — that is delivery of a product, not research. Cloud bills should therefore be segmented by account, project tag, or environment, and the allocation methodology written down. An unallocated lump of the annual AWS bill is among the easiest line items for an examiner to strike. SaaS subscription fees for productivity tools generally do not qualify; the payment must be for computer time, not for software licenses.
+
+## Documentation, category by category
+
+The substantiation standard is Section 6001's general recordkeeping duty plus Treas. Reg. §1.41-4(d): retain records in sufficiently usable form to establish the credit. No specific document is mandated — but the refund-claim specificity rules and Form 6765 Section G now force claim-time identification of business components and per-category QREs, so the practical bar has risen. The durable practice is a nexus file per business component: the uncertainty and experimentation narrative (supporting the four-part test), the list of employees and their allocation basis, the supply and cloud GL extracts, and the contracts behind every contract-research dollar.
+
+## When the numbers do not justify the exercise
+
+QRE building has real cost. A company whose qualified work is performed mostly by two founders taking modest W-2 wages may find the wage base too small to matter. A firm whose research is done predominantly overseas has no wage QREs for that work at all — foreign research is excluded regardless of who employs the researchers. And a taxpayer whose only sizable expense is depreciable equipment has qualifying *activity* but few qualifying *dollars*. Run the base before running the study; the [calculation guide](/rd-tax-credit/how-to-calculate-the-rd-credit) shows how the QRE totals translate into credit.

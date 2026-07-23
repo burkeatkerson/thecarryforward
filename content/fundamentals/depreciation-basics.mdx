@@ -1,0 +1,108 @@
+---
+title: "Depreciation basics: MACRS from first principles"
+description: "How MACRS actually works — basis, recovery periods, the half-year, mid-quarter, and mid-month conventions, declining balance versus straight line, Section 179 versus bonus — and why depreciation is a deferral, not a subsidy."
+date: "2026-02-10"
+type: "guide"
+tags: ["depreciation", "fundamentals", "credits-vs-deductions"]
+faq:
+  - q: "What is MACRS in simple terms?"
+    a: "MACRS, the Modified Accelerated Cost Recovery System, is the mandatory method for depreciating most business property placed in service after 1986. It assigns each asset a recovery period (3 to 39 years), a method (declining balance or straight line), and a convention that fixes when depreciation starts. Together those three inputs determine each year's deduction."
+  - q: "What is the difference between Section 179 and bonus depreciation?"
+    a: "Both allow immediate expensing, but Section 179 is an election with a dollar cap and a taxable-income limit, applied asset by asset, while bonus depreciation under Section 168(k) is automatic (unless elected out, by class), uncapped, and can create a loss. With 100% bonus restored for property acquired after January 19, 2025, bonus does most of the work for most taxpayers."
+  - q: "Does depreciation reduce taxes permanently?"
+    a: "No. Depreciation is deferral. Total deductions over an asset's life equal its basis regardless of method; faster methods only move deductions earlier. The benefit is the time value of money — and it can partially reverse on sale through depreciation recapture, taxed at ordinary rates for Section 1245 property and up to 25% for real-property straight-line depreciation."
+  - q: "What triggers the mid-quarter convention?"
+    a: "If more than 40% of the aggregate basis of personal property placed in service during the year (excluding real property and property expensed under Section 179) is placed in service in the fourth quarter, all personal property that year uses the mid-quarter convention instead of half-year — which shrinks first-year deductions for late-year additions."
+---
+
+Depreciation is the tax law's answer to a simple mismatch: you pay for a machine once, but it earns income for years. Rather than deduct the full cost when paid, Section 167 allows — and Section 168's Modified Accelerated Cost Recovery System (MACRS) prescribes — spreading the deduction over a statutory recovery period. Every depreciation computation reduces to three inputs: the basis being recovered, the recovery period and method assigned to the asset class, and the convention that fixes when the clock starts.
+
+Understand those three, and everything else — bonus depreciation, Section 179, [cost segregation](/cost-segregation/what-is-cost-segregation) — is a variation on the theme of moving deductions earlier.
+
+<KeyTakeaway>
+  <p>MACRS depreciation is basis, spread over a statutory recovery period, using a prescribed method and convention. Every acceleration technique — bonus, Section 179, cost segregation — changes the timing of deductions, never their total. Depreciation is deferral, and deferral is worth real money.</p>
+</KeyTakeaway>
+
+## Basis: what you are recovering
+
+Depreciable basis starts with cost under Section 1012 — purchase price plus amounts capitalized into the asset: sales tax, freight, installation, and for constructed property, the direct and allocable indirect costs Section 263A requires. Land is never depreciable, so a building purchase must be allocated between land and improvements, typically by appraisal or assessment ratio. Basis is reduced by any Section 179 expensing and bonus depreciation before the regular MACRS tables apply, and by credits where the Code requires (the Section 50(c) basis reduction for investment credits, for example).
+
+Get basis wrong and every subsequent year is wrong. This is the unglamorous foundation of every [cost segregation study](/cost-segregation/what-is-cost-segregation): the study does not conjure basis, it allocates the basis you already have among asset classes with different recovery periods.
+
+## Recovery periods: the classes
+
+MACRS assigns class lives largely through Rev. Proc. 87-56. The ones that matter in practice:
+
+**Common MACRS recovery periods under the general depreciation system.**
+
+| Property | Recovery period | Method |
+| --- | --- | --- |
+| Certain software, tools, racehorses | 3 years | 200% DB |
+| Cars, trucks, computers, office equipment, carpeting, decorative lighting | 5 years | 200% DB |
+| Office furniture, most machinery, agricultural equipment | 7 years | 200% DB |
+| Land improvements (parking lots, landscaping, site utilities) | 15 years | 150% DB |
+| Qualified improvement property (QIP) | 15 years | Straight line |
+| Residential rental buildings | 27.5 years | Straight line |
+| Nonresidential real property | 39 years | Straight line |
+
+The economic action is in the gaps. A dollar of building cost reclassified from 39-year straight line to 5-year property — and therefore eligible for bonus depreciation — moves from a 2.56% first-full-year deduction to potentially 100%. That single row-change is the entire business case for cost segregation.
+
+## Conventions: when the clock starts
+
+MACRS does not track actual in-service dates to the day. Three conventions approximate them:
+
+- **Half-year.** The default for personal property. Every asset is deemed placed in service at the year's midpoint, so year one gets half a year's depreciation regardless of the actual date. A 5-year asset therefore takes six calendar years to depreciate.
+- **Mid-quarter.** The anti-stuffing rule. If more than 40% of the year's personal-property basis (ignoring real property and 179'd amounts) goes in service in the fourth quarter, every personal-property asset that year is deemed placed in service at the midpoint of its actual quarter. December purchases get 1.5/12 of a year rather than half. Year-end equipment buying sprees routinely trip this test — one reason "buy it before December 31" advice deserves scrutiny.
+- **Mid-month.** Real property only. Buildings are deemed placed in service at the midpoint of the month, which is why the 39-year tables show fractional first-year percentages.
+
+<Callout label="Watch out">
+  <p>Bonus depreciation does not remove property from the mid-quarter 40% test, but Section 179 expensing does. In a heavy fourth quarter, electing 179 on late-year assets can keep the remaining fleet on the half-year convention.</p>
+</Callout>
+
+## Declining balance versus straight line
+
+MACRS pairs each class with a method. Personal property uses declining balance — 200% (double) for 3-, 5-, 7-, and 10-year classes, 150% for 15- and 20-year — switching to straight line in the year straight line yields more. Real property uses straight line throughout.
+
+Declining balance applies a fixed rate to the remaining undepreciated basis. For a 5-year asset, the 200% DB rate is 2 ÷ 5 = 40% per year, halved to 20% in year one by the half-year convention. The familiar table percentages (20.00, 32.00, 19.20, 11.52, 11.52, 5.76) are just this computation pre-baked, switch to straight line included.
+
+Taxpayers may elect slower recovery — straight line over the regular period, or the Alternative Depreciation System (ADS) with longer lives. ADS is mandatory in a few settings, notably for real property of businesses electing out of the Section 163(j) interest limitation, and for property used predominantly outside the United States. Electing slower depreciation is occasionally rational: a company with expiring NOLs or expecting sharply higher rates may prefer deductions later, the rate-arbitrage point developed in [credits versus deductions](/fundamentals/credits-vs-deductions).
+
+## Section 179 versus bonus depreciation
+
+Two regimes allow full expensing in year one. They are frequently confused and materially different.
+
+**Section 179** is an election, made asset by asset, to expense qualifying property — generally personal property, off-the-shelf software, and certain real-property improvements (roofs, HVAC, security systems for nonresidential buildings). It carries an inflation-indexed dollar cap (raised by the OBBBA to $2.5 million, phasing out above $4 million of additions, both indexed), and it cannot create or increase a loss: the deduction is limited to aggregate active business income, with the excess carried forward.
+
+**Bonus depreciation** under Section 168(k) is automatic for qualified property — MACRS property with a recovery period of 20 years or less, plus certain software and QIP — unless the taxpayer elects out for an entire asset class. It has no dollar cap and no income limit; it happily creates NOLs. The OBBBA permanently restored 100% bonus for qualified property acquired after January 19, 2025. Property acquired earlier remains under the TCJA phase-down: 80% for 2023, 60% for 2024, 40% for early-2025 acquisitions. Used property qualifies if it is new to the taxpayer.
+
+In a 100% bonus world, Section 179's remaining roles are narrow: the real-property improvement categories bonus does not reach, state regimes that decouple from bonus but conform to 179, and the mid-quarter management trick noted above.
+
+## Listed property
+
+Section 280F imposes extra discipline on "listed property" — assets that invite personal use, principally passenger automobiles and, historically, certain entertainment and photographic equipment (computers were delisted in 2018). Listed property used 50% or less for business is exiled to ADS straight line, loses 179 and bonus eligibility, and can trigger recapture of prior accelerated deductions if business use later falls below 50%. Passenger autos face separate annual dollar caps under 280F(a) regardless of cost — the reason a $90,000 sedan depreciates slowly while a heavy SUV over 6,000 pounds GVWR does not. Substantiation under Section 274(d) (mileage logs, usage records) is mandatory, not advisory; this is a recurring exam item and a small-scale preview of the [documentation discipline](/fundamentals/audit-readiness-documentation) that specialty claims demand.
+
+## Why depreciation is deferral — a worked example
+
+Depreciation never changes the total deducted; it changes when. Consider $1,000,000 of equipment, a 21% corporate rate, and an 8% discount rate, comparing straight-line over five years (half-year convention) against 100% bonus.
+
+**Timing of deductions and present value of tax savings on $1,000,000 of 5-year equipment.**
+
+| Year | Straight-line deduction | Bonus deduction | SL tax saved | Bonus tax saved |
+| --- | --- | --- | --- | --- |
+| 1 | $100,000 | $1,000,000 | $21,000 | $210,000 |
+| 2 | $200,000 | $0 | $42,000 | $0 |
+| 3 | $200,000 | $0 | $42,000 | $0 |
+| 4 | $200,000 | $0 | $42,000 | $0 |
+| 5 | $200,000 | $0 | $42,000 | $0 |
+| 6 | $100,000 | $0 | $21,000 | $0 |
+| **Total** | **$1,000,000** | **$1,000,000** | **$210,000** | **$210,000** |
+
+Nominal tax savings are identical: $210,000 either way. But discounted at 8%, the straight-line stream is worth roughly $166,000 today while the bonus deduction is worth the full $210,000 (taken in year one) — a present-value pickup of about $44,000, or 4.4% of the asset's cost, from timing alone. Scale that to a $20 million building where a cost segregation study shifts a quarter of the basis into bonus-eligible classes, and the deferral value funds the study many times over.
+
+Deferral has a tail, though. Accelerated deductions lower basis, so gain on sale is larger, and Section 1245 recaptures personal-property depreciation at ordinary rates while unrecaptured Section 1250 gain on real property is taxed at up to 25%. For a holder who sells quickly, acceleration can amount to borrowing at the recapture rate — one of the standard situations where cost segregation does not make sense.
+
+## When acceleration is the wrong answer
+
+The neutral accounting: faster is not always better. Acceleration hurts or does nothing when the taxpayer is in losses with no carryback (deductions pile into NOLs limited to 80% of future income), when rates are headed up, when a near-term sale will recapture at ordinary rates, when state decoupling from bonus creates two sets of books and addback complexity, or when larger losses trip the Section 461(l) excess business loss limitation for individual owners. And the parallel history of [Section 174](/section-174/section-174-explained) — where Congress forced capitalization of research costs for 2022–2024 before restoring expensing — is a reminder that recovery periods are policy levers, not laws of nature.
+
+The discipline is the same one that runs through all of specialty tax: compute the after-tax present value against your actual profile, not the brochure's.

@@ -1,0 +1,98 @@
+---
+title: "The four-part test, explained with real examples"
+description: "Section 41(d) qualifies research only if it passes four tests: permitted purpose, technological uncertainty, process of experimentation, and technological in nature. Here is how each works, with qualifying and non-qualifying examples."
+date: "2026-02-03"
+type: "guide"
+tags: ["section-41", "four-part-test", "qres", "software"]
+faq:
+  - q: "What is the four-part test for the R&D credit?"
+    a: "Under Section 41(d), an activity is qualified research only if it (1) relates to a new or improved business component's function, performance, reliability, or quality; (2) is intended to eliminate uncertainty about capability, method, or appropriate design; (3) involves a process of experimentation; and (4) relies on principles of engineering, physical science, biological science, or computer science. All four must be met."
+  - q: "What is a business component under Section 41?"
+    a: "A business component is any product, process, computer software, technique, formula, or invention the taxpayer intends to hold for sale, lease, license, or use in its trade or business. The four-part test is applied separately to each business component, and the shrink-back rule allows testing at the subcomponent level when the whole does not qualify."
+  - q: "Does research have to be new to the world to qualify?"
+    a: "No. The uncertainty standard is measured from the taxpayer's own vantage point at the outset of the work. Research can qualify even if a competitor has already solved the same problem, so long as the answer was not publicly available and the taxpayer had to experiment to find it. Patentability is not required."
+  - q: "What activities are excluded from the research credit?"
+    a: "Section 41(d)(4) excludes research after commercial production, adaptation or duplication of existing components, surveys and studies, most internal-use software, foreign research, research in the social sciences or humanities, and funded research where the taxpayer lacks rights or bears no financial risk."
+---
+
+Every research credit claim stands or falls on Section 41(d): an activity generates qualified research expenses only if it passes all four parts of a conjunctive test, applied to each business component. The parts are (1) a permitted purpose tied to a Section 174-type expenditure, (2) uncertainty about capability, method, or appropriate design, (3) a process of experimentation, and (4) reliance on the hard sciences. Miss any one, and the activity — and every dollar allocated to it — falls out.
+
+The test is less exotic than its reputation. It does not require novelty, patents, or laboratories. But it does require the taxpayer to identify *what* was uncertain, *what* alternatives were evaluated, and *how* — and IRS exams increasingly probe exactly those questions component by component.
+
+<KeyTakeaway>
+  <p>Section 41(d) is a conjunctive four-part test applied per business component: permitted purpose, technological uncertainty, process of experimentation, and technological in nature. The standard is the taxpayer's own uncertainty, not novelty to the world — but the Section 41(d)(4) exclusions and the substantially-all threshold do the real screening.</p>
+</KeyTakeaway>
+
+## The business component: the unit of analysis
+
+Before applying the test, identify the business component — defined in Section 41(d)(2)(B) as any product, process, computer software, technique, formula, or invention to be held for sale, lease, or license, or used in the taxpayer's trade or business. The test is applied *separately* to each one.
+
+This matters because granularity drives outcomes. "Our ERP migration" is probably not a qualifying component; the custom middleware layer written to reconcile two incompatible data models within it might be. Production processes are components distinct from the products they produce — a plant can qualify for developing a new welding process even if the part being welded is unchanged. The redesigned Form 6765 now forces this discipline into the filing itself: Section G requires business-component-level reporting for larger claimants, as described in [our Section G brief](/rd-tax-credit/form-6765-section-g).
+
+### The shrink-back rule
+
+Treas. Reg. §1.41-4(b)(2) provides the shrink-back rule: if the four-part test fails at the level of the whole component, apply it to the next most significant subset, and continue shrinking until you reach a level that qualifies — or run out of component. A new commercial vehicle may be, in the aggregate, an assembly of known technology; the battery thermal-management subsystem within it may independently satisfy all four parts. The rule cuts both ways. It rescues qualifying subsystems buried in routine products, but it also confines the QREs to the qualifying subset — you do not bootstrap the whole vehicle in because one subsystem qualifies.
+
+## Part one: permitted purpose (the Section 174 test)
+
+The research must be intended to discover information that would eliminate uncertainty, with expenditures eligible for treatment as research or experimental expenditures — historically under Section 174, now encompassing domestic costs under Section 174A (see [how the two regimes relate](/rd-tax-credit/rd-credit-vs-section-174)). Practically, the purpose must be a new or improved *function, performance, reliability, or quality* of a business component.
+
+What fails here is work aimed at style, taste, cosmetics, or seasonal design — expressly non-qualifying. A furniture maker's new chair silhouette does not qualify as such; the joint engineering required to make a cantilevered design hold 300 pounds might.
+
+## Part two: eliminating uncertainty
+
+Uncertainty exists, per Treas. Reg. §1.41-4(a)(3), when the information available to the taxpayer does not establish the *capability* of developing the component, the *method* of developing it, or its *appropriate design*. Any one of the three suffices — and "appropriate design" is the workhorse. A team may be entirely confident the product *can* be built and still be uncertain about which of several designs will meet the requirements.
+
+Two calibration points:
+
+- **The taxpayer's own knowledge is the yardstick.** The discovery test — a late-1990s regulatory effort to require information new to the world — was rejected in the final 2003 regulations. If the answer was genuinely available in the public domain or from the vendor's manual, there is no uncertainty; if the taxpayer had to find out, there is.
+- **Uncertainty is measured at the outset.** That the project succeeded quickly does not disqualify it; that it failed entirely does not disqualify it either. Failed projects are often the cleanest evidence of uncertainty.
+
+## Part three: process of experimentation
+
+This is where most exam disputes live. The taxpayer must engage in a process of experimentation: identifying the uncertainty, identifying one or more alternatives, and evaluating the alternatives through modeling, simulation, systematic trial and error, or similar methods. The regulation demands an evaluative process *capable* of identifying and testing alternatives — not merely effort, and not merely difficulty.
+
+Critically, Treas. Reg. §1.41-4(a)(6) requires that **substantially all** — 80% or more, measured by cost or time — of the activities relating to the business component constitute elements of a process of experimentation. The Seventh Circuit's *Little Sandy Coal* decision (2023) enforced this bluntly: building a first-of-a-kind vessel is not itself experimentation, and the taxpayer could not show that 80% of the activities on each vessel were experimental rather than construction. The 80% test is applied to the component (shrink-back available), and if met, 100% of the component's qualified costs count; if failed, none do. *Siemer Milling* (T.C. Memo. 2019-37) makes the companion point: routine quality testing and plant trials, without documented hypotheses and evaluated alternatives, do not add up to a process of experimentation. Both cases are treated at length in [audit defense](/rd-tax-credit/rd-credit-audit-defense).
+
+## Part four: technological in nature
+
+The process of experimentation must fundamentally rely on principles of the physical sciences, biological sciences, engineering, or computer science. This part rarely fails for industrial and software taxpayers; it exists to wall off economics, market research, management science, and psychology. A pricing-optimization project grounded in behavioral economics fails here no matter how rigorous the A/B testing.
+
+Employees need no particular credentials. A machinist running designed tooling experiments relies on engineering principles regardless of degree.
+
+## Worked examples across three industries
+
+### Software
+
+**Qualifying.** A SaaS company's ingestion pipeline fails above 50,000 events per second. The team identifies three candidate architectures — partitioned queues, a stream-processing rewrite, and a custom batching layer — builds prototypes of two, load-tests both against defined throughput and latency targets, and abandons one after testing reveals unacceptable tail latency. Capability and design uncertainty; alternatives systematically evaluated; computer science principles throughout.
+
+**Non-qualifying.** The same company integrates a payment provider by following the vendor's published API documentation, configures its CRM, and reskins the settings page. No technological uncertainty — the method and design were established — and configuration is adaptation of an existing component. Internal-use software faces an additional hurdle covered in [software development and the credit](/rd-tax-credit/rd-credit-software-development).
+
+### Manufacturing
+
+**Qualifying.** A precision-parts maker must hold ±0.0005-inch tolerances on a new aluminum alloy that galls under its existing tooling. It runs designed trials across tool coatings, feed rates, and coolant chemistry, scrapping instrumented first articles until a parameter set holds tolerance across a production run. The process — not the part — is the business component, and the trials are a textbook process of experimentation.
+
+**Non-qualifying.** The same shop buys a new five-axis machine and runs the manufacturer's recommended setup, then makes a longstanding part in a larger size using proportional scaling from the existing drawings. Installation, training, and adaptation to a customer's requirement without design uncertainty all fall outside the test — the last under the express adaptation exclusion.
+
+### Engineering
+
+**Qualifying.** A structural firm designs a long-span pedestrian bridge on soil with unusual settlement characteristics. Standard details do not govern; the team models three foundation schemes, iterates the superstructure against wind-tunnel and finite-element results, and revises the design when analysis shows unacceptable resonance. Design uncertainty resolved through modeling and simulation — an expressly recognized form of experimentation.
+
+**Non-qualifying.** The same firm produces permit drawings for a conventional tilt-up warehouse using code-prescribed details, performs a site survey, and prepares a feasibility study for a client. Applying established methods to routine conditions involves no design uncertainty, and surveys and studies are excluded by statute. Note also that if the bridge contract had assigned all design rights to the client and paid regardless of outcome, the funded research exclusion could disqualify the work irrespective of its technical merit — see [the funded research exclusion](/rd-tax-credit/funded-research-exclusion).
+
+## The Section 41(d)(4) exclusions
+
+Even activities passing all four parts are disqualified if they fall into an excluded category:
+
+- **Research after commercial production.** Once a component meets its basic functional and economic requirements and is ready for commercial use, subsequent work — debugging, routine tooling adjustments, production trouble-shooting — is out. Drawing this line is a recurring exam issue.
+- **Adaptation.** Modifying an existing component to a particular customer's requirement, absent new uncertainty.
+- **Duplication.** Reproducing an existing component from plans, specifications, or inspection of the component itself. Reverse engineering, in other words.
+- **Surveys, studies, and routine data collection.** Efficiency surveys, management studies, market research, routine testing and inspection for quality control.
+- **Internal-use software.** Software developed primarily for general and administrative back-office functions must additionally pass the three-prong high-threshold-of-innovation test of Treas. Reg. §1.41-4(c)(6).
+- **Foreign research.** Research conducted outside the United States, Puerto Rico, and U.S. possessions generates no QREs, wherever the payroll runs.
+- **Social sciences, arts, humanities.** Reinforcing part four.
+- **Funded research.** Research funded by grant, contract, or another person, analyzed under the rights and risk tests.
+
+## Practical application
+
+The test rewards taxpayers who frame projects the way the regulation does: name the business component, state the uncertainty at the outset, list the alternatives considered, and keep the artifacts — test plans, simulation runs, failed prototypes, design-review notes — that show evaluation actually occurred. That framing also does most of the work of building [qualified research expenses](/rd-tax-credit/qualified-research-expenses), since wages qualify only to the extent employees performed, supervised, or supported this activity. Where the framing cannot honestly be done — configuration projects, aesthetic redesigns, work fully paid for and owned by someone else — the better answer is to leave the component out of the claim.

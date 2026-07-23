@@ -1,0 +1,112 @@
+---
+title: "How to calculate the research credit: regular method and ASC, worked through"
+description: "The Section 41 credit is computed under the regular method (20% over a fixed-base amount) or the alternative simplified credit (14% over half the prior-three-year average). Worked numeric examples of both, plus the Section 280C reduced-credit election."
+date: "2026-03-17"
+type: "guide"
+tags: ["section-41", "form-6765", "section-280c", "qres"]
+faq:
+  - q: "How is the R&D credit calculated under the ASC?"
+    a: "The alternative simplified credit equals 14% of current-year qualified research expenses that exceed 50% of the average QREs for the three preceding taxable years. A taxpayer with no QREs in any of those three years instead gets 6% of current-year QREs. Most claimants then apply the Section 280C reduced-credit election, multiplying the result by 79%."
+  - q: "What is the fixed-base percentage?"
+    a: "The fixed-base percentage drives the regular method's base amount. For companies with 1984–1988 history, it is aggregate QREs over aggregate gross receipts for those years, capped at 16%. Start-up companies use a statutory 3% for their first five credit years, then a phased-in ratio based on their own recent history."
+  - q: "What is the Section 280C reduced-credit election?"
+    a: "Section 280C would otherwise require reducing deductions (or capitalized amounts) by the research credit claimed. Electing the reduced credit instead multiplies the gross credit by one minus the 21% corporate rate — a 79% haircut — and leaves deductions untouched. The election must be made on an original, timely filed return including extensions."
+  - q: "Which is better, the regular method or the ASC?"
+    a: "It depends on history. The regular method's 20% rate wins when gross receipts have grown much faster than research spending, keeping the base amount low. The ASC wins — or is the only practical option — when 1984–1988 records are unavailable, research intensity is stable or rising, or the fixed-base percentage is high. The choice is annual."
+---
+
+The Section 41 credit is computed one of two ways, elected year by year on Form 6765: the **regular method**, 20% of qualified research expenses above a base amount rooted in the taxpayer's historical research intensity, or the **alternative simplified credit (ASC)**, 14% of QREs above 50% of the prior three years' average QREs. Layered on either is the Section 280C question — reduce your deductions by the credit, or elect a reduced credit at 79% of the gross figure.
+
+This guide works both methods on full numeric examples, then shows the 280C math and how to choose. It assumes the QRE totals are already built; how to build them is covered in [qualified research expenses](/rd-tax-credit/qualified-research-expenses).
+
+<KeyTakeaway>
+  <p>The ASC is arithmetic on three years of QREs; the regular method is a higher rate over a gross-receipts-driven base. For a company with $2M of QREs and typical history, the two produce meaningfully different answers — and the Section 280C reduced-credit election, made only on a timely original return, trims either by 21%.</p>
+</KeyTakeaway>
+
+## The alternative simplified credit
+
+The ASC, in Section 41(c)(4) (redesignated over the years but unchanged in substance), asks only three questions: what are this year's QREs, what were the prior three years' QREs, and did you have any at all?
+
+**Worked example — Meridian Software, calendar 2025.** QREs: 2022 $900,000; 2023 $1,200,000; 2024 $1,500,000; 2025 $2,000,000.
+
+| Step | Computation | Amount |
+| --- | --- | --- |
+| 1. Current-year QREs | given | $2,000,000 |
+| 2. Prior-3-year average | ($900,000 + $1,200,000 + $1,500,000) ÷ 3 | $1,200,000 |
+| 3. ASC base | 50% × $1,200,000 | $600,000 |
+| 4. Incremental QREs | $2,000,000 − $600,000 | $1,400,000 |
+| 5. Gross ASC | 14% × $1,400,000 | $196,000 |
+| 6. Reduced credit (280C election) | 79% × $196,000 | $154,840 |
+
+Effective yield: about 7.7% of total QREs. Two features of the design are visible here. First, even a company with *flat* QREs gets a credit — spend $1.2 million every year and the ASC is 14% of half of it, or $84,000 gross. Second, the base is entirely self-referential: growing your research raises next year's base, so the marginal credit rate on a sustained increase is 14% now, partially clawed back later.
+
+**The no-history rate.** If the taxpayer had no QREs in *any* of the three preceding years, the ASC is 6% of current-year QREs. A first-year claimant with $500,000 of QREs gets $30,000 gross, $23,700 reduced. Note the trap in the other direction: one small year of QREs three years ago knocks you off the 6% rate and onto the 14%-over-base formula, which for a fast-growing company is usually better anyway.
+
+## The regular method
+
+The regular credit is 20% of QREs above the **base amount**, which is the **fixed-base percentage** multiplied by average annual gross receipts for the four preceding years — but never less than 50% of current-year QREs (the "minimum base").
+
+### The fixed-base percentage
+
+For a company that existed during 1984–1988, the fixed-base percentage is its aggregate QREs divided by its aggregate gross receipts over those five years, capped at 16%. Yes: the regular method still turns on Reagan-era records, which is the single biggest practical reason the ASC exists.
+
+### Start-up rules
+
+A company whose first year with both QREs and gross receipts came after 1988 uses the **start-up** rules of Section 41(c)(3)(B): a fixed-base percentage of **3%** for the first five taxable years with QREs, then a phase-in over years six through ten based on specified fractions of the company's own actual QRE-to-receipts ratio for designated recent years, arriving at a fully self-determined ratio from year eleven.
+
+**Worked example — Calder Instruments, calendar 2025.** A start-up-rule taxpayer in its fourth credit year (fixed-base percentage: 3%). QREs 2025: $2,000,000. Gross receipts: 2021 $8,000,000; 2022 $10,000,000; 2023 $12,000,000; 2024 $14,000,000.
+
+| Step | Computation | Amount |
+| --- | --- | --- |
+| 1. Current-year QREs | given | $2,000,000 |
+| 2. Average annual gross receipts (prior 4 years) | ($8M + $10M + $12M + $14M) ÷ 4 | $11,000,000 |
+| 3. Tentative base amount | 3% × $11,000,000 | $330,000 |
+| 4. Minimum base | 50% × $2,000,000 | $1,000,000 |
+| 5. Base amount | greater of steps 3 and 4 | $1,000,000 |
+| 6. Incremental QREs | $2,000,000 − $1,000,000 | $1,000,000 |
+| 7. Gross regular credit | 20% × $1,000,000 | $200,000 |
+| 8. Reduced credit (280C election) | 79% × $200,000 | $158,000 |
+
+The minimum base binds here — a common outcome for research-intensive start-up-rule companies — capping the regular credit at an effective 10% of QREs (20% × 50%). Had Calder's receipts been $40 million on average, the tentative base ($1.2 million) would have exceeded the minimum and the credit would shrink; had its fixed-base percentage been the 16% cap, the base would have been $1.76 million and the credit only $48,000 gross. The regular method punishes historically research-intensive companies and rewards those whose receipts outran their research.
+
+**For the same $2,000,000 of 2025 QREs, the three computations diverge widely.**
+
+<BarChart
+  title="Gross credit on $2,000,000 of 2025 QREs, by method"
+  unit="$"
+  note="Illustrative companies described in the worked examples above; amounts before the Section 280C reduced-credit election."
+  data={[
+    { label: "ASC, growing history (Meridian)", value: 196000, display: "$196,000" },
+    { label: "Regular, start-up 3% FBP (Calder)", value: 200000, display: "$200,000" },
+    { label: "ASC, no prior QREs (6% rate)", value: 120000, display: "$120,000" },
+    { label: "Regular, 16% FBP, $40M receipts", value: 48000, display: "$48,000" },
+  ]}
+/>
+
+## Section 280C: the reduced-credit election
+
+Because QREs are also deductible (currently under Section 174A for domestic costs), the Code prevents a double benefit. Section 280C(c) requires the taxpayer either to **reduce its deduction** (or capitalized amount) by the credit, or to **elect a reduced credit** equal to the gross credit times (1 − 21%), the maximum corporate rate.
+
+The arithmetic on Meridian's $196,000 gross ASC:
+
+| Approach | Credit | Deduction effect | Federal tax effect at 21% |
+| --- | --- | --- | --- |
+| Full credit, reduced deduction | $196,000 | Deductions cut $196,000 → tax up $41,160 | Net benefit $154,840 |
+| Reduced-credit election | $154,840 | None | Net benefit $154,840 |
+
+At a 21% marginal federal rate the two are economically identical — which is why the election is usually framed as a simplification, not a saving. It matters at the margins: taxpayers in losses (where the deduction cut has no current cost but the addback flows through state returns), states that piggyback federal taxable income without allowing the credit (where the election avoids a state tax increase), and pass-throughs whose owners face rates other than 21%. The election must be made on an **original, timely filed return (including extensions)** — it cannot be made on an amended return, which is a genuine trap for credits first claimed retroactively. The interaction with the deduction regimes is developed further in [the credit versus Section 174](/rd-tax-credit/rd-credit-vs-section-174).
+
+## Choosing between the methods
+
+The election is annual and made on Form 6765 (the ASC election, once on a timely return, applies for that year; you may switch methods year to year on originally filed returns, though an ASC election cannot be made or revoked on an amended return). Rules of thumb:
+
+- **No usable 1984–1988 records and not a start-up-rule taxpayer:** ASC, full stop. Reconstructing a fixed-base percentage without records is an exam loser.
+- **Start-up-rule taxpayer in the 3% years with receipts modest relative to QREs:** run both; the regular method's 20% rate frequently wins until the minimum base binds, and even then 10% effective beats many ASC outcomes.
+- **High fixed-base percentage or receipts growing with research:** ASC.
+- **Volatile QREs:** the ASC base averages three years, so a spike year does well; a trough year after a spike can produce zero.
+
+Whatever the method, the credit lands on Form 6765 — now with business-component reporting under [Section G](/rd-tax-credit/form-6765-section-g) — flows into the Form 3800 general business credit, and any unused amount carries back one year and forward twenty under [Section 39](/rd-tax-credit/rd-credit-carryforward-rules). Qualified small businesses may instead direct up to $500,000 against payroll taxes via the [payroll offset](/rd-tax-credit/payroll-tax-offset-startups).
+
+## Where calculations go wrong
+
+Three recurring errors, all fixable at claim time and expensive later. First, **consistency**: Section 41(c) requires QREs in base years to be determined on the same basis as the credit year — if you newly identify a category of qualifying wages, you must add it to the prior-three-year ASC base too, not just the numerator. Second, **gross receipts definitions** under the regular method: receipts means receipts, including interest and gross (not net) sales, computed on the same basis year over year, with controlled-group aggregation under Section 41(f) applied before anything else. Third, **the 280C election deadline** — deciding to claim the credit on an amended return means living with the full-credit-reduced-deduction mechanics, and the state consequences should be modeled, not assumed.

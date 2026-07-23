@@ -1,0 +1,119 @@
+---
+title: "Section 174 explained: from full expensing to amortization and back"
+description: "How Section 174 went from immediate expensing to mandatory five- and fifteen-year amortization in 2022, and how new Section 174A restored domestic expensing for tax years beginning after 2024."
+date: "2026-01-13"
+type: "guide"
+tags: ["section-174", "section-174a", "sre-costs", "amortization", "obbba"]
+faq:
+  - q: "Is Section 174 amortization still required in 2026?"
+    a: "Not for domestic research. Under Section 174A, enacted as part of the OBBBA on July 4, 2025, domestic research or experimental expenditures are immediately deductible for tax years beginning after December 31, 2024. Foreign research remains subject to 15-year capitalization under Section 174."
+  - q: "What years did mandatory Section 174 capitalization apply?"
+    a: "Tax years beginning in 2022, 2023, and 2024. During that window, all specified research or experimental (SRE) expenditures — explicitly including software development — had to be capitalized and amortized over 5 years (domestic) or 15 years (foreign), with a half-year of amortization in year one."
+  - q: "What happens to costs capitalized in 2022 through 2024?"
+    a: "Unamortized domestic amounts do not stay stranded. The OBBBA transition rules let all taxpayers deduct the remaining unamortized domestic balance over one or two years beginning with the first tax year after 2024, and small businesses (average annual gross receipts of $31 million or less) may instead amend 2022–2024 returns."
+  - q: "Does Section 174 affect the R&D credit under Section 41?"
+    a: "Yes, in one direction. Section 41 qualified research expenses must first be Section 174 eligible — 174 is the outer boundary, and the Section 41 pool is a narrower subset. Capitalizing or deducting costs under 174 or 174A does not change credit eligibility, but Section 280C coordinates the deduction and the credit."
+  - q: "What counts as a specified research or experimental expenditure?"
+    a: "Costs incident to research in the experimental or laboratory sense — activities intended to eliminate uncertainty about the development or improvement of a product, process, or software. For 2022 and later, any software development cost is treated as an SRE expenditure by statute, regardless of whether it would otherwise meet the uncertainty standard."
+---
+
+For nearly seventy years, Section 174 was one of the least controversial provisions in the Code: research and experimental expenditures were deductible in the year paid or incurred, full stop. That ended for tax years beginning in 2022, when a delayed provision of the Tax Cuts and Jobs Act converted Section 174 into a mandatory capitalization regime — five-year amortization for domestic research, fifteen-year for foreign, with software development swept in by statute. Three years of cash-tax pain later, the One Big Beautiful Bill Act (OBBBA), enacted July 4, 2025, restored immediate expensing for domestic research through a new Section 174A, effective for tax years beginning after December 31, 2024.
+
+This guide covers the full arc: what Section 174 reaches, how the 2022–2024 amortization era actually hit taxable income, and what the restoration does and does not fix.
+
+<KeyTakeaway>
+  <p>Domestic research costs are once again immediately deductible — under new Section 174A, for tax years beginning after December 31, 2024 — while foreign research remains stuck with 15-year amortization under Section 174. Amounts capitalized during 2022–2024 come back through transition elections, not automatically.</p>
+</KeyTakeaway>
+
+## What Section 174 covers: SRE expenditures
+
+Section 174 applies to "specified research or experimental expenditures" — SRE expenditures, in the argot. The core definition predates the TCJA: expenditures incurred in connection with the taxpayer's trade or business which represent research and development costs "in the experimental or laboratory sense." Treas. Reg. §1.174-2 glosses this as activities intended to discover information that would eliminate uncertainty concerning the development or improvement of a product — where "uncertainty" exists if the information available does not establish the capability or method for developing the product, or its appropriate design.
+
+Several features distinguish 174 from an ordinary business deduction under Section 162:
+
+- **Breadth.** Section 174 does not require success, novelty to the industry, or a formal R&D department. Uncertainty about capability, method, or design is enough.
+- **No trade-or-business ripeness requirement.** Under *Snow v. Commissioner*, 416 U.S. 500 (1974), pre-revenue startups can have 174 costs even before an active trade or business exists in the Section 162 sense.
+- **Indirect costs count.** Notice 2023-63 confirmed that SRE expenditures include allocable overhead — rent, utilities, depreciation, and labor costs of employees who support research — not just the direct costs a company books to an R&D cost center. We cover the allocation mechanics in [identifying SRE expenditures](/section-174/identifying-sre-expenditures).
+
+The TCJA added one categorical rule: for tax years beginning after 2021, "any amount paid or incurred in connection with the development of any software" is treated as an SRE expenditure. No uncertainty analysis required; software development is 174 by fiat. That single sentence is why the 2022–2024 era hit the technology sector hardest — see [why software was swept into Section 174](/section-174/section-174-software-development).
+
+## The pre-2022 world: expensing by default
+
+Before 2022, Section 174 offered a choice: deduct research costs currently, or elect to capitalize and amortize over not less than 60 months. Nearly everyone deducted. Software development enjoyed parallel comfort under Rev. Proc. 2000-50, which allowed current deduction of software development costs "in a manner similar to" Section 174. The distinction between 174 costs and ordinary 162 expenses rarely mattered on the deduction side; it mattered mainly as the gateway to the Section 41 research credit.
+
+The TCJA, enacted in December 2017, scheduled the switch to mandatory amortization for tax years beginning after December 31, 2021 — a revenue-raiser placed four years out, which most observers expected Congress to repeal before it took effect. Congress did not.
+
+## The amortization era, 2022–2024
+
+For tax years beginning in 2022 through 2024, capitalization was mandatory:
+
+- **Domestic SRE expenditures**: amortized over 5 years.
+- **Foreign SRE expenditures** (research performed outside the United States, its possessions, and territories): amortized over 15 years.
+- **Midpoint convention**: amortization begins at the midpoint of the year the costs are incurred, so year one yields only a half-year of deduction — 10% of a domestic cost, 3.33% of a foreign one.
+- **No recovery on disposition**: abandoning a project or even disposing of the underlying property did not accelerate the write-off; amortization continued on schedule.
+
+### A worked example: the cash-tax shock
+
+Consider a domestic software company with $10 million of revenue, $6 million of SRE expenditures (all domestic engineering payroll and allocable overhead), and $3 million of other deductible operating costs. Book income is $1 million. Here is taxable income in the first amortization year under each regime.
+
+**The same economic year produces radically different taxable income under expensing versus first-year amortization:**
+
+| Line | Full expensing (pre-2022 / 174A) | Amortization, year 1 (2022–2024) |
+| --- | ---: | ---: |
+| Revenue | $10,000,000 | $10,000,000 |
+| SRE deduction | ($6,000,000) | ($600,000) |
+| Other operating costs | ($3,000,000) | ($3,000,000) |
+| **Taxable income** | **$1,000,000** | **$6,400,000** |
+| Federal tax at 21% | $210,000 | $1,344,000 |
+
+The amortization-year deduction is $600,000 — 10% of the $6 million, reflecting the half-year midpoint convention. The company's tax bill is 6.4 times higher on identical economics. A pre-revenue startup fared worse still: a company with no revenue and $6 million of research spend, which previously showed a $6 million loss, could show positive taxable income once salaries capitalized under 174 exceeded its remaining deductions. The deductions were not lost — they were deferred across the five-year schedule — but the year-one cash outflow was real, and for companies without financing, sometimes existential. Growing R&D budgets meant the wedge compounded each year rather than washing out.
+
+State conformity varied: some states never adopted TCJA capitalization, so companies ran parallel computations for three years.
+
+## The 2025 restoration: Section 174A
+
+The OBBBA did not simply repeal the TCJA change. It enacted a new **Section 174A** governing *domestic* research or experimental expenditures for tax years beginning after December 31, 2024:
+
+- **Immediate deduction** of domestic R&E expenditures, restoring the pre-2022 default.
+- **Elective capitalization** over not less than 60 months, for taxpayers who prefer to spread deductions — relevant where a company wants to preserve income against expiring attributes or Section 382-limited NOLs.
+- **Foreign research unchanged**: SRE expenditures attributable to research performed outside the United States remain capitalized over 15 years under Section 174 itself. The old section survives as the foreign-research regime — see [the 15-year foreign rule](/section-174/foreign-research-15-year).
+
+The full mechanics — including what makes research "domestic," and how 174A interacts with the research credit and Section 280C — are covered in [Section 174A explained](/section-174/section-174a-explained).
+
+### Transition relief for 2022–2024 balances
+
+Amounts capitalized during the amortization era do not automatically spring back. The OBBBA offers a menu:
+
+1. **Small-business retroactivity.** Taxpayers meeting the Section 448(c) gross-receipts test at a $31 million threshold (average annual gross receipts for the prior three years) may apply Section 174A retroactively to tax years beginning after December 31, 2021 — amending 2022, 2023, and 2024 returns to deduct the costs as if capitalization never applied.
+2. **Catch-up deduction for everyone.** All taxpayers may deduct remaining unamortized domestic Section 174 amounts over one or two tax years, beginning with the first tax year after 2024 — typically 2025 for calendar-year filers.
+
+Both paths involve accounting-method-change mechanics; the choice between them turns on rates, NOL posture, and refund interest. We model the trade-offs in [the transition rules guide](/section-174/section-174-transition-rules) and, for small businesses specifically, in [amended return vs. catch-up](/section-174/amended-return-vs-catch-up).
+
+## Section 174 and the Section 41 research credit
+
+Section 174 and Section 41 are frequently conflated. They are different instruments doing different work.
+
+Section 174 (and now 174A) governs the **deduction** — the timing of cost recovery. Section 41 provides a **credit** — a dollar-for-dollar tax reduction computed on qualified research expenses (QREs). The two are linked at the definition: an expense can be a QRE only if it is first eligible under Section 174. Section 41(d)'s four-part test then narrows the pool substantially — technological in nature, process of experimentation, permitted purpose — and the credit reaches only certain cost categories (in-house wages, supplies, 65% of most contract research), not the overhead that 174 sweeps in.
+
+Two practical consequences:
+
+- A company's 174 cost pool is almost always larger than its Section 41 QRE pool. During the amortization era, this asymmetry stung: overhead had to be capitalized under 174 without generating any credit.
+- **Section 280C** polices double benefit. A taxpayer claiming the credit must either reduce its deduction (or capitalized amount) by the credit, or elect a reduced credit under Section 280C(c). With full expensing restored, the 280C computation once again operates against a current deduction rather than an amortization schedule.
+
+For a fuller treatment, see [Section 174 vs. Section 41](/section-174/section-174-vs-section-41) and the primer on [what the R&D credit is](/rd-tax-credit/what-is-the-rd-tax-credit).
+
+## Where disputes still arise
+
+Restoration of expensing lowers the temperature but does not end controversy under 174.
+
+- **Domestic vs. foreign classification.** With a 15-year schedule still attached to foreign research, the situs of research activity — including where contract researchers actually perform work — is now the highest-stakes classification question in the section.
+- **Scope creep in both directions.** Before 2022, taxpayers wanted costs *in* 174 (credit eligibility); during 2022–2024, they wanted costs *out* (avoid capitalization); now the incentives have largely realigned, but amended-return positions for the capitalization years still get examined. The IRS challenges aggressive re-characterization of 2022–2024 costs as Section 162 expenses, particularly routine software maintenance recast as non-developmental.
+- **Transition elections.** Method-change filings and small-business amended returns each carry their own procedural traps — see [Section 481(a) and Section 174](/section-174/section-481a-and-174) and the general [Form 3115 guide](/fundamentals/form-3115-accounting-method-changes).
+
+<Callout label="When this doesn't help">
+  <p>Section 174A is a timing benefit, not free money. A taxpayer with large NOL carryforwards, or one already in a loss, gets little current value from accelerated deductions — and may affirmatively prefer the elective 60-month capitalization to avoid deepening a limited NOL. Foreign-heavy R&D operations get no relief at all.</p>
+</Callout>
+
+## The bottom line
+
+Section 174 is now a two-track regime. Domestic research or experimental expenditures — including domestic software development — are deductible as incurred under Section 174A, with an election to amortize over at least 60 months for those who want it. Foreign research stays on a 15-year clock under Section 174 proper. The 2022–2024 capitalization era survives only in its residue: unamortized balances working through the transition rules, amended-return refund claims for small businesses, and a body of guidance (chiefly Notice 2023-63) that continues to define what an SRE expenditure is. For CPAs, the compliance question has shifted from "how do we amortize this" to "where was this research performed, and which transition path recovers the stranded balance fastest."

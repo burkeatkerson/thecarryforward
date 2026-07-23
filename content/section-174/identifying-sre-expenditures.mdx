@@ -1,0 +1,96 @@
+---
+title: "Identifying SRE expenditures: what belongs in the Section 174 pool"
+description: "How to build the specified research or experimental expenditure pool: direct costs, allocable indirect costs, the statutory software development sweep, funded research, and the line against ordinary Section 162 expenses — with documentation approaches that survive exam."
+date: "2026-04-07"
+type: "guide"
+tags: ["sre-costs", "section-174", "software", "section-41", "section-174a"]
+faq:
+  - q: "What costs count as SRE expenditures under Section 174?"
+    a: "Costs incident to research in the experimental or laboratory sense: labor of people performing, supervising, or directly supporting research; materials and supplies consumed; depreciation and rent allocable to research use; certain patent costs; and — by statute for post-2021 years — any cost of software development. Allocable indirect costs such as utilities and facilities overhead are included."
+  - q: "Do indirect costs and overhead have to be included in Section 174?"
+    a: "Yes. Notice 2023-63 requires allocation of indirect costs that directly benefit or are incurred by reason of SRE activities — rent, utilities, insurance, depreciation, and support labor — using a consistent, reasonable allocation method. The pool is not limited to the direct costs a company books to its R&D cost center."
+  - q: "Is all software development a Section 174 cost?"
+    a: "For tax years beginning after 2021, yes — the statute treats any amount paid or incurred in connection with software development as an SRE expenditure, without a separate uncertainty analysis. Post-launch maintenance, routine bug fixes without enhancement, and configuration of purchased software generally fall outside development and remain deductible under Section 162."
+  - q: "Are reimbursed or funded research costs SRE expenditures?"
+    a: "Generally not for the contractor who bears no financial risk and retains no substantial rights in the results — those costs are ordinary costs of performing services. A contract researcher that bears risk (fixed-price with performance obligations) or retains rights to use the results typically does have SRE expenditures. The funding party analyzes its payments under the contract-research rules."
+  - q: "Why does SRE identification still matter now that Section 174A allows expensing?"
+    a: "Three reasons: foreign SRE costs still amortize over 15 years, so the pool must be built and split by geography; Section 41 credit eligibility starts from 174 eligibility; and the 2022–2024 capitalized balances flowing through the transition rules depend on how the pool was defined in those years."
+---
+
+Every Section 174 question — how much to deduct under Section 174A, how much sits on the 15-year foreign schedule, how much stranded 2022–2024 balance the transition rules release, what feeds the Section 41 credit — starts with the same exercise: identifying the pool of specified research or experimental (SRE) expenditures. The restoration of domestic expensing lowered the stakes for domestic costs but did not eliminate the exercise. The pool still has to be built, allocated, and defended.
+
+This guide sets out what goes in, what stays out, and how to document the difference.
+
+<KeyTakeaway>
+  <p>The SRE pool includes direct research costs, allocable indirect costs, and — categorically — software development, but excludes routine production, post-development maintenance, and research performed without risk or rights for someone else. A consistent, written allocation methodology is the difference between a defensible pool and an exam problem.</p>
+</KeyTakeaway>
+
+## The definitional core: experimentation and uncertainty
+
+SRE expenditures are costs incident to research and development "in the experimental or laboratory sense." Treas. Reg. §1.174-2 supplies the operative test: activities intended to discover information that would eliminate **uncertainty** concerning the development or improvement of a product, where uncertainty exists if available information does not establish the *capability* of developing the product, the *method* of developing it, or its *appropriate design*. "Product" is broad — it includes processes, formulas, inventions, techniques, patents, and pilot models, whether developed for sale or for internal use.
+
+What the test does not require: success, scientific novelty, a lab, or white coats. What it does require: a genuine open question at the time the cost is incurred. Once capability, method, and design are established, subsequent costs — scaling production, routine quality control, cosmetic changes — are not SRE expenditures.
+
+Under *Snow v. Commissioner*, 416 U.S. 500 (1974), the costs need only be connected to a trade or business in the broad sense; pre-revenue ventures qualify.
+
+## Direct costs
+
+The uncontroversial center of the pool:
+
+- **Research labor.** Wages, bonuses, and payroll costs of employees who perform research, directly supervise it, or directly support it (lab technicians, test engineers, research data staff). This tracks the performance/supervision/support taxonomy familiar from Section 41, though the 174 pool is not limited to Section 41's "qualified" wages.
+- **Materials and supplies** consumed in research, including prototype materials and pilot-model costs.
+- **Contract research** the taxpayer pays for, where the taxpayer bears the financial risk of failure or retains rights in the results (more below).
+- **Patent costs.** Attorney's fees and filing costs for obtaining a patent are classic 174 costs; defending or perfecting title to an existing patent is not.
+
+## Allocable indirect costs
+
+Here 174 diverges sharply from what companies book as "R&D expense." Notice 2023-63 — the governing framework for building the pool, carried forward in substance into the 174A era — requires inclusion of indirect costs that **directly benefit** SRE activities or are **incurred by reason of** them:
+
+- Rent, utilities, insurance, and property taxes on facilities used for research
+- Depreciation on equipment and buildings used in research (the depreciation allocable to research use, not the asset's cost)
+- Repairs and maintenance of research facilities
+- Compensation of support functions serving research — a portion of HR, IT, and facilities labor attributable to the research organization
+
+The allocation method must be reasonable and consistently applied: square footage for facilities costs, headcount or labor hours for support functions, usage logs for shared equipment. The Notice does not prescribe a single method; it prescribes consistency. What it forbids is the shortcut most companies instinctively take — treating the general-ledger R&D cost center as the pool. That figure typically omits allocable occupancy and support costs (understating 174) while sometimes including non-research items like sales engineering (overstating it).
+
+Costs that are *not* required in the pool include general and administrative functions that only indirectly benefit research (the CEO's salary, corporate accounting), interest expense, and — importantly for Section 41 coordination — amounts representing land or property of a character subject to depreciation (the asset capitalizes normally; only its depreciation flows in).
+
+## The software development sweep
+
+For tax years beginning after 2021, the statute short-circuits the uncertainty analysis for one category: **any amount paid or incurred in connection with the development of any software is an SRE expenditure.** No experimentation showing required. This covers software for sale or license, internal-use software, website and app development, and platform work — planning, design, coding, testing up to the point the software is ready for its intended use, and enhancements that add functionality afterward.
+
+Outside the sweep, and generally deductible under Section 162: post-release maintenance that does not add functionality or materially extend capability, routine bug fixes, data conversion, user training, configuration of purchased software without customization rising to development, and hosting or license fees for software the taxpayer merely uses. The history and current relevance of the sweep — it now mostly determines *foreign* treatment and credit eligibility rather than domestic timing — is covered in [our software development brief](/section-174/section-174-software-development).
+
+## Funded and reimbursed research
+
+Research performed **for** someone else follows the risk-and-rights logic:
+
+- A contractor that performs research under a contract where payment is guaranteed regardless of outcome (time-and-materials, cost-plus) and that retains no substantial rights in the results has no SRE expenditures — it has ordinary costs of earning service revenue, deductible under Section 162.
+- A contractor that bears financial risk — a fixed-price contract where payment is contingent on success — or that retains rights to use the research results in its own business generally *does* have SRE expenditures for its costs.
+- The **funding party**'s payments are its own SRE expenditures if it bears the risk or obtains the rights — which is the usual configuration when a company hires a development shop.
+
+The result: the same dollar of research activity is an SRE expenditure to exactly one party, determined by contract terms. Sloppy contracts create either double counting or orphaned costs. The same risk-and-rights analysis, in stricter form, governs the funded-research exclusion under Section 41(d)(4)(H); see [Section 174 vs. Section 41](/section-174/section-174-vs-section-41).
+
+<Callout label="Watch out">
+  <p>Where a domestic company hires a foreign development contractor and the company bears the risk, the company's payments are its SRE expenditures — attributable to research performed where the contractor's people sit. That makes them foreign SRE costs on the 15-year schedule, a result many taxpayers discover only at exam. See the contractor-location discussion in <a href="/section-174/foreign-research-15-year">the foreign research brief</a>.</p>
+</Callout>
+
+## The line against Section 162
+
+The boundary with ordinary business expenses matters in both directions. During 2022–2024 taxpayers wanted costs out of 174 (to avoid capitalization); the IRS challenged recharacterizations of development work as "maintenance." Under 174A the domestic incentive largely dissolves — both routes deduct currently — but the classification still controls three things: foreign treatment, credit eligibility, and the 2022–2024 amended-return and catch-up computations under [the transition rules](/section-174/section-174-transition-rules).
+
+Reliable non-SRE categories: efficiency surveys, market and consumer research, advertising, routine data collection, quality-control testing of established products, management studies, and acquisition of another's patent or technology (that is an acquired intangible, amortized under Section 197 or otherwise — not research).
+
+## Documentation that holds up
+
+The IRS examines SRE pools on methodology, not vibes. A defensible file contains:
+
+1. **A written cost-pool methodology** — which accounts and cost centers feed the pool, which allocation keys apply to indirect costs, and how the domestic/foreign split is made. Update annually; apply consistently.
+2. **Project-level activity records.** Time tracking or a reasonable engineering-time survey mapping labor to projects, plus documentation of where each project's uncertainty lay and when it resolved. This double-services the Section 41 study — the same records support the credit's process-of-experimentation test and the Form 6765 Section G business-component reporting; see [the R&D credit primer](/rd-tax-credit/what-is-the-rd-tax-credit).
+3. **Geographic evidence.** Payroll locations, contractor staffing records, and contract terms establishing where research is performed.
+4. **Contract files** for funded and outsourced research, flagged for risk and rights terms.
+5. **A reconciliation** from book R&D expense (ASC 730) to the tax SRE pool — the differences are expected and explainable; the absence of a reconciliation is what draws questions. The book-tax relationship is treated in [R&D capitalization and financial statements](/section-174/rd-cost-capitalization-financial-statements).
+
+## The bottom line
+
+Building the SRE pool is an allocation exercise anchored in the uncertainty test, widened by mandatory indirect-cost inclusion and the software sweep, and narrowed by the funded-research and post-development exclusions. Expensing under Section 174A removed the domestic timing pain but none of the definitional work: geography, credits, and legacy balances all still run through the same pool. Companies that wrote down their methodology during the capitalization era should keep it running; those that never did now have a lower-pressure window in which to build one.
