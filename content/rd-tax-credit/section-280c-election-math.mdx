@@ -1,0 +1,55 @@
+---
+title: "The Section 280C(c) election: the arithmetic at 21%"
+description: "Section 280C(c) makes you choose: claim the full research credit and add it back to income, or elect a reduced credit of 79% with no addback. At a 21% corporate rate the two are federally identical — the differences live in timing, losses, and state conformity."
+date: "2026-06-02"
+type: "brief"
+level: "working"
+tags: ["section-280c", "section-41", "form-6765"]
+faq:
+  - q: "What is the Section 280C reduced credit election?"
+    a: "Section 280C(c) prevents a double benefit from deducting research costs and crediting them. The taxpayer either includes the full credit amount in income (an addback) or elects a reduced credit equal to the gross credit times one minus the 21% corporate rate — 79% of the full amount — with no addback. The election is made on Form 6765 and only on a timely filed original return."
+  - q: "Is the 280C election worth it at a 21% tax rate?"
+    a: "For a fully taxable C corporation the two routes produce identical federal results: a $100,000 gross credit becomes $79,000 either way — $100,000 minus $21,000 of tax on the addback, or a straight $79,000 reduced credit. The election usually wins anyway because it simplifies the return, avoids inflating federal taxable income that many states use as their starting point, and avoids addback complications in loss years."
+  - q: "Can you make the 280C election on an amended return?"
+    a: "No. The reduced-credit election under Section 280C(c) is valid only on a timely filed original return, including extensions. A taxpayer that discovers a credit later can still claim the full credit with the income addback on an amended return, but the reduced-credit option for that year is permanently gone — one of the few genuinely unfixable deadlines in the research credit."
+---
+
+Section 280C(c) exists to stop a double dip: research costs deducted under Section 174A cannot also generate a tax-free credit on the same dollars. The taxpayer picks its poison annually — take the **full credit** and add the credit amount back to taxable income, or elect the **reduced credit**: the gross credit multiplied by (1 − maximum corporate rate). At today's 21% rate, the reduced credit is 79 cents on the dollar, and for a fully taxable C corporation the two routes are arithmetically identical.
+
+<KeyTakeaway>
+  <p>At a 21% rate, full-credit-plus-addback and the 79% reduced credit produce the same federal number for a taxpaying C corporation. The election still usually wins — for simplicity, state-tax reasons, and loss-year mechanics — but it must be made on the original return or not at all.</p>
+</KeyTakeaway>
+
+## The arithmetic
+
+Take $1,000,000 of QREs producing a $100,000 gross credit for a profitable C corporation:
+
+| | Full credit + addback | Reduced credit election |
+| --- | --- | --- |
+| Gross Section 41 credit | $100,000 | $100,000 |
+| Credit claimed | $100,000 | $79,000 |
+| Income addback | $100,000 | $0 |
+| Tax cost of addback (21%) | $21,000 | $0 |
+| **Net federal benefit** | **$79,000** | **$79,000** |
+
+The identity holds because the election's haircut *is* the corporate rate. Before the TCJA, at a 35% rate, the reduced credit was 65% and the same identity held at that rate. The statutory text is in Section 280C at the [official Internal Revenue Code](https://uscode.house.gov/browse/prelim@title26&edition=prelim); the election box lives on [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765), and it is valid **only on a timely filed original return, including extensions**.
+
+## When the full credit plus addback wins
+
+The identity breaks whenever the addback's tax cost is less than 21 cents on the dollar:
+
+- **Loss companies not electing the payroll offset.** The addback merely shrinks an NOL — a deferred cost at best — while the full credit carries forward at 100 cents. A startup banking credits under [Section 39](/rd-tax-credit/rd-credit-carryforward-rules) for future profitable years preserves 21% more credit by skipping the election, at the price of a smaller NOL.
+- **Payroll-offset electors.** The [payroll offset](/rd-tax-credit/payroll-tax-offset-startups) monetizes the credit currently; electing 280C would shave the monetizable amount by 21% while the addback costs a loss company nothing now. Most QSBs take the full credit.
+- **Effective rates below 21%.** Taxpayers whose marginal federal cost of the addback is diluted — certain FDII positions, expiring NOLs — can come out ahead on the full credit.
+
+The countervailing risk: the addback is income *now*; the carried-forward credit pays off only if profits arrive within 20 years.
+
+## The state conformity kicker
+
+Many states compute taxable income starting from federal taxable income and offer no research credit of their own — or decouple from Section 280C. For a taxpayer in such states, the full-credit route's $100,000 addback inflates the **state** base too, costing state tax with no offsetting state credit; the reduced-credit election keeps federal taxable income clean and the state cost at zero. In a 6% state, that kicker is worth $6,000 on the example — enough to break the federal tie decisively. States that require their own addbacks or conform differently need year-by-year modeling; see the [state credits overview](/rd-tax-credit/state-rd-credits-overview).
+
+<Callout label="Watch out">
+  <p>The election is annual and irrevocable for the year once the original return is filed. Amended-return claims — including lookback studies covering open years — are stuck with full-credit-plus-addback math, which is precisely why late-discovered credits are worth about 79% of what timely-planned ones would net in a conforming state.</p>
+</Callout>
+
+The election decision belongs in the pre-filing calendar described in the [claim process timeline](/rd-tax-credit/rd-credit-claim-process-timeline): model the entity's tax posture, its states, and any payroll-offset plans before the return goes out, because this is the one box that cannot be re-ticked.

@@ -1,0 +1,103 @@
+---
+title: "The software company playbook for Section 174A"
+description: "Section 174A restored expensing for domestic software development, but software companies still have real planning work: splitting engineering orgs into SRE and non-SRE activity, pricing offshore teams under the surviving 15-year rule, and deciding when the 60-month election beats immediate deduction."
+date: "2026-05-12"
+type: "guide"
+level: "working"
+tags: ["software", "section-174a", "section-174", "sre-costs", "amortization"]
+faq:
+  - q: "Is software development still capitalized under Section 174A?"
+    a: "Not if it is domestic. For tax years beginning after December 31, 2024, Section 174A allows immediate deduction of domestic research or experimental expenditures, and software development remains explicitly an R&E activity. Foreign software development is still capitalized over 15 years under Section 174, and taxpayers may elect to amortize domestic costs over at least 60 months instead of deducting them."
+  - q: "Does all engineering payroll count as SRE cost for a software company?"
+    a: "No. Software development is SRE activity, but maintenance of released software, routine configuration, customer support, and installation generally are not. A software company must split its engineering organization by activity — typically using project and ticketing data — because the non-SRE share is an ordinary business expense under Section 162 regardless of any Section 174A election."
+  - q: "Why would a software company elect 60-month amortization instead of expensing under Section 174A?"
+    a: "Mainly to manage losses. A pre-revenue company generates NOLs it cannot use for years, and post-2017 NOLs offset only 80% of future taxable income. Electing to capitalize over 60 months moves deductions into revenue years where they offset income dollar-for-dollar, and can preserve deductions that limitations like Section 382 or the 80% cap would otherwise strand."
+  - q: "How does Section 174A interact with the research credit and Section 280C?"
+    a: "The Section 41 credit is computed independently on qualified research expenses, a narrower set than SRE costs. With expensing restored, claiming the credit again requires either reducing the Section 174A deduction by the credit amount or making the Section 280C(c) reduced-credit election, which cuts the credit by the corporate rate but leaves deductions intact."
+  - q: "Do offshore engineering teams still create a tax penalty after the OBBBA?"
+    a: "Yes. Foreign research remains under 15-year amortization with a half-year convention, so a dollar of offshore development yields roughly a 3.3-cent first-year deduction against 100 cents domestically. Offshore work also generates no Section 41 credit. The labor-cost saving must be weighed against the deferral and the lost credit."
+---
+
+For software companies, the OBBBA ended the worst of Section 174 but not the work. Domestic software development is again immediately deductible for tax years beginning after December 31, 2024 under new [Section 174A](/section-174/section-174a-explained); foreign development still amortizes over 15 years; and the definition of what counts as software development — as opposed to maintenance, configuration, and support — now decides both the foreign pool and the credit base. The planning questions have shifted from "how do we survive capitalization" to "how do we classify, where do we build, and should we ever choose to capitalize on purpose."
+
+This is the operating playbook: mapping the engineering org, pricing the domestic/offshore split, the 60-month election cases, the credit interaction, and a cash-tax forecast for a working hypothetical.
+
+<KeyTakeaway>
+  <p>Software companies should (1) split engineering activity into SRE and non-SRE using project data, (2) model offshore teams at their true after-tax cost under the surviving 15-year rule, (3) consider the 60-month election if pre-revenue and generating NOLs they cannot efficiently use, and (4) revisit the Section 280C election now that deductions are worth taking again.</p>
+</KeyTakeaway>
+
+## Mapping the engineering org: SRE versus not
+
+Since 2022, software development has been statutorily an R&E activity — no gating question about technological uncertainty, no Section 41-style four-part test. That cut both ways under capitalization and still matters under expensing, because the boundary of "development" sets the foreign pool, the 60-month election base, and the workpapers behind the credit. IRS interim guidance in the capitalization era treated these as software development: planning and design, coding, testing up to release, and upgrades and enhancements. It treated these as outside: maintenance activities that do not add functionality (bug fixes to released software in the ordinary course), data conversion, installation, training, customer support, and configuring existing software without development-scale modification.
+
+Mapping a real engineering org onto that line is a data exercise, not a judgment call made once a year in the tax department:
+
+- **Product engineering** — feature development, new products, re-architecture: SRE.
+- **Platform/infrastructure engineering** — mostly SRE (building internal tooling and infrastructure is development), with a carve-out for pure operations work (on-call, incident response, capacity management).
+- **QA** — SRE when testing pre-release code; non-SRE when reproducing customer-reported defects on shipped versions.
+- **DevOps/SRE-the-job-title** — split; pipeline and tooling development is 174 SRE activity, production babysitting is not. The unfortunate acronym collision is permanent.
+- **Solutions/implementation engineering** — configuration and installation for customers is non-SRE; genuinely custom development in a services engagement raises the [contract research question](/section-174/contract-development-who-capitalizes) of whose SRE cost it is.
+- **Support** — non-SRE.
+
+The practical method: classify at the epic or ticket level in Jira (or equivalent), roll up to a percentage per team, and apply those percentages to fully loaded labor. Indirect costs then follow the labor under a documented method — see [cost allocation methods](/section-174/section-174-cost-allocation-methods). The same split should be run annually; org charts drift.
+
+## Domestic versus offshore: the cost model
+
+The OBBBA deliberately preserved the offshoring penalty. Foreign SRE costs — including offshore contract development the U.S. company pays for — remain under Section 174's 15-year amortization with a half-year first-year convention, and foreign work earns no Section 41 credit. The statutory scheme is at [26 U.S.C. §174 and §174A](https://uscode.house.gov/browse/prelim@title26&edition=prelim), as amended by [the OBBBA](https://www.congress.gov/bill/119th-congress/house-bill/1).
+
+**The chart compares the first-year deduction generated by $1,000,000 of engineering work in three configurations — the cash-tax reason a 45% offshore payroll saving is smaller than it looks.**
+
+<BarChart
+  title="First-year deduction per $1M of engineering spend, 2026"
+  unit="$"
+  note="Illustrative. Domestic assumes Section 174A expensing; foreign reflects 15-year amortization with the half-year convention (1/30 in year one). Blended: 60% domestic / 40% offshore."
+  data={[
+    { label: "All domestic (174A expensing)", value: 1000000, display: "$1,000,000" },
+    { label: "Blended 60/40", value: 613333, display: "$613,333" },
+    { label: "All foreign (15-year)", value: 33333, display: "$33,333" },
+  ]}
+  highlight={2}
+/>
+
+The full comparison for a decision needs three lines: labor cost, tax deferral, and credit. Suppose a 10-engineer pod costs $1.8M domestic or $1.0M offshore. Offshore saves $800K of cash compensation but defers deduction of nearly the entire $1.0M (first-year deduction $33K), and forfeits a credit worth perhaps $90–140K on the domestic alternative. At a 21% rate, the year-one tax cost of the deferral is about $203K, plus the lost credit — real money, though usually not $800K of it. For profitable companies the offshore case often still pencils; for companies burning cash with no taxable income, the deferral costs little today but builds a 15-year tail. Either way the location data must be tracked at the person-and-hours level — see [the foreign research rules](/section-174/foreign-research-15-year).
+
+## The 60-month election: when capitalizing on purpose wins
+
+Section 174A permits an election to capitalize domestic R&E and amortize it over not less than 60 months, beginning when the taxpayer first realizes benefits from the expenditures. Choosing slower recovery sounds perverse; for three fact patterns it is not.
+
+**Pre-revenue companies protecting NOLs.** A startup spending $4M a year on development with no revenue generates NOLs it cannot use. Post-2017 federal NOLs carry forward indefinitely but offset only 80% of taxable income in any carryforward year, so a dollar deducted today into a loss returns at most 80 cents of shelter later — and possibly less after a [Section 382 ownership change](/section-174/section-174-nol-interaction) from the next financing round. Electing 60-month amortization parks the deductions and releases them into (hopefully) revenue years, where current deductions offset income without the 80% haircut.
+
+**Section 382-exposed companies.** Serial financers whose NOLs face annual usage limitations after ownership changes get more from deductions that arise after the change than from pre-change NOLs squeezed through a limitation.
+
+**Companies managing to a taxable-income target.** Interest limitations under Section 163(j), the need to use expiring credits, and state addback regimes occasionally make income today worth more than deduction today.
+
+<Callout label="Watch out">
+  <p>The election is not free optionality. It applies method-wide to the elected expenditures, binds future years absent consent to change (an accounting-method question — see <a href="/fundamentals/form-3115-accounting-method-changes">Form 3115 mechanics</a>), and a company that elects and then becomes profitable sooner than projected has voluntarily deferred deductions it now wants. Model the revenue ramp before electing, and re-run the model annually.</p>
+</Callout>
+
+## The credit and Section 280C, revisited
+
+The [Section 41 research credit](https://www.irs.gov/credits-deductions/businesses/research-credit) is computed on qualified research expenses — wages, supplies, 65% of contract research — a narrower base than SRE costs and one that still excludes foreign work entirely. With expensing restored, the old Section 280C(c) trade is back in its classic form: a taxpayer claiming the credit must either reduce its deduction by the credit amount or elect the reduced credit (the gross credit cut by the 21% corporate rate). During the capitalization era the deduction haircut was cheap because deductions were deferred anyway; under Section 174A, deductions are current and the 280C analysis reverts to the pre-2022 arithmetic. For most profitable C corporations the reduced-credit election remains the simpler and roughly value-equivalent path; for loss companies using the payroll offset, the computation deserves attention rather than habit. Credits are claimed on [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765), whose redesigned Section G business-component reporting means the SRE activity mapping above does double duty.
+
+Startups under $5M in gross receipts should also stack the payroll offset — up to $500,000 against payroll taxes per year — covered in [startup cash planning](/section-174/startup-cash-planning-174a).
+
+## Worked hypothetical: cash-tax forecast
+
+**The table forecasts federal taxable income for Meridian Analytics, a hypothetical software company with $12M revenue, $5M of domestic SRE costs, $1M of offshore SRE costs, and $3.5M of other deductible expenses, under three postures for 2026.** The pre-OBBBA column shows what 2026 would have looked like had TCJA capitalization continued (domestic 5-year, midpoint convention; prior-year layers ignored for clarity).
+
+| Line | 174A expensing | 174A + 60-month election | Old-law capitalization |
+| --- | ---: | ---: | ---: |
+| Revenue | $12,000,000 | $12,000,000 | $12,000,000 |
+| Other expenses | ($3,500,000) | ($3,500,000) | ($3,500,000) |
+| Domestic SRE deduction | ($5,000,000) | ($500,000) | ($500,000) |
+| Foreign SRE deduction (15-yr) | ($33,333) | ($33,333) | ($33,333) |
+| **Taxable income** | **$3,466,667** | **$7,966,667** | **$7,966,667** |
+| Federal tax at 21% | $728,000 | $1,673,000 | $1,673,000 |
+
+Expensing saves Meridian roughly $945,000 of 2026 federal cash tax against either capitalization scenario. Note the 60-month election column matching old law in year one is a coincidence of conventions (60-month amortization with a mid-year start ≈ 10% year one, versus 5-year with half-year = 10%); the schedules diverge thereafter, and the election was never meant for a company with $8M of pre-R&E operating profit. Meridian should expense.
+
+Companies with unamortized 2022–2024 domestic balances layer the catch-up deduction — one or two years, taxpayer's choice — on top of this forecast; small businesses under the $31M gross-receipts threshold can instead amend back to 2022. Those mechanics live in [the transition rules](/section-174/section-174-transition-rules).
+
+## What can still go wrong
+
+The neutral accounting: expensing is not a planning cure-all. States that have not conformed to Section 174A still require capitalization addbacks, so the federal forecast above can overstate the total cash saving materially — see [state conformity](/section-174/section-174-state-conformity). The foreign pool is permanent policy, not a transition artifact. The IRS's exam interest in 2022–2024 positions did not lapse with the law change; taxpayers that under-capitalized in those years (direct labor only, no overhead) took catch-up deductions computed from an understated base, which is a math error stacked on a method error. And the SRE/maintenance boundary that now looks harmless federally still controls the foreign pool, the credit workpapers, and any 60-month election base. The classification muscle built for 2022–2024 should be maintained, not disbanded.

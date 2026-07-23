@@ -49,8 +49,9 @@ function ResultRow({ a }: { a: ArticleMeta }) {
         </div>
         <div className="flex-1">
           <p className="kicker mb-1 font-medium text-[10px] text-ink-mute">
-            {a.type === "guide" ? "Guide" : "Brief"} · {a.readingMinutes} min
-            {a.type === "guide" ? " · In depth" : ""}
+            {a.type === "guide" ? "Guide" : "Brief"} ·{" "}
+            {a.level === "intro" ? "Intro" : a.level === "pro" ? "Pro" : "Working"} ·{" "}
+            {a.readingMinutes} min
           </p>
           <h3 className="font-serif text-2xl font-semibold leading-[1.05] group-hover:text-accent">
             {a.title}

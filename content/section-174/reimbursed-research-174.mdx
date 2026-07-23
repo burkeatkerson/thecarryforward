@@ -1,0 +1,39 @@
+---
+title: "Reimbursed research: who holds the Section 174 cost when someone else pays"
+description: "A research provider paid under contract generally has no SRE expenditures if it performs the work without financial risk and without rights in the results — the costs belong to the funding customer. The test runs as a rough mirror image of the Section 41 funded-research rules, but the two do not always assign the same party."
+date: "2026-06-23"
+type: "brief"
+level: "pro"
+tags: ["section-174", "sre-costs", "section-174a", "transition-rules"]
+faq:
+  - q: "Does a contractor performing research under a reimbursed contract have Section 174 SRE expenditures?"
+    a: "Generally no, if two conditions hold: the contractor bears no financial risk (it is paid regardless of the research's outcome, as under time-and-materials or cost-plus terms) and it obtains no right to use or exploit the resulting product or IP. Meeting both, its costs are ordinary contract-performance costs; the funding customer holds the SRE expenditures."
+  - q: "Can a research provider have SRE expenditures even when fully reimbursed?"
+    a: "Yes. Under the capitalization-era guidance, a provider that retains any substantial right to use the research results in its own business — even non-exclusive rights, such as reusable code or methods — has SRE expenditures despite full reimbursement. That rule pulled many dev shops and CROs into capitalization for 2022–2024 on margins they never kept."
+  - q: "Are the Section 174 reimbursed-research rules the same as the Section 41 funded-research rules?"
+    a: "They rhyme but are not identical. Both turn on financial risk and rights in results, and in the standard cases they are mirror images: the party with risk or rights holds the 174 cost, and the same features defeat the Section 41 funded-research exclusion. But the tests developed separately — Section 41 has its own regulations and case law on inspection-and-acceptance terms — so edge cases can leave both parties, or arguably neither, with the research for a given purpose."
+---
+
+When one party pays another to perform research, Section 174 must decide whose research it is — the same project cannot generate SRE expenditures for both sides on the same dollars. The rule that crystallized in the capitalization-era guidance (Notice 2023-63) assigns the cost by risk and rights: a research provider has no SRE expenditures if it bears no financial risk of the research failing *and* obtains no right to use or exploit the results; fail either prong and the provider holds SRE costs despite being reimbursed. The funding customer, meanwhile, holds SRE expenditures whenever it bears the risk — the classic time-and-materials outsourcing posture. Section 174A carried the framework forward for the expensing era; the statutes sit at [26 U.S.C. §174 and §174A](https://uscode.house.gov/browse/prelim@title26&edition=prelim).
+
+<KeyTakeaway>
+  <p>Reimbursement alone does not strip a provider of SRE expenditures — retained rights do the damage. A dev shop paid cost-plus that keeps reuse rights in its code has SRE costs on work it was fully paid for. The analysis mirrors the Section 41 funded-research rules, but the two tests are drafted separately and can diverge at the edges.</p>
+</KeyTakeaway>
+
+## The two-prong provider test
+
+**Financial risk.** Does payment depend on the research succeeding? Fixed-price development where the provider eats overruns and rework carries risk; time-and-materials and cost-plus arrangements, where the meter runs regardless of outcome, do not. Milestone structures fall in between and turn on whether milestones are genuine success conditions or disguised progress billing.
+
+**Rights in results.** The broader trap. Under the capitalization-era guidance, retaining any substantial right to use the resulting SRE product in the provider's own trade or business — including non-exclusive rights — gives the provider SRE expenditures even with zero financial risk. Standard dev-shop master service agreements that carve out "background IP, tools, and generalized know-how" for provider reuse walked straight into this during 2022–2024: full reimbursement, no risk, and still capitalization on the provider's own cost base. A right that exists only on paper but covers reusable components is still a right.
+
+A provider caught by either prong holds SRE expenditures measured by its own costs of performance (not the contract price) — currently deductible under [Section 174A](/section-174/section-174a-explained) if the work is domestic, amortized over 15 years if its people perform the work abroad (see [the foreign rules](/section-174/foreign-research-15-year)). The customer's side of the same analysis, including the situs consequences of paying an offshore provider, runs on its own track.
+
+## The mirror image in Section 41
+
+The funded-research exclusion of Section 41(d)(4)(H) and Treas. Reg. §1.41-4A runs the same two dials in reverse for the credit: research is "funded" — and excluded from the payer's credit — to the extent the researcher is paid regardless of outcome, and a researcher with no substantial rights in the results cannot claim the credit either. So in the standard postures, 174 and 41 point at the same party. Customer bears risk and takes the IP: customer has the SRE costs *and* the credit (65% of the contract payments as contract research on [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765)). Provider bears risk and keeps rights: provider has both.
+
+But the symmetry is rough, not guaranteed. The Section 41 case law on fixed-price contracts, inspection-and-acceptance clauses, and what counts as "substantial rights" developed independently — see [the funded-research exclusion](/rd-tax-credit/funded-research-exclusion) — and the 174 guidance's "any right to use" formulation is arguably broader than the credit's "substantial rights." The uncomfortable result: a provider can hold 174 SRE expenditures (retained reuse rights) on a contract whose terms simultaneously render the research funded against it for credit purposes. Both sides of every research contract should run both tests separately rather than assuming one answer implies the other.
+
+<Callout label="Drafting note">
+  <p>The allocation is contract-driven, which means it is plannable. Risk terms, IP assignment, and reuse carve-outs decide who capitalizes foreign costs, who claims the credit, and who needed the 2022–2024 capitalization — and a method-consistent change in treatment may require <a href="/fundamentals/form-3115-accounting-method-changes">Form 3115</a>. The indicator-by-indicator walkthrough is in <a href="/section-174/contract-development-who-capitalizes">who capitalizes contract development</a>.</p>
+</Callout>

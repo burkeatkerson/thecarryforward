@@ -1,0 +1,52 @@
+---
+title: "Why the energy modeling software behind a 179D claim matters"
+description: "Section 179D savings must be modeled in software on the Department of Energy's qualified list, against the applicable ASHRAE 90.1 baseline. A claim modeled in unqualified software fails regardless of how efficient the building is — and a modeling report should let a reviewer re-perform the result."
+date: "2026-06-24"
+type: "brief"
+level: "intro"
+tags: ["section-179d", "energy-efficiency", "certification"]
+faq:
+  - q: "What software can be used for a 179D energy model?"
+    a: "Only software on the Department of Energy's qualified software list for Section 179D, published on the DOE's website. The list names specific programs and versions — tools like EnergyPlus-based platforms that can simulate whole-building annual energy costs. A model built in a program or version not on the list does not satisfy Section 179D's calculation requirement, no matter how accurate it is."
+  - q: "What is the ASHRAE 90.1 baseline in a 179D model?"
+    a: "It is the hypothetical comparison building. The modeler simulates a reference building that just meets the applicable version of ASHRAE Standard 90.1 — the energy code for commercial buildings — and compares the actual building's modeled annual energy and power costs against it. The 90.1 version that applies depends on when construction began, so the same building can face different baselines depending on its timeline."
+  - q: "What should a 179D modeling report contain?"
+    a: "Enough for an independent reviewer to re-perform the result: the software name and qualified version, the ASHRAE 90.1 baseline applied, inputs for both the as-designed and reference buildings (envelope, lighting, HVAC, schedules), the resulting annual energy cost for each, and the savings percentage. A report showing only a final percentage, without inputs, does not substantiate the deduction."
+---
+
+A [Section 179D](/energy-incentives/section-179d-explained) deduction is only as good as the energy model behind it, and the law is unusually specific about the tooling: the savings must be calculated in software on the Department of Energy's qualified list, comparing the building against a reference building that just meets the applicable ASHRAE Standard 90.1 baseline. Use the wrong software — or the wrong version — and the claim fails on procedure before anyone looks at the building. For a reader vetting a 179D provider, the software question is the fastest quality screen available.
+
+<KeyTakeaway>
+  <p>179D is a modeled deduction: DOE-qualified software, an ASHRAE 90.1 reference building, and a documented savings percentage. If the provider cannot name the software, its qualified version, and the applicable baseline, the study is not defensible.</p>
+</KeyTakeaway>
+
+## The qualified software list
+
+Section 179D(d) directs that energy savings be calculated under Department of Energy rules, and DOE implements this with a published list of qualified software — specific programs, at specific versions, vetted for simulating whole-building annual energy and power costs. The list lives on the [DOE 179D page](https://www.energy.gov/eere/buildings/179d-commercial-buildings-energy-efficiency-tax-deduction). Two practical consequences follow. First, the requirement is binary: an unlisted tool, or an unlisted version of a listed tool, does not qualify, and no engineering excellence cures that. Second, the qualification attaches to versions over time, so the study file should record exactly which version produced the model — a detail examiners check because it is easy to check.
+
+This is a "modeled savings" regime, not a utility-bill regime: the deduction turns on simulated performance against a hypothetical building, not on what the meters later say. (The one exception, the retrofit alternative that measures a building against its own metered baseline, is covered in our [retrofit brief](/energy-incentives/179d-retrofit-alternative).)
+
+## What the ASHRAE 90.1 baseline is
+
+ASHRAE Standard 90.1 is the model energy code for commercial buildings — minimum requirements for envelope insulation, lighting power, HVAC efficiency, and so on. The 179D model builds two buildings in software: the building **as designed**, and a **reference building** of the same size and use that merely meets the applicable 90.1 version. The deduction depends on how far the real design's simulated annual energy and power costs fall below the reference building's; 25% savings is the entry point for post-2022 property, per the IRS's [179D overview](https://www.irs.gov/credits-deductions/energy-efficient-commercial-buildings-deduction).
+
+Which 90.1 version applies depends on when construction began — later baselines are stricter, so the same design shows smaller savings against a newer baseline. That makes the construction-start date a modeling input, not just a legal fact, and it is one reason the date deserves documentation (it now also controls eligibility outright, since 179D ends for construction beginning after June 30, 2026).
+
+## What a modeling report should contain
+
+**The test for a report is re-performability: could an independent modeler reproduce the number from what is on the page?**
+
+| Report element | Why it matters |
+| --- | --- |
+| Software name and qualified version | The threshold procedural requirement |
+| ASHRAE 90.1 version applied | Driven by construction start; wrong version, wrong answer |
+| As-designed building inputs | Envelope, lighting power, HVAC, schedules — the claim's substance |
+| Reference building inputs | Shows the baseline was built to code minimum, not softened |
+| Annual energy cost, both buildings | The raw comparison |
+| Savings percentage and system breakdown | Feeds the Form 7205 rate computation |
+
+A report that is a single percentage on letterhead substantiates nothing. The model files themselves should be retained alongside the report, because the certification an engineer signs — and the [inspection and certification steps](/energy-incentives/179d-claim-process) that follow — all rest on this simulation. A softened baseline (a reference building modeled worse than code requires) inflates savings and is the modeling equivalent of an aggressive appraisal: hard for a layperson to spot, straightforward for the IRS's own reviewers to test.
+
+## The intro-level takeaway
+
+You do not need to run EnergyPlus to supervise a 179D claim. You need three answers in writing: which qualified software and version, which 90.1 baseline and why, and where the full inputs are. Providers who answer crisply tend to survive exams; providers who answer with a brochure tend not to.

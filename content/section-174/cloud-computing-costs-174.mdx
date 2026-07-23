@@ -1,0 +1,39 @@
+---
+title: "Cloud computing costs under Section 174: dev is SRE, prod is not"
+description: "Cloud spend supporting software development — dev, test, and staging environments — is an SRE expenditure; the cost of running released software for customers is an ordinary operating expense. The environment the compute serves, not the vendor invoice, draws the line."
+date: "2026-04-28"
+type: "brief"
+level: "working"
+tags: ["cloud-computing", "section-174", "sre-costs", "software"]
+faq:
+  - q: "Are AWS or Azure costs Section 174 SRE expenditures?"
+    a: "Only the portion supporting research activity. Cloud compute, storage, and services used in development, testing, and staging environments for software under development are SRE expenditures. Cloud costs of hosting released software for customers are ordinary operating expenses under Section 162. A single cloud bill routinely contains both, so it must be split by environment or account."
+  - q: "Why does the dev/prod cloud split still matter now that Section 174A restored expensing?"
+    a: "Three reasons. Cloud costs supporting foreign development follow the labor into the 15-year foreign amortization pool. Taxpayers electing 60-month amortization under Section 174A capitalize their dev-environment cloud spend. And 2022–2024 capitalization-era returns, including catch-up deduction computations, remain open to exam on how cloud costs were classified."
+  - q: "How should a company document the SRE portion of its cloud bill?"
+    a: "Use the provider's own structure: separate accounts or subscriptions per environment, resource tagging (env:dev, env:prod), and cost-allocation reports from the billing console. Contemporaneous tagging turns the split into a report; reconstructing it later from architecture diagrams and engineer interviews is expensive and less credible on exam."
+---
+
+Cloud spend splits along one line: compute that supports software development is a Section 174 SRE expenditure, and compute that runs released software for customers is an ordinary operating expense deductible under Section 162. IRS guidance in the capitalization era (Notice 2023-63) said so expressly — costs of computers and hardware, "including... an amount paid or incurred to another party for the right to use computers" for software development, are SRE costs — and the principle carries into [Section 174A](/section-174/section-174a-explained), which changed the recovery of domestic SRE costs, not their definition. The statute is at [26 U.S.C. §174](https://uscode.house.gov/browse/prelim@title26&edition=prelim).
+
+<KeyTakeaway>
+  <p>Dev, test, staging, and CI/CD environments are SRE cloud spend; production hosting of shipped software is operating expense. The split still carries cash consequences for foreign teams, 60-month electors, decoupled states, and open 2022–2024 years — and it is nearly free to document with account separation and tagging.</p>
+</KeyTakeaway>
+
+## Which environments fall on which side
+
+**SRE side.** Development environments; automated test and QA environments; staging and pre-release environments used to validate builds; CI/CD pipeline compute; sandboxes for prototyping; training runs and experiment compute for models under development; and the development share of shared services (source control, artifact registries, observability on dev clusters). These costs are incident to the development activity and follow it — including into the [15-year foreign pool](/section-174/foreign-research-15-year) when the development team they support is offshore.
+
+**Operating side.** Production environments serving customers; disaster-recovery replicas of production; production monitoring and logging; content delivery; and compute behind customer support. Running released software is not developing it — the same boundary that keeps maintenance labor out of the SRE pool.
+
+**The genuinely mixed.** A production environment that also hosts A/B tests of features under development, or "canary" infrastructure, can be split by any reasonable, consistently applied allocation — usage metering or resource tagging beats a flat percentage. Under a 60-month election, an inflated SRE share defers your own deductions; with foreign teams, it inflates the 15-year pool. The general allocation standards are covered in [cost allocation methods](/section-174/section-174-cost-allocation-methods).
+
+## Does the classification still matter under expensing?
+
+For a purely domestic company expensing under Section 174A, dev and prod cloud spend are both currently deductible and the split is bookkeeping. It keeps real cash consequences in four situations: foreign development teams (their supporting cloud spend amortizes over 15 years); a 60-month capitalization election; states that have not conformed to expensing and still require addback (see [state conformity](/section-174/section-174-state-conformity)); and the open 2022–2024 years, where treating dev-environment spend as a current expense understated the capitalized pool — and, later, the catch-up deduction under [the transition rules](/section-174/section-174-transition-rules). Reclassification across those years is an accounting-method question, generally fixed prospectively via [Form 3115](https://www.irs.gov/forms-pubs/about-form-3115) rather than amended returns.
+
+<Callout label="Practice note">
+  <p>Structure the cloud account hierarchy so the tax answer falls out of the billing console: one account or subscription per environment, mandatory env tags enforced by policy, and a monthly cost-allocation export archived with the tax workpapers. The engineering cost-optimization team usually wants the same structure; borrow their work.</p>
+</Callout>
+
+One caution against over-inclusion: cloud spend is an SRE cost because it supports research activity, not because engineers touch it. Corporate IT workloads — email, HR systems, the data warehouse serving finance — are neither dev nor prod product infrastructure, and belong in neither analysis.

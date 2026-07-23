@@ -1,0 +1,57 @@
+---
+title: "Qualified services and the wage QRE: whose pay counts, and how much"
+description: "Wage QREs under Section 41(b)(2) cover three qualified services — direct research, direct supervision, direct support — measured on taxable wages. Which W-2 figure drives the number, and how equity compensation complicates it."
+date: "2026-05-12"
+type: "brief"
+level: "working"
+tags: ["qres", "section-41", "documentation"]
+faq:
+  - q: "What are qualified services for the R&D credit?"
+    a: "Section 41(b)(2)(B) defines three: engaging in qualified research (the hands-on work), direct supervision (the first-line management of researchers), and direct support (services like machining prototype parts or running test equipment that directly assist the research). Higher-level management, general administration, HR, and facilities work are not qualified services regardless of how research-adjacent they feel."
+  - q: "Which W-2 wages count for the R&D credit?"
+    a: "Wages as defined for income tax withholding under Section 3401(a) — in practice, the Box 1 figure on the W-2, adjusted for the credit's purposes. That includes bonuses and the spread on nonqualified stock option exercises, but excludes pre-tax 401(k) deferrals (which reduce Box 1) and amounts that never hit withholding wages. Self-employed individuals and partners have no W-2 wages; their earned income does not generate wage QREs."
+  - q: "Does stock compensation count as R&D credit wages?"
+    a: "Only when it produces Section 3401(a) wages in the year. Nonqualified option exercises and RSU vesting create withholding wages and can be QREs to the extent the employee performed qualified services that year. Incentive stock options generally never do — a qualifying ISO disposition produces no withholding wages — so heavily ISO-compensated startups have smaller wage QREs than their burn rate suggests."
+---
+
+Wages are the engine of nearly every research credit claim — typically 70% to 90% of total QREs — and Section 41(b)(2) qualifies them only for **qualified services**, measured on a specific wage base. Getting both halves right, the *who* and the *how much*, is most of the wage computation.
+
+<KeyTakeaway>
+  <p>Three services qualify: doing research, directly supervising it, and directly supporting it. The wage base is Section 3401(a) withholding wages — effectively W-2 Box 1 — which pulls in NQSO spreads and bonuses but excludes 401(k) deferrals, ISO income, and everything paid to partners and the self-employed.</p>
+</KeyTakeaway>
+
+## The three qualified services
+
+**Engaging in qualified research** is the scientist, engineer, or developer actually conducting the experimentation — designing, coding, testing, analyzing.
+
+**Direct supervision** is the *immediate* supervision of qualified research: the engineering manager reviewing designs and directing experiments. Treas. Reg. §1.41-2(c)(2) draws the line at first-line management — a research VP who manages the managers is not directly supervising, and her wages fall out even if she holds the patents. The regulation's text is at [eCFR Title 26](https://www.ecfr.gov/current/title-26).
+
+**Direct support** covers services in *direct* support of research: the machinist fabricating a prototype part, the technician running the test rig, the person cleaning equipment used in experiments. It does not cover general and administrative functions — payroll, recruiting, facilities — even when they serve the research department exclusively. Support is about the activity supported, not the department billed.
+
+Time in qualified services is then measured per employee, and the [80% substantially-all rule](/rd-tax-credit/substantially-all-rule) rounds up: an employee at 80%+ qualified time counts 100% of wages; below that, the actual percentage.
+
+## The wage base: what "wages" means
+
+Section 41(b)(2)(D) borrows the Section 3401(a) definition — wages for income tax withholding. As a practical matter that is the **W-2 Box 1** figure, with consequences people miss in both directions:
+
+| Item | In the wage base? | Why |
+| --- | --- | --- |
+| Salary, bonus, commissions | Yes | Ordinary withholding wages |
+| NQSO exercise spread | Yes | Withholding wages in the exercise year |
+| RSU vesting income | Yes | Withholding wages at vest |
+| Pre-tax 401(k) deferrals | No | Excluded from 3401(a)/Box 1 |
+| Employer payroll taxes, benefits | No | Not wages to the employee |
+| ISO exercise (qualifying) | No | No withholding wages ever arise |
+| Partner guaranteed payments, SE income | No | Not 3401(a) wages — no wage QRE |
+
+The last row bites professional firms and LLC startups: a founder taxed as a partner generates zero wage QREs no matter how much research she performs. (Her *self-employment* labor is simply outside the wage category.) Entity choice quietly moves credit dollars.
+
+## Equity compensation wrinkles
+
+Equity comp creates timing mismatches worth flagging. An NQSO spread lands in the wage base in the **exercise** year — so a 2026 exercise by an engineer who did qualified research in 2026 inflates that year's wage QRE, applying that year's qualified-time percentage to a number swollen by options granted for years of prior service. The IRS has generally accepted the year-of-inclusion approach, since the statute keys to wages paid, but large exercise-year spikes draw questions, and a spike also distorts the ASC's prior-three-year base in later computations. ISOs, by contrast, never enter: a qualifying disposition produces capital gain, not wages, and even the disqualifying-disposition income is not withholding wages. Startups paying engineers substantially in ISOs should model the credit on cash comp only.
+
+<Callout label="Watch out">
+  <p>Bonuses and severance for people no longer performing research, and sign-on bonuses paid before any qualified services, belong out of the claim even though they sit in Box 1. The wage base is necessary, not sufficient — every dollar still needs a qualified-services percentage attached.</p>
+</Callout>
+
+The per-person build — wages times qualified percentage, person by person, tied to projects — is what [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765) Section G ultimately reports, and the time records behind the percentages are the exam battleground covered in the [documentation playbook](/rd-tax-credit/rd-credit-documentation-playbook). For where wages sit among the other QRE categories, see [qualified research expenses](/rd-tax-credit/qualified-research-expenses).

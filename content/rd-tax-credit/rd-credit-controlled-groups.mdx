@@ -1,0 +1,54 @@
+---
+title: "Controlled groups and the research credit: aggregation under Section 41(f)"
+description: "Section 41(f) computes the research credit as if a controlled group were one taxpayer, then allocates it among members by proportionate QREs. Why the single-taxpayer rule exists, how the allocation works, and how acquisitions and dispositions reset base amounts."
+date: "2026-06-16"
+type: "brief"
+level: "pro"
+tags: ["controlled-groups", "section-41", "qres"]
+faq:
+  - q: "How is the R&D credit computed for a controlled group?"
+    a: "Section 41(f)(1) treats all members of a controlled group of corporations — and all trades or businesses under common control — as a single taxpayer. QREs, gross receipts, and base-period history are combined, one group credit is computed, and each member is allocated a share proportionate to its own QREs relative to the group's total."
+  - q: "What ownership level creates a controlled group for Section 41?"
+    a: "Section 41(f)(5) uses the Section 1563 controlled-group definitions but with a more-than-50% ownership threshold in place of 80%. Parent-subsidiary chains, brother-sister groups under common owners, and trades or businesses under common control (including partnerships and proprietorships) are aggregated — a private-equity portfolio can be one Section 41 taxpayer without realizing it."
+  - q: "How do acquisitions affect the R&D credit base amount?"
+    a: "Section 41(f)(3) requires the acquirer to inherit the acquired business's QRE and gross-receipts history for computing base amounts, and the seller to shed it. An acquisition therefore raises the buyer's ASC three-year QRE average — shrinking its incremental credit — while a disposition lowers the seller's. Ignoring the adjustment overstates one side's credit and understates the other's."
+---
+
+Section 41 is an incremental credit, and increments can be manufactured by fragmentation: split research into a new subsidiary with no QRE history and its "growth" over a zero base would mint credits from nothing. Section 41(f) closes the door. All members of a **controlled group** — using the Section 1563 tests with a more-than-50% threshold — and all trades or businesses under common control are treated as a **single taxpayer**. One computation, one credit, then an allocation.
+
+<KeyTakeaway>
+  <p>The group computes one credit on combined QREs and history, and each member takes a share proportional to its own QREs. Acquisitions and dispositions carry QRE history with them under Section 41(f)(3), so deal activity mechanically resets base amounts — a modeling step routinely missed in diligence.</p>
+</KeyTakeaway>
+
+## The single-taxpayer rule
+
+For computation, member boundaries disappear: current-year QREs, prior-year QREs (for the ASC's three-year average), and gross receipts are aggregated across the group, including foreign members' relevant history. The more-than-50% threshold — lower than the 80% used elsewhere in Section 1563 — pulls in structures that consolidated-return rules would leave separate. Common-control rules extend the net past corporations to partnerships and proprietorships under Treas. Reg. §1.41-6 and the Section 52 principles it incorporates; the regulatory text is at [eCFR Title 26](https://www.ecfr.gov/current/title-26), and the code at the [official IRC](https://uscode.house.gov/browse/prelim@title26&edition=prelim).
+
+The rule cuts both ways. It blocks the fragmentation play, but it also means intercompany research arrangements are ignored — a member paying a sister company to perform research does not create 65% contract research; the group sees only the performing member's own wages and supplies. And qualified-small-business tests for the [payroll offset](/rd-tax-credit/payroll-tax-offset-startups) apply at the aggregated level: a startup majority-owned by a fund alongside revenue-generating siblings under common control can fail the $5 million gross-receipts screen on group numbers.
+
+## Allocation among members
+
+Since 2011, the statute allocates the group credit to each member **in proportion to the member's share of the group's QREs** — a clean pro-rata rule replacing the older stand-alone-credit method.
+
+**Example — a three-member group with a $500,000 group credit:**
+
+| Member | QREs | Share of group QREs | Allocated credit |
+| --- | --- | --- | --- |
+| Parent Co | $2,000,000 | 50% | $250,000 |
+| DevSub LLC | $1,600,000 | 40% | $200,000 |
+| SalesCo | $400,000 | 10% | $50,000 |
+| **Group** | **$4,000,000** | **100%** | **$500,000** |
+
+Each member reports its allocated share on its own [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765) (the form's Section E asks the controlled-group question directly), and each member's ability to *use* the share depends on its own tax posture — a loss member's allocation simply carries forward under Section 39 on that member's account. Elections add coordination problems: the [Section 280C](/rd-tax-credit/section-280c-election-math) reduced-credit election is made member by member on original returns, and inconsistent member filings are a recurring cleanup item.
+
+## Why acquisitions change base amounts
+
+Section 41(f)(3) is the provision deal models forget. When a taxpayer acquires the major portion of a trade or business (or a separate unit of one), the acquirer must **include the acquired business's QREs and gross receipts** in its own history for base-amount purposes, with interim-year proration; the disposing taxpayer excludes them going forward.
+
+The consequences are mechanical. A buyer with a $3 million three-year QRE average acquiring a target that historically ran $2 million of QREs computes future ASC bases on roughly a $5 million combined average — so the combined company's credit is incremental over the *combined* history, not the buyer's alone. Post-deal claims that keep computing on the buyer's stand-alone base overstate the credit, and the inherited-history rule likewise defeats the tactic of buying a research team and treating its spend as growth over zero. On the sell side, a carve-out sheds history and can *increase* the seller's go-forward credit. Diligence should always request the target's QRE history, not just its credit carryforwards — the carryforwards transfer subject to their own Section 383 limits, but the history transfers by operation of Section 41(f)(3) regardless.
+
+<Callout label="Watch out">
+  <p>Group membership is tested on facts that change mid-year — fund ownership crossing 50%, options treated as exercised under Section 1563 attribution. A company that becomes a group member computes and allocates as a member for that year, and its prior stand-alone computations do not bind the group. Annual re-testing belongs on the claim checklist alongside the QRE build described in the documentation playbook.</p>
+</Callout>
+
+For the computation each member's allocation feeds into, see [how to calculate the credit](/rd-tax-credit/how-to-calculate-the-rd-credit); for the record-keeping the aggregated computation demands across entities, see the [documentation playbook](/rd-tax-credit/rd-credit-documentation-playbook).

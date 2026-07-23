@@ -37,6 +37,11 @@ export function SiteFooter() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/courses" className="text-ink-soft hover:text-accent">
+                    Courses
+                  </Link>
+                </li>
+                <li>
                   <Link href="/glossary" className="text-ink-soft hover:text-accent">
                     Glossary
                   </Link>

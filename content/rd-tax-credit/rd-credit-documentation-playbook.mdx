@@ -1,0 +1,136 @@
+---
+title: "The R&D credit documentation playbook: what to capture, when, and why"
+description: "A category-by-category record-keeping playbook for the Section 41 research credit: what to capture for wages, supplies, and contract research, which time-tracking approaches survive exam, and a retention schedule that maps records to the four-part test."
+date: "2026-04-07"
+type: "guide"
+level: "working"
+tags: ["documentation", "audit-defense", "qres", "four-part-test", "section-41"]
+faq:
+  - q: "What documentation does the IRS require for the R&D tax credit?"
+    a: "No single document is mandated, but Treas. Reg. §1.6001-1 requires records sufficient to substantiate the credit. In practice that means contemporaneous evidence tying each qualified research expense — wages, supplies, contract research — to identified business components and to the Section 41(d) four-part test: project lists, time records or allocation studies, technical documents showing uncertainty and experimentation, and invoices or contracts."
+  - q: "Is contemporaneous time tracking required for the R&D credit?"
+    a: "No statute or regulation requires contemporaneous time tracking, and courts have accepted credible estimates under the Cohan doctrine. But defensibility runs on a spectrum: project-coded timesheets survive exam almost intact, quarterly allocation surveys mostly survive, and after-the-fact interview-based estimates draw the deepest haircuts. Start tracking prospectively; reconstruct only for open prior years."
+  - q: "How long should R&D credit records be kept?"
+    a: "Keep them for the life of the credit plus the assessment period. Because unused research credits carry forward up to 20 years under Section 39, records supporting a credit generated in 2026 may need to survive into the late 2040s — the IRS can examine the computation of a carryforward in the year it is used, not just the year it arose."
+  - q: "What is a business component for R&D credit documentation?"
+    a: "Under Section 41(d)(2)(B), a business component is a product, process, computer software, technique, formula, or invention held for sale, lease, license, or use in the taxpayer's trade or business. The four-part test applies separately to each business component, so documentation must map expenses to specific named components — the redesigned Form 6765 Section G now asks for exactly this."
+---
+
+The research credit is lost in examinations far more often for failures of proof than for failures of law. The IRS does not prescribe a specific form of substantiation; instead, Treas. Reg. §1.6001-1 requires records sufficient to establish the amount of any credit claimed, and Section 41 supplies the substance those records must demonstrate — qualified research, on identified business components, generating qualified research expenses (QREs) in a specific year. This playbook sets out what to capture for each QRE category, ranks the time-tracking approaches by how they actually fare in exam, and gives a retention schedule keyed to the credit's unusually long life.
+
+<KeyTakeaway>
+  <p>Documentation must connect three things: a dollar of expense, a named business component, and evidence that the work on that component satisfied the four-part test. Records that make only one or two of those connections — payroll registers without projects, technical files without dollars — are where credits go to die.</p>
+</KeyTakeaway>
+
+## The structure of proof: expense, component, test
+
+Think of substantiation as a three-legged stool. First, the **expense** must be real and in the right year — payroll registers, invoices, general ledger detail. Second, the expense must attach to a **business component** as defined in Section 41(d)(2)(B): a product, process, software, technique, formula, or invention. Third, the work on that component must satisfy the **four-part test** — permitted purpose, technological in nature, elimination of uncertainty, and a process of experimentation (the [four-part test explained](/rd-tax-credit/four-part-test-explained) covers the substance).
+
+Most companies have leg one in abundance and legs two and three hardly at all. An accounting system knows what it paid every engineer; it rarely knows which projects they worked, and it never knows whether those projects involved technical uncertainty. The playbook's whole purpose is building the second and third legs contemporaneously, because reconstructing them years later is expensive and discounted on exam.
+
+The [IRS research credit page](https://www.irs.gov/credits-deductions/businesses/research-credit) and the redesigned [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765) have converged on the same architecture: Section G of the 2024-revision form requires business-component-level reporting of QREs for most claimants (taxpayers at or below $1.5 million of QREs and $50 million of gross receipts, and qualified small businesses electing the payroll offset, may skip it). Documentation that already lives at the business-component level makes Section G a report; documentation that doesn't makes it a research project every filing season.
+
+## What to capture, by QRE category
+
+### Wages
+
+Wage QREs under Section 41(b)(2) are taxable wages for **qualified services**: direct research, direct supervision, and direct support. The records that matter:
+
+- **A project inventory.** A maintained list of business components with a short technical narrative each: the objective, the uncertainty at the outset, the alternatives evaluated. One page per project is enough; zero pages per project is fatal.
+- **Individual-to-project time allocation.** The heart of the wage claim — see the ranking below.
+- **Role documentation.** Job descriptions or org charts establishing who performs, supervises, or supports research. A first-line engineering manager qualifies for direct supervision; a VP two levels up generally does not.
+- **The 80% test trail.** Where an employee's qualified-service time reaches 80%, Treas. Reg. §1.41-2(d)(2) allows 100% of wages — but you must be able to show the 80%, per person, per year. See [the substantially-all rule](/rd-tax-credit/substantially-all-rule).
+- **Payroll tie-out.** Box 1-basis wages by person, reconciled to the W-3, so the examiner can trace claimed dollars to filed payroll returns.
+
+### Supplies
+
+Supplies are tangible property (other than land or depreciable property) used in the conduct of qualified research. Capture:
+
+- Purchase orders and invoices coded to project, not just to a supplies GL account.
+- For prototypes and pilot builds, bills of materials tied to the specific experimental build — and disposition records (scrapped, torn down, sold) because sale of a supply-built prototype invites the argument that the materials were production inventory.
+- Exclusion screens documented: general and administrative supplies, travel, overhead, and depreciable equipment do not count, and a file showing you screened them out is itself persuasive.
+
+### Contract research
+
+For the 65% category (Section 41(b)(3)), the contract file is the documentation:
+
+- The executed agreement, with the payment and rights clauses flagged — the taxpayer must bear economic risk and retain substantial rights, or the [funded research exclusion](/rd-tax-credit/funded-research-exclusion) applies.
+- Statements of work describing the technical tasks, so the contractor's work itself can be mapped to the four-part test.
+- Invoices and proof of payment, with amounts "paid or incurred" in the credit year identified — prepayments for research performed in a later year belong to the later year.
+
+## Time tracking, ranked by defensibility
+
+**Every approach below can support a credit; they differ in how much of it survives.** The ranking reflects exam experience and the case law, from *Union Carbide* (estimates accepted where credible) to *Siemer Milling* (claims denied where the process of experimentation was undocumented).
+
+| Rank | Approach | How it works | Exam experience |
+| --- | --- | --- | --- |
+| 1 | Project-coded timesheets | Hours charged to project codes as worked | Strongest; disputes shift to whether projects qualify, not whether hours are real |
+| 2 | Sprint/ticket-system data | Jira, Azure DevOps, or lab notebooks mined for effort by component | Nearly as strong; contemporaneous and system-generated, though it needs a mapping layer |
+| 3 | Quarterly allocation certifications | Each researcher certifies percentage splits by project every quarter | Generally accepted; short recall window keeps estimates credible |
+| 4 | Annual manager surveys | Managers allocate their teams' time once a year | Accepted with haircuts; recall bias is the examiner's opening argument |
+| 5 | After-the-fact interviews | A study provider interviews staff about prior years | Weakest; *Cohan*-style estimation may save something, but rounded, uniform percentages (everyone at 80%) invite wholesale disallowance |
+
+Two practice notes. First, precision beats coverage: a credible 62% for a key engineer is worth more than an implausible 95%. Percentages that cluster exactly at 80% — the substantially-all threshold — are a known audit flag. Second, whatever the method, have the *individual* sign or certify where possible. An allocation the engineer has never seen is hearsay about her own time.
+
+## Project accounting: the connective tissue
+
+The single highest-leverage change most companies can make is adding a project dimension to the general ledger and payroll systems. It need not be elaborate — a project code on supply purchases, a cost-center or project field in the time system, contractor invoices referencing SOW numbers. Once expenses carry project codes, the QRE computation becomes a query rather than a study, Form 6765 Section G populates from the trial balance, and the [QRE categories](/rd-tax-credit/qualified-research-expenses) reconcile to books.
+
+Project accounting also disciplines the claim. Costs that cannot be coded to a research project — general IT, facilities, executive time — visibly fall out, which is exactly the screening the IRS wants to see performed.
+
+## Mapping records to the four-part test
+
+Each element of Section 41(d) has natural documentary evidence. The table below is the nexus examiners look for — a record on the left with no corresponding element on the right is decoration; an element with no record is a finding waiting to be written.
+
+**Records mapped to the four-part test elements they prove:**
+
+| Four-part test element | Records that prove it |
+| --- | --- |
+| Permitted purpose (new or improved function, performance, reliability, quality) | Project charters, product requirement documents, design specifications |
+| Technological in nature | Engineering drawings, code repositories, lab protocols, staff credentials |
+| Elimination of uncertainty | Design review minutes noting open technical questions, feasibility analyses, failed-approach memos |
+| Process of experimentation | Test plans and results, iteration logs, prototype build records, A/B or simulation output, version histories |
+
+The fourth row is where claims fail. In *Siemer Milling Co. v. Commissioner*, the Tax Court denied credits not because flour-milling process work couldn't qualify but because the taxpayer could not show a systematic process of evaluating alternatives. Test plans and recorded results — even informal ones — are the difference between "we experimented" and evidence of experimentation. The regulations at [Treas. Reg. §1.41-4](https://www.ecfr.gov/current/title-26) describe the process of experimentation in exactly these terms: identifying uncertainty, identifying alternatives, and evaluating them.
+
+## A retention schedule that respects the 20-year carryforward
+
+Because the credit carries forward 20 years under Section 39 (and back one), the assessment window on a credit is effectively open until three years after the return using the last carryforward dollar. Retention has to follow the credit, not the calendar. See [carryforward rules](/rd-tax-credit/rd-credit-carryforward-rules) for the mechanics.
+
+**Suggested retention schedule by record class:**
+
+| Record class | Examples | Retain until |
+| --- | --- | --- |
+| Credit computation file | QRE workpapers, Form 6765 and Section G detail, 280C election | 3 years after the return absorbing the final carryforward dollar |
+| Time and allocation records | Timesheets, surveys, certifications | Same as computation file |
+| Technical project files | Charters, test plans, results, design reviews | Same as computation file (electronic archives make this cheap) |
+| Contracts and invoices | Contract research agreements, SOWs, supply invoices | Same as computation file |
+| Payroll and GL support | Registers, W-2/W-3, trial balances | Standard 4-year payroll retention, extended if credits remain unused |
+| Base-period data (regular method) | 1984–1988 QREs and gross receipts, or start-up base years | Permanently, while the regular method remains in use |
+
+The last row surprises people: a taxpayer on the regular credit method must be able to substantiate its fixed-base percentage indefinitely, which for older companies means records from the 1980s. It is one of the quieter reasons the alternative simplified credit dominates in practice.
+
+## What survives exam, and what doesn't
+
+Patterns from exams and the litigated cases are consistent enough to state plainly.
+
+**What survives.** Contemporaneous, system-generated records (time systems, ticket data, test logs). Project-level QRE builds that tie to the GL and payroll returns. Technical narratives written by engineers, in engineering language, close in time to the work. Reasonable, varied allocation percentages certified by the individuals. Documented screening — the memo showing what you excluded and why.
+
+**What doesn't.** Uniform percentages applied across whole departments. Studies consisting of interview summaries with no underlying documents. Narratives written by the study provider in identical boilerplate across projects. Claims where the business components were first identified during the exam. Estimates untethered to any contemporaneous record — *Little Sandy Coal Co. v. Commissioner* shows the substantially-all analysis failing for want of activity-level evidence, and oral history alone rarely fills the gap.
+
+<Callout label="Watch out">
+  <p>A perfect technical file cannot rescue an expense that fails the statute — funded research, foreign research, post-commercial-production work, and adaptation projects are excluded under Section 41(d)(4) no matter how well documented. Documentation proves qualification; it cannot create it.</p>
+</Callout>
+
+## A day-one checklist
+
+For a company starting fresh — or resetting after a painful study — the minimum viable system:
+
+1. Stand up a project inventory: one row per business component, owner, one-paragraph technical objective, status.
+2. Add project codes to the time system (or commit to quarterly allocation certifications on a recurring calendar).
+3. Route supply purchases and contractor invoices through project codes; flag every research contract for a rights-and-risk review at signing.
+4. Require a short test plan and a recorded result for each significant experiment — a wiki page or a ticket is sufficient.
+5. Quarterly, reconcile project-coded costs to the GL; annually, run the four-part test and exclusion screens per component and memo the outcome.
+6. Archive the credit-year file — computation, allocations, technical documents — as a single package, and label it with the carryforward retention date.
+
+None of this is exotic, and most of it improves engineering management independent of tax. The [audit-readiness framework](/fundamentals/audit-readiness-documentation) applies across incentives; the research credit simply raises the stakes, because the examiner's default position is that undocumented time is not qualified time. Build the record while the work happens, and the exam becomes an exercise in production rather than persuasion.

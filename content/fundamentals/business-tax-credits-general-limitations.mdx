@@ -1,0 +1,105 @@
+---
+title: "The general business credit: how Section 38 limits what you can actually use"
+description: "Section 38 stacks most business credits into one pool, Section 38(c) caps how much of that pool can offset tax each year, and Section 39 carries the excess back one year and forward twenty. Here is the machinery, with worked numbers."
+date: "2026-05-12"
+type: "guide"
+level: "pro"
+tags: ["section-38", "carryforward", "fundamentals", "credits-vs-deductions"]
+faq:
+  - q: "What is the Section 38(c) limitation on the general business credit?"
+    a: "Section 38(c) caps the general business credit at net income tax minus the greater of the tentative minimum tax or 25 percent of net regular tax liability above $25,000. For most C corporations the tentative minimum tax is treated as zero, so the practical cap is roughly 75 percent of regular tax above the first $25,000. Excess credit carries back one year and forward twenty under Section 39."
+  - q: "How long can unused general business credits be carried forward?"
+    a: "Unused general business credits, including the Section 41 research credit, carry back one year and forward twenty years under Section 39. Credits are absorbed first-in, first-out: the oldest carryforward is used before the current-year credit. After twenty years, Section 196 allows a deduction for certain expired credits, a partial consolation at deduction value rather than credit value."
+  - q: "Does an ownership change limit general business credit carryforwards?"
+    a: "Yes. Section 383 applies the Section 382 ownership-change rules to credit carryforwards. After a more-than-50-percentage-point ownership shift, pre-change credits can offset only the tax attributable to the Section 382 limitation amount — loss-company value times the long-term tax-exempt rate. Acquirers routinely discover that a target's credit carryforwards are worth far less post-closing than the balance suggests."
+  - q: "Can the research credit offset the corporate alternative minimum tax or BEAT?"
+    a: "Partially. General business credits do not reduce the corporate alternative minimum tax (CAMT) itself, though a CAMT liability generates a credit against future regular tax. Under BEAT, the research credit is one of the credits partially protected in computing the base erosion minimum tax through 2025-era rules, but the interaction is computed on Form 8991 and can still strand credit value."
+---
+
+Most federal business credits — the [research credit](https://www.irs.gov/credits-deductions/businesses/research-credit), the work opportunity credit, many energy credits — do not stand alone. Section 38 pools them into a single "general business credit," and Section 38(c) caps how much of that pool can offset tax in any year: net income tax minus the greater of the tentative minimum tax or 25% of net regular tax liability above $25,000. Whatever the cap strands carries back one year and forward twenty under Section 39, absorbed oldest-first.
+
+That machinery — stack, cap, carry — determines whether a credit computed on a study is cash this year, cash in 2031, or a deduction-value scrap in 2046. Practitioners who model the credit but not the limitation routinely overstate the benefit.
+
+<KeyTakeaway>
+  <p>Section 38 aggregates most business credits into one pool; Section 38(c) generally limits use to about 75% of regular tax above the first $25,000; Section 39 carries the excess back one year and forward twenty, FIFO. Ownership changes (Section 383), BEAT, and the corporate AMT can each further strand credits — the computed credit is a ceiling, not a check.</p>
+</KeyTakeaway>
+
+## How Section 38 stacks the credits
+
+Section 38(b) lists the component credits — several dozen, from the investment credit to the research credit under Section 41 to the employer-provided childcare credit — and sums them into the current-year general business credit. Order matters within the stack: Section 38(d) absorbs the components in the order listed in 38(b), which controls *which* credit is treated as used when the cap bites and therefore which credit carries forward. The full text is worth reading directly at the [Internal Revenue Code](https://uscode.house.gov/browse/prelim@title26&edition=prelim); summaries reliably omit the ordering rules.
+
+The aggregation has a practical consequence: a taxpayer claiming both a research credit and, say, a work opportunity credit does not get two separate limitations. They compete for the same headroom.
+
+## What does the Section 38(c) limitation actually allow?
+
+The formula: the credit allowed for the year cannot exceed the excess of **net income tax** over the **greater of** (i) the tentative minimum tax or (ii) **25% of net regular tax liability above $25,000**.
+
+For C corporations, the pre-2018 corporate AMT's tentative minimum tax is treated as zero for this purpose (the new corporate alternative minimum tax runs on separate rails — more below), so prong (ii) usually controls. Worked numbers:
+
+**A corporation with $500,000 of net income tax and $600,000 of available Section 38 credits can use only $381,250 of them this year.**
+
+| Step | Amount |
+|---|---|
+| Net income tax | $500,000 |
+| Net regular tax liability above $25,000 | $475,000 |
+| 25% of that excess | $118,750 |
+| Tentative minimum tax (treated as zero) | $0 |
+| Greater of the two | $118,750 |
+| **Section 38(c) limit: $500,000 − $118,750** | **$381,250** |
+| Credit stranded to Section 39 | $218,750 |
+
+<BarChart
+  title="Where $600,000 of general business credit goes against $500,000 of tax"
+  unit="$"
+  note="Worked example from this article; assumes a C corporation with tentative minimum tax of zero."
+  highlight={0}
+  data={[
+    { label: "Credit usable this year", value: 381250, display: "$381,250" },
+    { label: "Tax that must still be paid (25% floor)", value: 118750, display: "$118,750" },
+    { label: "Credit carried to other years", value: 218750, display: "$218,750" },
+  ]}
+/>
+
+The 25% floor is the point: Congress decided profitable taxpayers should not zero out with credits. Roughly a quarter of regular tax above the first $25,000 is always payable, no matter how large the credit pool. For individuals and passthrough owners, the tentative minimum tax prong is live — a taxpayer in the AMT zone can find prong (i) far more restrictive than the 25% floor, and "specified credits" under Section 38(c)(4), including eligible small business research credits in certain years, get relief from the TMT prong. Check the current statute; this subsection has been amended repeatedly.
+
+## Section 39: one back, twenty forward, oldest first
+
+Excess credit is not lost — yet. Section 39 carries it back one year (a refund claim for last year, filed on Form 1045/1139 or an amended return, subject to the [refund statute of limitations](/fundamentals/statute-of-limitations-refunds)) and forward twenty years.
+
+Absorption is strictly FIFO under Section 38(d): in any year, carryforwards are used oldest vintage first, then the current-year credit, then carrybacks into that year. Three consequences:
+
+1. **Vintage tracking is mandatory.** A taxpayer with 2019, 2022, and 2025 credits must know which dollars were absorbed in which year — Form 3800 requires it, and Section 383 (below) makes it matter at exit.
+2. **The current-year credit is the one that carries.** Because old credit absorbs first, a taxpayer generating credit faster than the cap allows pushes each new year's credit further down the queue.
+3. **Expiry is real.** After year twenty, Section 196 permits a deduction for certain expired credits, including the research credit — worth 21 cents on the dollar to a corporation instead of 100. The [carryforward mechanics for the research credit specifically](/rd-tax-credit/rd-credit-carryforward-rules) follow this same schedule.
+
+## What happens to credit carryforwards after an ownership change?
+
+Section 383 imports the Section 382 regime: after an "ownership change" — a more-than-50-percentage-point shift in 5% shareholders over a three-year testing period — pre-change credits can offset only the tax liability attributable to the annual Section 382 limitation (loss-company equity value times the long-term tax-exempt rate, a rate that has hovered in the low single digits). The mechanics live in Treas. Reg. §1.383-1, on [eCFR Title 26](https://www.ecfr.gov/current/title-26).
+
+The arithmetic is brutal for credit-heavy startups. A company worth $10 million at change with a 3.5% rate has a $350,000 annual *income* limitation; the credit usable each year is only the **tax** on that sliver — at 21%, about $73,500 of credit per year, against a carryforward that may run into the millions. Venture-backed companies routinely trigger ownership changes at financing rounds without noticing. Any acquirer pricing a target's Form 3800 balance should assume a Section 383 haircut until a study proves otherwise.
+
+## Credits against BEAT and the corporate AMT
+
+Two parallel minimum-tax regimes interact with the credit pool, briefly:
+
+- **BEAT (Section 59A).** The base erosion minimum tax is computed by comparing 10% of modified taxable income to regular tax *reduced by credits* — so credits, by lowering the comparison baseline, can mechanically increase BEAT. The statute carves partial protection for the research credit and certain Section 38 credits in the computation; the interaction is a Form 8991 exercise, not an afterthought.
+- **Corporate AMT (CAMT).** The 15% book-minimum tax enacted in 2022 is not reduced by general business credits. A CAMT payer can find fresh research credits unusable in the CAMT year, though the resulting CAMT credit and the Section 39 carryforward both preserve value for later regular-tax years.
+
+Neither regime eliminates credit value; both defer it, sometimes for years.
+
+## Why do unusable credits pile up, and what should you do?
+
+Credits accumulate when generation outruns the cap: pre-profit startups, loss years, NOL-sheltered income (an NOL deduction reduces the tax the credit needs to offset), Section 383 events, and CAMT years. A large Form 3800 carryforward schedule is common; a *managed* one is not. The toolkit:
+
+- **Elect the payroll offset if eligible.** Qualified small businesses can apply up to $500,000 of research credit against payroll taxes via [Form 8974](https://www.irs.gov/forms-pubs/about-form-8974) — converting a stranded income-tax credit into near-term cash. The election is only available on a timely filed original return; see the [planning-calendar consequences](/fundamentals/tax-planning-calendar-incentives).
+- **Model the 280C election annually.** The reduced-credit election trades credit size for deduction size; a taxpayer who cannot use the credit for a decade may prefer the deduction now. This is the classic [credits-versus-deductions](/fundamentals/credits-vs-deductions) trade with a time-value twist.
+- **Sequence deductions and credits.** Accelerating deductions (bonus depreciation, Section 174A expensing) into a year with expiring-vintage credits can be exactly wrong — it shrinks the tax base the old credit needed. Sometimes the right move is to *slow* deductions.
+- **Protect vintages in M&A.** Pre-transaction Section 382/383 studies, and purchase agreements that price the haircut.
+
+<Callout label="Watch out">
+  <p>The one-year carryback is a use-it-or-lose-it refund claim with its own limitations period. A taxpayer who discovers a prior-year credit late — say, via an amended-return research credit study — may find the carryback year closed while the carryforward survives. Compute the credit before the carryback window shuts, not after.</p>
+</Callout>
+
+## When the limitation analysis does not matter
+
+If the taxpayer pays substantial regular tax every year, generates modest credits, and has stable ownership, Section 38(c) is a formality — Form 3800 absorbs everything and this article is trivia. The machinery matters at the margins: startups, loss companies, acquisitions, minimum-tax payers, and anyone whose credit study produces a number larger than a quarter of their tax bill. For those taxpayers, the limitation — not the credit computation — is where the modeling belongs, and it is also where the IRS looks least and the calendar punishes most.

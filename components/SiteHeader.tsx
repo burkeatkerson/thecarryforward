@@ -12,7 +12,13 @@ function editionDate(): string {
   });
 }
 
-export function SiteHeader({ activeCluster }: { activeCluster?: string }) {
+export function SiteHeader({
+  activeCluster,
+  activeNav,
+}: {
+  activeCluster?: string;
+  activeNav?: "courses" | "index" | "glossary" | "about";
+}) {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-ink bg-paper shadow-[0_2px_12px_rgba(30,26,20,.08)]">
       <a
@@ -38,10 +44,22 @@ export function SiteHeader({ activeCluster }: { activeCluster?: string }) {
             aria-label="Site"
             className="kicker flex items-center gap-3 text-[11px] tracking-[0.09em] sm:gap-5"
           >
-            <Link href="/the-index" className="hidden text-ink hover:text-accent sm:inline">
+            <Link
+              href="/the-index"
+              className={`hidden sm:inline ${activeNav === "index" ? "text-accent" : "text-ink hover:text-accent"}`}
+            >
               The Index
             </Link>
-            <Link href="/glossary" className="hidden text-ink hover:text-accent sm:inline">
+            <Link
+              href="/courses"
+              className={activeNav === "courses" ? "text-accent" : "text-ink hover:text-accent"}
+            >
+              Courses
+            </Link>
+            <Link
+              href="/glossary"
+              className={`hidden sm:inline ${activeNav === "glossary" ? "text-accent" : "text-ink hover:text-accent"}`}
+            >
               Glossary
             </Link>
             <Link href="/about" className="hidden text-ink hover:text-accent md:inline">

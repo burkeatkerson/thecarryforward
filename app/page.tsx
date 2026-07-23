@@ -3,6 +3,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { clusters } from "@/lib/clusters";
 import { getAllArticles, getClusterArticles } from "@/lib/content";
+import { courses, getCourseLessons, LEVEL_LABEL, totalMinutes } from "@/lib/courses";
+import { CourseCardProgress } from "@/components/progress";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 const MACRS_5YR = [20, 32, 19.2, 11.52, 11.52, 5.76];
@@ -251,6 +253,42 @@ export default function HomePage() {
                 >
                   Open the full index — all {all.length} pieces →
                 </Link>
+              </div>
+            </div>
+
+            {/* ——— Courses ——— */}
+            <div className="mt-8 border-t-2 border-ink pt-5">
+              <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+                <h2 className="font-serif text-2xl font-semibold">Courses</h2>
+                <Link
+                  href="/courses"
+                  className="kicker text-[11px] font-medium text-accent hover:text-accent-deep"
+                >
+                  Guided tracks · all {courses.length} →
+                </Link>
+              </div>
+              <div className="grid gap-6 md:grid-cols-3">
+                {courses.slice(0, 3).map((co) => {
+                  const lessons = getCourseLessons(co);
+                  return (
+                    <div key={co.slug} className="flex flex-col border border-ink p-4">
+                      <p className="kicker text-[10px] text-accent">
+                        Course · {lessons.length} lessons · {LEVEL_LABEL[co.level]} ·{" "}
+                        {totalMinutes(lessons)} min
+                      </p>
+                      <h3 className="mt-2 flex-1 font-serif text-[19px] font-semibold leading-tight">
+                        <Link href={`/courses/${co.slug}`} className="hover:text-accent">
+                          {co.title}
+                        </Link>
+                      </h3>
+                      <div className="mt-3">
+                        <CourseCardProgress
+                          ids={lessons.map((l) => `${l.cluster}/${l.slug}`)}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 

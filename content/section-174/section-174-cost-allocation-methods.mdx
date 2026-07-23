@@ -1,0 +1,129 @@
+---
+title: "Allocating indirect costs to SRE activities: methods that survive exam"
+description: "Section 174 has always reached beyond direct research labor to the overhead that supports it — rent, utilities, depreciation, and supervisory time. This guide covers which indirect costs must be allocated to SRE activities, what a reasonable allocation method looks like, and the errors that draw examiner attention."
+date: "2026-04-14"
+type: "guide"
+level: "pro"
+tags: ["section-174", "sre-costs", "section-174a", "software"]
+faq:
+  - q: "Do indirect costs like rent and utilities have to be included in Section 174 SRE costs?"
+    a: "Yes. Section 174 specified research or experimental expenditures include costs incident to research activities, not just direct labor and supplies. Rent, utilities, insurance, depreciation on research equipment, and allocable overhead supporting SRE activities must be included in the SRE cost pool under any reasonable, consistently applied allocation method."
+  - q: "What is a reasonable method for allocating indirect costs to research under Section 174?"
+    a: "Any method that reflects the relationship between the cost and the research activity, applied consistently. Common keys are research labor dollars or hours for general overhead, square footage for facilities costs, and headcount for shared services. The method must be documented and cannot be reverse-engineered each year to minimize the capitalized amount."
+  - q: "Does indirect cost allocation still matter now that Section 174A restored expensing?"
+    a: "Yes, for three reasons. Foreign SRE costs still amortize over 15 years, so indirect costs supporting foreign research must be identified and allocated. Taxpayers electing 60-month amortization under Section 174A need the full pool. And 2022–2024 amortization positions, including catch-up deductions, remain open to exam based on how allocations were done."
+  - q: "Are general and administrative costs like HR and accounting allocable to SRE activities?"
+    a: "Only the portion that supports research. A payroll clerk processing engineer paychecks and an HR recruiter hired to staff the development team support SRE activities in part; the CEO's salary and general corporate legal fees generally do not. The line is whether the cost is incident to the research, not merely incident to running a company that happens to do research."
+  - q: "What documentation supports an SRE indirect cost allocation?"
+    a: "A written allocation memo stating the method and keys, the source data behind each key (badge or square-footage records, payroll registers, time data), the general ledger accounts mapped into and out of the pool, and evidence of consistent year-over-year application. Contemporaneous documentation matters because allocation disputes are fact disputes."
+---
+
+Section 174 has never been a direct-cost statute. Specified research or experimental (SRE) expenditures include not only the salaries of the engineers doing the work but the costs "incident to" that work — the rent on the floor they sit on, the utilities that power their machines, the depreciation on the lab equipment they use, and a share of the overhead functions that support them. Any taxpayer that capitalized only direct labor for 2022–2024, or that computes its [Section 174A](/section-174/section-174a-explained) pools that way today, has an incomplete method — and an exam exposure.
+
+The allocation question did not die when the OBBBA restored domestic expensing. Foreign research still amortizes over 15 years, the 60-month election requires a complete pool, and three years of amortization positions remain open. This guide covers what must be allocated, what "reasonable" means, and how to build a method that holds up.
+
+<KeyTakeaway>
+  <p>Indirect costs that support research — facilities, utilities, equipment depreciation, supervisory and support labor — are SRE expenditures and must be allocated to the research pool under a reasonable, documented, consistently applied method. Both over-inclusion (dragging in pure G&A) and under-inclusion (direct labor only) are wrong, and both get challenged.</p>
+</KeyTakeaway>
+
+## Why indirect allocation is required, not optional
+
+The statutory phrase is "research or experimental expenditures," and the regulations under Treas. Reg. §1.174-2 have long read it to mean costs incident to the development or improvement of a product — a formulation that comfortably includes the supporting cost structure, not just the hands-on work. The TCJA-era capitalization regime made the point explicit in IRS guidance: SRE expenditures include labor, materials, depreciation, rent, utilities, insurance, taxes, and overhead allocable to research activities. Section 174A carries the same cost-definition DNA; it changed the recovery period for domestic costs, not the definition of what belongs in the pool. The current regulations are at [Title 26 of the eCFR](https://www.ecfr.gov/current/title-26), and the statute itself at [26 U.S.C. §174](https://uscode.house.gov/browse/prelim@title26&edition=prelim).
+
+This is the single biggest divergence from the Section 41 credit, which counts only wages, supplies, and contract research — no overhead, no rent, no depreciation. A company that builds its 174 pool by copying its credit QREs understates the pool, sometimes by 30–50%. The two computations share source data but not scope.
+
+## Which indirect costs must be allocated
+
+The pool divides into categories with different allocation logic:
+
+**Facilities costs.** Rent, utilities, property insurance, property taxes, building maintenance, and security for space occupied by research personnel. If engineering occupies 40% of the leased square footage, roughly 40% of these costs are SRE expenditures. Depreciation on an owned building follows the same logic — the allocable share of the depreciation deduction is capitalized into the SRE pool rather than deducted as depreciation (a point that surprises people: Section 174 capitalization can capture and re-time other deductions).
+
+**Equipment depreciation.** Depreciation on lab equipment, test rigs, development servers, and engineer workstations used in research is an SRE cost to the extent of research use. The underlying asset still depreciates under its normal [Form 4562](https://www.irs.gov/forms-pubs/about-form-4562) schedule; what moves is the character of the deduction, which becomes part of the research pool. Equipment used partly for research and partly for production is allocated by usage.
+
+**Support and supervisory labor.** First-line engineering managers, QA supporting development (as opposed to post-release support), technical program managers, and the research share of IT, HR, payroll, and recruiting. The test is whether the function supports the research activity: a recruiter sourcing engineers is partly an SRE cost; a recruiter sourcing salespeople is not.
+
+**Software and cloud spend.** Development-environment [cloud and compute costs](/section-174/cloud-computing-costs-174), engineering tooling licenses, and source-control and CI infrastructure supporting SRE activities.
+
+**What stays out.** Interest expense is statutorily excluded. General corporate G&A with no nexus to research — the CEO's compensation, board costs, general legal, investor relations, sales and marketing — is not incident to research and does not belong in the pool. Land acquisition and exploration costs are separately excluded under the regulations.
+
+## What "reasonable method" means
+
+Neither Section 174 nor Section 174A prescribes an allocation formula. The standard is a reasonable method that reflects the relationship between the cost and the research, applied consistently. Three properties define reasonableness in practice:
+
+1. **Causal logic.** The allocation key should track what drives the cost. Facilities costs follow space; people-driven overhead follows headcount or labor dollars; usage-driven costs follow metered usage.
+2. **Consistency.** The same method year over year, and the same method across cost categories of the same kind. A method changed to reach a better answer looks like what it is. A genuine method change for computing SRE costs may be an accounting method change requiring [Form 3115](https://www.irs.gov/forms-pubs/about-form-3115) — see [the accounting-method mechanics](/fundamentals/form-3115-accounting-method-changes).
+3. **Auditability.** The keys must trace to records — square footage to lease exhibits and floor plans, headcount to payroll registers, usage to billing or telemetry data.
+
+<Callout label="Watch out">
+  <p>"Reasonable" is not "any." An allocation that assigns 5% of rent to a department holding 40% of headcount, or that treats all cloud spend as production, will not survive the first document request. The IRS does not have to propose a better method to reject an unreasonable one.</p>
+</Callout>
+
+## Department-based versus project-based approaches
+
+There are two architectures for the allocation, and most companies should run them in sequence.
+
+**Department-based (cost-center) allocation** starts from the general ledger's departmental structure. Each department is classified as wholly SRE (core product engineering), wholly non-SRE (sales), or mixed (IT, facilities, executive). Wholly-SRE departments' costs go in the pool in full, including their allocated share of facilities and shared services. Mixed departments are split by a key — typically the ratio of research headcount or labor dollars to the total population the department serves. This approach is cheap, maps to how the books are kept, and works well when departments are functionally clean.
+
+**Project-based allocation** assigns costs to projects first, then classifies projects as SRE or non-SRE. It is more precise where a single engineering organization does both development and non-SRE work (maintenance, configuration, support), because department-level classification would force an all-or-nothing call on mixed teams. Project data usually comes from ticketing and time-tracking systems, and the indirect costs ride on top of the direct labor via an overhead rate: indirect pool ÷ total research labor dollars, applied to each project's labor.
+
+The hybrid most practitioners land on: classify activity at the project or epic level to split direct engineering labor into SRE and non-SRE, then apply department-based logic to load facilities and support costs onto the SRE labor. The same activity-level data feeds the [software company planning exercise](/section-174/software-companies-174-planning) and the domestic/foreign split.
+
+## A worked allocation: 40-person software company
+
+**The table below builds the full SRE pool for a hypothetical 40-person software company with $7.06M of total operating costs — 25 engineers, of whom activity analysis shows 80% of engineering labor is SRE work.** Engineering holds 25 of 40 heads (62.5%) and occupies 60% of the office by badge-verified floor plan.
+
+| Cost category | Annual total | Allocation key | SRE share | SRE amount |
+| --- | ---: | --- | ---: | ---: |
+| Engineering salaries + benefits | $4,500,000 | Activity analysis (project data) | 80.0% | $3,600,000 |
+| Engineering management | $600,000 | Follows managed labor | 80.0% | $480,000 |
+| Cloud — dev/test environments | $300,000 | Account-tagged usage | 100.0% | $300,000 |
+| Cloud — production | $500,000 | Operating cost, not SRE | 0.0% | $0 |
+| Rent, utilities, insurance | $480,000 | Sq. footage (60%) × SRE labor ratio (80%) | 48.0% | $230,400 |
+| Workstation/server depreciation | $180,000 | Research-use assets | 80.0% | $144,000 |
+| IT, HR, recruiting, payroll support | $400,000 | Headcount (62.5%) × SRE ratio (80%) | 50.0% | $200,000 |
+| Sales, marketing, G&A, executive | $1,100,000 | No research nexus | 0.0% | $0 |
+| **Total** | **$8,060,000** | | | **$4,954,400** |
+
+<BarChart
+  title="Where the $4.95M SRE pool comes from"
+  unit="$"
+  note="Illustrative 40-person software company; indirect categories add roughly 27% on top of direct SRE labor."
+  data={[
+    { label: "Direct engineering labor", value: 3600000, display: "$3,600,000" },
+    { label: "Supervisory labor", value: 480000, display: "$480,000" },
+    { label: "Dev/test cloud", value: 300000, display: "$300,000" },
+    { label: "Facilities allocation", value: 230400, display: "$230,400" },
+    { label: "Support functions", value: 200000, display: "$200,000" },
+    { label: "Equipment depreciation", value: 144000, display: "$144,000" },
+  ]}
+  highlight={0}
+/>
+
+Two observations. Indirect costs added about $1.35M — 27% — on top of direct SRE labor; a direct-labor-only pool would have missed a quarter of the number. And the layered keys matter: facilities costs are cut first by space (60%) and then by the SRE share of the people in that space (80%), because engineering's floor supports both its SRE and non-SRE work.
+
+## Common over-inclusion errors
+
+Over-inclusion mattered most in 2022–2024, when every dollar in the pool was a dollar deferred; it still matters for foreign pools and 60-month elections.
+
+- **Sweeping in all G&A.** Applying a flat overhead rate to the entire G&A block, including sales commissions and investor relations, capitalizes costs with no research nexus.
+- **Production cloud and hosting.** Costs of running the released product for customers are operating expenses, not SRE costs — the dev/prod line is the whole game; see [cloud costs under Section 174](/section-174/cloud-computing-costs-174).
+- **Post-release maintenance labor.** Bug triage, patching, and customer support on shipped software is not software development under the TCJA-era guidance, yet blanket "all engineering is SRE" methods capitalize it anyway.
+- **Interest.** Statutorily excluded; occasionally captured by careless overhead rates that start from total operating expenses.
+
+## Common under-inclusion errors
+
+Under-inclusion is the live exam risk in an expensing world where taxpayers still amortize foreign costs — and it was an understatement of the catch-up base for some.
+
+- **Direct labor only.** The most common error, usually inherited from a credit study.
+- **Copying Section 41 QREs.** Excludes overhead, facilities, depreciation, and the 35% haircut-free portion of contract research by construction.
+- **Missing depreciation recharacterization.** Equipment depreciation supporting research is an SRE cost even though it is "already deducted" elsewhere on the return.
+- **Ignoring stock-based compensation and bonuses.** Total compensation of research personnel, not base salary, drives both the direct pool and labor-based allocation keys.
+- **Orphaned foreign overhead.** Offshore facilities and support costs follow their labor into the [15-year foreign pool](/section-174/foreign-research-15-year); allocating overhead only to domestic labor quietly under-states the foreign balance.
+
+## Documentation that carries the burden
+
+Allocation disputes are factual, and the taxpayer bears the burden. The file should contain: a method memo (categories, keys, rationale, effective date); the key source data (floor plans and lease exhibits, payroll registers by department, project-time extracts, cloud billing by tagged account); a GL mapping showing every account's disposition into or out of the pool; and a year-over-year consistency schedule. Where the method changes — say, from headcount to labor dollars for shared services — document why, and evaluate whether the change is a method change requiring [Form 3115](https://www.irs.gov/forms-pubs/about-form-3115) rather than a mere refinement of facts.
+
+## When precision is not worth buying
+
+Neutrality requires saying so: for a domestic-only company currently expensing under Section 174A with no 60-month election, the SRE/non-SRE boundary and the indirect allocation have little current cash consequence — everything is deductible either way, and the allocation exercise is a compliance formality that supports the [Form 6765 credit computation](https://www.irs.gov/forms-pubs/about-form-6765) only indirectly. The full apparatus earns its cost where classification changes timing: foreign operations, a 60-month election, open 2022–2024 years, or a state that decoupled from expensing (see [state conformity](/section-174/section-174-state-conformity)). Scale the method to the stakes — but write it down either way, because the cheapest time to build an allocation file is the year the costs are incurred.

@@ -1,0 +1,46 @@
+---
+title: "Contract development: two parties, one project, whose Section 174 cost?"
+description: "When a customer hires a development shop, Section 174 assigns the SRE expenditures by financial risk and rights in the results — not by who writes the code or who signs the checks. Read the contract's risk and IP terms first; they usually decide the whole analysis."
+date: "2026-07-07"
+type: "brief"
+level: "working"
+tags: ["section-174", "sre-costs", "software", "section-174a"]
+faq:
+  - q: "When a company hires a dev shop, which party has the Section 174 SRE expenditures?"
+    a: "Follow risk and rights. The customer has SRE expenditures when it bears the financial risk of the development failing (time-and-materials or cost-plus terms) — measured by its payments to the provider. The provider has SRE expenditures, measured by its own costs, if it bears financial risk (fixed-price) or retains any substantial right to use the results, even non-exclusively."
+  - q: "Can both the customer and the dev shop have Section 174 costs on the same project?"
+    a: "Yes, on different dollars. A time-and-materials customer holds SRE expenditures equal to its contract payments; if the provider also retains reuse rights in the code, the provider simultaneously holds SRE expenditures equal to its own performance costs. The amounts differ — contract price versus cost base — so there is no true double counting of the same dollar."
+  - q: "Does it matter where the dev shop's engineers are located?"
+    a: "Decisively, for whichever party holds the cost. SRE expenditures are domestic or foreign based on where the research is physically performed. A U.S. customer bearing risk on a contract staffed from a vendor's offshore office has foreign SRE expenditures amortized over 15 years under Section 174, regardless of the vendor's U.S. address, and the work generates no Section 41 credit."
+---
+
+Outsourced development forces Section 174 to pick a party, and it picks by economics: the SRE expenditures belong to whoever bears the financial risk of the research failing, and additionally to a provider that keeps rights to exploit the results. Who employs the engineers, who invoices whom, and whose name is on the repository are all irrelevant. In the standard arrangement — customer pays time-and-materials, takes full IP assignment — the customer holds the SRE costs, deductible currently under [Section 174A](/section-174/section-174a-explained) if the work is performed in the United States and amortized over 15 years if it is not. The governing statutes are at [26 U.S.C. §174 and §174A](https://uscode.house.gov/browse/prelim@title26&edition=prelim), with the definitional regulations in [Title 26 of the eCFR](https://www.ecfr.gov/current/title-26).
+
+<KeyTakeaway>
+  <p>Risk and rights allocate the cost: T&M customer with full IP assignment → customer's SRE expenditure; fixed-price or rights-retaining provider → provider has SRE costs too, on its own cost base. Location of performance then sets domestic versus 15-year foreign treatment for whoever holds the cost.</p>
+</KeyTakeaway>
+
+## The indicators, in order of weight
+
+**The table summarizes how the common contract features cut.** No single row is dispositive alone, but risk and rights terms dominate everything else.
+
+| Indicator | Points to customer | Points to provider |
+| --- | --- | --- |
+| Payment terms | Time-and-materials, cost-plus | Fixed-price, success fees |
+| Payment contingent on outcome? | No — paid regardless | Yes — acceptance/performance conditions |
+| Rework and overrun cost | Customer pays for fixes | Provider absorbs at its expense |
+| IP in deliverables | Assigned to customer | Retained or licensed back |
+| Reuse rights in code, tools, methods | None retained by provider | Provider keeps "background IP" reuse rights |
+| Direction of the research | Customer sets requirements, priorities | Provider controls approach and design |
+
+Two features deserve emphasis. First, the risk test is about *research* risk — being paid only if the thing works — not ordinary commercial risk like customer credit. Milestone billing is neutral until a milestone is a genuine success condition. Second, the rights prong is asymmetric and provider-hostile: under the capitalization-era guidance, a provider retaining *any* substantial right to use the results in its own business has SRE expenditures even when fully reimbursed and risk-free. The standard MSA "provider retains background technology and generalized know-how" clause frequently does exactly that. The reimbursement-side doctrine is unpacked in [reimbursed research under Section 174](/section-174/reimbursed-research-174), and its Section 41 sibling in [the funded-research exclusion](/rd-tax-credit/funded-research-exclusion).
+
+## What each party actually books
+
+The customer's SRE expenditure is its payments under the contract; the provider's, where it has one, is its own cost of performance — salaries, allocable overhead, its own subcontractors. Because the bases differ, both parties can carry SRE treatment on the same project without the same dollar being counted twice. Location then applies per party: the customer's cost is situated where the provider's people work (offshore staffing means a [15-year foreign pool](/section-174/foreign-research-15-year) for the customer, and no research credit), while the provider's own cost splits by its own staffing map.
+
+<Callout label="Watch out">
+  <p>The contract decides, so the contract can be drafted. A customer wanting clean 174A expensing and credit eligibility should take T&M-style risk, full assignment, no provider reuse rights, and a covenant to report work location by person and hours. A provider wanting to avoid SRE treatment on reimbursed work should strip its reuse carve-outs — which many resist for business reasons. Changing an established treatment mid-stream is an accounting-method question; see <a href="/fundamentals/form-3115-accounting-method-changes">Form 3115 mechanics</a>.</p>
+</Callout>
+
+Under restored domestic expensing the stakes are concentrated where they always are now: foreign performance, 60-month elections, non-conforming states, and open 2022–2024 years where the wrong party capitalized. The risk-and-rights read of every material development contract belongs in the annual [174 workpaper cycle](/section-174/section-174-explained), not in the deal file drawer.

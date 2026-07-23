@@ -26,7 +26,7 @@ export default function TheIndexPage() {
 
   return (
     <>
-      <SiteHeader />
+      <SiteHeader activeNav="index" />
       <main id="main">
         <div className="mx-auto max-w-[1120px] px-5 pt-11 sm:px-10">
           <div className="sheet px-7 py-9 sm:px-11 sm:py-10">

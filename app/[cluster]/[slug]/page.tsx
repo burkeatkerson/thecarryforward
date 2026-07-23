@@ -16,6 +16,8 @@ import {
   getSiblings,
 } from "@/lib/content";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { findLesson, getCourseLessons } from "@/lib/courses";
+import { MarkRead } from "@/components/progress";
 
 export function generateStaticParams() {
   return getAllArticles().map((a) => ({ cluster: a.cluster, slug: a.slug }));
@@ -62,6 +64,11 @@ export default async function ArticlePage({ params }: { params: Params }) {
   const headings = extractHeadings(a.content);
   const related = getRelated(a);
   const { prev, next } = getSiblings(a);
+  const lesson = findLesson(cluster, slug);
+  const courseLessons = lesson ? getCourseLessons(lesson.course) : [];
+  const lessonPrev = lesson && lesson.index > 0 ? courseLessons[lesson.index - 1] : null;
+  const lessonNext =
+    lesson && lesson.index < courseLessons.length - 1 ? courseLessons[lesson.index + 1] : null;
 
   const articleLd = {
     "@context": "https://schema.org",
@@ -113,11 +120,37 @@ export default async function ArticlePage({ params }: { params: Params }) {
                 { name: a.title, href: `/${cluster}/${slug}` },
               ]}
             />
+            <MarkRead id={`${cluster}/${slug}`} />
+
+            {lesson ? (
+              <div className="no-print mx-auto mt-6 flex max-w-[680px] flex-wrap items-baseline justify-between gap-2 border-[1.5px] border-ink px-4 py-2.5">
+                <span className="kicker text-[10px] text-ink-mute">
+                  Lesson {lesson.index + 1} of {courseLessons.length} ·{" "}
+                  <Link
+                    href={`/courses/${lesson.course.slug}`}
+                    className="text-accent hover:text-accent-deep"
+                  >
+                    {lesson.course.title}
+                  </Link>
+                </span>
+                {lessonNext ? (
+                  <Link
+                    href={`/${lessonNext.cluster}/${lessonNext.slug}`}
+                    className="kicker text-[10px] text-ink hover:text-accent"
+                  >
+                    Next lesson →
+                  </Link>
+                ) : (
+                  <span className="kicker text-[10px] text-ink-faint">Final lesson</span>
+                )}
+              </div>
+            ) : null}
 
             {/* Head, centered on the reading measure */}
             <header className="mx-auto mt-7 max-w-[680px]">
               <p className="kicker mb-3.5 text-xs text-accent">
-                {c.name} · {a.type === "guide" ? "Guide" : "Brief"}
+                {c.name} · {a.type === "guide" ? "Guide" : "Brief"} ·{" "}
+                {a.level === "intro" ? "Intro" : a.level === "pro" ? "Pro" : "Working"} level
               </p>
               <h1 className="font-serif text-[34px] font-semibold leading-[1.05] tracking-[-0.01em] sm:text-[48px]">
                 {a.title}
@@ -188,6 +221,54 @@ export default async function ArticlePage({ params }: { params: Params }) {
                   ))}
                 </dl>
               </section>
+            ) : null}
+
+            {/* Course pager */}
+            {lesson ? (
+              <nav
+                aria-label="Course navigation"
+                className="no-print mx-auto mt-10 flex max-w-[680px] justify-between gap-6 border-y-[1.5px] border-ink py-4"
+              >
+                {lessonPrev ? (
+                  <Link
+                    href={`/${lessonPrev.cluster}/${lessonPrev.slug}`}
+                    className="group max-w-[45%]"
+                  >
+                    <span className="kicker text-[10px] text-ink-mute">← Previous lesson</span>
+                    <span className="mt-1 block font-serif text-base font-semibold leading-tight group-hover:text-accent">
+                      {lessonPrev.title}
+                    </span>
+                  </Link>
+                ) : (
+                  <Link href={`/courses/${lesson.course.slug}`} className="group max-w-[45%]">
+                    <span className="kicker text-[10px] text-ink-mute">← Course home</span>
+                    <span className="mt-1 block font-serif text-base font-semibold leading-tight group-hover:text-accent">
+                      {lesson.course.title}
+                    </span>
+                  </Link>
+                )}
+                {lessonNext ? (
+                  <Link
+                    href={`/${lessonNext.cluster}/${lessonNext.slug}`}
+                    className="group ml-auto max-w-[45%] text-right"
+                  >
+                    <span className="kicker text-[10px] text-accent">Next lesson →</span>
+                    <span className="mt-1 block font-serif text-base font-semibold leading-tight group-hover:text-accent">
+                      {lessonNext.title}
+                    </span>
+                  </Link>
+                ) : (
+                  <Link
+                    href={`/courses/${lesson.course.slug}`}
+                    className="group ml-auto max-w-[45%] text-right"
+                  >
+                    <span className="kicker text-[10px] text-accent">Course complete ✓</span>
+                    <span className="mt-1 block font-serif text-base font-semibold leading-tight group-hover:text-accent">
+                      Back to {lesson.course.title}
+                    </span>
+                  </Link>
+                )}
+              </nav>
             ) : null}
 
             {/* Prev / next within the section */}

@@ -1,0 +1,52 @@
+---
+title: "The substantially-all rule: how 80% becomes 100% (or nothing)"
+description: "Section 41's two 80% thresholds — the wage rule that credits an employee's full wages when qualified services reach 80%, and the business-component rule requiring substantially all activities to be elements of experimentation — plus shrink-back and a worked example."
+date: "2026-05-05"
+type: "brief"
+level: "working"
+tags: ["section-41", "qres", "four-part-test", "audit-defense"]
+faq:
+  - q: "What is the substantially-all rule for R&D credit wages?"
+    a: "Under Treas. Reg. §1.41-2(d)(2), if at least 80% of an employee's services for the year are qualified services — direct research, direct supervision, or direct support — then 100% of the employee's wages count as qualified research expenses. Below 80%, only the actual qualified percentage counts. The rule rounds up generously at the threshold but gives nothing extra below it."
+  - q: "What is the substantially-all test for a business component?"
+    a: "Section 41(d)(1)(C) requires that substantially all — at least 80%, measured by cost or another consistently applied reasonable basis — of a business component's research activities constitute elements of a process of experimentation. If the whole component fails, the shrink-back rule of Treas. Reg. §1.41-4(b)(2) applies the test to the next-smaller subset until a qualifying subcomponent is found."
+  - q: "What is the shrink-back rule?"
+    a: "Shrink-back, in Treas. Reg. §1.41-4(b)(2), rescues partial claims: when a whole product or process fails the four-part test's substantially-all requirement, the test is reapplied to the most significant subset of the component's elements — a module, a subassembly — and continues shrinking until a level qualifies. The claim then covers the qualifying subcomponent's research costs."
+---
+
+Two different 80% thresholds share the name "substantially all," and confusing them is a standard exam-season error. One is generous: an employee whose **qualified services** reach 80% of total services gets *all* wages counted. One is demanding: a **business component** qualifies only if at least 80% of its research activities are elements of a process of experimentation — the test the taxpayer failed in *Little Sandy Coal Co. v. Commissioner*. Both use 80%; they run in opposite directions.
+
+<KeyTakeaway>
+  <p>For wages, 80% qualified time credits 100% of the wage — a cliff that rewards, and invites scrutiny of, allocations sitting exactly at the threshold. For business components, 80% of activities must be experimentation or the whole component fails, subject to shrink-back to a qualifying subcomponent.</p>
+</KeyTakeaway>
+
+## The wage rule: 80% rounds up to 100%
+
+Treas. Reg. §1.41-2(d)(2) provides that where substantially all — 80% or more — of an employee's services are qualified services, all of the employee's wages for the year are wage QREs. An engineer at 85% research yields 100% of her wages; an engineer at 75% yields 75%. The cliff only helps: below the threshold you still claim the actual percentage.
+
+The rule's audit shadow is predictable. Allocations that cluster at exactly 80% across a department look reverse-engineered, and examiners test them hard. Time records that show honest variation — 62% here, 91% there — substantiate the individuals who genuinely cross the line. What counts as qualified services in the first place is covered in [qualified services and wages](/rd-tax-credit/qualified-services-wages).
+
+## The component rule: 80% or the claim shrinks
+
+Section 41(d)(1)(C) requires that substantially all of the activities of the research constitute elements of a process of experimentation, measured per business component. The regulations at [eCFR Title 26](https://www.ecfr.gov/current/title-26) (Treas. Reg. §1.41-4(a)(6)) let taxpayers measure by cost or another consistently applied reasonable basis. *Little Sandy Coal* (7th Cir. 2023) made the consequence concrete: asserting a first-of-kind vessel was "experimental in its entirety," without allocating activities between experimentation and routine fabrication, failed for lack of proof — the 80% must be computed, not declared.
+
+When a component fails, **shrink-back** (Treas. Reg. §1.41-4(b)(2)) reapplies the test at the next-smaller level — the drivetrain rather than the vehicle, the scheduling module rather than the ERP system — until some subset qualifies. The claim then covers research on that subset only.
+
+## Worked example
+
+A machinery maker spends $1,000,000 developing a new packaging line (one business component). Activity analysis, by cost:
+
+| Activity | Cost | Element of experimentation? |
+| --- | --- | --- |
+| Concept design and alternative evaluation | $200,000 | Yes |
+| Prototype build and iterative testing | $350,000 | Yes (including direct support) |
+| Standard conveyor sections, catalog engineering | $300,000 | No |
+| Installation and operator training | $150,000 | No |
+
+Experimentation elements total $550,000 — 55%, well short of 80%. The full line fails. Shrink back to the novel **filling head subassembly**: its costs are the $200,000 design and $350,000 prototype work, of which, say, $500,000 (91%) are elements of experimentation. The subassembly passes, and the claim proceeds on its research costs — not the conveyor sections, not the training. Compare the all-or-nothing alternative: without shrink-back, the failed 55% would have zeroed the component.
+
+<Callout label="Watch out">
+  <p>The component-level 80% test screens which projects qualify; the wage-level 80% test then sets how much of each person's pay counts. Run them in that order, per person and per component, and keep the activity-cost worksheet — it is the exhibit Little Sandy Coal says you must have.</p>
+</Callout>
+
+The activity-level records that make this computation possible are the same ones described in the [documentation playbook](/rd-tax-credit/rd-credit-documentation-playbook); the underlying qualification standard is the [four-part test](/rd-tax-credit/four-part-test-explained). The [IRS research credit overview](https://www.irs.gov/credits-deductions/businesses/research-credit) summarizes both thresholds without, unhelpfully, distinguishing them by name — the regulations do that work.

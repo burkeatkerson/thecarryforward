@@ -1,0 +1,49 @@
+---
+title: "State conformity to Section 174A: three patterns, one tracking problem"
+description: "Rolling-conformity states picked up Section 174A expensing automatically; static-conformity states are frozen at pre-OBBBA law until their legislatures act; a third group selectively decouples. Until the map settles, multistate taxpayers must keep parallel 174 schedules and addback workpapers state by state."
+date: "2026-06-30"
+type: "brief"
+level: "working"
+tags: ["state-conformity", "section-174a", "section-174", "obbba"]
+faq:
+  - q: "Do states automatically follow Section 174A's restored R&E expensing?"
+    a: "Only rolling-conformity states, which adopt the Internal Revenue Code as currently in effect, picked up Section 174A automatically upon the OBBBA's July 4, 2025 enactment. Static-conformity states adopt the Code as of a fixed date; any state whose date precedes the OBBBA still applies TCJA-era capitalization until its legislature updates the conformity date or enacts specific legislation."
+  - q: "Why would a state require an R&E addback even after the OBBBA?"
+    a: "Two reasons. Static-conformity states frozen before July 4, 2025 never adopted Section 174A, so their law still requires capitalization — the federal deduction is effectively added back and replaced with state amortization. And some states decouple deliberately for revenue reasons, keeping capitalization or their own schedules even after updating general conformity."
+  - q: "What records do multistate taxpayers need to track state 174 differences?"
+    a: "A parallel amortization schedule per non-conforming state: the state's own 2022–2024 capitalized layers, its treatment of the federal catch-up deduction (often not allowed as such), current-year addback and subtraction modifications, and state NOL effects. The federal fixed-asset system rarely holds this; most taxpayers maintain separate state 174 workpapers."
+---
+
+Section 174A is federal law; whether a state honors it depends on how that state incorporates the Internal Revenue Code. States follow one of three patterns — rolling conformity, static (fixed-date) conformity, and selective decoupling — and until every legislature has spoken, multistate taxpayers must run parallel 174 computations: expensing federally under [Section 174A](/section-174/section-174a-explained), and, in non-conforming states, an addback of the federal deduction plus state-specific amortization of a state-specific capitalized pool. The OBBBA itself is [H.R. 1](https://www.congress.gov/bill/119th-congress/house-bill/1); the federal statutes it amended are in [Title 26](https://uscode.house.gov/browse/prelim@title26&edition=prelim).
+
+<KeyTakeaway>
+  <p>Rolling-conformity states follow Section 174A now; static states frozen before July 4, 2025 still require capitalization until they update; decoupling states may never follow. Every non-conforming state means a separate amortization schedule, a separate treatment of the catch-up deduction, and separate NOL math.</p>
+</KeyTakeaway>
+
+## The three patterns
+
+**Rolling conformity.** These states adopt the IRC "as currently in effect," so Section 174A applied for state purposes the day the OBBBA was enacted. Domestic expensing, the 60-month election, and (generally) the transition catch-up flow through, subject to any state-specific modification statutes. Most rolling states also inherited the problem's history cleanly — they capitalized 2022–2024 with the federal government and unwind with it.
+
+**Static conformity.** These states adopt the IRC as of a fixed date and must legislate to move it. A state conformed to the Code as of, say, January 1, 2025 has TCJA-era Section 174 — mandatory capitalization, 5- and 15-year amortization — as its law until the date advances. Federal expensing is added back; the state allows its own amortization deduction; and the federal catch-up deduction for 2022–2024 balances typically does not exist in state law at all, because the state's own amortization of those layers continues on the original schedule. Static states update on their own calendars, some annually as routine housekeeping, some only when the revenue estimate permits.
+
+**Selective decoupling.** Conformity date aside, states can decouple from specific provisions — as many famously did from bonus depreciation for two decades. A state may update its general conformity date past July 4, 2025 and simultaneously decouple from Section 174A expensing, or from the one- and two-year catch-up specifically (a large one-time deduction is exactly the kind of revenue hit legislatures decouple from). A few states never fully conformed to TCJA capitalization in the first place, which means their taxpayers skipped the 2022–2024 pain and now have no state catch-up to claim.
+
+## Why the addback math compounds
+
+**The table shows one $5M domestic R&E year for a company filing in three states with different postures — the same federal facts, three state outcomes.**
+
+| Item | Rolling state | Static (pre-OBBBA date) | Decoupled from catch-up |
+| --- | ---: | ---: | ---: |
+| Federal 174A deduction | $5,000,000 | $5,000,000 | $5,000,000 |
+| State addback | $0 | $5,000,000 | $0 |
+| State amortization allowed | n/a | $500,000 | n/a |
+| Federal catch-up allowed by state? | Yes | No (own schedule continues) | No |
+| Net state-modification exposure | $0 | $4,500,000 | Catch-up only |
+
+The differences cascade: state taxable income diverges from federal, which changes state NOL generation and usage (many states cap or suspend NOLs on their own terms — the state cousin of [the federal 80% problem](/section-174/section-174-nol-interaction)), apportionment applies to a different base, and the small-business retroactive amendment federally may have no state analogue, forcing amended federal returns with unamended state returns.
+
+<Callout label="Tracking obligations">
+  <p>Non-conforming states create a workpaper that must live for a decade: state-basis 2022–2024 amortization layers by year and by state, current-year addback/subtraction modifications, the state's disposition of the federal catch-up, and reconciliation of state-versus-federal NOLs. When a static state eventually conforms, its transition rule for the accumulated difference will be its own — read it, do not assume it copies the federal one. And a federal accounting-method change filed on <a href="/fundamentals/form-3115-accounting-method-changes">Form 3115</a> does not automatically govern the state computation in a decoupled state.</p>
+</Callout>
+
+The practical advice is unglamorous: inventory every filing state's conformity date and 174-specific modifications as of each return's filing, refresh the inventory each legislative season, and price state addbacks into any cash-tax forecast built on federal expensing — the [federal-only forecast](/section-174/software-companies-174-planning) can overstate the total saving by the full state rate in a non-conforming, high-rate state.

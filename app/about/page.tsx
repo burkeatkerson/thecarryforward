@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader activeNav="about" />
       <main id="main">
         <div className="mx-auto max-w-[1120px] px-5 pt-11 sm:px-10">
           <div className="sheet px-7 py-9 sm:px-14 sm:py-11">

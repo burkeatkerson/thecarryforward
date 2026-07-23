@@ -13,6 +13,7 @@ export type ArticleMeta = {
   date: string; // ISO yyyy-mm-dd
   updated?: string;
   type: "guide" | "brief";
+  level: "intro" | "working" | "pro";
   tags: string[];
   faq: FaqItem[];
   readingMinutes: number;
@@ -39,6 +40,7 @@ function parseFile(cluster: string, file: string): Article {
     date: String(data.date ?? "2026-01-01"),
     updated: data.updated ? String(data.updated) : undefined,
     type: data.type === "brief" ? "brief" : "guide",
+    level: data.level === "intro" || data.level === "pro" ? data.level : "working",
     tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
     faq: Array.isArray(data.faq)
       ? data.faq

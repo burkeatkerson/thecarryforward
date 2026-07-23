@@ -1,0 +1,92 @@
+---
+title: "Cost segregation and 1031 exchanges: depreciating the replacement property"
+description: "After a like-kind exchange, replacement property splits into carryover basis (depreciated on the old schedule) and excess basis (depreciated as new property under Reg. §1.168(i)-6). Cost segregation works on both — but a study done just before an exchange can strand Section 1245 recapture. Ordering strategies and a worked example."
+date: "2026-05-05"
+type: "guide"
+level: "pro"
+tags: ["1031-exchange", "cost-segregation", "depreciation", "recapture", "section-1245"]
+faq:
+  - q: "How is replacement property depreciated after a 1031 exchange?"
+    a: "Under Treas. Reg. §1.168(i)-6, the replacement property's basis splits in two. The exchanged (carryover) basis continues depreciating over the relinquished property's remaining recovery period and method, as if the exchange never happened. Any excess basis — new money invested above the carryover — is treated as property newly placed in service, with fresh recovery periods and bonus depreciation eligibility. Taxpayers may instead elect out and depreciate the entire basis as new."
+  - q: "Can you do a cost segregation study on 1031 replacement property?"
+    a: "Yes. A study can allocate excess basis among 5-, 7-, 15-, and 39-year classes exactly as with any purchase, and excess basis assigned to short-life classes is eligible for bonus depreciation. Carryover basis is more constrained: it generally keeps depreciating on the relinquished property's existing schedule unless the taxpayer elects out of Reg. §1.168(i)-6 and treats the whole basis as newly placed in service."
+  - q: "Why can a cost segregation study before a 1031 exchange backfire?"
+    a: "Section 1245 recapture on personal property is not deferred by a like-kind exchange unless the taxpayer receives like-kind Section 1245 property in return. Post-2017, Section 1031 covers only real property, so components a study classified as Section 1245 personal property can trigger ordinary income at the exchange even though the real estate gain is deferred. A study shortly before a planned exchange manufactures exactly that exposure."
+  - q: "Should you elect out of the exchange depreciation rules?"
+    a: "Electing out of Treas. Reg. §1.168(i)-6 treats the entire replacement basis — carryover plus excess — as newly placed in service. That restarts long recovery periods on the carryover basis, which is usually bad, but it lets a cost segregation study reach the whole basis rather than only the excess. It tends to help when carryover basis is small relative to excess or the old schedule is nearly exhausted. Model both ways."
+  - q: "Is excess basis in a 1031 exchange eligible for bonus depreciation?"
+    a: "Yes. The Section 168(k) regulations treat the excess basis of replacement property as eligible for bonus depreciation if the property otherwise qualifies. Excess basis a cost segregation study allocates to 5-, 7-, or 15-year classes takes 100 percent bonus for property acquired after January 19, 2025. Carryover basis is not bonus-eligible under the general rule."
+---
+
+A like-kind exchange defers gain; it does not simplify depreciation. Under [Treas. Reg. §1.168(i)-6](https://www.ecfr.gov/current/title-26), replacement property acquired in a Section 1031 exchange carries two distinct baskets of basis: the **exchanged (carryover) basis**, which keeps depreciating on the relinquished property's old schedule as though nothing happened, and the **excess basis** — the new money — which is treated as property freshly placed in service, with new recovery periods and full [bonus depreciation](/cost-segregation/cost-segregation-bonus-depreciation) eligibility. Cost segregation interacts with both baskets, differently, and the sequencing of study and exchange can be worth six figures — in either direction.
+
+The trap runs the other way too. Because post-TCJA Section 1031 covers only real property, components a study has already reclassified as Section 1245 personal property do not ride along in the deferral. A study commissioned shortly before an exchange can convert deferred gain into current ordinary recapture.
+
+<KeyTakeaway>
+  <p>After an exchange, only excess basis gets fresh lives and bonus — so cost segregation on replacement property works best when there is substantial new money, or when electing out of Reg. §1.168(i)-6 makes the whole basis "new." And because Section 1245 recapture is not sheltered by a real-property-only Section 1031, do the study after the exchange, not before it.</p>
+</KeyTakeaway>
+
+## How does basis carry into the replacement property?
+
+Section 1031(d) gives replacement property the relinquished property's adjusted basis, decreased by money received and increased by gain recognized and new investment. Functionally: old adjusted basis, plus the cash (or new debt) added to trade up. The regulation then splits that total for depreciation purposes:
+
+- **Exchanged basis** — the portion up to the relinquished property's remaining adjusted depreciable basis. It continues over the *relinquished* property's remaining recovery period, using its method and convention. Fifteen years into a 39-year schedule, the carryover basis finishes the remaining 24 years.
+- **Excess basis** — everything above that. New property, placed in service at the exchange date, with recovery periods determined fresh and, under the Section 168(k) regulations, bonus eligibility for the portion that qualifies.
+
+The taxpayer may **elect out** of this bifurcation under Reg. §1.168(i)-6(i) and treat the entire basis as newly placed in service. The election trades away the old schedule's remaining head start (usually bad) for the ability to run the whole basis through new classification (sometimes good — see below). [Pub 946](https://www.irs.gov/publications/p946) walks through the mechanics; the depreciation lands on [Form 4562](https://www.irs.gov/forms-pubs/about-form-4562) like any other.
+
+## Where does cost segregation fit after the exchange?
+
+**Excess basis is the clean target.** It is simply new investment in the replacement building, and a study allocates it across classes like any acquisition: 5-year carpet and equipment connections, 15-year site improvements, the residual to 27.5 or 39 years. Short-life excess basis acquired after January 19, 2025 takes 100 percent bonus. On a significant trade-up — sold at $3 million, bought at $8 million — the excess basis is most of the new building, and the study economics look like an ordinary purchase.
+
+**Carryover basis is constrained.** Under the default rule it keeps the old property's schedule. If the relinquished property never had a study, its carryover basis is one undifferentiated 39-year (or 27.5-year) stream, and the default rule keeps it that way. The routes to accelerating it are (1) the elect-out, which restarts the clock on everything, or (2) in some fact patterns, a [look-back study with a Form 3115](https://www.irs.gov/forms-pubs/about-form-3115) on the relinquished property's history — which raises exactly the pre-exchange recapture problem discussed below, plus genuine complexity about how reclassified personal property fares in a real-property-only exchange. That second route needs specialist modeling, not a default.
+
+### When does electing out make sense?
+
+The elect-out is attractive when the carryover basis is small — a heavily depreciated relinquished property traded into a much larger one — or when the old schedule is nearly done anyway, so little head start is sacrificed. Then the whole replacement basis becomes study-able new property. It is unattractive when carryover basis is large and mid-schedule: restarting $4 million of 39-year basis at year zero to pick up a modest reclassification is a bad trade. There is no shortcut; run both projections.
+
+## Why is a pre-exchange study dangerous?
+
+Since 2018, Section 1031 applies only to **real property**. Section 1245 recapture, meanwhile, is triggered on any disposition of Section 1245 property and is deferred in an exchange only to the extent like-kind *Section 1245* property is received. A cost segregation study reclassifies part of a building into Section 1245 personal property — so a study done before a planned exchange creates a bucket of fully or substantially depreciated personal property that the exchange does not shelter. (Some reclassified assets may qualify as real property under the Section 1031 regulations' own definitions, which do not track Section 1245 — this is precisely the seam where advisors disagree and exams happen.) The conservative planning rule: **no new study between the decision to exchange and the closing.** The mechanics of the recapture buckets are covered in [depreciation recapture explained](/cost-segregation/depreciation-recapture-explained).
+
+<Callout label="Watch out">
+  <p>The same logic applies to bonus depreciation already claimed. If the relinquished property had a study years ago, its Section 1245 components carry recapture potential into the exchange regardless of timing. The exchange planning should inventory the old study's 1245 assets and their remaining basis before the replacement property is even identified — not at return time.</p>
+</Callout>
+
+## A worked example
+
+Assume: relinquished office building sold for $5,000,000; adjusted basis $2,000,000 (all 39-year, 15 years elapsed, no prior study); replacement building bought for $8,000,000, of which $1,200,000 is land. New depreciable basis, simplified: $2,000,000 carryover + $4,800,000 excess above the land allocation. A post-exchange study allocates excess basis 20 percent to 5-year, 10 percent to 15-year.
+
+**First-year depreciation on the replacement property, three strategies compared** (property acquired after January 19, 2025; illustrative, conventions simplified).
+
+| Strategy | 5-yr bonus (100%) | 15-yr bonus (100%) | Remaining regular depreciation | Approx. year-one total |
+| --- | --- | --- | --- | --- |
+| No study, default rules | $0 | $0 | ~$83K carryover + ~$62K excess 39-yr | ~$145,000 |
+| Study on excess basis only (default §1.168(i)-6) | $960,000 | $480,000 | ~$83K carryover + ~$43K excess 39-yr | ~$1,566,000 |
+| Elect out; study entire $6.8M basis | $1,360,000 | $680,000 | ~$61K on new 39-yr residual | ~$2,101,000 |
+
+<BarChart
+  title="Approximate first-year depreciation by strategy"
+  unit="$"
+  note="Illustrative example above; mid-year conventions simplified. Elect-out gains year-one deduction but restarts the carryover basis's 39-year clock."
+  data={[
+    { label: "No study", value: 145000, display: "$145,000" },
+    { label: "Study excess basis only", value: 1566000, display: "$1,566,000" },
+    { label: "Elect out + full study", value: 2101000, display: "$2,101,000" },
+  ]}
+  highlight={1}
+/>
+
+The elect-out looks best in year one, but it converted $2,000,000 of carryover basis with 24 years to run into mostly 39-year property with 39 years to run — the out-year cost of the year-one win. For this fact pattern (carryover small relative to excess), the middle strategy is usually the keeper: nearly all the benefit, none of the restart.
+
+## Ordering strategies in practice
+
+1. **Study after the exchange, on excess basis** — the default good answer whenever the trade-up is significant.
+2. **Model the elect-out** when carryover basis is small, nearly exhausted, or short-lived.
+3. **Never study in the exchange window.** If a study was already done years ago, inventory the 1245 assets and model recognition before committing to the exchange structure.
+4. **Mind the passive-loss plumbing.** A large year-one loss on replacement property is only cash if it is usable — the Section 469 limits apply to exchange-generated depreciation like any other.
+5. **Remember the exit.** Serial exchanges compound deferred recapture; the eventual taxable sale (or the basis step-up at death) is where the whole chain resolves. If the plan is to sell rather than exchange again, the acceleration math changes — see [when cost segregation doesn't make sense](/cost-segregation/when-cost-segregation-doesnt-make-sense).
+
+## What does the IRS look at?
+
+Examiners reviewing an exchange-plus-study fact pattern check the basis bifurcation arithmetic (carryover versus excess, and the land carve-out from each), whether bonus was claimed only on eligible excess basis, whether an elect-out was validly made on a timely filed return, and — increasingly — whether personal property from a prior study was quietly treated as deferred in a real-property exchange. The interaction of Reg. §1.168(i)-6 with a study is legitimate and well-trodden; what draws adjustment is claiming new-property treatment on carryover basis without the election, or bonus on basis that never qualified. Keep the study, the exchange documents, and the basis schedule in one file; this is a computation that must be reproducible in front of an examiner.

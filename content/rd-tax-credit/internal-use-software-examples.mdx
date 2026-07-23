@@ -1,0 +1,53 @@
+---
+title: "Internal-use software and the high-threshold-of-innovation test: five examples"
+description: "Treas. Reg. §1.41-4(c)(6) subjects internal-use software to three extra hurdles — innovation, significant economic risk, and no commercial alternative — on top of the four-part test. Five realistic projects show which pass, which fail, and why."
+date: "2026-05-19"
+type: "brief"
+level: "working"
+tags: ["software", "section-41", "four-part-test", "audit-defense"]
+faq:
+  - q: "What is the high-threshold-of-innovation test for internal-use software?"
+    a: "Under Treas. Reg. §1.41-4(c)(6), software developed primarily for a taxpayer's internal general-and-administrative functions must satisfy three additional requirements beyond the ordinary four-part test: the software must be innovative (intended to produce a substantial and economically significant reduction in cost or improvement in speed), its development must involve significant economic risk, and the software must not be commercially available for the intended purpose without substantial modification."
+  - q: "Is software sold or licensed to customers subject to the internal-use software rules?"
+    a: "No. Software developed to be commercially sold, leased, licensed, or otherwise marketed to third parties is not internal-use software under Treas. Reg. §1.41-4(c)(6)(iii), and neither is software that enables third parties to interact with the taxpayer or initiate functions on its systems — a customer portal, for example. Those projects face only the ordinary Section 41(d) four-part test."
+  - q: "Does configuring an ERP system qualify for the research credit?"
+    a: "Almost never. Installing and configuring commercially available software — mapping fields, setting workflows, writing standard integrations — fails the internal-use software rules twice: the commercial-availability prong, because the software exists and works as purchased, and usually the four-part test itself, because configuration rarely involves a process of experimentation resolving technological uncertainty."
+---
+
+Software built primarily for a company's own general-and-administrative functions — financial management, HR, support services — must clear three hurdles beyond the ordinary [four-part test](/rd-tax-credit/four-part-test-explained) before its costs count toward the research credit. Treas. Reg. §1.41-4(c)(6) requires that the software be **innovative**, that its development involve **significant economic risk**, and that no **commercially available** alternative would serve without substantial modification. Software sold to customers, or that lets third parties interact with the taxpayer's systems, escapes the regime entirely.
+
+<KeyTakeaway>
+  <p>The high-threshold-of-innovation test kills most back-office software claims — ERP configurations and dashboard builds fail routinely — but genuinely novel internal platforms with substantial technical risk can pass all three prongs. The first question is always whether the software is internal-use at all.</p>
+</KeyTakeaway>
+
+## The three extra prongs
+
+The regulations at [eCFR Title 26](https://www.ecfr.gov/current/title-26) define each prong. *Innovative* means the software is intended to result in a reduction in cost or improvement in speed that is substantial and economically significant. *Significant economic risk* means the taxpayer commits substantial resources with substantial uncertainty, because of technical risk, that they will be recovered within a reasonable period. *Not commercially available* means no existing product could be used for the intended purpose without modifications satisfying the first two prongs. All three must be met — in addition to, not instead of, Section 41(d).
+
+## Five projects, tested
+
+**A comparative summary, before the detail:**
+
+| Project | Internal-use? | High-threshold result |
+| --- | --- | --- |
+| 1. ERP configuration | Yes | Fails (commercially available) |
+| 2. Custom warehouse routing engine | Yes | Passes |
+| 3. Executive KPI dashboard | Yes | Fails (not innovative; no economic risk) |
+| 4. Customer self-service portal | No | Exempt — ordinary four-part test only |
+| 5. In-house fraud-scoring model | Yes | Passes |
+
+**1. ERP implementation.** A distributor licenses a major ERP suite and spends $2M on configuration, data migration, and standard integrations. Fails. The software is commercially available and works as designed; configuration involves business judgment, not technological uncertainty. This is the most commonly — and wrongly — claimed project type.
+
+**2. Warehouse routing engine.** A retailer builds, from scratch, a real-time optimization engine to route pickers through fulfillment centers, after concluding no vendor product could handle its constraint set without a ground-up rewrite. Development consumed 18 months with genuine uncertainty whether the latency targets were achievable. Passes: novel algorithmic work (innovative, targeting a measurable double-digit labor-cost reduction), real technical risk to substantial committed resources, and no commercial substitute.
+
+**3. KPI dashboard.** Finance builds an executive dashboard on a commercial BI platform — data pipelines, visualizations, scheduled refreshes. Fails. The work is capable and useful, but nothing about it is technologically uncertain, the cost-reduction case is soft, and the BI platform is the commercially available tool doing the heavy lifting.
+
+**4. Customer portal.** A logistics company builds a portal where customers book shipments, track loads, and pull documents. Not internal-use software at all — third parties initiate functions on the taxpayer's systems, so under Treas. Reg. §1.41-4(c)(6)(iii) only the ordinary four-part test applies. Whether it passes *that* test depends on the usual experimentation analysis covered in [software development and the R&D credit](/rd-tax-credit/rd-credit-software-development).
+
+**5. Fraud-scoring model.** An insurer develops an in-house machine-learning system to score claims for fraud, after vendor tools proved unable to handle its data at acceptable false-positive rates. Passes: model architecture and feature engineering involved systematic experimentation, the projected loss-avoidance is substantial and quantified, resources were committed under real technical uncertainty, and the commercial alternatives were evaluated and rejected in writing — the exhibit an examiner will ask for.
+
+<Callout label="Watch out">
+  <p>Dual-function software — one system serving both internal G&A and third-party interaction — gets carved up under the regulation's safe harbor: the third-party subset is tested normally, and taxpayers may treat 25% of the remaining dual-function costs as non-internal-use if third-party use is reasonably anticipated to be at least 10%. Skipping the carve-up and claiming the whole system is a standard exam adjustment.</p>
+</Callout>
+
+The [IRS research credit overview](https://www.irs.gov/credits-deductions/businesses/research-credit) flags internal-use software as a distinct category but leaves the three-prong analysis to the regulations. Document the commercial-alternative evaluation and the risk assessment contemporaneously; both are factual questions the taxpayer bears the burden of proving.

@@ -1,0 +1,60 @@
+---
+title: "Section 174 and NOLs: how capitalization burned loss carryforwards, and how the catch-up rebuilds them"
+description: "For 2022–2024, Section 174 capitalization manufactured taxable income that companies sheltered by burning NOL carryforwards — at 80 cents of shelter per dollar of income under Section 172. The OBBBA catch-up deduction reverses the income, and for loss companies it regenerates NOLs at full value."
+date: "2026-05-05"
+type: "brief"
+level: "working"
+tags: ["nol", "section-174", "section-174a", "transition-rules"]
+faq:
+  - q: "How did Section 174 capitalization interact with NOL carryforwards in 2022–2024?"
+    a: "Capitalization deferred R&E deductions, inflating taxable income for companies that were economically break-even or losing money. Post-2017 NOL carryforwards offset only 80% of taxable income under Section 172(a)(2), so even NOL-rich companies paid cash tax on 20% of the artificial income — and consumed carryforwards to shelter the rest."
+  - q: "Does the OBBBA catch-up deduction restore NOLs consumed by 174 capitalization?"
+    a: "Not retroactively for most taxpayers, but prospectively yes: deducting the remaining unamortized 2022–2024 domestic balance over one or two years starting in 2025 either offsets income or creates new NOLs that carry forward indefinitely. Small businesses under the $31M average gross-receipts threshold can instead amend 2022–2024, which directly restores the consumed carryforwards and recovers cash tax paid."
+  - q: "Why did companies with large NOLs still pay tax during the capitalization era?"
+    a: "The 80% limitation. A company with $10M of capitalization-inflated taxable income and ample post-2017 NOLs could offset only $8M, leaving $2M taxable — $420,000 of federal cash tax at 21% — despite being in a cumulative loss position. Only pre-2018 NOLs, usable against 100% of income, avoided the residual tax, and those were expiring assets."
+---
+
+Section 174 capitalization and the NOL rules compounded each other badly from 2022 through 2024. Capitalization deferred deductions and manufactured taxable income at companies with no economic profit; Section 172(a)(2) then capped post-2017 NOL usage at 80% of taxable income, so even companies sitting on nine-figure carryforwards paid cash tax on the remaining 20% — while burning carryforward dollars to shelter income that existed only because of a timing rule. The OBBBA runs the film backward: the catch-up deduction for unamortized domestic balances reverses the artificial income, and for companies still in losses it mints fresh NOLs. Section 172 is at [26 U.S.C. §172](https://uscode.house.gov/browse/prelim@title26&edition=prelim); the transition mechanics come from [H.R. 1](https://www.congress.gov/bill/119th-congress/house-bill/1).
+
+<KeyTakeaway>
+  <p>The 80% NOL limitation turned 174 capitalization into cash tax even for deeply loss-making companies. The catch-up deduction under the transition rules reverses the income and can regenerate NOLs — and small businesses under $31M in gross receipts can amend 2022–2024 to undo the damage at the source.</p>
+</KeyTakeaway>
+
+## The 80% arithmetic, worked
+
+**The table shows a software company with $60M of pre-2022 post-2017 NOL carryforwards and $10M of annual domestic R&E spend, economically break-even each year (income before R&E deduction of $10M).** Capitalization allows only a fraction of each year's spend as amortization, the NOL offsets 80% of what remains, and cash tax appears from nowhere.
+
+| Line (2023 example year) | Amount |
+| ---: | ---: |
+| Income before R&E deduction | $10,000,000 |
+| R&E amortization allowed (yr 1 of 2023 layer + yr 2 of 2022 layer) | ($3,000,000) |
+| Taxable income before NOL | $7,000,000 |
+| NOL deduction (80% × $7,000,000) | ($5,600,000) |
+| Taxable income | $1,400,000 |
+| **Federal cash tax at 21%** | **$294,000** |
+| NOL carryforward consumed | $5,600,000 |
+
+An economically break-even year produced roughly $294,000 of cash tax and vaporized $5.6M of carryforward. Run three years of this and the company consumed on the order of $15M of NOLs and paid near $1M in cash tax against zero cumulative economic income. (Pre-2018 NOLs, deductible against 100% of income, softened the blow where they existed — but they carry 20-year expirations and are mostly gone.)
+
+<BarChart
+  title="Where each $7M of capitalization-inflated income went"
+  unit="$"
+  note="Illustrative 2023 year from the table: 80% absorbed by NOL carryforward, 20% taxed in cash."
+  data={[
+    { label: "Sheltered by NOLs (80%)", value: 5600000, display: "$5,600,000" },
+    { label: "Taxed at 21% (20% × income)", value: 1400000, display: "$1,400,000" },
+  ]}
+  highlight={1}
+/>
+
+## How the catch-up regenerates losses
+
+Beginning with the first tax year after 2024, all taxpayers deduct their remaining unamortized domestic 2022–2024 balances over one or two years. For the company above, the stranded balance approaches $19M. Taking it in one 2025 year against $10M of operating income produces roughly a $9M *new* NOL — carried forward indefinitely, though itself subject to the 80% cap when used. Electing the two-year spread instead can keep each year's deduction closer to each year's income, absorbing income dollar-for-dollar at 100% rather than cycling it through the 80%-limited NOL mechanism — a genuine reason the two-year election sometimes beats the one-year for companies near breakeven. The election mechanics are in [the transition rules](/section-174/section-174-transition-rules).
+
+Small businesses (average annual gross receipts of $31M or less) have the cleaner remedy: retroactive application of [Section 174A](/section-174/section-174a-explained) via amended 2022–2024 returns, which unwinds the inflated income in the years it arose, restores the consumed carryforwards to their original vintages, and refunds the cash tax.
+
+<Callout label="Watch out">
+  <p>NOL regeneration is not made whole in every case. NOLs consumed in 2022–2024 may have been pre-2018 vintages usable at 100% that the catch-up replaces with 80%-limited post-2017 losses; a Section 382 ownership change between consumption and regeneration caps the new losses; and state NOL regimes — many with their own caps and their own 174 conformity — do not follow the federal reversal automatically (see <a href="/section-174/section-174-state-conformity">state conformity</a>). The catch-up reverses the income, not the history.</p>
+</Callout>
+
+Loss-position companies weighing the [60-month election going forward](/section-174/software-companies-174-planning) should notice that this whole episode is the argument for it: deductions deferred into income years bypass the 80% limitation entirely.

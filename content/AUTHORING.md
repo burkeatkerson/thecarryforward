@@ -10,6 +10,7 @@ title: "Plain, specific headline — sentence case, no clickbait"
 description: "One-to-two sentence dek. Answer-first; this feeds meta description and AEO."
 date: "2026-03-14"          # ISO. Spread publication dates across 2026-01 through 2026-07.
 type: "guide"               # "guide" (long-form, 1,800–2,800 words) or "brief" (500–900 words)
+level: "working"            # "intro" (no background assumed), "working" (practitioner), "pro" (specialist nuance)
 tags: ["section-41", "qres"] # 2–5 kebab-case tags from the shared vocabulary; reused across clusters for related-article linking
 faq:                        # 3–5 for guides, 2–3 for briefs. Concise, self-contained answers (40–80 words) — these emit FAQPage JSON-LD.
   - q: "A real question a CPA or founder would type into a search engine?"
@@ -50,7 +51,7 @@ faq:                        # 3–5 for guides, 2–3 for briefs. Concise, self-
 />
 ```
 
-BarChart rules: single series only; 3–7 rows; numeric `value` (use `display` for a formatted string like `"$500,000"` with `value` as the raw number); always include `note` when data is illustrative. Use charts only where they genuinely clarify (roughly 1 in 3 guides).
+BarChart rules: single series only; 3–7 rows; numeric `value` (use `display` for a formatted string like `"$500,000"` with `value` as the raw number); optional `highlight={i}` draws row i in the accent ink — use it to mark the row the surrounding prose discusses; always include `note` when data is illustrative. Visual-first mandate: every guide includes at least one BarChart or substantive table (prefer both); briefs include one wherever a numeric comparison exists. Charts must carry real analytical weight — worked numbers from the article, statutory rates, or schedules — never decoration.
 
 ## Fixed legal facts (do not contradict; as of July 2026)
 
@@ -63,6 +64,39 @@ BarChart rules: single series only; 3–7 rows; numeric `value` (use `display` f
 - Research credit: Section 41 permanent; ASC = 14% of QREs over 50% of prior-3-year average (6% if no prior QREs); regular method 20% over base amount; Section 280C reduced-credit election; payroll tax offset up to $500,000 for qualified small businesses (< $5M gross receipts, no gross receipts before the 5-taxable-year window).
 - Form 6765 redesign effective for 2024 tax years: Sections E–G, with Section G business-component reporting (optional for QSBs and taxpayers with ≤ $1.5M QREs and ≤ $50M gross receipts).
 - Research credit carryback 1 year, carryforward 20 (Section 39).
+
+## Authoritative citations (required)
+
+Every article links to 2–4 primary or governmental sources inline as markdown links, at the point where the authority matters. Use ONLY these verified URLs (do not invent deeper links):
+
+- Research credit overview: https://www.irs.gov/credits-deductions/businesses/research-credit
+- Form 6765: https://www.irs.gov/forms-pubs/about-form-6765
+- Form 3115: https://www.irs.gov/forms-pubs/about-form-3115
+- Form 4562 (depreciation): https://www.irs.gov/forms-pubs/about-form-4562
+- Form 8974 (payroll offset): https://www.irs.gov/forms-pubs/about-form-8974
+- Form 7205 (179D): https://www.irs.gov/forms-pubs/about-form-7205
+- Pub 946, How to Depreciate Property: https://www.irs.gov/publications/p946
+- Pub 538, Accounting Periods and Methods: https://www.irs.gov/publications/p538
+- Cost Segregation Audit Techniques Guide: https://www.irs.gov/businesses/cost-segregation-audit-techniques-guide
+- 179D deduction (IRS): https://www.irs.gov/credits-deductions/energy-efficient-commercial-buildings-deduction
+- 45L credit (IRS): https://www.irs.gov/credits-deductions/45l-new-energy-efficient-home-credit
+- Prevailing wage & apprenticeship (IRS): https://www.irs.gov/credits-deductions/prevailing-wage-and-apprenticeship-requirements
+- 45L builder pages (ENERGY STAR): https://www.energystar.gov/partner_resources/residential_new/homes_prog_reqs/45l_fed_tax_credits
+- DOE 179D qualified software: https://www.energy.gov/eere/buildings/179d-commercial-buildings-energy-efficiency-tax-deduction
+- Internal Revenue Code (official): https://uscode.house.gov/browse/prelim@title26&edition=prelim
+- Treasury regulations (eCFR Title 26): https://www.ecfr.gov/current/title-26
+- OBBBA (H.R. 1, 119th Congress): https://www.congress.gov/bill/119th-congress/house-bill/1
+- IRS Appeals: https://www.irs.gov/appeals
+- Taxpayer Bill of Rights: https://www.irs.gov/taxpayer-bill-of-rights
+
+Cite statutes and regulations in prose precisely (e.g., "Treas. Reg. §1.41-4(c)(6)") even when the link is to the general eCFR title.
+
+## Answer engine optimization (top priority)
+
+- The lede's first two sentences must directly and completely answer the question the title poses — quotable in isolation.
+- Prefer question-form H2s where natural ("Who can elect the payroll offset?").
+- Every number gets its authority and its year. Every rule gets its cite.
+- FAQ answers must be self-contained (no "see above"), 40–80 words, and restate key entities by name.
 
 ## Voice
 

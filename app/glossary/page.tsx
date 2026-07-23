@@ -25,7 +25,7 @@ export default function GlossaryPage() {
   };
   return (
     <>
-      <SiteHeader />
+      <SiteHeader activeNav="glossary" />
       <main id="main">
         <script
           type="application/ld+json"
