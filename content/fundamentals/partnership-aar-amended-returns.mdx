@@ -1,0 +1,51 @@
+---
+title: "Fixing a partnership return after BBA: AARs, push-outs, and why amended returns are mostly gone"
+description: "Under the centralized partnership audit regime, a BBA partnership generally cannot amend a filed return — it files an administrative adjustment request (AAR), and favorable adjustments reach partners in the year the AAR is filed, not the year being fixed. That timing shift is why claiming missed credits or 174 relief is structurally harder in partnerships."
+date: "2026-07-14"
+type: "brief"
+level: "pro"
+tags: ["amended-returns", "fundamentals", "section-174", "statute-of-limitations"]
+faq:
+  - q: "Can a partnership amend its Form 1065 to claim a missed credit?"
+    a: "Generally not, if it is subject to the BBA centralized audit regime (most partnerships are). The fix is an administrative adjustment request (AAR) filed by the partnership representative. Only partnerships that validly elected out of BBA for the year — 100 or fewer eligible partners, none of them partnerships or trusts — amend the old way, with partners amending their own returns."
+  - q: "When do partners get the benefit of a favorable AAR?"
+    a: "In the reporting year — the partners' tax year that includes the date the AAR is filed — not the year being corrected. Partners receiving a Form 8986 push-out statement recompute the earlier year's tax hypothetically and claim the decrease as an adjustment on the current return. A 2023 fix filed in 2026 lands on 2026 returns, and if the recomputed decrease exceeds current tax, the excess does not generate a refund of the old year's tax."
+  - q: "What is the difference between push-out and imputed underpayment in an AAR?"
+    a: "Unfavorable adjustments default to an imputed underpayment: the partnership itself pays tax on the netted adjustments at the highest rate, subject to modifications. Alternatively the partnership elects to push the adjustments out to the reviewed-year partners on Forms 8986, and they account for the tax. Favorable adjustments cannot produce an entity-level refund — they must flow to partners through push-out statements."
+---
+
+Since the Bipartisan Budget Act's centralized audit regime took effect, "amend the partnership return" has mostly stopped being a real instruction. A BBA partnership that discovers an error — a missed credit, an overstated income item, unclaimed [retroactive Section 174A relief](/section-174/amended-return-vs-catch-up) — files an **administrative adjustment request (AAR)** under Section 6227 ([26 U.S.C. §6227](https://uscode.house.gov/browse/prelim@title26&edition=prelim)) rather than an amended Form 1065, and the correction reaches partners in the year the AAR is filed, not the year that was wrong. That timing displacement, plus the one-way refund plumbing, is why every specialty-tax fix is structurally harder inside a partnership than anywhere else.
+
+<KeyTakeaway>
+  <p>BBA partnerships file AARs, not amended returns. Unfavorable adjustments: entity pays an imputed underpayment at the top rate, or pushes out to reviewed-year partners. Favorable adjustments: push-out only, benefit lands on partners' current-year returns, and any excess over current tax can be lost. Electing out of BBA — where eligible — preserves the old amended-return world.</p>
+</KeyTakeaway>
+
+## The fork: who is in BBA, and the deadlines
+
+The regime covers all partnerships except those that validly elect out annually — available only with 100 or fewer eligible partners, all of them individuals, C corporations, S corporations, foreign equivalents, or estates. A partnership with any partner that is itself a partnership (that is, every tiered structure) is locked in. Elected-out partnerships still amend classically: superseding or amended 1065s, partners amending their own 1040s and 1120s, refunds flowing under the ordinary [statute of limitations rules](/fundamentals/statute-of-limitations-refunds).
+
+For everyone else, the AAR window is its own clock: within three years of the later of the return's filing or due date (without extensions), and never after a notice of administrative proceeding issues for the year. The filing is made by the partnership representative — partners cannot file, object, or participate as of right, which makes the LPA's provisions about the representative's duties suddenly interesting.
+
+## Two paths for the adjustments
+
+**Unfavorable adjustments** (the partnership underreported) default to an **imputed underpayment**: the adjustments are netted, taxed at the highest individual or corporate rate, and paid by the partnership itself in the AAR year — economically borne by *current* partners, whoever they now are. Modifications (tax-exempt partners, lower applicable rates) can shrink the number. Or the partnership elects to **push out** the adjustments on Forms 8986 to the reviewed-year partners, who compute the additional tax on their own returns with interest at an elevated rate.
+
+**Favorable adjustments** have no entity refund path. They must be pushed out; each reviewed-year partner recomputes the earlier year's tax as if the correction had been made, and takes the *decrease* as a credit-like adjustment against the current reporting year's tax.
+
+**Which path, and who bears the result:**
+
+| Situation | Mechanism | Who bears / benefits | When |
+| --- | --- | --- | --- |
+| Partnership owes more | Imputed underpayment (default) | Current partners, top rate | AAR year |
+| Partnership owes more, push-out elected | Forms 8986 to reviewed-year partners | Reviewed-year partners | Their current returns |
+| Partnership overpaid / missed deductions or credits | Push-out only | Reviewed-year partners | Reporting year — no refund of old-year tax |
+
+## Why specialty-credit fixes hurt more here
+
+Consider the standard fact patterns. A look-back [research credit](/rd-tax-credit/rd-credit-claim-process-timeline) claim for a corporate taxpayer is an amended return and a refund check with overpayment interest. The same claim for a BBA partnership is an AAR whose benefit surfaces on partners' *current* returns — no interest on the old overpayment, no cash for a reviewed-year partner whose current liability is too small to absorb the recomputed decrease, and nothing at all routed to someone who has since left the partnership in a way the push-out does not reach cleanly. The OBBBA's small-business retroactive Section 174A option ran into exactly this: what the statute offered as "amended returns" arrived, for BBA partnerships, as AARs with reporting-year mechanics. Tiered structures compound it — each pass-through partner in the chain files its own Form 8986 cascade on its own deadlines.
+
+Three practical consequences. Where the fix is favorable and partners' current-year capacity is doubtful, model the push-out partner by partner before filing; an AAR that strands the benefit is worse than the status quo. Where the error is caught fast, a **superseding return** before the extended due date avoids the whole regime — the strongest argument for extending partnership returns as a matter of course, as covered in [amended versus superseding returns](/fundamentals/amended-returns-vs-superseding). And where a method is the problem rather than a one-year error, a [Form 3115](https://www.irs.gov/forms-pubs/about-form-3115) method change with a current-year 481(a) catch-up sidesteps the AAR machinery entirely — often the only clean route to old-year benefits a partnership has left.
+
+<Callout label="Watch out">
+  <p>An AAR is not a quiet filing. It reopens the year's items to IRS review, restarts nothing in the partnership's favor, and is binding as filed — the partnership representative cannot revise it once submitted. Small favorable items are frequently not worth the machinery; price the fix before requesting it.</p>
+</Callout>

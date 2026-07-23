@@ -1,0 +1,54 @@
+---
+title: "Game studios and the R&D credit: engine work qualifies, content mostly doesn't"
+description: "How game development maps to Section 41 — engine and tooling engineering versus the content and creative work the style-and-taste exclusion removes, with an activity-by-activity sorting table."
+date: "2026-05-05"
+type: "brief"
+level: "intro"
+tags: ["gaming", "section-41", "four-part-test", "qres"]
+faq:
+  - q: "Does video game development qualify for the R&D tax credit?"
+    a: "Partially. Game software is a product, and the technical layer — engine development, novel rendering and physics work, netcode, procedural generation, build and tooling infrastructure — can satisfy the Section 41 four-part test where the approach was genuinely uncertain. The creative layer — art, story, level design, game feel, balancing — is excluded as style, taste, and cosmetic work under Section 41(d)(4)."
+  - q: "Do artists' and designers' wages count as qualified research expenses at a game studio?"
+    a: "Generally no. Wages qualify only for qualified services — engaging in or directly supervising or supporting qualified research. Creating art assets, writing narrative, and designing levels are aesthetic activities the statute excludes, so those wages stay out even on a technically innovative title. A technical artist who develops shader systems or asset-pipeline tools is doing engineering, and that time can qualify if tracked."
+  - q: "Does building a game on Unreal or Unity disqualify the R&D credit claim?"
+    a: "Not by itself, but it narrows the claim. Using a licensed engine as intended is applying an existing solution — no uncertainty, no credit. Qualification survives in what the engine cannot do out of the box: custom rendering features, engine-source modifications, large-scale multiplayer architecture, or performance engineering beyond the engine's documented limits. The claim should identify precisely what the stock engine could not achieve."
+---
+
+A video game is software — a qualifying business component — built by an industry whose largest cost is the thing Section 41 excludes. The statute removes research relating to *style, taste, cosmetic, or seasonal design* factors, and most of a game's budget (art, animation, narrative, level and game design) sits squarely inside that exclusion. What remains is the technical substrate: engines, tools, simulation, networking, and performance engineering, which qualify on the same [four-part test](/rd-tax-credit/four-part-test-explained) as any software development when the approach was genuinely uncertain.
+
+<KeyTakeaway>
+  <p>Claim the engineering, not the game. Engine, tooling, and systems work with real technical uncertainty qualifies; content creation and creative design are statutorily excluded, and studios that sweep whole-team payroll into QREs are claiming mostly excluded wages.</p>
+</KeyTakeaway>
+
+## Sorting the studio: engineering versus content
+
+**Representative studio activities under Section 41(d):**
+
+| Activity | Typically qualifies? | Why |
+| --- | --- | --- |
+| Custom engine or engine-source modification (rendering, physics, streaming) | Yes | Capability and design uncertainty; systematic iteration |
+| Netcode for large-scale multiplayer with unproven latency/consistency targets | Yes | Classic architecture uncertainty |
+| Procedural generation systems where feasibility at quality bar is unknown | Yes | Experimentation on algorithms |
+| Asset-pipeline, build, and automation tooling solving nonstandard problems | Yes | Process/software business component |
+| Performance optimization beyond documented platform techniques | Sometimes | Qualifies when methods are uncertain, not routine profiling |
+| Porting via established SDKs and known techniques | No | Routine engineering; adaptation |
+| Art, animation, audio, and narrative production | No | Style/taste/cosmetic exclusion |
+| Level design, balancing, playtesting for fun | No | Aesthetic judgment; excluded surveys-and-studies flavor |
+| Live-ops content drops and seasonal events | No | Seasonal design factors; post-release content |
+
+The middle of the table is where documentation earns its keep. "We optimized the frame rate" is routine; "we could not know whether the streaming architecture could hold 60fps within the platform's memory budget, and we built and discarded three approaches" is a process of experimentation. Design documents, prototype branches, and profiling data that show alternatives evaluated are the studio's substantiation — the same evidence discipline that decides claims in every industry, as the taste-driven fashion claim in [*Leon Max v. Commissioner*](/case-law/leon-max-v-commissioner) illustrates from the losing side: work driven by aesthetic factors fails no matter how iterative it is.
+
+## Building the claim: people, not projects
+
+Because a single title mixes qualified and excluded work, game claims should be built bottom-up from roles and time, not top-down from project budgets:
+
+- **Engineering wages** — engine, graphics, systems, network, and tools programmers — are the core wage QRE pool, allocated to qualifying tasks. Technical artists and technical designers can qualify for the engineering share of their time.
+- **Excluded wages** — artists, designers, writers, producers, QA doing play-balance testing — stay out. QA time spent executing structured tests of uncertain technical systems (load testing new netcode) is the narrow exception, as direct support of experimentation.
+- **Contract development** at 65% where the studio bears risk and keeps rights; outsourced art fails on content grounds before the 65% question even arises. Work-for-hire development for a publisher that pays regardless of outcome and owns the IP is the publisher's research, not the studio's — the [funded research exclusion](/rd-tax-credit/funded-research-exclusion) analysis every external-development deal needs.
+- **Cloud computing** used to develop and test (build farms, multiplayer test infrastructure) can enter as rented computer time; the categories are in the [QRE guide](/rd-tax-credit/qualified-research-expenses).
+
+<Callout label="Watch out">
+  <p>Games sold to customers are commercial software, so the internal-use software hurdles do not apply to the shipped product — but a studio's internal back-office systems are still IUS, and middleware built only for internal pipelines needs the classification check before claiming.</p>
+</Callout>
+
+Claims are filed on [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765); the [IRS research credit overview](https://www.irs.gov/credits-deductions/businesses/research-credit) states the framework. A defensible studio claim is usually a minority of payroll and says so plainly — the claims that draw exams are the ones where the whole credits scroll appears on the timesheet.

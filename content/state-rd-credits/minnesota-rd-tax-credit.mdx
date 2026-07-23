@@ -1,0 +1,55 @@
+---
+title: "Minnesota R&D tax credit: 10% then 4%, with a refundability history"
+description: "Minnesota's research credit pays 10% on the first tier of incremental in-state QREs and 4% above it, using federal Section 41 definitions. The first tier has a partial-refundability history for small claimants — a feature the Legislature has toggled, so verify current status."
+date: "2026-07-07"
+type: "brief"
+level: "working"
+tags: ["state-credits", "minnesota", "section-41"]
+faq:
+  - q: "What is the Minnesota R&D credit rate?"
+    a: "As of mid-2026, Minnesota's credit equals 10% of the first $2 million of qualifying research expenses in Minnesota over a base amount, and 4% of the excess above that tier. Qualified research takes its definition from federal Section 41, limited to research performed in Minnesota, with the base computed from Minnesota gross receipts history."
+  - q: "Is the Minnesota R&D credit refundable?"
+    a: "Historically it has been at times, in part. Minnesota made the credit refundable for a brief window in the early 2010s, returned it to nonrefundable status, and the Legislature has repeatedly considered restoring partial refundability for the first tier. Because this feature has toggled, confirm the current year's refundability status with the Minnesota Department of Revenue before modeling any cash benefit for a loss company."
+  - q: "Can pass-through owners claim the Minnesota research credit?"
+    a: "Yes. Minnesota allows the credit to individuals as well as corporations, so partners and S corporation shareholders can claim their share against Minnesota individual income tax — broader than corporation-only states like New Jersey. Unused amounts carry forward fifteen years; there is no carryback."
+---
+
+Minnesota's research credit is a two-tier incremental design: as of mid-2026, 10% of the first $2 million of Minnesota qualified research expenses over a base amount, and 4% of the excess — federal [Section 41](https://www.irs.gov/credits-deductions/businesses/research-credit) definitions, in-state research only, claimable by corporations and pass-through owners alike, with a 15-year carryforward. Its most discussed feature is one that has come and gone: partial refundability, which the Legislature enacted briefly in the early 2010s, repealed, and has repeatedly considered restoring. Confirm the current year's status with the [Minnesota Department of Revenue](https://www.revenue.state.mn.us).
+
+<KeyTakeaway>
+  <p>Minnesota pays 10% on the first tier of incremental in-state QREs and 4% above it, with a 15-year carryforward and pass-through availability. Refundability has toggled historically — never assume it either way for a current year without checking.</p>
+</KeyTakeaway>
+
+## Computation: two tiers on a regular-method-style base
+
+The definitional layer is federal — the four-part test and QRE categories from the [federal claim](/rd-tax-credit/what-is-the-rd-tax-credit) carry over, filtered to research performed in Minnesota. The base amount follows a regular-method-style structure keyed to a fixed-base percentage and Minnesota gross receipts, so claimants need in-state receipts and QRE history, not just current-year spending; Minnesota has not offered an ASC-style shortcut, which puts it with California on that [dimension](/state-rd-credits/how-state-credits-differ).
+
+**The tier structure rewards the first slice of increment disproportionately (illustrative, as of mid-2026):**
+
+<BarChart
+  title="Minnesota credit on incremental in-state QREs, by increment size"
+  unit="$ thousands"
+  note="Illustrative: 10% of increment up to $2M, 4% above. Assumes base already computed; actual base mechanics reduce the increment."
+  data={[
+    { label: "$500k increment", value: 50, display: "$50k" },
+    { label: "$1M increment", value: 100, display: "$100k" },
+    { label: "$2M increment", value: 200, display: "$200k" },
+    { label: "$5M increment", value: 320, display: "$320k" },
+    { label: "$10M increment", value: 520, display: "$520k" },
+  ]}
+  highlight={2}
+/>
+
+The blended rate falls as the increment grows — 10% flat through $2 million, sliding toward 4% at scale — which makes the credit relatively richest for mid-sized, growing research operations rather than the state's largest spenders.
+
+## Monetization and the refundability saga
+
+The credit offsets Minnesota income tax, including for individuals receiving pass-through shares, and unused amounts carry forward 15 years with no carryback. On refundability, the honest statement is historical: Minnesota made the credit partially refundable for tax years in a brief early-2010s window, repealed refundability thereafter, and proposals to restore a refundable first tier have recurred in legislative sessions since. As of mid-2026, model the credit as nonrefundable unless the Department of Revenue's current-year guidance says otherwise — and if a loss company's Minnesota decision hinges on refundability, check the statute for the specific year rather than relying on secondary summaries, this one included.
+
+## Who benefits
+
+Growing research operations in Minnesota with tax liability somewhere in the structure — the pass-through availability means a profitable founder can absorb credits a loss-running entity cannot, a meaningful difference from corporation-only credits. The two-tier design favors companies whose annual increment sits near or below $2 million. Weak fits: flat spenders (incremental base), companies without reconstructible Minnesota receipts history for the base, and loss companies with no taxable owners and a fifteen-year clock.
+
+## The trap: the base, not the tiers
+
+The tiers are easy; the base is where claims fail. Minnesota's regular-method-style base requires a fixed-base percentage built on historical Minnesota QREs and gross receipts, and companies that grew by acquisition, relocated research into Minnesota, or lack sourced records tend to compute a base that examiners can unwind. The [multistate sourcing habit](/state-rd-credits/multistate-rd-credit-strategy) — state-of-performance fields on every workpaper line, kept for base years as well as claim years — is the whole defense. And date everything: rates, tiers, and especially refundability are legislative variables in Minnesota more than most states.

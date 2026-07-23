@@ -1,0 +1,57 @@
+---
+title: "The research credit on a consolidated return"
+description: "A consolidated group is automatically a Section 41(f) controlled group, so the credit is computed on combined QREs and history and allocated among members by proportionate QREs. Intercompany research payments are ignored, and a departing member takes its QRE history — but not necessarily its credits — out the door."
+date: "2026-06-18"
+type: "brief"
+level: "pro"
+tags: ["section-41", "consolidated", "controlled-groups"]
+faq:
+  - q: "How is the research credit computed on a consolidated return?"
+    a: "Every consolidated group is also a controlled group under Section 41(f), so the credit is computed as if the members were a single taxpayer: combined QREs, combined gross receipts, combined prior-year history. The single group credit is then allocated among members in proportion to each member's share of group QREs, and the group claims the total through the parent's Form 3800 on the consolidated return."
+  - q: "How are intercompany research payments treated in a consolidated group?"
+    a: "They are effectively ignored for computing the group credit. Because Section 41(f) treats the members as one taxpayer, a payment from one member to a sister member to perform research is not 65% contract research — the group counts only the performing member's own wages, supplies, and third-party contract research. Payments to true third parties remain contract research subject to the 65% haircut."
+  - q: "What happens to research credits when a subsidiary leaves a consolidated group?"
+    a: "Unused consolidated research credits attributable to the departing member leave with it under Treas. Reg. §1.1502-79 attribution principles, subject to SRLY and Section 383 limits in the new group. Separately, Section 41(f)(3) transfers the member's QRE and gross-receipts history to the buyer for base-amount purposes — so a departing member's credit carryforwards and its credit history travel under different rules and can land in different amounts."
+---
+
+For research credit purposes, a consolidated return adds a layer on top of rules that would apply anyway. Every affiliated group filing a consolidated return is also a controlled group under Section 41(f) — the more-than-50% Section 41 threshold is looser than the 80% consolidation threshold — so the credit is computed on a single-taxpayer basis: combined qualified research expenses (QREs), combined gross receipts, combined base-period history, one group credit. What consolidation adds is return mechanics (one Form 3800, one credit against one consolidated liability) and a distinct set of rules for members that arrive and depart mid-stream.
+
+<KeyTakeaway>
+  <p>The group computes one credit on combined numbers and allocates it by proportionate member QREs; intercompany research payments drop out of the computation entirely. When a member leaves, its credit carryforwards and its QRE history exit under different rules — Reg. §1.1502-79 attribution for the credits, Section 41(f)(3) for the history — and both sides of a deal need both numbers.</p>
+</KeyTakeaway>
+
+## Single-entity computation, member-level allocation
+
+Treas. Reg. §1.41-6(d) requires the group credit to be computed on aggregate QREs and aggregate history, then allocated to each member in proportion to the member's QREs over group QREs — the same pro-rata rule that governs any [controlled group](/rd-tax-credit/rd-credit-controlled-groups); the regulatory text is at [eCFR Title 26](https://www.ecfr.gov/current/title-26). On a consolidated return the allocation is largely bookkeeping for a single filing: each member's [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765) data rolls up, and the parent claims the group total against consolidated tax. But the member-level allocation still matters — it fixes each member's share for earnings-and-profits, tax-sharing agreements, separate-return-year carryovers, and the day the member is sold.
+
+Method elections coordinate at the group level for a consolidated year: the group cannot compute some members on the alternative simplified credit and others on the regular method for the single group computation, and the Section 280C(c) reduced-credit election on a timely original consolidated return binds the group. See [how to calculate the credit](/rd-tax-credit/how-to-calculate-the-rd-credit) for the two methods the group is choosing between.
+
+## Intercompany research payments disappear
+
+The single-taxpayer fiction eliminates a category of error. If DevSub performs research and bills Parent under an intercompany services agreement, Parent has not purchased contract research subject to the 65% limitation — the group simply counts DevSub's own wages and supplies at 100%, and the intercompany charge is disregarded for the credit just as the intercompany-transaction rules of Reg. §1.1502-13 neutralize it for income. Two practical corollaries:
+
+- **No double counting.** Claims that pick up DevSub's wages *and* 65% of Parent's payment to DevSub overstate QREs — a recurring finding in exam.
+- **Funding analysis simplifies internally, not externally.** The funded-research exclusion of Section 41(d)(4)(H) still applies in full to arrangements with parties outside the group; only intra-group funding drops away.
+
+**How a $1,000,000 intercompany research arrangement enters the group computation:**
+
+| Treatment | QREs counted |
+| --- | --- |
+| Correct: performing member's own wages and supplies | $780,000 |
+| Wrong: 65% contract research on the intercompany charge | $650,000 |
+| Wrong: both wages and 65% of the charge | $1,430,000 |
+
+## Members joining and leaving
+
+**Joining.** A target's taxable year closes when it enters the group, producing a stub period with its own short-year adjustments (annualized inputs, prorated ASC base — see the [short-year brief](/rd-tax-credit/short-tax-years-rd-credit)). From the deal date, Section 41(f)(3) folds the target's QRE and gross-receipts history into the group's base-amount computations, prorated by days for the transaction year.
+
+**Leaving.** Two separate transfers occur, and diligence should quantify both:
+
+1. **Credit carryforwards.** Unused consolidated research credits are attributed to the departing member under the principles of Treas. Reg. §1.1502-79 — broadly, the credits it would have generated on a separate basis — and travel with it, subject in the acquiring group to SRLY limits and Section 383 (the credit analog of Section 382) if an ownership change occurred.
+2. **QRE history.** Section 41(f)(3) moves the member's research history to the buyer and out of the seller's base, whether or not any carryforwards exist. The seller's go-forward credit can rise (less history in its ASC average); the buyer's incremental credit shrinks against a larger combined base.
+
+<Callout label="Watch out">
+  <p>Tax-sharing agreements frequently allocate consolidated credits by a formula that differs from the §1.41-6 QRE-proportionate allocation. On a sale, the contractual entitlement and the tax-law attribution can diverge — the purchase agreement should say which one governs the price adjustment, because the regulations will govern the returns.</p>
+</Callout>
+
+Exam exposure is consolidated too: the IRS audits the group computation as a whole, and an adjustment to one member's QREs moves every member's allocated share. The documentation and [audit defense](/rd-tax-credit/rd-credit-audit-defense) file should be maintained at the member level even though the claim is filed once.

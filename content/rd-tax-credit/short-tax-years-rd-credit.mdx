@@ -1,0 +1,54 @@
+---
+title: "Short tax years and the research credit: annualization and modified averages"
+description: "A short taxable year — from a transaction, a liquidation, or an accounting-period change — changes every averaged input to the Section 41 credit. Gross receipts are annualized for the base amount, prior short-year QREs are annualized for the ASC average, and a current short year prorates the ASC base itself."
+date: "2026-06-04"
+type: "brief"
+level: "pro"
+tags: ["section-41", "acquisitions", "asc"]
+faq:
+  - q: "How does a short tax year affect the alternative simplified credit?"
+    a: "Treas. Reg. §1.41-9(c) requires the ASC's prior-three-year QRE average to be computed on annualized numbers: QREs from a prior short year are grossed up by 365 over the number of days in that short year. For a current short credit year, the 50%-of-average base is prorated to the short period. Skipping the annualization understates the base and overstates the credit."
+  - q: "Are gross receipts annualized for the regular research credit in a short year?"
+    a: "Yes. Section 41(f)(4) directs that gross receipts for any short taxable year be annualized in computing the regular method's average annual gross receipts for the four preceding years. The qualified small business $5 million screen for the payroll offset is likewise applied on an annualized basis under Section 41(h)(3)."
+  - q: "Does an acquisition create a short tax year for the research credit?"
+    a: "Frequently. A target joining a consolidated group closes its taxable year at the acquisition date, producing a short pre-closing year and a stub period inside the buyer's year. Each short period gets its own credit computation with annualized inputs, and Section 41(f)(3) simultaneously moves QRE and gross-receipts history between the parties with day-count proration for the transaction year."
+---
+
+A short taxable year breaks every average in Section 41, and the statute's fix is annualization. The regular method's base amount rests on average annual gross receipts for the four preceding years; the alternative simplified credit (ASC) rests on the average of the prior three years' qualified research expenses (QREs). When any of those years — or the credit year itself — is shorter than twelve months, the raw numbers mislead, so Section 41(f)(4) annualizes short-year gross receipts and Treas. Reg. §1.41-9(c) annualizes short-year QREs and prorates the ASC base for a short credit year.
+
+<KeyTakeaway>
+  <p>Short-year inputs are grossed up by 365 over the days in the short period before averaging, and a short credit year prorates the ASC's 50%-of-average base. M&A stub periods trigger these rules and the Section 41(f)(3) history transfers at the same time — two adjustments, easy to conflate, both mandatory.</p>
+</KeyTakeaway>
+
+## The mechanics, method by method
+
+**Regular method.** Section 41(f)(4) (text at the [official IRC](https://uscode.house.gov/browse/prelim@title26&edition=prelim)) requires gross receipts for any short year in the four-year lookback to be annualized so the "average annual" figure means what it says. A six-month year with $4 million of receipts enters the average at roughly $8 million.
+
+**ASC.** Treas. Reg. §1.41-9(c) ([eCFR Title 26](https://www.ecfr.gov/current/title-26)) applies the same logic to QREs. Two distinct adjustments:
+
+1. *Prior short year in the lookback:* multiply that year's QREs by 365 and divide by the days in the short period, then average.
+2. *Current short credit year:* the base — 50% of the three-year average — is itself prorated by the days in the short year. Current-year QREs are actual, not annualized.
+
+**A stub-period ASC computation — a calendar-year target acquired June 30, creating a 181-day short year:**
+
+| Input | Raw figure | Adjusted figure |
+| --- | --- | --- |
+| Prior-3-year average QREs (full years) | $2,000,000 | $2,000,000 |
+| Base: 50% of average, prorated 181/365 | $1,000,000 | $495,890 |
+| Stub-period QREs (actual) | $1,150,000 | $1,150,000 |
+| Excess over base | — | $654,110 |
+| ASC at 14% | — | $91,575 |
+
+Without proration, the base would be $1,000,000 and the credit only $21,000 — the adjustment cuts the base roughly in half and quadruples the credit. The direction of the error is not always taxpayer-favorable: annualizing a *prior* short year's QREs raises the average and shrinks later credits.
+
+## Transaction-year mechanics
+
+Deals generate short years and history transfers simultaneously. A target entering a consolidated group closes its year at the deal date; the pre-closing short year gets its own [credit computation](/rd-tax-credit/how-to-calculate-the-rd-credit) with the adjustments above. Meanwhile Section 41(f)(3) moves the target's QRE and gross-receipts history to the buyer — with proration by days for the year of the transaction — as covered in the [acquisitions brief](/rd-tax-credit/acquisitions-base-amount-adjustments) and the broader [controlled-group rules](/rd-tax-credit/rd-credit-controlled-groups). The two regimes stack: the buyer's post-deal ASC average includes annualized target history for any short target years within the lookback.
+
+Accounting-period changes (a 52-53-week adoption, a fiscal-year conversion under Rev. Proc. authority described in [Pub 538](https://www.irs.gov/publications/p538)) create the same short-period arithmetic without any deal.
+
+<Callout label="Watch out">
+  <p>The qualified small business screens for the payroll offset are annualized too — Section 41(h)(3) applies the $5 million test to annualized short-year receipts. A startup with $3 million of receipts in a seven-month first year is over the line at about $5.2 million annualized, and the election fails even though the raw number looks safe.</p>
+</Callout>
+
+Software rarely handles any of this automatically. Short-year computations belong on a manual checklist: identify every short period in the credit year and the lookbacks, annualize each input the statute annualizes, prorate the ASC base if the credit year itself is short, and document the day counts.

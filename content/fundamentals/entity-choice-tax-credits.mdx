@@ -1,0 +1,49 @@
+---
+title: "Entity choice and tax credits: where a credit is actually worth the most"
+description: "A C corporation uses credits against its own 21% tax; a passthrough sends credits to owners, where Section 41(g) and the general business credit rules can strand them against insufficient or mismatched liability. Credits alone rarely decide entity choice — but they reliably tilt it, and the tilt runs toward whoever has liability the credit can reach."
+date: "2026-06-11"
+type: "brief"
+level: "working"
+tags: ["credits-vs-deductions", "section-41", "fundamentals", "carryforward"]
+faq:
+  - q: "Does an S corporation or partnership use the research credit itself?"
+    a: "No. Credits computed at the passthrough level are separately stated and flow to shareholders or partners, who claim them on their own returns subject to their own limitations. The entity's K-1 reports each owner's share; whether the credit becomes cash depends entirely on the owner's tax posture, not the entity's."
+  - q: "What does Section 41(g) limit?"
+    a: "For research credits flowing from a passthrough, Section 41(g) caps each owner's usable credit at the tax attributable to that owner's income from the specific business generating the credit. An owner with large wages or portfolio income but a small allocable share of business income can use only a sliver of the credit in the current year; the excess carries forward under Section 39."
+  - q: "Are credits a reason to choose C corporation status?"
+    a: "Sometimes a contributing reason, rarely a sufficient one. A C corporation applies credits directly against a known 21% liability with no owner-level mismatch, and qualified small businesses can elect the payroll tax offset regardless of entity form. But C corporation status brings double taxation of distributions and exit proceeds (QSBS aside), which usually outweighs cleaner credit usage on its own."
+---
+
+A tax credit is worth face value only to someone with tax it can offset, which is why the same research credit can be cash this year inside a C corporation and a decade-long carryforward in the hands of a passthrough's owners. The C corporation applies the credit against its own 21% liability, subject only to the general business credit limitation. A partnership or S corporation computes the credit and hands it out on Schedule K-1, where each owner runs it through the [Section 38 limitation](/fundamentals/business-tax-credits-general-limitations) *and*, for the research credit, the Section 41(g) same-business cap — the provision that quietly strands more passthrough credits than any other ([26 U.S.C. §41](https://uscode.house.gov/browse/prelim@title26&edition=prelim)).
+
+<KeyTakeaway>
+  <p>C corporations use credits directly and predictably; passthrough credits are only as good as each owner's matching liability, and Section 41(g) requires that liability to come from the very business that generated the credit. Credits tilt entity choice toward C status — but double taxation usually outweighs the tilt, and the payroll offset is entity-agnostic.</p>
+</KeyTakeaway>
+
+## The C corporation case: one taxpayer, one limitation
+
+Inside a C corporation, the [research credit](https://www.irs.gov/credits-deductions/businesses/research-credit) meets exactly one gate: the general business credit cannot offset the last 25% of net regular tax liability above $25,000, with unused amounts carried back one year and forward twenty under Section 39. The entity that incurred the research pays the tax the credit offsets — no allocation, no owner mismatch. The Section 280C reduced-credit election is a single entity-level decision. And loss-year corporations at least accumulate the carryforward in one place, where the [NOL 80% limitation](/fundamentals/nol-rules-after-tcja) conveniently guarantees some future liability for it to meet. The costs sit elsewhere: a second layer of tax on dividends and non-QSBS exits, which is the perennial passthrough argument.
+
+## The passthrough case: the credit meets Section 41(g)
+
+Passthrough credits flow out separately stated, and each owner applies its own limitations. For the research credit, Section 41(g) adds the cap with teeth: the credit an owner may use is limited to the tax attributable to that owner's taxable income from *the business generating the credit*. A profitable S corporation's owner whose allocable business income is modest — because of depreciation, because of the [Section 174 capitalization years' reversal](/section-174/section-174-vs-section-41), because the business reinvests — can be sitting on credit she cannot touch, however large her overall tax bill from wages or other investments. Excess amounts carry forward, but carryforwards are deferral, and Section 41(g) applies again each year they return. Material-participation and basis rules add further owner-level friction for limited partners and passive investors.
+
+**Where a $100,000 research credit lands, by structure:**
+
+| Factor | C corporation | S corp / partnership |
+| --- | --- | --- |
+| Who uses the credit | The entity, at 21% | Owners, pro rata |
+| Key limitation | §38 (25%-over-$25K rule) | §38 *plus* §41(g) same-business cap, per owner |
+| Loss-year outcome | Entity carryforward, 20 years | Owner carryforwards, each on its own clock |
+| Payroll offset (QSBs) | Available at entity | Available at entity |
+| Distributions / exit | Second layer of tax (QSBS may exempt stock gain) | Single layer |
+
+Two entity-agnostic notes soften the contrast. The [payroll tax offset](/rd-tax-credit/payroll-tax-offset-startups) — up to $500,000 against payroll taxes for qualified small businesses — is elected and used at the entity level on [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765), so pre-profit startups get equivalent value in either form. And credits that are transferable or refundable by their own terms (chiefly energy credits under the IRA rules) sidestep the usage question entirely.
+
+## What should actually drive the choice
+
+Credits are a tiebreaker, not a thesis. The dominant entity-choice variables remain the double-tax cost of C status against the QSBS exemption's value at exit, state taxes, owner compensation, and reinvestment plans. The credit analysis earns a real seat in two fact patterns: a research-heavy business with profitable operations and passive or income-mismatched owners (where 41(g) will bite annually, favoring C status or a restructuring of who holds the interests), and a business whose owners already have liability from the same activity (where the passthrough credit works fine and the C-corp argument evaporates). Run the owner-by-owner usage math before letting a credit reweight the structure — and remember the modeling belongs in diligence when the structure is being bought, as covered in [tax incentive due diligence in M&A](/fundamentals/tax-incentive-due-diligence-mna).
+
+<Callout label="Watch out">
+  <p>Converting to C corporation status to "use the credits" is a one-way door with a five-year lookback problem: S elections cannot be re-made for five years after revocation, and the accumulated passthrough credit carryforwards stay behind with the owners — they do not follow the business into its new form.</p>
+</Callout>

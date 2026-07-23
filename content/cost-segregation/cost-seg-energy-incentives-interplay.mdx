@@ -1,0 +1,48 @@
+---
+title: "One building, several incentives: coordinating cost segregation with 179D and energy credits"
+description: "Cost segregation, the Section 179D deduction, and the Section 48E investment credit can all attach to a single building — but 179D reduces the basis the study depreciates, credit-eligible energy property should be carved out of the study entirely, and each dollar of cost can support only one incentive. Ordering rules and a coordination checklist."
+date: "2026-05-26"
+type: "brief"
+level: "working"
+tags: ["cost-segregation", "energy-interplay", "179d", "depreciation"]
+faq:
+  - q: "Does the Section 179D deduction reduce depreciable basis?"
+    a: "Yes. Section 179D(e) requires the building's basis to be reduced by the amount of the deduction. A cost segregation study should therefore be computed on basis net of 179D — the reduction is generally applied against the energy-efficient building systems (envelope, HVAC, lighting) that generated the deduction, which mostly sit in 39-year building basis rather than the study's short-life classes. Note that 179D terminates for property whose construction begins after June 30, 2026."
+  - q: "Can the same solar equipment go through a cost segregation study and claim the Section 48E credit?"
+    a: "It claims the credit, not a study reclassification — but it is depreciated too. Energy property eligible for the Section 48E clean electricity investment credit (such as rooftop solar) is 5-year MACRS property in its own right, with basis reduced by 50 percent of the credit under Section 50(c)(3). The study should carve the energy property out as a separately tracked asset so its cost is not double-counted in the building allocation."
+  - q: "Can one dollar of construction cost support both 179D and a cost segregation reclassification?"
+    a: "A dollar of cost can be depreciated only once, and 179D-deducted amounts leave basis entirely under Section 179D(e). The practical rule is one incentive per dollar: 179D consumes basis in the qualifying building systems; the investment credit consumes half its basis under Section 50(c)(3); whatever basis remains is what the cost segregation study allocates among MACRS classes. The workpapers should reconcile total project cost across all three."
+---
+
+A new or renovated building can plausibly claim three federal incentives at once: accelerated depreciation from a cost segregation study, the [Section 179D](/energy-incentives/section-179d-explained) energy-efficient commercial buildings deduction, and the Section 48E clean electricity investment credit on energy property such as solar. They stack — but not on the same dollars. Section 179D(e) strips deducted amounts out of basis; Section 50(c)(3) removes half the credit from the energy property's basis; and a study can only allocate the basis that survives. The coordination failure examiners look for is simple double counting: a lighting system deducted under 179D and still sitting at full cost in the study's asset detail, or solar cost blended into the building allocation while also claiming the credit.
+
+<KeyTakeaway>
+  <p>Order the work: carve out credit-eligible energy property first (5-year MACRS, basis reduced by half the 48E credit), apply the 179D basis reduction to the qualifying building systems next, then run the cost segregation study on what remains. One incentive per dollar, one reconciliation tying the three workpapers to total project cost.</p>
+</KeyTakeaway>
+
+## The ordering, and why it matters
+
+**Step one: carve out energy property.** Solar arrays, storage, and other clean-electricity property claiming the 48E credit are not building components for study purposes — they are separately stated 5-year MACRS assets (bonus-eligible) whose depreciable basis is cut by 50 percent of the credit under Section 50(c)(3). Leaving their cost inside the building total inflates every allocation downstream. The carve-out also protects the credit itself: credit basis must be established from actual cost records, not a study's residual arithmetic. IRS guidance on the deduction side lives at the [energy-efficient commercial buildings deduction page](https://www.irs.gov/credits-deductions/energy-efficient-commercial-buildings-deduction).
+
+**Step two: apply the 179D reduction.** 179D — claimed on [Form 7205](https://www.irs.gov/forms-pubs/about-form-7205), up to the inflation-adjusted per-square-foot maximums, with the prevailing wage and apprenticeship multiplier — reduces the building's basis dollar-for-dollar under Section 179D(e). The reduction properly attaches to the systems that earned it: interior lighting, HVAC and hot water, and envelope. Those systems are overwhelmingly 39-year (or QIP) basis, not the study's 5/7/15-year classes, so a well-sequenced 179D claim mostly consumes slow basis — one reason the two incentives coexist so comfortably. Timing note: under OBBBA, 179D terminates for property whose construction begins after June 30, 2026, so this coordination question is now largely about projects already under way.
+
+**Step three: run the study on net basis.** With energy property out and 179D netted, the study allocates the remaining cost normally. On a $12,000,000 project with $800,000 of solar and a $400,000 179D deduction, the study's working basis is $10,800,000 — and reporting the study against $12,000,000 overstates depreciation by exactly the double-counted amounts. Baseline mechanics are covered in [what a cost segregation study is](/cost-segregation/what-is-cost-segregation); the classification standards in the [Cost Segregation Audit Techniques Guide](https://www.irs.gov/businesses/cost-segregation-audit-techniques-guide) apply to the net numbers.
+
+**Illustrative $12M project — where each dollar lands.**
+
+| Bucket | Cost | Treatment |
+| --- | --- | --- |
+| 48E energy property (solar) | $800,000 | Credit; 5-yr MACRS on $800K less half the credit |
+| 179D-deducted basis | $400,000 | Deducted year one; leaves basis under §179D(e) |
+| Study: 5/7/15-year classes | ~$2,700,000 | Bonus-eligible short-life property |
+| Residual 39-year building | ~$8,100,000 | Straight-line |
+
+## Coordination checklist
+
+1. **One cost ledger.** Reconcile study, 179D certification, and credit basis to a single total-project-cost schedule; unexplained overlaps are the audit finding.
+2. **Carve out energy property before the study fieldwork**, and give it its own asset records including the Section 50(c)(3) basis reduction.
+3. **Net 179D against the systems that earned it** — lighting, HVAC, envelope — and show the reduction on the study's residual-basis tie-out, not as a plug.
+4. **Check the calendar.** 179D requires construction beginning by June 30, 2026; prevailing wage and apprenticeship documentation (see the [IRS PWA requirements](https://www.irs.gov/credits-deductions/prevailing-wage-and-apprenticeship-requirements)) drives the 5x multiplier and must be contemporaneous.
+5. **Mind the exits.** Credit recapture runs five years from placed-in-service; accelerated depreciation carries its own [recapture at sale](/cost-segregation/depreciation-recapture-explained). A disposition plan should model all of it together — the incentives were claimed together, and they unwind together.
+
+The stack is legitimate and, on qualifying projects, substantial. What it is not is additive on the same dollars — and the reconciliation workpaper proving that is cheaper to build now than to reconstruct on exam.

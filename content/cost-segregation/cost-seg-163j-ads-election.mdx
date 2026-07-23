@@ -1,0 +1,116 @@
+---
+title: "The Section 163(j) real property election: trading bonus depreciation for interest deductions"
+description: "An electing real property trade or business escapes the Section 163(j) business interest limitation, but must depreciate its buildings and QIP under ADS — 40-year nonresidential, 30-year residential, 20-year QIP — and loses bonus depreciation on that ADS property. Personal property from a cost segregation study keeps bonus. How to model the trade, and why the election is irrevocable."
+date: "2026-05-19"
+type: "guide"
+level: "pro"
+tags: ["cost-segregation", "163j", "depreciation", "bonus-depreciation", "real-estate"]
+faq:
+  - q: "What is the Section 163(j) electing real property trade or business election?"
+    a: "Under Section 163(j)(7)(B), a real property trade or business may elect out of the business interest expense limitation entirely. The price is Section 168(g)(1)(F): the electing business must use the alternative depreciation system (ADS) for its nonresidential real property (40 years), residential rental property (30 years), and qualified improvement property (20 years). The election is irrevocable, and ADS property is ineligible for bonus depreciation."
+  - q: "Does the 163(j) election eliminate bonus depreciation from a cost segregation study?"
+    a: "Only partly. The ADS requirement in Section 168(g)(1)(F) reaches nonresidential real property, residential rental property, and qualified improvement property — not Section 1245 personal property or land improvements. Assets a cost segregation study assigns to 5-, 7-, or 15-year classes keep their GDS recovery periods and remain eligible for 100 percent bonus depreciation. The building shell moves to 40- or 30-year ADS, and QIP moves to 20-year straight-line without bonus."
+  - q: "What are the ADS recovery periods for an electing real property trade or business?"
+    a: "Nonresidential real property is depreciated over 40 years, residential rental property over 30 years, and qualified improvement property over 20 years, all straight-line. Residential rental property placed in service before 2018 uses 30-year ADS prospectively for electing businesses under the CARES Act technical correction. Personal property and land improvements identified in a cost segregation study are unaffected and keep their regular MACRS lives."
+  - q: "Can the Section 163(j) real property election be revoked?"
+    a: "No. Treas. Reg. §1.163(j)-9 makes the election irrevocable except in narrow circumstances — for example, the business ceases to be a real property trade or business. A business that elects in a high-interest year cannot elect back out when rates fall or debt is repaid. The permanence is why the decision should be modeled over the hold period, not one tax year."
+  - q: "Who benefits from the 163(j) real property election?"
+    a: "Highly leveraged real estate businesses whose interest expense would otherwise be limited — typically those with large debt loads relative to adjusted taxable income, or thin margins. Businesses under the roughly $31 million gross receipts small-business exemption (2026, indexed) are exempt from Section 163(j) anyway and should not elect. Lightly leveraged owners give up bonus on QIP and slower building depreciation for relief they do not need."
+---
+
+Section 163(j) limits a business's deduction for net interest expense to 30 percent of adjusted taxable income, and real estate — the most leverage-dependent asset class in the economy — was handed a specific escape hatch: a **real property trade or business** may elect under Section 163(j)(7)(B) to be exempt from the limitation altogether. The toll, imposed by Section 168(g)(1)(F), is depreciation under the alternative depreciation system (ADS) for three categories of property: nonresidential real property (40-year ADS life), residential rental property (30 years), and qualified improvement property (20 years). ADS property is straight-line and — the part that matters most for cost segregation planning — categorically ineligible for bonus depreciation under Section 168(k)(2)(D).
+
+The election is irrevocable. It is also narrower than most owners assume: it never touches the 5-, 7-, and 15-year property a cost segregation study identifies. So the real decision is not "interest deductions versus cost segregation." It is "full interest deductions versus bonus on the building-classified property — principally QIP — plus a modestly slower building schedule." That is a model, not a slogan.
+
+<KeyTakeaway>
+  <p>The 163(j) election buys unlimited interest deductions at the cost of 40/30/20-year ADS lives — and no bonus — on nonresidential real property, residential rental property, and QIP. Personal property and land improvements from a cost segregation study are untouched and keep 100 percent bonus, which is why highly leveraged owners often do both: elect, and still study.</p>
+</KeyTakeaway>
+
+## What does the limitation actually cost a leveraged owner?
+
+Section 163(j) caps the deduction for business interest at business interest income plus 30 percent of adjusted taxable income (ATI), computed since 2022 on an EBIT basis — depreciation and amortization are *not* added back. That EBIT computation is brutal for real estate: a building generating healthy cash flow can show near-zero ATI after depreciation, throttling the interest deduction on the very debt that bought the building. Disallowed interest carries forward indefinitely, but for a partnership it carries forward at the *partner* level under the Section 163(j)(4) excess business interest rules — a plumbing problem all its own.
+
+Two groups never face the problem. Businesses meeting the small-business gross receipts exemption (average annual gross receipts of roughly $31 million or less for 2026, aggregated across related entities under Section 448(c)) are exempt from Section 163(j) without any election — and should not make one. And businesses with modest leverage simply never hit the 30 percent ceiling. The election only makes sense when interest is actually being disallowed, or reliably will be.
+
+## What exactly does the election require?
+
+An electing real property trade or business — defined by cross-reference to Section 469(c)(7)(C): development, construction, acquisition, rental, operation, management, leasing, or brokerage of real property — must use ADS for the following, per Section 168(g)(1)(F):
+
+**ADS consequences of the election, by property class.**
+
+| Property class | Normal (GDS) treatment | After election (ADS) | Bonus eligible after election? |
+| --- | --- | --- | --- |
+| Nonresidential real property | 39-year straight-line | **40-year** straight-line | No (never was) |
+| Residential rental property | 27.5-year straight-line | **30-year** straight-line | No (never was) |
+| Qualified improvement property | 15-year, 200%→SL | **20-year** straight-line | **No — this is the real loss** |
+| 5-/7-year personal property | MACRS declining balance | Unchanged | **Yes, 100% bonus** |
+| 15-year land improvements | MACRS declining balance | Unchanged | **Yes, 100% bonus** |
+
+Read the table from the bottom up. The building shell was never bonus-eligible, so moving from 39 to 40 years (or 27.5 to 30) costs only the spread between straight-line rates — real money on a large basis, but small per dollar. The categorical loss is [qualified improvement property](/cost-segregation/qualified-improvement-property): QIP is normally 15-year property eligible for 100 percent bonus, and the election converts it to 20-year straight-line with no bonus at all. For an owner planning heavy interior improvement cycles — office repositioning, retail tenant turns — that is the line item that decides the analysis.
+
+The ADS requirement applies to existing property, not just future acquisitions: in the election year, previously placed-in-service buildings and QIP switch to ADS prospectively under a prescribed change-in-use-style computation (remaining basis over the remaining ADS life), per Treas. Reg. §1.163(j)-9 and Rev. Proc. guidance. No recapture of previously claimed bonus is required — property for which bonus was already properly claimed keeps it — but no *new* bonus is available on ADS-required classes going forward. Mechanics live on [Form 4562](https://www.irs.gov/forms-pubs/about-form-4562); [Pub 946](https://www.irs.gov/publications/p946) covers the ADS tables.
+
+<Callout label="Watch out">
+  <p>The election is made per trade or business, and Treas. Reg. §1.163(j)-9 makes it irrevocable — refinancing at lower rates or paying down the mortgage later does not undo it. An owner who elects to solve a temporary leverage problem wears 40-year ADS and bonus-free QIP for the life of the business.</p>
+</Callout>
+
+## How does the election interact with a cost segregation study?
+
+Cleanly, once the boundary is understood. A study allocates a building's cost among asset classes using the principles in the [Cost Segregation Audit Techniques Guide](https://www.irs.gov/businesses/cost-segregation-audit-techniques-guide). Section 168(g)(1)(F) conscripts only three classes into ADS. Everything the study pulls *out* of those classes escapes:
+
+- **Section 1245 personal property** (5- and 7-year): carpet, decorative lighting, dedicated electrical and plumbing serving equipment, movable partitions. Regular MACRS, 100 percent bonus for property acquired after January 19, 2025. Unaffected by the election.
+- **15-year land improvements**: paving, site utilities, landscaping, fencing. Also unaffected, also bonus-eligible.
+- **The residual building**: 40- or 30-year ADS instead of 39 or 27.5.
+- **QIP**: 20-year ADS straight-line, no bonus — instead of 15-year with 100 percent bonus.
+
+So for an electing business, a study still converts a large slice of basis into immediately deductible bonus property; it just converts *less* of it than for a non-electing owner, because the QIP tranche is neutralized. If anything, the election raises the marginal value of the study's personal-property work: the 5/7/15-year classes are the only acceleration left. See [what a cost segregation study actually does](/cost-segregation/what-is-cost-segregation) for the baseline mechanics.
+
+## A worked comparison
+
+Assume a $10,000,000 nonresidential acquisition (after land), acquired and placed in service in 2026, financed with $7,000,000 of debt at 7 percent ($490,000 annual interest). A study allocates 15 percent to 5-year property, 10 percent to 15-year land improvements, 8 percent to QIP, and 67 percent to the building. Suppose Section 163(j) would disallow $250,000 of the interest annually absent the election (EBIT-based ATI, thin margins).
+
+**Year-one deductions with and without the election, both with a cost segregation study** (illustrative; conventions simplified; 100% bonus on qualifying classes).
+
+| Component | No election | With 163(j) election |
+| --- | --- | --- |
+| 5-year property ($1.5M) — bonus | $1,500,000 | $1,500,000 |
+| 15-year land improvements ($1.0M) — bonus | $1,000,000 | $1,000,000 |
+| QIP ($0.8M) | $800,000 (bonus) | ~$20,000 (20-yr SL, half-year) |
+| Building ($6.7M) | ~$165,000 (39-yr, mid-month) | ~$161,000 (40-yr ADS) |
+| Interest deducted | $240,000 (after $250K disallowed) | $490,000 |
+| **Year-one total** | **~$3,705,000** | **~$3,171,000** |
+
+<BarChart
+  title="Year-one deductions: election versus no election ($10M acquisition, $7M debt)"
+  unit="$"
+  note="Illustrative example above. The no-election column assumes $250,000 of interest disallowed in year one; disallowed interest carries forward and the gap narrows or reverses over the hold period."
+  data={[
+    { label: "No election — depreciation", value: 3465000, display: "$3,465,000" },
+    { label: "No election — interest", value: 240000, display: "$240,000" },
+    { label: "Election — depreciation", value: 2681000, display: "$2,681,000" },
+    { label: "Election — interest", value: 490000, display: "$490,000" },
+  ]}
+  highlight={3}
+/>
+
+Year one favors *not* electing: the QIP bonus alone ($800,000) dwarfs the recovered interest ($250,000). But the comparison is misleading in isolation. Bonus is a one-time timing benefit; the interest disallowance recurs every year the leverage persists. By year four in this fact pattern, cumulative deductions under the election overtake the no-election path, and the gap widens for the rest of the hold. The disallowed-interest carryforward softens this — carryforwards are deductible in future years with ATI headroom — but for a business that is *structurally* over the 30 percent ceiling, headroom never arrives, and at the partnership level the carryforward is stranded with partners under Section 163(j)(4) until excess taxable income is allocated.
+
+The honest model, then, has three inputs: the annual interest disallowance and its expected duration; the QIP pipeline (planned improvements over the hold, each losing bonus if the election is made); and the hold period, since ADS's slower building recovery partly reverses at sale anyway through lower accumulated depreciation and hence less [Section 1250 recapture exposure](/cost-segregation/depreciation-recapture-explained).
+
+## When does the election make sense — and when not?
+
+**Elect** when the business is structurally leveraged past the 30 percent ATI ceiling — high LTV, long-dated fixed debt, thin EBIT — and the improvement pipeline is modest. Stabilized residential portfolios fit especially well: the ADS penalty is only 27.5-to-30 years, and apartments generate little QIP (QIP is nonresidential-interior by definition under Section 168(e)(6), so residential owners give up almost nothing on that line).
+
+**Do not elect** when gross receipts fall under the Section 448(c) small-business exemption (the limitation does not apply); when leverage is modest or amortizing quickly; when a large QIP program is imminent — a nonresidential repositioning with $3 million of planned interior work forfeits $3 million of bonus; or when the disallowance is plausibly temporary (a bridge loan pending stabilization), because the election cannot be unwound when the problem solves itself. The neutral advice most modeling supports: exhaust the alternatives first — check the exemption, check aggregation, model the carryforward — and treat the election as the tool for *persistent* disallowance, not a bad year.
+
+## Mechanics and traps
+
+- **How to elect.** Attach the election statement described in Treas. Reg. §1.163(j)-9 to a timely filed original return for the election year, identifying each electing trade or business. Late-election and withdrawal relief has been granted only in narrow, revenue-procedure-specific windows (e.g., the CARES Act QIP fix); do not plan around its availability.
+- **Per-business, not per-entity.** A taxpayer with multiple real property trades or businesses may elect for some and not others — which makes the definition and separation of "trades or businesses" a planning surface, and an exam issue.
+- **Anti-abuse.** Treas. Reg. §1.163(j)-9(j) polices real property businesses that lease to a commonly controlled operating business; look-through rules can deny or narrow the intended benefit.
+- **Existing QIP.** QIP placed in service before the election year with bonus already claimed keeps its deduction; the switch to ADS applies to remaining basis prospectively. Get the change-in-use computation right on [Form 4562](https://www.irs.gov/forms-pubs/about-form-4562) — this is a line examiners can recompute in minutes.
+- **Study sequencing.** If both the election and a study are planned, do the study in the same engagement cycle: the classification determines which basis lands in the ADS-required classes, and an aggressive QIP-versus-personal-property line item now carries election consequences on top of the usual classification stakes under the statute's text at [26 U.S.C. §168](https://uscode.house.gov/browse/prelim@title26&edition=prelim).
+
+## The bottom line
+
+The 163(j) real property election is a permanent trade: full interest deductibility against slower building depreciation and — the binding constraint — loss of bonus on QIP. Cost segregation does not counsel against the election; it changes what the election costs, because the study's 5-, 7-, and 15-year property sails through with bonus intact either way. Leveraged owners with thin ATI and small improvement pipelines should usually elect and still study. Owners with big interior-improvement plans, modest debt, or a small-business exemption should usually decline. Nobody should decide on year one alone — the election is forever, and the model should be too.

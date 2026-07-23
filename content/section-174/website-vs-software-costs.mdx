@@ -1,0 +1,51 @@
+---
+title: "Website costs versus software development: where the Section 174 line ran"
+description: "Building a marketing website — pages, content, design, a CMS configured out of the box — was never Section 174 software development. Writing code that makes a site do something new was. The line runs between content and functionality, and between configuring purchased tools and customizing them with your own engineering."
+date: "2026-05-19"
+type: "brief"
+level: "intro"
+tags: ["section-174", "software", "sre-costs", "section-174a"]
+faq:
+  - q: "Were website costs subject to Section 174 capitalization in 2022–2024?"
+    a: "Only the software-development portion. Writing copy, producing images and video, designing page layouts, and routine hosting were not software development and stayed deductible under normal rules. Engineering work — custom checkout logic, a customer portal, back-end integrations, anything requiring developers to write and test code — was software development, capitalized and amortized over five years domestic during 2022–2024."
+  - q: "Is configuring purchased software the same as developing software for Section 174?"
+    a: "No. Setting options, loading data, and arranging features a purchased platform already offers — choosing a Shopify theme, mapping fields in a CRM — is configuration, not development. Customization crosses the line when your team (or contractors at your risk) writes new code the product did not ship with: custom plugins, scripted extensions, novel integrations. Configuration is deductible operating cost; qualifying customization was SRE."
+  - q: "Does this distinction still matter now that domestic research is deductible again?"
+    a: "Yes, three ways. Foreign-performed development still amortizes over 15 years under Section 174, so offshore website engineering must still be identified. Unamortized 2022–2024 balances are still unwinding, and classifying them correctly drives the catch-up. And the same content-versus-functionality sort feeds the Section 41 credit, where only genuine development can qualify."
+---
+
+Most of what a business spends on its website was never "software development" for Section 174 — and getting the sort right mattered a great deal during 2022–2024, when the TCJA-era statute explicitly swept all software development into five-year capitalization. Content is not code: writing product descriptions, shooting photography, designing layouts, and publishing pages through an off-the-shelf content management system are ordinary business expenses. Software development means engineering — people writing, testing, and debugging code to make the site *do* something it could not do before. The distinction survives into the current era because foreign development still amortizes over 15 years under [Section 174](https://uscode.house.gov/browse/prelim@title26&edition=prelim), and because old balances are still unwinding under [the transition rules](/section-174/section-174-transition-rules).
+
+<KeyTakeaway>
+  <p>Content, design, and configuration of purchased platforms: not software development, never capitalized under 174. Custom code — new features, integrations, back-end logic — was software development, whether for a customer-facing app or your own website. The marketing site mostly falls on the safe side; the product behind the login mostly does not.</p>
+</KeyTakeaway>
+
+## Content versus functionality
+
+The workable test: does the spending create *what the site says* or *what the site does*? The first bucket — copywriting, translation, photography, video, graphic design, brand work, SEO content — is communication, deductible as ordinary advertising or business expense. The second — a custom booking engine, a pricing calculator, account login and profiles, payment processing you built rather than embedded — is functionality, and building it is software development within the meaning the capitalization-era guidance (Notice 2023-63) gave the term: work to develop or improve computer software, from planning and design through coding and testing.
+
+Plenty of website projects mix both. A redesign that refreshes the visuals while engineers rebuild the checkout has one deductible workstream and one that was SRE. Invoices rarely split themselves; time records and project scopes do, which is why [cost identification](/section-174/identifying-sre-expenditures) starts with who did the work — designers and writers on one side, developers on the other.
+
+## Configuration versus customization
+
+The second boundary runs through purchased tools. **Configuration** — installing a platform, selecting a theme, setting options, mapping data fields, arranging features the vendor already built — is not development. Standing up a Shopify store or a WordPress site from stock components is deductible setup, however long it takes. **Customization** begins where your own engineering begins: writing a plugin the platform does not offer, scripting custom middleware between your site and your inventory system, extending source code. That work was software development regardless of the fact that a purchased product sits underneath it. The same line matters for internal tools, as covered in [Section 174 and software development](/section-174/section-174-software-development).
+
+**Where common website spending fell during the 2022–2024 capitalization years:**
+
+| Activity | Treatment |
+| --- | --- |
+| Copy, images, video, page design | Deductible — content, not code |
+| Hosting, domains, SaaS subscriptions | Deductible operating cost |
+| CMS/e-commerce platform configuration | Deductible — configuration |
+| Custom features, plugins, integrations | SRE — capitalized (5-yr domestic / 15-yr foreign) |
+| Custom web application behind a login | SRE — squarely software development |
+
+## The marketing-site boundary — and why it still matters
+
+The rough rule of thumb that emerged: the marketing site — brochureware, blog, contact forms on a stock platform — sat mostly outside 174, while the product — the SaaS application, the customer portal, the API — sat inside it. The gray zone is the marketing site that grew features: interactive configurators, quoting tools, personalization engines. Each custom-coded feature was its own analysis.
+
+Today the sort has three live uses. Foreign contractors building site functionality still generate [15-year foreign amortization](/section-174/foreign-research-15-year) for whoever holds the cost. The 2022–2024 balances being caught up under the OBBBA must be correctly composed — misclassified content costs inflate the catch-up and invite questions. And the development side of the line is the starting population for the [research credit](https://www.irs.gov/credits-deductions/businesses/research-credit), which then applies its own, stricter four-part test: most routine website development was 174 software development but still failed Section 41's technological-uncertainty requirement.
+
+<Callout label="Note">
+  <p>Do not read "website costs are deductible" too broadly in either direction. A founder who capitalized her copywriter's salary overpaid; one who deducted three offshore engineers building a customer dashboard misfiled. The job titles usually tell you which side of the line you are on before the invoices do.</p>
+</Callout>

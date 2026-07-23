@@ -1,0 +1,49 @@
+---
+title: "R&D in financial services: Section 174 and the credit for banks, insurers, and asset managers"
+description: "Financial institutions write enormous amounts of software — trading systems, underwriting models, risk engines — and that development is SRE under Section 174/174A even though the industry sells no technology. The Section 41 credit is harder: most of this software is internal-use, so the three-part high-threshold-of-innovation test stands between the same costs and a credit."
+date: "2026-07-07"
+type: "brief"
+level: "working"
+tags: ["section-174", "software", "section-41", "sre-costs"]
+faq:
+  - q: "Do banks and insurers have Section 174 research costs?"
+    a: "Yes, usually large ones. Section 174 turns on the activity, not the industry: developing or improving software — core banking platforms, policy administration systems, pricing and risk models, trading infrastructure — is SRE activity. During 2022–2024 those costs were capitalized over five years (fifteen for offshore development centers); under Section 174A, domestic development is deductible again while foreign work stays on the 15-year schedule."
+  - q: "Can financial institutions claim the R&D credit on internal software?"
+    a: "Sometimes. Software developed primarily for internal general-and-administrative use must pass the internal-use software rules of Treas. Reg. §1.41-4(c)(6): beyond the ordinary four-part test, it must be innovative, involve significant economic risk, and not be commercially available. Customer-facing platforms — mobile banking, client portals — are generally not internal-use software and face only the normal four-part test."
+  - q: "Is building or calibrating a financial model 'research' for tax purposes?"
+    a: "Developing a new model or materially improving one — new methodology, new architecture, engineering to make it perform at scale — can be. Routine periodic recalibration, refreshing parameters on an existing model, and running models in production are not; they resolve no technological uncertainty. The line matters for both the 174 cost population and the much narrower credit population."
+---
+
+Nobody at a bank calls it R&D, which is why financial services chronically misses — and mismeasures — both halves of the research-cost analysis. Section 174 is indifferent to industry: developing or improving software is a specified research or experimental activity whether the developer is a chip company or a regional insurer, and the TCJA-era statute said so expressly. A bank's core-platform rebuild, an insurer's policy administration modernization, an asset manager's portfolio analytics engine — all of it was capitalizable SRE during 2022–2024 and is domestic-deductible now under [Section 174A](https://uscode.house.gov/browse/prelim@title26&edition=prelim), with offshore development centers still generating 15-year foreign amortization. The credit is a different, narrower question, because so much financial-sector software is internal-use.
+
+<KeyTakeaway>
+  <p>The 174 population in financial services is big — most in-house software engineering counts. The Section 41 population is much smaller, because internal-use software must clear the high-threshold-of-innovation test on top of the four-part test. Model development sits on both lines: new builds can qualify; recalibration and production use do not.</p>
+</KeyTakeaway>
+
+## The SRE scope: wider than the industry assumes
+
+The costs hide under other names — "change the bank" budgets, digital transformation, IT capital projects. What counts is the activity underneath: planning, designing, building, and testing software improvements, per the framework in [identifying SRE expenditures](/section-174/identifying-sre-expenditures). That sweeps in payments infrastructure, fraud detection systems, regulatory reporting engines, actuarial platforms, and the middleware stitching acquired banks' systems together. What stays out follows the ordinary lines: configuring vendor platforms as shipped, content and UX copy, data migration executed with existing tools, and maintenance that fixes rather than improves — the same [configuration-versus-customization boundary](/section-174/website-vs-software-costs) that applies everywhere.
+
+Financial institutions also felt the situs rule harder than most. Offshore captive development centers — a fixture of the sector — put large cost pools on the [15-year foreign schedule](/section-174/foreign-research-15-year), where they remain even after the OBBBA. Institutions still unwinding 2022–2024 domestic balances take the one- or two-year catch-up like everyone else.
+
+## The credit and the internal-use software wall
+
+Here the industry's position inverts. Software developed primarily for internal general-and-administrative functions is "internal-use software" (IUS), and Treas. Reg. §1.41-4(c)(6) ([eCFR Title 26](https://www.ecfr.gov/current/title-26)) makes IUS earn the [research credit](https://www.irs.gov/credits-deductions/businesses/research-credit) the hard way — the ordinary four-part test *plus* the high threshold of innovation:
+
+**The three additional hurdles for internal-use software:**
+
+| Test | What it demands |
+| --- | --- |
+| Innovative | Intended to yield a substantial and economically significant reduction in cost or improvement in speed |
+| Significant economic risk | Substantial resources committed with substantial uncertainty of recovery, for technical reasons |
+| Not commercially available | No off-the-shelf product could do the job without significant modification |
+
+The regulations' own carve-outs matter as much as the tests. Software developed to be used by third parties — customer-facing mobile banking, client portals, trading interfaces used by counterparties — is generally *not* IUS and faces only the normal four-part test. Nor is software developed as part of a hardware-software product or sold commercially. A sensible credit study therefore sorts the portfolio first: customer-facing and dual-function systems on the ordinary track, back-office G&A systems against the high threshold, with the dual-function safe harbor available for mixed systems. Worked examples are in [internal-use software and the credit](/rd-tax-credit/internal-use-software-examples).
+
+## Model development
+
+Quant and actuarial modeling is the sector's most genuine research — and its most contested. Building a new credit-risk model, a novel pricing engine, or a machine-learning fraud detector involves algorithm design, architecture experimentation, and performance engineering that can satisfy the process-of-experimentation requirement. But the credit's technological-in-nature prong wants hard science and computer science, not economics: the defensible claims center on the *engineering* — making the model compute at scale, integrating it into production systems — rather than the financial theory. And routine life is not research: quarterly recalibration, parameter refreshes, regulatory-mandated validation runs, and production scoring resolve no uncertainty. For 174 purposes the same sort applies with a lower bar; new-model development is SRE, model *operation* is not.
+
+<Callout label="Watch out">
+  <p>The mismatch is the planning fact: an institution can carry nine figures of 174-eligible development while defending a far smaller credit population, and claims that treat the two as coextensive draw exams. Report the credit on <a href="https://www.irs.gov/forms-pubs/about-form-6765">Form 6765</a> from a population built against the IUS rules, not from the capitalized-cost ledger.</p>
+</Callout>

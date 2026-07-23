@@ -91,6 +91,19 @@ Every article links to 2–4 primary or governmental sources inline as markdown 
 
 Cite statutes and regulations in prose precisely (e.g., "Treas. Reg. §1.41-4(c)(6)") even when the link is to the general eCFR title.
 
+## State credit articles (content/state-rd-credits/)
+
+- Date every rate, cap, and threshold ("as of mid-2026") and note that state legislatures change these annually — verify before relying.
+- Only state facts you are highly confident in; where detail is uncertain, describe the mechanism and direct readers to the state authority by name.
+- External links: the state revenue agency's top-level domain ONLY (e.g. https://www.ftb.ca.gov, https://www.tax.ny.gov, https://www.cdtfa.ca.gov, https://www.revenue.state.mn.us, https://tax.illinois.gov, https://www.mass.gov/orgs/massachusetts-department-of-revenue, https://comptroller.texas.gov) — never deep links to specific pages or PDFs.
+- Every state article covers: credit rate & computation base, federal conformity/divergence, refundability/transferability/carryforward, who tends to benefit, filing mechanics & deadlines, and at least one trap.
+
+## Case briefs (content/case-law/)
+
+- Full citation in the lede (court, reporter or docket, year). Only well-documented, widely cited cases; no invented quotes — paraphrase holdings.
+- Structure: the dispute → the holding → the reasoning that matters → what it means for claims today → related cases on the site.
+- Neutral: describe what the taxpayer did wrong (or right) without editorializing; the lesson is the point.
+
 ## Answer engine optimization (top priority)
 
 - The lede's first two sentences must directly and completely answer the question the title poses — quotable in isolation.

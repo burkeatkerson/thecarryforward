@@ -1,0 +1,51 @@
+---
+title: "Section 163(j) in brief: the business interest limitation and who escapes it"
+description: "Section 163(j) caps deductible business interest at business interest income plus 30% of adjusted taxable income, with disallowed amounts carried forward indefinitely. Small businesses under the gross-receipts threshold are exempt, and real estate businesses can elect out — at the price of ADS depreciation on their buildings."
+date: "2026-06-24"
+type: "brief"
+level: "working"
+tags: ["fundamentals", "depreciation", "real-estate", "carryforward"]
+faq:
+  - q: "What is the Section 163(j) limitation?"
+    a: "Deductible business interest expense for a year is capped at the sum of business interest income, 30% of adjusted taxable income (ATI), and floor plan financing interest. ATI is taxable income computed without interest, NOLs, or the Section 199A deduction — and since 2022 without adding back depreciation and amortization, an EBIT-style base that made the cap materially tighter for capital-intensive borrowers."
+  - q: "Who is exempt from Section 163(j)?"
+    a: "Businesses meeting the Section 448(c) small-business gross receipts test — average annual gross receipts at or below the inflation-adjusted threshold (about $31 million as of mid-2026), with related entities aggregated — are exempt outright, unless they are tax shelters. Certain regulated utilities are excluded, and real property and farming businesses may elect out irrevocably in exchange for ADS depreciation."
+  - q: "What does the real property trade or business election cost?"
+    a: "An electing real property trade or business escapes 163(j) permanently but must depreciate its residential rental, nonresidential real, and qualified improvement property under ADS — longer straight-line lives (30 or 40 years for buildings) — and, critically, QIP on ADS is ineligible for bonus depreciation. The election trades an interest cap for slower building depreciation, and it is irrevocable."
+---
+
+Section 163(j) limits the business interest a taxpayer can deduct each year to its business interest income, plus 30% of adjusted taxable income (ATI), plus any floor plan financing interest. Whatever the cap disallows is not lost — it carries forward indefinitely as business interest expense in later years. The regime, rewritten by the TCJA and administered under detailed regulations at Treas. Reg. §1.163(j)-1 and following ([eCFR Title 26](https://www.ecfr.gov/current/title-26)), applies to most businesses with meaningful leverage; the statute is [Section 163(j)](https://uscode.house.gov/browse/prelim@title26&edition=prelim). The two escape hatches — the small-business exemption and the real property election — do most of the planning work.
+
+<KeyTakeaway>
+  <p>Cap: business interest income + 30% of ATI + floor plan interest. ATI has been an EBIT-style base since 2022 — no depreciation add-back — so accelerated depreciation now tightens the cap. Disallowed interest carries forward indefinitely. Small businesses (≤ roughly $31M average receipts) are out; real estate can elect out for the price of ADS lives.</p>
+</KeyTakeaway>
+
+## How the limitation computes
+
+ATI starts from taxable income and strips out items that would distort a financing-capacity measure: interest expense and income, NOL deductions, and Section 199A. Through 2021 it also added back depreciation, amortization, and depletion — an EBITDA base. Since 2022 it has not, and the shift to EBIT is the number that changed borrowers' lives: a real-estate-heavy or capital-intensive business whose large depreciation deductions previously *raised* the cap now finds those same deductions shrinking ATI and trapping interest. The interaction cuts against acceleration strategies — every dollar of bonus depreciation is a dollar out of ATI, so 30 cents of interest capacity goes with it.
+
+Carryforwards are indefinite and deduct in future years subject to that year's cap, but they queue behind current-year interest and, in corporate acquisitions, ride the Section 382-style limitations as a pre-change attribute. Partnerships run their own version at the entity level, with disallowed interest passed to partners as excess business interest expense that waits for excess taxable income from the *same* partnership — a notoriously sticky attribute.
+
+## Who never enters the regime
+
+The small-business exemption tracks the Section 448(c) gross-receipts test: average annual gross receipts for the prior three years at or below the inflation-adjusted threshold (about $31 million as of mid-2026 — the same aggregation-heavy test used across the code, with related entities counted together and tax shelters excluded regardless of size). A business under the line simply does not apply 163(j).
+
+## Why real estate cares: the RPTOB election
+
+A real property trade or business — development, rental, management, brokerage, and the rest of the Section 469(c)(7)(C) list — may make an irrevocable election out of 163(j). The price is the alternative depreciation system (ADS) for its residential rental property (30-year straight line), nonresidential real property (40-year), and qualified improvement property (20-year). ADS property is outside bonus depreciation, so the election's real cost is concentrated in [QIP](/cost-segregation/qualified-improvement-property), which loses 100% bonus eligibility entirely.
+
+**The trade, side by side for an electing real property business:**
+
+| Item | No election (163(j) applies) | RPTOB election |
+| --- | --- | --- |
+| Interest deduction | Capped at 30% of ATI + interest income | Fully deductible |
+| Nonresidential building | 39-yr MACRS | 40-yr ADS |
+| Residential rental | 27.5-yr MACRS | 30-yr ADS |
+| QIP | 15-yr, 100% bonus-eligible | 20-yr ADS, no bonus |
+| 5/15-yr cost-seg property | Unaffected | Unaffected — ADS hits real property lives, not personalty |
+
+Note the last row: a [cost segregation study's](/cost-segregation/what-is-cost-segregation) 5-, 7-, and 15-year personal property and land improvements keep their MACRS lives and [bonus eligibility](/cost-segregation/cost-segregation-bonus-depreciation) even inside an electing RPTOB — the election punishes the building shell and QIP, not the segregated components. That is why heavily leveraged owners often pair the election with a study: the interest deduction is saved, and most of the acceleration survives.
+
+<Callout label="Watch out">
+  <p>The election is irrevocable, and its arithmetic changes with circumstances: an owner who elects while rates are high and leverage is heavy is still on 40-year ADS after the debt is refinanced away. Model the election against realistic hold periods and the bonus depreciation actually at stake — for a low-leverage owner or one under the small-business threshold, electing solves a problem the taxpayer does not have. Depreciation mechanics are in <a href="/fundamentals/depreciation-basics">depreciation basics</a>.</p>
+</Callout>

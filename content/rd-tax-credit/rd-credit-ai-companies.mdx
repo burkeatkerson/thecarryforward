@@ -1,0 +1,63 @@
+---
+title: "AI companies and the research credit: models, training compute, and proving uncertainty"
+description: "How machine-learning development maps to Section 41 — model development as qualified research, whether training-run compute counts as supplies or rented computer time, data pipeline engineering, and documenting uncertainty for ML experiments."
+date: "2026-07-07"
+type: "brief"
+level: "working"
+tags: ["ai", "section-41", "qres", "four-part-test"]
+faq:
+  - q: "Does machine learning model development qualify for the R&D tax credit?"
+    a: "Core model development usually does. Architecture selection, training methodology, and whether a model can reach a performance target are genuinely uncertain at the outset, and ML's workflow — hypothesize, train, evaluate, iterate — is a process of experimentation in Section 41(d)(3)'s own terms. Applying a proven model to a new dataset by standard fine-tuning, or integrating a vendor's API, generally does not qualify."
+  - q: "Are cloud computing costs for training runs qualified research expenses?"
+    a: "Cloud compute is not a supply — supplies are tangible property under Section 41(b)(2)(C) — but amounts paid for the right to use computers in qualified research qualify under Section 41(b)(2)(A)(iii) when the machines are operated by someone else (a cloud provider) and not on the taxpayer's premises. Training and experiment compute can therefore be a QRE; inference compute serving production traffic cannot."
+  - q: "How should an AI company document technical uncertainty for the credit?"
+    a: "Contemporaneously, at the experiment level: the hypothesis or target metric, the alternatives considered (architectures, hyperparameters, data mixtures), the runs executed, and the results including failures. Experiment-tracking tools already capture most of this. The key is recording what was unknown before the run — a claim asserting uncertainty after the fact, over work that was actually routine application of known methods, is the profile examiners reject."
+---
+
+Machine-learning development maps onto Section 41 more naturally than almost any modern activity: the workflow is literally hypothesis, experiment, evaluation, iteration, and the outcome of a training run is uncertain in exactly the sense Treas. Reg. §1.41-4 means. The open questions in an AI company's claim are rarely whether research happened — they are which expenses count (training compute chief among them), where routine engineering ends, and whether the uncertainty was documented before the runs rather than asserted after.
+
+<KeyTakeaway>
+  <p>Model development, novel data-pipeline engineering, and evaluation infrastructure qualify when targets were genuinely uncertain; cloud training compute enters as rented computer time under Section 41(b)(2)(A)(iii), not as supplies. The claim's weak point is documentation — experiment-tracking records made at run time are the substantiation, and production inference and routine integration work must stay out.</p>
+</KeyTakeaway>
+
+## What qualifies across the ML lifecycle
+
+- **Model development.** Architecture experiments, training-methodology work, fine-tuning where the capability is unproven for the task, RLHF and alignment techniques with uncertain outcomes. The [four-part test](/rd-tax-credit/four-part-test-explained) is met when the team cannot know in advance whether the approach reaches the target metric — which is most frontier and applied-research work, and is not true of dropping a proven model behind a vendor API.
+- **Data pipeline engineering.** Deduplication, filtering, and synthetic-data generation at scales or quality bars without established solutions qualify as software/process development; routine ETL with standard tools does not. The distinction is uncertainty of method, not size of the data.
+- **Evaluation and infrastructure.** Building novel eval harnesses, distributed-training infrastructure, and inference-optimization work (quantization, distillation with uncertain quality trade-offs) qualify on ordinary software-development grounds. Most of this is software for sale or third-party interaction, avoiding [internal-use software](/rd-tax-credit/internal-use-software-examples) hurdles; purely internal MLOps tooling should be classified before claiming.
+- **Out:** production inference serving, prompt tuning by trial-and-error against a vendor model, UI work, data labeling performed as routine piecework, and market or user research.
+
+## Training compute: the largest QRE, and its legal basis
+
+Compute is often an AI company's biggest research cost, and it is not a "supply" — Section 41(b)(2)(C) supplies are *tangible* property. The correct hook is Section 41(b)(2)(A)(iii): amounts paid to another person for the *right to use computers* in the conduct of qualified research, where the computer is owned and operated by someone else and not located on the taxpayer's premises. Standard cloud GPU rental fits; owned on-premises clusters do not (they are depreciable property — no QRE for the hardware, though power is generally not claimable either and the operating engineers' wages still count).
+
+The allocation discipline is separating experimental compute from production compute:
+
+| Compute use | QRE? | Basis |
+| --- | --- | --- |
+| Training runs and ablations for models under development | Yes | §41(b)(2)(A)(iii) rented computer time |
+| Hyperparameter sweeps and failed runs | Yes | Failures are experimentation's best evidence |
+| Eval and benchmark runs during development | Yes | Part of the process of experimentation |
+| Production inference serving customers | No | Post-development operation |
+| Retraining a deployed model on fresh data by settled recipe | Generally no | Routine; no remaining uncertainty |
+| Owned on-prem GPU cluster costs | No (hardware) | Depreciable property excluded |
+
+<BarChart
+  title="Illustrative AI startup annual spend: what enters the QRE base"
+  unit="$"
+  note="Illustrative allocation. Cloud training compute qualifies as rented computer time; inference serving and owned hardware do not."
+  highlight={1}
+  data={[
+    { label: "Research engineering wages", value: 3200000, display: "$3,200,000" },
+    { label: "Cloud training/experiment compute", value: 2100000, display: "$2,100,000" },
+    { label: "Contract research at 65%", value: 260000, display: "$260,000" },
+    { label: "Excluded: inference serving compute", value: 1500000, display: "$1,500,000" },
+    { label: "Excluded: G&A and sales wages", value: 1800000, display: "$1,800,000" },
+  ]}
+/>
+
+Tag compute at the job or cluster level so training, eval, and serving costs separate cleanly on the invoice data — a single blended cloud bill allocated by estimate is the adjustment waiting to happen. The broader expense rules are in the [QRE guide](/rd-tax-credit/qualified-research-expenses).
+
+## Documenting uncertainty for ML experiments
+
+AI teams already run experiment trackers; the credit asks only that the record show *ex ante* uncertainty. For each research thrust, the file should contain the target metric and why existing approaches were expected to miss it, the alternatives considered, the runs (including failures — negative results are the strongest evidence that outcomes were unknown), and the decision log. Two cautions: research performed under a customer's development contract needs the [funded-research](/rd-tax-credit/funded-research-exclusion) rights-and-risk read, and pre-revenue AI startups should note the payroll-tax offset — up to $500,000 of credit against payroll taxes for qualified small businesses, claimed via [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765) and Form 8974 — which turns the credit into cash years before income tax is owed. The [IRS research credit overview](https://www.irs.gov/credits-deductions/businesses/research-credit) covers the general mechanics.

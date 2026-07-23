@@ -1,0 +1,50 @@
+---
+title: "Form 4562, part by part: where depreciation actually gets reported"
+description: "Form 4562 collects Section 179 elections (Part I), bonus depreciation (Part II), MACRS on current-year property (Part III), listed property (Part V), and amortization (Part VI). Cost segregation results land as reallocated basis across the MACRS classes — or, for look-back studies, as an 'other depreciation' catch-up rather than new Part III entries."
+date: "2026-05-06"
+type: "brief"
+level: "intro"
+tags: ["depreciation", "fundamentals", "macrs", "bonus-depreciation"]
+faq:
+  - q: "When do I have to file Form 4562?"
+    a: "For any year you place depreciable property in service, claim a Section 179 election, claim bonus depreciation, report depreciation on listed property, or begin amortizing something (including Section 174 foreign research balances). If you are only continuing regular depreciation on property placed in service in prior years and none of the triggers apply, the form is generally not required — the deduction still flows to the return."
+  - q: "Where do cost segregation results appear on Form 4562?"
+    a: "For a study done in the placed-in-service year, the reallocated basis appears in Part III, lines 19a–19i, spread across 5-, 7-, and 15-year MACRS classes instead of a single 39-year line, with bonus-eligible amounts in Part II. For a look-back study on property placed in service earlier, the Section 481(a) catch-up from Form 3115 lands on line 16 ('other depreciation'), not the class lines."
+  - q: "What is the difference between Section 179 and bonus depreciation on the form?"
+    a: "Part I (Section 179) is an election with a dollar cap and a taxable-income limitation, applied property by property. Part II (bonus) is automatic for qualified property — 100% for property acquired after January 19, 2025 — with no income limit and no cap. Ordering matters: 179 applies first to elected assets, bonus to remaining basis, then regular MACRS on what is left."
+---
+
+Form 4562 is where every depreciation and amortization number on a business return is assembled: the Section 179 election, bonus depreciation, first-year MACRS by recovery class, listed property, and amortization each get a dedicated part. The [IRS Form 4562 page](https://www.irs.gov/forms-pubs/about-form-4562) carries the current form and instructions; [Publication 946](https://www.irs.gov/publications/p946) supplies the class lives and tables the form assumes you already know. Read part by part, the form is a map of how the pieces fit — and of where a cost segregation study actually shows up.
+
+<KeyTakeaway>
+  <p>Part I is the 179 election, Part II is bonus, Part III is current-year MACRS by class, Part IV totals, Part V is listed property, Part VI is amortization. Cost seg results appear as basis spread across Part III's class lines in a placed-in-service-year study — or as a line 16 catch-up when claimed later through Form 3115.</p>
+</KeyTakeaway>
+
+## Parts I and II: the elections up front
+
+**Part I — Section 179.** An election, not a default: you list the elected property and cost, apply the annual dollar limit and the phase-out for large purchases, then hit the taxable-income limitation — 179 cannot create a loss, and disallowed amounts carry forward on the form itself. **Part II — bonus depreciation** (line 14, "special depreciation allowance") is the opposite temperament: automatic unless you elect out by class, no income limit, currently 100% for qualified property acquired after January 19, 2025, with the pre-OBBBA phase-down rates (80% for 2023, 60% for 2024) governing earlier acquisitions. The strategic choice between them for real estate assets is its own topic — see [bonus versus 179](/cost-segregation/bonus-vs-179-real-estate) — but mechanically, 179 comes off elected assets first, bonus takes the remaining basis of qualified property, and MACRS depreciates whatever survives.
+
+## Part III: the MACRS columns
+
+Part III reports only property placed in service *this* year. Line 17 carries the continuing depreciation on older assets; lines 19a–19i break current-year additions into the familiar class ladder — 3-, 5-, 7-, 10-, 15-, 20-, 25-year property, then residential rental (27.5-year) and nonresidential real (39-year). Each line takes basis, recovery period, convention (half-year or mid-quarter for personalty; mid-month for buildings), and method (200% or 150% declining balance for the short classes, straight line for the buildings).
+
+**This ladder is where a placed-in-service-year cost segregation study becomes visible.** Instead of one 39-year entry for the whole building, the engineered allocation spreads basis across the lines:
+
+| Part III line | Class | Typical cost-seg contents |
+| --- | --- | --- |
+| 19b | 5-year | Carpet, decorative lighting, dedicated equipment power |
+| 19c | 7-year | Certain fixtures and equipment |
+| 19e | 15-year | Land improvements — paving, landscaping, site utilities |
+| 19i | 39-year | The building shell that remains |
+
+The 5- and 15-year amounts are also what Part II's bonus line feeds on, which is the arithmetic engine of [cost segregation](/cost-segregation/what-is-cost-segregation). For a **look-back** study on property placed in service in an earlier year, none of this reruns: the change comes through [Form 3115](/fundamentals/form-3115-accounting-method-changes), and the Section 481(a) catch-up is reported as other depreciation on line 16 — a single number, not a re-sorted ladder.
+
+## Parts V and VI: listed property and amortization
+
+Part V handles **listed property** — vehicles and other assets prone to personal use — and it comes *first* in the form's own ordering: 179 and bonus amounts for listed property are computed in Part V and carried back to Parts I and II. Business-use percentage drives everything; drop to 50% or below and accelerated methods are lost with recapture of the excess. The evidence questions on lines 24a–24b (do you have written mileage records?) are answered under penalties of perjury.
+
+Part VI is **amortization** — Section 197 intangibles from acquisitions, startup costs, and, in the specialty-tax world, [Section 174 foreign research balances](/section-174/section-174-explained) on their 15-year schedule. Each item lists its start date, basis, code section, and period; year one goes on line 42, continuing amortization on line 43.
+
+<Callout label="Note">
+  <p>Form 4562 is per-activity: a taxpayer with multiple businesses or rental activities may file several. And the form is a summary, not a substitute for the fixed-asset detail behind it — in an exam, the asset-by-asset schedule and, for a cost seg, the engineering report are what carry the numbers.</p>
+</Callout>

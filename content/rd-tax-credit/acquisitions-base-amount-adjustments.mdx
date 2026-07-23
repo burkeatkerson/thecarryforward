@@ -1,0 +1,50 @@
+---
+title: "Section 41(f)(3): how buying or selling a business resets research credit base amounts"
+description: "When a taxpayer acquires the major portion of a trade or business, Section 41(f)(3) moves the acquired business's QRE and gross-receipts history to the buyer and out of the seller's base — with day-count proration in the transaction year. A worked example shows the buyer's ASC base rising and the seller's falling."
+date: "2026-07-01"
+type: "brief"
+level: "pro"
+tags: ["section-41", "acquisitions", "asc"]
+faq:
+  - q: "How does an acquisition change the buyer's research credit base amount?"
+    a: "Section 41(f)(3)(A) requires a buyer acquiring the major portion of a trade or business (or a separate unit of one) to include the acquired business's prior QREs and gross receipts in its own history. Under the ASC, that raises the buyer's prior-three-year QRE average, so the combined company's credit is incremental over combined history — not over the buyer's stand-alone base. In the acquisition year, the inherited history is prorated by the number of days the buyer held the business."
+  - q: "Does selling a division increase the seller's research credit?"
+    a: "Often, yes. Section 41(f)(3)(B) removes the disposed business's QREs and gross receipts from the seller's history going forward. With a smaller prior-year QRE average, the seller's remaining research spend clears its ASC base more easily, so the go-forward credit on retained research typically rises — a modest, mechanical offset to losing the disposed unit's future credits."
+  - q: "Do research credit carryforwards transfer in an acquisition?"
+    a: "Only in stock deals, and separately from history. Credit carryforwards are tax attributes of the entity — they survive a stock purchase subject to Section 383 limitation after an ownership change, and they do not transfer at all in an asset deal. QRE and gross-receipts history, by contrast, moves with the trade or business under Section 41(f)(3) in either deal form. Diligence must track the two separately."
+---
+
+Section 41(f)(3) is the research credit's anti-distortion rule for M&A, and it binds both sides of every deal. When a taxpayer acquires the **major portion of a trade or business** — or the major portion of a separate unit of one — the buyer must add the acquired business's qualified research expense (QRE) and gross-receipts history to its own for computing base amounts, and the seller must subtract that history from its own. The credit stays incremental over real history: a buyer cannot treat an acquired lab's spending as growth over a zero base, and a seller cannot keep claiming a base built on research it no longer owns.
+
+<KeyTakeaway>
+  <p>History follows the business. The buyer's ASC three-year average rises by the target's prorated QRE history (shrinking its incremental credit), the seller's average falls (often raising its go-forward credit), and in the transaction year the transfer is prorated by days of ownership. Credit carryforwards travel under entirely different rules.</p>
+</KeyTakeaway>
+
+## The rule and its transaction-year proration
+
+The statute (Section 41(f)(3), text at the [official IRC](https://uscode.house.gov/browse/prelim@title26&edition=prelim)) and Treas. Reg. §1.41-6(f) at [eCFR Title 26](https://www.ecfr.gov/current/title-26) work in day counts for the year of the deal. For the acquisition year, the buyer includes the target's measurement-period QREs multiplied by the fraction of the year the buyer held the business; for later years, the buyer includes the full inherited history. The seller mirrors: partial exclusion in the disposition year, full exclusion after. The same mechanics govern gross receipts for the [regular method's](/rd-tax-credit/how-to-calculate-the-rd-credit) base amount; under the ASC only the QRE history matters.
+
+"Major portion" is a facts-and-circumstances threshold — acquiring a workforce and ongoing project line can qualify even without every asset, and hiring away a research team with its work in progress has been treated as an acquisition of a portion of a business in IRS analysis. Deal structure matters less than substance: asset deals, stock deals, and carve-outs all move history when a trade or business moves.
+
+## A short-form worked example
+
+Bracket Corp (ASC method) acquires the DiagnosticsCo division of Meridian Inc on October 1, 2026 — 92 of 365 days in the buyer's hands. DiagnosticsCo ran $2,000,000 of QREs in each lookback year.
+
+**ASC prior-three-year average before and after the deal (2027 credit year, full inheritance):**
+
+| Party | Own 3-yr avg QREs | DiagnosticsCo history | Adjusted avg | ASC base (50%) |
+| --- | --- | --- | --- | --- |
+| Bracket (pre-deal) | $3,000,000 | — | $3,000,000 | $1,500,000 |
+| Bracket (post-deal) | $3,000,000 | +$2,000,000 | $5,000,000 | $2,500,000 |
+| Meridian (pre-deal) | $6,000,000 | — | $6,000,000 | $3,000,000 |
+| Meridian (post-deal) | $6,000,000 | −$2,000,000 | $4,000,000 | $2,000,000 |
+
+If the combined company runs $6,000,000 of QREs in 2027, Bracket's credit is 14% × ($6,000,000 − $2,500,000) = $490,000 — not the $630,000 a stand-alone base would suggest. Meridian, retaining $4,500,000 of research spend, computes 14% × ($4,500,000 − $2,000,000) = $350,000, more than the $210,000 its unadjusted base would have produced. For the 2026 transaction year itself, Bracket includes only 92/365 of each lookback year's DiagnosticsCo QREs (about $504,000 per year), and Meridian excludes the mirror image.
+
+## What the rule does not move
+
+Credit **carryforwards** are entity attributes, not business attributes. In a stock deal they stay in the target, limited by Section 383 after an ownership change; in an asset deal they stay with the seller. Section 41(f)(3) moves history regardless of deal form. Diligence checklists that request only the carryforward schedule miss half the picture — the target's QRE history determines the buyer's future credits, and it transfers by operation of law. The interaction with group membership (the target joining the buyer's [controlled group](/rd-tax-credit/rd-credit-controlled-groups)) and the target's stub-period computation (see the [short-year brief](/rd-tax-credit/short-tax-years-rd-credit)) run in parallel with the history transfer.
+
+<Callout label="Watch out">
+  <p>Sellers forget the rule as often as buyers. A seller that keeps computing on pre-disposition history claims too small a credit — Section 41(f)(3)(B) is one of the few provisions taxpayers under-claim by ignoring. Buyers make the opposite error, and an overstated post-deal credit is a routine exam adjustment because the deal itself is public and the examiner needs only the purchase agreement and the prior-year Form 6765 filings from irs.gov's [research credit](https://www.irs.gov/credits-deductions/businesses/research-credit) framework to reprice it.</p>
+</Callout>

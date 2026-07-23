@@ -1,0 +1,51 @@
+---
+title: "Medical device companies: 510(k), PMA, and the research credit"
+description: "How device development maps to Section 41 across the 510(k) and PMA pathways — prototyping, verification and validation testing, and where regulatory submission work stops qualifying."
+date: "2026-06-16"
+type: "brief"
+level: "working"
+tags: ["medical-devices", "section-41", "qres", "four-part-test"]
+faq:
+  - q: "Does medical device development under a 510(k) qualify for the R&D tax credit?"
+    a: "The engineering usually does; the filing does not. A 510(k) claims substantial equivalence to a predicate device, but getting there — design iterations, bench and biocompatibility testing, human factors work — routinely involves genuine design uncertainty that satisfies Section 41(d). What does not qualify is assembling the submission itself, predicate searches, and administrative FDA correspondence."
+  - q: "Are verification and validation (V&V) testing costs qualified research expenses?"
+    a: "Design verification and validation performed while the design can still change — testing that feeds failures back into design iterations — is part of the process of experimentation, and its wages and consumed test units are QREs. Repetitive testing of a frozen design for the record, and routine lot-release or quality-control testing in production, are excluded as routine testing under Section 41(d)(4)(D)."
+  - q: "Can prototype device units be supply QREs if they are later used clinically or sold?"
+    a: "Prototype materials consumed in development — bench units, units destroyed in testing, early builds evaluated against a test plan — are supply QREs under Section 41(b)(2)(C). Units from pilot builds that are sold, or clinical units whose costs are reimbursed by a sponsor or payer, draw the production-cost and funded-research arguments; disposition records for every build are what keep the supply claim intact."
+---
+
+Medical device development is regulated experimentation: FDA design controls under 21 CFR 820.30 force manufacturers to document design inputs, outputs, verification, validation, and changes — very nearly the record Section 41 asks for. The credit analysis therefore tends to be about *boundaries* rather than substance: where the qualifying engineering ends and excluded regulatory administration, routine testing, and production begin. The regulatory pathway — 510(k) versus PMA — changes the shape of the spend, not the legal test.
+
+<KeyTakeaway>
+  <p>Design, prototyping, and iterative V&V qualify on both the 510(k) and PMA pathways; submission assembly, routine lot testing, and post-clearance production do not. Device makers' design history files already contain most of the substantiation — the claim's job is mapping QREs onto them and stopping at design freeze.</p>
+</KeyTakeaway>
+
+## Pathway does not decide qualification — uncertainty does
+
+A common misconception is that 510(k) devices cannot qualify because the pathway rests on *substantial equivalence* to a predicate. Regulatory equivalence is not engineering certainty: a company can know its device is "equivalent" in intended use and still face open questions about materials, mechanism, miniaturization, firmware, and manufacturability that only iterative design and testing resolve. The [four-part test](/rd-tax-credit/four-part-test-explained) asks whether the appropriate design was uncertain at the outset and whether alternatives were systematically evaluated — questions answered by the design history file, not the FDA docket. PMA-class devices (novel, higher-risk, requiring clinical evidence) simply carry more of the same, plus clinical study costs that follow the analysis in the [biotech and pharma guide](/rd-tax-credit/rd-credit-biotech-pharma), including the foreign-site exclusion and CRO rights-and-risk review.
+
+**Where the credit lives across a device program:**
+
+| Program stage | Typically qualifies? | Notes |
+| --- | --- | --- |
+| Concept and feasibility engineering | Yes | Alternatives evaluation; capability uncertainty |
+| Prototype design and build iterations | Yes | Wages plus materials consumed as supply QREs |
+| Design verification (bench, biocompatibility, electrical safety, human factors) | Yes, while design is fluid | Test failures feeding design changes are the proof |
+| Design validation (does the device meet user needs) | Yes, to design freeze | Including simulated-use and cadaver labs |
+| Process development, pilot line, test-method validation | Yes | Process business component, as in manufacturing |
+| 510(k)/PMA assembly, predicate analysis, FDA correspondence | No | Administrative, not experimentation |
+| Repetitive testing of the frozen design for submission record | No | Routine testing exclusion, §41(d)(4)(D) |
+| Production lot-release and incoming QC testing | No | Quality control, excluded |
+| Post-market surveillance and complaint handling | No | Post-commercial-production |
+
+## Prototypes and V&V: the two big expense pools
+
+**Prototyping.** Wages of design, firmware, and test engineers are the largest QRE category; materials consumed in bench units, tooling trials, and destructively tested builds are supplies under Section 41(b)(2)(C). The recurring adjustments mirror manufacturing: capitalized molds and test equipment are depreciable property, not supplies, and pilot-build units that ship as sellable inventory are production. Keep a disposition log — scrapped, tested-to-destruction, retained as reference, sold — for every build; the [QRE guide](/rd-tax-credit/qualified-research-expenses) covers the categories in detail.
+
+**Verification and validation.** V&V is where device claims are most often over- and under-claimed at once. The qualifying core is testing that *informs design* — a failed fatigue test that sends the team back to geometry, usability findings that change the interface. Under Treas. Reg. §1.41-4, evaluating alternatives through modeling and testing is the process of experimentation itself, so pre-freeze V&V is not merely "support" but the experiment. After design freeze, reruns of the same protocols to generate a clean submission record are routine data collection; claim the engineering, not the paperwork run.
+
+<Callout label="Watch out">
+  <p>Third-party test labs (biocompatibility, EMC, sterilization validation) are contract research at 65% — but only if the manufacturer bears the risk and retains rights, which standard fee-for-service lab agreements almost always satisfy. Development performed under a distribution partner's funding, or NRE billed to an OEM customer, needs the funded-research read before it enters the claim.</p>
+</Callout>
+
+Device software — embedded firmware, companion apps, and increasingly ML-based functions — generally qualifies as software developed for sale as part of the product, avoiding the internal-use software hurdles. Claims are reported at the business-component level on [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765) Section G; the [IRS research credit overview](https://www.irs.gov/credits-deductions/businesses/research-credit) frames the general rules. The design history file the FDA already requires is the audit file the IRS wants — few industries get their substantiation this cheaply.

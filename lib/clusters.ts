@@ -45,6 +45,24 @@ export const clusters: Cluster[] = [
     order: 4,
   },
   {
+    slug: "state-rd-credits",
+    name: "State R&D Credits",
+    shortName: "State Credits",
+    tagline: "The federal credit's fifty siblings, state by state",
+    description:
+      "State research credits look like the federal credit and behave nothing like it — different rates, bases, refundability, apportionment, and paperwork in every state. Individual state guides, multistate strategy, and the honest rankings.",
+    order: 6,
+  },
+  {
+    slug: "case-law",
+    name: "The Docket",
+    shortName: "The Docket",
+    tagline: "The cases that shaped specialty tax",
+    description:
+      "The research credit and cost segregation rest on decades of litigation. Case briefs of the decisions practitioners actually cite — what was argued, what the court held, and what it means for claims today.",
+    order: 7,
+  },
+  {
     slug: "fundamentals",
     name: "Fundamentals",
     shortName: "Fundamentals",
@@ -53,7 +71,7 @@ export const clusters: Cluster[] = [
       "Credits versus deductions, depreciation and basis, accounting-method changes, amended returns and statutes of limitations, audit readiness, and how to evaluate the advisors who sell specialty tax work.",
     order: 5,
   },
-];
+].sort((a, b) => a.order - b.order);
 
 export function getCluster(slug: string): Cluster | undefined {
   return clusters.find((c) => c.slug === slug);

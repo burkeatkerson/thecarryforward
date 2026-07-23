@@ -1,0 +1,52 @@
+---
+title: "Fintech and the research credit: the internal-use software line in payments and banking"
+description: "How fintech development maps to Section 41 — when a payments or banking platform is commercial software versus internal-use software under Treas. Reg. §1.41-4(c)(6), and why compliance-driven development mostly fails the four-part test."
+date: "2026-06-23"
+type: "brief"
+level: "working"
+tags: ["fintech", "section-41", "internal-use-software", "four-part-test"]
+faq:
+  - q: "Is a fintech company's platform 'internal-use software' for the R&D credit?"
+    a: "Usually not. Under Treas. Reg. §1.41-4(c)(6), software is internal-use only if developed for general and administrative functions — financial management, HR, support services. Software developed to be commercially sold, leased, licensed, or to enable third parties to interact with the taxpayer's systems or initiate functions — the definition most customer-facing fintech platforms meet — is not IUS and faces only the ordinary four-part test."
+  - q: "Does software built to meet banking or payments regulations qualify for the credit?"
+    a: "Only the technically hard parts. A regulatory mandate supplies the requirement, not the qualification: implementing a rule by known methods — new fields, reports, disclosures, configuration — involves no technological uncertainty and fails Section 41(d). Engineering work the mandate forces that is genuinely uncertain, such as real-time sanctions screening at scale or novel fraud-detection architecture, can still qualify on its own merits."
+  - q: "What is the high threshold of innovation test for internal-use software?"
+    a: "Internal-use software must pass three extra requirements beyond the four-part test: the software must be innovative (intended to produce a substantial and economically significant reduction in cost or improvement in speed), involve significant economic risk (substantial resources committed with substantial uncertainty of recovery due to technical risk), and not be commercially available for the intended purpose without significant modification. All three must be met."
+---
+
+Fintech development sits on both sides of the research credit's most technical software boundary. Software a company develops "primarily for internal use" must clear the three-part high-threshold-of-innovation test on top of the ordinary four-part test; software developed for commercial sale or for third parties to interact with escapes those extra hurdles entirely. Treas. Reg. §1.41-4(c)(6) draws the line, and for payments and banking platforms it mostly falls in the taxpayer's favor — the trap is elsewhere, in claiming compliance work that involves no technological uncertainty at all.
+
+<KeyTakeaway>
+  <p>Customer-facing payments and banking platforms are generally not internal-use software — third parties initiate functions on them — so they face only the ordinary four-part test. Back-office systems are IUS and need the high threshold of innovation. Compliance-driven development qualifies only where the implementation itself was technically uncertain, which is rarer than fintech claims assume.</p>
+</KeyTakeaway>
+
+## Where the IUS line falls in a fintech stack
+
+The 2016 final regulations narrowed internal-use software to systems for *general and administrative* functions: financial management, human resources, and support services. Everything else — software developed for sale, lease, or license, and software developed "to enable a taxpayer to interact with third parties or to allow third parties to initiate functions or review data" — is non-IUS. A payment gateway processing merchants' transactions, a banking-as-a-service API, a consumer app moving money: third parties initiate functions on all of them. Worked classifications across industries are in the [internal-use software examples](/rd-tax-credit/internal-use-software-examples) brief.
+
+**A typical fintech platform, system by system:**
+
+| System | Classification | Consequence |
+| --- | --- | --- |
+| Merchant-facing payment API and gateway | Not IUS — third-party interaction | Four-part test only |
+| Consumer mobile banking app | Not IUS — third-party interaction | Four-part test only |
+| Ledger and core-processing engine sold/licensed to banks | Not IUS — commercial software | Four-part test only |
+| Internal fraud-ops case-management tool | IUS — support services | High threshold of innovation applies |
+| Internal general-ledger and reconciliation system | IUS — financial management | High threshold of innovation applies |
+| Risk engine embedded in the customer transaction flow | Likely not IUS; dual-function analysis | Reg. safe harbor may apply to mixed subsets |
+
+Dual-function software — one system serving both third parties and internal G&A — is analyzed subset by subset, and the regulations offer a safe harbor treating 25% of the dual-function remainder as non-IUS where third-party use is at least 10%. This is where fintech claims need the most engineering-to-regulation mapping.
+
+For the back-office systems that are IUS, the three extra requirements (innovative, significant economic risk, not commercially available) are demanding by design. An internally built reconciliation system that replicates what vendors sell fails the commercial-availability prong regardless of how well it was engineered. Genuine IUS qualification in fintech tends to involve scale or latency demands commercial products cannot meet — and needs the contemporaneous documentation to prove the team knew that going in.
+
+## Compliance-driven development: mandate is not uncertainty
+
+Fintech engineering roadmaps are heavily regulator-driven — KYC/AML, PCI DSS, ISO 20022 migration, open-banking rules, state money-transmitter requirements. The recurring claim error is treating the mandate as the qualification. The [four-part test](/rd-tax-credit/four-part-test-explained) asks whether the *method or design* was uncertain, and most compliance work is certain: add the fields, generate the report, encrypt to the standard, follow the vendor's integration guide. That is configuration and routine engineering, however expensive.
+
+The qualifying residue is real but narrower: sanctions screening that must run in-line at transaction latency and scale, fraud-model architectures with genuine capability uncertainty, tokenization schemes without an established design for the taxpayer's constraints. The discipline is to name the technical uncertainty independently of the rule — "the regulation requires X" is not an answer to "what was uncertain?" A useful contrast pair: implementing ISO 20022 message formats per the specification (no), versus re-architecting a payment core for the throughput the migration exposed as inadequate, with alternatives tested and discarded (yes).
+
+<Callout label="Watch out">
+  <p>Fintechs operating on white-label or sponsor-bank development agreements should read the funded-research terms before claiming: development a partner pays for regardless of outcome, with IP assigned to the partner, belongs to the partner's analysis, not yours — see the <a href="/rd-tax-credit/funded-research-exclusion">funded research exclusion</a>.</p>
+</Callout>
+
+Wage QREs for engineers, at 65% for qualifying contract development, follow the ordinary rules in the [QRE guide](/rd-tax-credit/qualified-research-expenses). Under Section 174A, domestic software development costs are also once again immediately deductible for tax years beginning after 2024 — a separate benefit from the credit, claimed alongside it. Claims go on [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765), with Section G business-component reporting that forces exactly the platform-by-platform decomposition this analysis requires; the regulations are at [eCFR Title 26](https://www.ecfr.gov/current/title-26).

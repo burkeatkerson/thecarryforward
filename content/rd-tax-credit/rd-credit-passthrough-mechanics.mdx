@@ -1,0 +1,107 @@
+---
+title: "The research credit in partnerships and S corporations: computation, K-1 allocation, and the Section 41(g) limitation"
+description: "Passthrough entities compute the Section 41 credit at the entity level and pass it to partners and shareholders on Schedule K-1. Individuals then face the Section 41(g) limitation — the credit cannot exceed tax attributable to their interest in the business — a cap that routinely traps credits at the owner level."
+date: "2026-05-12"
+type: "guide"
+level: "pro"
+tags: ["section-41", "passthroughs", "qres"]
+faq:
+  - q: "How does the R&D credit work in a partnership or S corporation?"
+    a: "The entity computes the Section 41 credit on its own Form 6765 using entity-level QREs, gross receipts, and method elections, then allocates the credit to partners or shareholders on Schedule K-1. Partners take their share generally in proportion to how the underlying research deductions were allocated; S corporation shareholders take it pro rata by stock ownership. Each owner claims the share on Form 3800 with their own return."
+  - q: "What is the Section 41(g) limitation on the research credit?"
+    a: "Section 41(g) caps an individual owner's usable credit at the amount of income tax attributable to that owner's taxable income from the trade or business generating the credit. A partner with little or no current income from the partnership — common in loss-year startups — cannot use the allocated credit against tax from wages or other sources. The disallowed amount carries back one year and forward twenty under Section 39, subject to the same limitation each year."
+  - q: "Can an S corporation elect the payroll tax offset for its shareholders?"
+    a: "Yes — and only the entity can. The qualified small business payroll offset election under Section 41(h) is made by the partnership or S corporation itself on Form 6765 with a timely filed return, and the gross-receipts tests apply at the entity level. The elected amount offsets the entity's own employer payroll taxes via Form 8974; it never passes through to owners' K-1s."
+  - q: "Does the R&D credit reduce a partner's basis or at-risk amount?"
+    a: "No. Credits are not deductions: the allocation of a research credit on Schedule K-1 does not reduce outside basis, capital accounts, or at-risk amounts. What does interact with basis is the Section 280C adjustment — absent the reduced-credit election, the entity's research deductions are cut back by the credit amount, which raises entity income and flows through to owners with normal basis consequences."
+  - q: "What happens to research credits a partner cannot use?"
+    a: "They carry back one year and forward up to twenty on the partner's own account under Section 39, retested against the Section 41(g) limitation annually. Credits trapped by 41(g) are only usable in a year the owner has enough tax attributable to that business's income. Planning options include the Section 280C(c) reduced-credit election, guaranteed payments or salary that shift income character, and — for qualified small businesses — the entity-level payroll offset, which bypasses 41(g) entirely."
+---
+
+Most research credits are not claimed by C corporations. They are computed inside partnerships and S corporations and passed out to owners on Schedule K-1 — and the passthrough journey has its own mechanics. The entity computes one credit under Section 41 on its own [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765), using entity-level qualified research expenses (QREs), gross receipts, and method elections. Owners then claim their allocated shares on their own returns, where an individual-level cap most C-corporation practitioners never meet — the Section 41(g) limitation — decides whether the credit is usable at all.
+
+<KeyTakeaway>
+  <p>The credit is computed once at the entity level and allocated out on K-1s, but Section 41(g) limits each individual owner's use to the tax attributable to that owner's income from the credit-generating business. Loss-year startups therefore routinely allocate credits their owners cannot use — which is exactly why the entity-level payroll offset election matters.</p>
+</KeyTakeaway>
+
+## Computation happens at the entity level
+
+A partnership or S corporation is the taxpayer for every input to the credit computation. QREs are the entity's wages, supplies, and contract research; the base-period history — the prior three years' QREs for the alternative simplified credit (ASC), or the fixed-base percentage and gross receipts for the regular method — is the entity's history, not the owners'. The method choice between the [regular credit and the ASC](/rd-tax-credit/how-to-calculate-the-rd-credit) is made on the entity's Form 6765, as is the Section 280C(c) reduced-credit election, and both bind every owner. An owner cannot elect the ASC for its share while the entity computed the regular credit.
+
+The same entity-level frame governs aggregation. A partnership under common control with other trades or businesses is combined with them under Section 41(f) — the [controlled-group rules](/rd-tax-credit/rd-credit-controlled-groups) reach passthroughs through the "trades or businesses under common control" language of Section 41(f)(1)(B) and Treas. Reg. §1.41-6, with the group computing a single credit and allocating it among members by proportionate QREs before any member passes its share out to owners.
+
+One computational wrinkle is specific to partnerships. Under Treas. Reg. §1.41-2(a)(4), research expenses of a partnership generally qualify only if the research relates to a trade or business carried on by the partnership itself; a research joint venture that has no trade or business of its own can fail at the threshold, though the regulation lets in-house research expenses qualify to the extent of a partner's own trade-or-business nexus. Special-purpose research vehicles should be tested against this rule before anyone models a credit.
+
+## How the credit reaches the K-1
+
+Once computed, the credit is a separately stated item. Partnerships report each partner's distributive share of the research credit on Schedule K-1 (Form 1065), and S corporations report each shareholder's pro rata share on Schedule K-1 (Form 1120-S). The allocation rules differ in stringency:
+
+- **S corporations** have no discretion. The credit is allocated pro rata, share by share, day by day, under Section 1377 — the single-class-of-stock regime forbids special allocations.
+- **Partnerships** allocate under Section 704(b) principles. Treas. Reg. §1.704-1(b)(4)(ii) directs that tax credits generally follow the allocation of the deductions or expenditures that generated them: the research credit tracks how the underlying research expenses were allocated among partners. A special allocation of research deductions to a funding partner carries the credit with it — but the underlying deduction allocation must itself have substantial economic effect.
+
+Each owner then folds the K-1 share into Form 3800, the general business credit, on the owner's own return. The IRS's [research credit overview](https://www.irs.gov/credits-deductions/businesses/research-credit) describes the claim chain; the entity attaches Form 6765, and owners generally do not file their own 6765 for passthrough shares.
+
+**A worked example — Novi Instruments LLC, a two-member partnership with a 60/40 profit split and $180,000 of ASC credit:**
+
+| K-1 line item | Partner A (60%) | Partner B (40%) | Entity total |
+| --- | --- | --- | --- |
+| Distributive share of ordinary income | $150,000 | $100,000 | $250,000 |
+| Research credit allocated (Code M, Schedule K-1) | $108,000 | $72,000 | $180,000 |
+| Tax attributable to the business interest (assumed) | $45,000 | $9,000 | — |
+| Credit usable in the current year after §41(g) | $45,000 | $9,000 | $54,000 |
+| Credit carried forward under §39 | $63,000 | $63,000 | $126,000 |
+
+The table's bottom half is the part of the analysis most claims skip, and it is where the money stalls. Partner B — perhaps a passive investor whose share of partnership income is modest and heavily offset — receives a $72,000 allocation and can use $9,000 of it. The rest waits.
+
+## The Section 41(g) limitation: tax attributable to the business
+
+Section 41(g) provides that for an individual who owns an interest in an unincorporated trade or business, is a partner, is an S corporation shareholder, or is a beneficiary of an estate or trust, the credit passed through "shall not exceed an amount (separately computed with respect to such person's interest in such trade or business or entity) equal to the amount of tax attributable to that portion of a person's taxable income which is allocable or apportionable to the person's interest in such trade or business or entity." The computational method lives in the regulations under the predecessor provision, Treas. Reg. §1.41-7 (via the rules of §1.53-3), on [eCFR Title 26](https://www.ecfr.gov/current/title-26).
+
+The mechanics are a ratio. Roughly: compute the owner's total tax, then multiply by the fraction of the owner's taxable income attributable to the interest in the credit-generating business. If the K-1 shows a loss — the normal condition of a venture-backed startup — the attributable tax is zero, and the usable credit is zero, no matter how much tax the owner pays on wages, capital gains, or other businesses.
+
+Three consequences follow:
+
+1. **The limitation is per-business.** An owner with interests in several credit-generating entities computes the cap separately for each. Income from entity one cannot free credits from entity two.
+2. **Disallowed amounts are not lost.** The excess carries back one and forward twenty years under Section 39 — but it is retested against 41(g) in every carryover year. A partner who never again has income from that business may watch the credit expire.
+3. **The limitation applies to individuals, not C corporations.** A corporate partner takes its distributive share without a 41(g) haircut (its constraint is the ordinary Section 38(c) tax-liability limitation and, historically, passive-loss-style rules for closely held corporations). This asymmetry occasionally drives structuring: routing an interest through a C corporation blocker changes the credit's usability along with everything else.
+
+<Callout label="Watch out">
+  <p>Tax software does not reliably compute the 41(g) limitation, and many preparers apply only the general Form 3800 tax-liability limit. A partner claiming a passthrough research credit against tax generated by unrelated wage income is a mechanical audit adjustment — the examiner needs no facts about the research itself.</p>
+</Callout>
+
+## Basis, at-risk, and passive-activity: mostly non-issues, with one 280C exception
+
+Credits are not deductions, so the familiar loss-limitation gauntlet mostly does not apply:
+
+- **Outside basis and capital accounts** are unaffected by a credit allocation. Section 705 adjusts basis for income, losses, and distributions — a credit is none of these.
+- **At-risk rules** under Section 465 limit loss deductions, not general business credits (the separate at-risk credit-base rules of old Section 46 investment-credit law do not reach Section 41).
+- **Passive-activity rules** do apply, but through Section 469's own credit branch: a passive owner's share of the credit can generally offset only tax attributable to passive income. For a materially participating founder this is irrelevant; for a fund LP holding a passthrough interest it stacks a second cap on top of 41(g).
+
+The one genuine basis interaction runs through Section 280C. Unless the entity makes the 280C(c) reduced-credit election, its research deductions are reduced by the credit amount — which increases entity taxable income dollar for dollar, increases each owner's distributive share of income, and flows through with normal basis and tax consequences. An owner who cannot use the credit because of 41(g) still picks up the income from the deduction cutback. That mismatch — phantom income now, trapped credit indefinitely — is the single strongest argument for the reduced-credit election in loss-year passthroughs, and the tradeoff deserves modeling rather than a default.
+
+## The payroll offset: an entity-level escape hatch
+
+For qualified small businesses, Section 41(h) converts up to $500,000 of research credit into an offset against the employer's payroll taxes — and in a passthrough, everything about the election happens at the entity level. The entity makes the election on a timely filed original return (Form 6765, Section D), tests the gross-receipts screens — under $5 million in the credit year, and no gross receipts before the five-taxable-year window — on entity numbers (aggregated with any Section 41(f) group), and applies the elected amount against its own employer Social Security and Medicare taxes on [Form 8974](https://www.irs.gov/forms-pubs/about-form-8974) filed with its employment tax returns.
+
+The elected portion never reaches the K-1s. That is the point: a pre-revenue startup whose partners could use none of the credit under 41(g) instead consumes it against payroll taxes the entity is actually paying each quarter. For most early-stage passthroughs the [payroll offset](/rd-tax-credit/payroll-tax-offset-startups) is not an alternative to the income-tax credit; it is the only version of the credit with a cash value. Only the excess over the elected amount passes through to owners, where 41(g) applies as usual.
+
+**Where each dollar of a qualified small business's credit can go:**
+
+| Route | Who uses it | Limitation that applies | Cash timing |
+| --- | --- | --- | --- |
+| Payroll offset election (§41(h)) | The entity, via Form 8974 | $500,000/year; QSB gross-receipts screens | Next quarterly filing after election |
+| K-1 passthrough to individual owners | Each partner/shareholder | §41(g) tax-attributable cap, §469 if passive | Only in years with business income |
+| Carryforward of trapped amounts | Each owner separately | §39 twenty-year limit, retested §41(g) | Unknown; possibly never |
+
+## Planning around trapped credits
+
+When the payroll offset is unavailable — gross receipts too old or too large — the planning conversation is about generating tax attributable to the business or reducing the amount of credit exposed to the cap:
+
+- **Elect Section 280C(c).** The reduced credit (the gross credit cut by the top corporate rate) shrinks the trapped amount and eliminates the phantom-income flowthrough. For owners facing a long 41(g) tunnel, a smaller credit plus full deductions frequently beats a larger credit that never clears the cap.
+- **Mind the character of owner compensation.** A shareholder-employee's W-2 wages from an S corporation are not distributive-share income from the interest for 41(g) purposes; income has to arrive as a pro rata share to count. In partnerships, guaranteed payments raise analogous attribution questions. The compensation mix that optimizes employment taxes can be exactly the mix that starves the 41(g) numerator.
+- **Watch allocation design in partnerships.** Because the credit follows the research-expense allocation, allocating deductions to the partner with no other income allocates the credit to the partner least able to use it. Aligning the expense allocation with the partners who will bear income from the venture keeps the credit and the 41(g) capacity in the same hands — within the substantial-economic-effect constraints.
+- **Do not manufacture income.** Accelerating income recognition purely to release credits usually costs more in tax than the credit returns; the arithmetic deserves a model, not a reflex.
+
+## When the passthrough credit is not worth chasing
+
+Neutrality demands the negative case. A small partnership with perpetual losses, owners rich in outside income, no QSB eligibility, and no exit horizon can spend real money on a study to generate credits that sit in twenty-year carryforwards until they lapse. The credit also does not survive an owner's exit in any useful sense — carryforwards computed at the owner level stay with the owner, still trapped. And the entity-level computation is fully examinable: the IRS audits the partnership's QREs under the centralized partnership audit regime, with the four-part test and documentation burdens no lighter than for a C corporation ([audit defense considerations](/rd-tax-credit/rd-credit-audit-defense) apply with the added complication that adjustments land on multiple owners' returns). Before commissioning a study, a passthrough should model owner-by-owner usability — the gross credit number on the engagement letter is not the number anyone will keep.

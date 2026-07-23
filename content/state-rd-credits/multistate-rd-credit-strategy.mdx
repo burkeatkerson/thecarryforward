@@ -1,0 +1,113 @@
+---
+title: "Multistate R&D credit strategy: claiming across state lines"
+description: "How to layer state research credits on a federal Section 41 claim across several states: sourcing QREs by state of performance, handling conformity differences, sequencing compliance, managing 280C addback interactions, and deciding when a state credit is not worth the fee."
+date: "2026-06-24"
+type: "guide"
+level: "pro"
+tags: ["state-credits", "section-41", "qres", "section-280c"]
+faq:
+  - q: "Can a company claim R&D tax credits in more than one state?"
+    a: "Yes. A company with qualified research in several states can claim each state's credit for the research performed there, on top of the federal Section 41 credit. Each state's credit applies only to in-state QREs — wages for work done in the state, supplies consumed there, contract research performed there — so the federal QRE pool must be split by state of performance."
+  - q: "How are QREs sourced to a state for state R&D credits?"
+    a: "By where the research is performed, not where the company is headquartered or where the deduction lands. Wages are sourced to where the employee does the qualified work, supplies to where they are consumed in research, and contract research to where the contractor performs it. Remote and hybrid employees make wage sourcing the hardest and most audited element of a multistate claim."
+  - q: "Does the federal Section 280C election affect state R&D credits?"
+    a: "Often, yes, in two ways. In states that start from federal taxable income, the federal reduced-credit election changes state taxable income. Separately, several states impose their own addback, requiring expenses to be added back to the extent of the state credit, sometimes with a state-level reduced-credit election. The federal and state elections must be modeled together, not independently."
+  - q: "When is a state R&D credit not worth claiming?"
+    a: "When the expected award does not clear the fixed costs of claiming it. Small in-state QRE slivers, short carryforwards a company will not use, oversubscribed application pools, and states requiring separate base-period reconstruction all raise the cost-per-dollar of credit. A common rule of thumb: if projected credit in a state is a low-four-figure amount and the state needs its own computation, let it go."
+  - q: "Do all states use the federal definition of qualified research?"
+    a: "Most do, by conforming to Section 41's definitions, but on different vintages — rolling or fixed-date — and several states write their own computation base or omit federal features such as the alternative simplified credit. A few, like New York, deliver research incentives through economic-development programs rather than a Section 41 analog. The federal qualification file transfers; the computation rarely does."
+---
+
+A company doing qualified research in several states is usually entitled to several credits — federal [Section 41](https://www.irs.gov/credits-deductions/businesses/research-credit) plus one per state with a credit and enough in-state activity. The strategy problem is not qualification, which mostly travels with the federal four-part test, but execution: splitting one QRE pool across state lines defensibly, running different computations on different conformity vintages, sequencing elections and applications so nothing forecloses anything else, and knowing when a marginal state claim costs more than it returns.
+
+This guide assumes fluency with the federal credit ([start here otherwise](/rd-tax-credit/what-is-the-rd-tax-credit)) and with the [eight dimensions along which state credits differ](/state-rd-credits/how-state-credits-differ). It is about the layer where those dimensions collide: nexus, sourcing, stacking, and sequencing.
+
+<KeyTakeaway>
+  <p>Multistate R&D credit work is one qualification exercise and many computations. Source every QRE by state of performance at the workpaper level, model federal and state 280C-style elections together, sequence application-based states first, and drop states where the credit does not clear the fixed cost of claiming it.</p>
+</KeyTakeaway>
+
+## Nexus first: where can you claim at all?
+
+A state credit presupposes a return to claim it on. Before any credit analysis, establish where the company files: income tax nexus (physical presence, economic nexus, factor thresholds), franchise tax in Texas, the commercial activity tax in Ohio. Remote employees complicate this in both directions — a single engineer working from home can create filing obligations in a new state *and* a small pot of creditable in-state QREs. The credit analysis inherits whatever the nexus analysis concludes; do not let a credit opportunity drive a nexus position the company has not otherwise taken.
+
+Note the asymmetry: nexus without research earns nothing, but research without nexus is worse — QREs performed in a state where the company does not file generate no state credit anywhere. Research in a no-credit or no-income-tax state (Washington, Nevada) is federally creditable and state-inert.
+
+## Sourcing the QRE pool by state of performance
+
+Every state credit reaches only research performed in that state. The federal QRE pool must therefore be decomposed:
+
+- **Wages** — sourced to where the employee performs the qualified services. For a hybrid engineer splitting time between an office in Illinois and a home in Wisconsin, the qualified wage sources proportionally, and the allocation needs contemporaneous support (payroll work-state coding, time data, travel records). This is the largest line and the most audited.
+- **Supplies** — sourced to where they are used or consumed in the research, usually the lab or build site.
+- **Contract research** — sourced to where the *contractor* performs the work, not where the payor sits. A California company paying a Pennsylvania contractor has Pennsylvania-situs contract QREs (creditable there only if the company files there).
+
+The efficient practice is to build state-of-performance as a field on every line of the federal workpapers, so each state's QRE pool is a filter, not a separate study. The same discipline must extend to **base periods**: incremental states need in-state historical QREs, and a company that starts tagging location in 2026 cannot reconstruct a defensible 2022–2024 in-state base without pain. Some states add overlays — minimum in-state research percentages, or bases keyed to in-state gross receipts — that require apportionment data the federal file never touches.
+
+## Conformity: states that follow Section 41 versus states that write their own
+
+Sort your states into three bins:
+
+1. **Piggyback states.** The statute computes the credit as a percentage of the federally defined QREs or of the federal computation itself. New Jersey is the clean example — 10% keyed to the federal Section 41 computation. Here the federal file does most of the work; the main tasks are in-state sourcing and vintage-checking.
+2. **Own-base states.** The statute borrows Section 41's *definitions* but builds its own machine: California's regular-method-style 15% credit with no ASC analog, Georgia's base ratio against in-state receipts, Minnesota's and Arizona's tier structures. Each needs its own computation and its own base-period data.
+3. **Program states.** No Section 41 analog at all — research incentives ride inside economic-development programs with certification, job, and investment requirements. New York's Excelsior and life-sciences programs are the model. These are negotiated or applied-for benefits, not return positions, and they belong on a different internal calendar.
+
+The bin determines the marginal cost of the state: piggyback states are cheap to add, own-base states cost a computation, program states cost a relationship with an agency.
+
+## Stacking state and federal: the 280C interactions
+
+State and federal credits stack — the same dollar of qualified wage can earn 20% (or 14% ASC) federally and another 3–24% from a state. But the stack is not simply additive, because deductions and credits interact in both directions.
+
+Federally, [Section 280C(c)](https://uscode.house.gov/browse/prelim@title26&edition=prelim) disallows deductions to the extent of the credit unless the taxpayer makes the reduced-credit election. That federal choice propagates into every state that starts its computation from federal taxable income: the reduced-credit election means smaller federal credit, larger federal deduction, and therefore *lower* state taxable income in piggyback states — which is precisely why the election frequently earns its keep for multistate filers even when it looks like a wash federally.
+
+Separately, several states run their own 280C-style addback: expenses are added back to state income to the extent of the *state* credit, sometimes with a state reduced-credit election mirroring the federal one. The modeling consequence is that federal and state elections cannot be optimized independently. A worked comparison for a taxpayer in three income-tax states typically shows the federal reduced-credit election shifting a few points of combined benefit — small per year, decisive over a carryforward horizon. Model the whole stack in one spreadsheet, both election states, before filing anything.
+
+One more interaction: state conformity to the *deduction* side — Section 174A immediate expensing after the OBBBA — is separate from credit conformity and changes state taxable income in nonconforming states. See [the Section 174 cluster](/section-174/section-174a-explained); the point here is only that the credit model must sit on the correct state deduction baseline.
+
+## Compliance sequencing
+
+Multistate credit work has an order of operations, because some steps have deadlines that precede the return and some choices foreclose others:
+
+1. **Application-based states first.** Pennsylvania's pooled program, Arizona's refundable tier, New York's program certifications all have windows independent of — and often earlier than — return deadlines. Calendar these at the start of the engagement; a missed application is an unrecoverable zero.
+2. **Elections next.** The federal 280C reduced-credit election is made on a timely filed original return; several state elections work the same way. Decide the election stack before the first return is filed, because amending into a better election is often impossible.
+3. **Federal computation, then state filters.** Finalize the federal QRE pool with state-of-performance tagging, then run each state's computation off the tagged data. [Form 6765](https://www.irs.gov/forms-pubs/about-form-6765)'s Section G business-component detail, where required, should be built so the same components map to state schedules.
+4. **Extensions and estimated tax last.** Nonrefundable state credits still affect estimates; pooled awards that arrive late may require amended estimates or create overpayments to manage.
+
+## Comparing the major design approaches
+
+**The table below compares the principal state design patterns a multistate filer will encounter, with representative states as of mid-2026; every row changes legislatively, so verify with the state authority before relying.**
+
+| Approach | Representative states | Marginal cost to add | Loss-company value | Key sequencing item |
+| --- | --- | --- | --- | --- |
+| Piggyback on federal §41 | New Jersey | Low — sourcing only | Carryforward only | Federal 280C election timing |
+| Own incremental base, no ASC | California | High — separate base | Indefinite carryforward, no cash | Base-period reconstruction |
+| Tiered incremental | Minnesota, Arizona | Medium | Partial refundability (small firms) | AZ refundable-tier application |
+| Pooled, application-based, transferable | Pennsylvania | Medium | Sellable — real cash at a discount | Application window |
+| Non-income-tax base | Texas (franchise), Ohio (CAT) | Medium | Offsets non-income tax — works in loss years | TX credit-vs-exemption election |
+| Program-based | New York | High — certification | Refundable for participants | Program admission before year one |
+
+<BarChart
+  title="Illustrative combined benefit per $1M of in-state incremental QREs"
+  unit="$ thousands"
+  note="Illustrative only: federal ASC (14%, reduced-credit basis) plus each state's headline rate applied to $1M of increment, ignoring bases, caps, and addbacks. Actual results differ materially."
+  data={[
+    { label: "Federal ASC alone", value: 110, display: "$110k" },
+    { label: "+ California (15%)", value: 260, display: "$260k" },
+    { label: "+ New Jersey (10%)", value: 210, display: "$210k" },
+    { label: "+ Illinois (6.5%)", value: 175, display: "$175k" },
+    { label: "+ Colorado EZ (3%)", value: 140, display: "$140k" },
+  ]}
+  highlight={0}
+/>
+
+The chart shows why the state layer is worth the trouble at scale — a plausible 50–130% uplift on the federal benefit for the same research — and also why it is *not* worth the trouble in slivers: the uplift scales with in-state QREs, but the compliance cost per state is roughly fixed.
+
+## When a state credit isn't worth the fee
+
+The honest end of the analysis is subtraction. Decline a state when:
+
+- **The sliver is too thin.** One remote employee in an own-base state generates a computation, a base reconstruction, and a form for a credit measured in hundreds of dollars. A workable screen: skip any own-base state where projected annual credit is below the marginal preparation cost — often $3,000–$10,000 per state at professional rates.
+- **The carryforward will expire.** A nonrefundable credit in a state where the company projects losses through the carryforward window is an accrual, not an asset.
+- **The pool is oversubscribed.** Application states with heavy proration can turn a computed $50,000 into an awarded $12,000; run the fee math on the award.
+- **The addback eats the credit.** In high-rate states with mandatory addbacks and no reduced-credit option, the net benefit can shrink well below the headline rate.
+- **The position outruns the nexus posture.** Claiming a credit in a state where the company has been quietly not filing invites a conversation nobody wants.
+
+State revenue departments audit these credits — California's Franchise Tax Board is notably active on research credit exams — and the multistate file is only as strong as its weakest sourcing schedule. Every rate and feature above is stated as of mid-2026; state legislatures amend these annually, and the state authority's own guidance controls. When in doubt, the sequencing rule generalizes: claim the states where the money is, document the sourcing like it will be examined, and let the slivers go.

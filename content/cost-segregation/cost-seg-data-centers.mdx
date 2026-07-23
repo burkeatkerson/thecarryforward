@@ -1,0 +1,56 @@
+---
+title: "Cost segregation for data centers"
+description: "A data center is mostly electrical and mechanical plant with a roof: UPS, generators, PDUs, CRAC units, and raised floors can push reclassification past 40% of basis. The hard question is where equipment-serving systems end and building systems begin."
+date: "2026-07-07"
+type: "brief"
+level: "pro"
+tags: ["cost-segregation", "data-centers", "depreciation", "section-1245", "macrs"]
+faq:
+  - q: "How much of a data center can cost segregation reclassify?"
+    a: "Frequently 35% to 50% of depreciable basis for a powered-shell-plus-fit-out, and more where the owner's basis is concentrated in the electrical and mechanical fit-out. UPS systems, batteries, PDUs, generators, switchgear serving IT load, CRAC/CRAH units, and raised access floors are the major Section 1245 candidates; the shell, office space, and building-serving systems remain 39-year property."
+  - q: "Are backup generators and UPS systems personal property?"
+    a: "Generally yes, to the extent they serve the IT load rather than the building. Generators, UPS modules, batteries, and power distribution units that exist to keep servers running classify as 5- or 7-year Section 1245 property under the primary-use analysis; capacity serving life safety and general building load is a structural component and must be carved out by load allocation."
+  - q: "Is a raised access floor 39-year or short-life property?"
+    a: "Bolt-together raised access floor systems installed to route cooling and cabling to equipment are commonly classified as personal property under the movability and function factors — they are removable, reusable, and serve the machines. The IRS has litigated adjacent questions, so the position depends on documented facts: pedestal-and-panel construction, no structural role, and equipment-serving purpose."
+  - q: "Who does the study in a leased data center?"
+    a: "Each party studies its own basis. In a powered-shell lease the landlord owns the shell and often the primary power path, while the tenant owns the fit-out — UPS, PDUs, CRACs, containment, racks. Tenant fit-out studies typically reclassify a far higher percentage than landlord shell studies, and lease terms deciding who owns improvements at termination control whose study it is."
+---
+
+Strip the servers out of a data center and what remains is still mostly machine: switchgear, UPS modules, batteries, generators, PDUs, chillers, CRAC units, containment, and a raised floor to knit it together. That is why data centers reclassify 35–50% of depreciable basis in a [cost segregation study](/cost-segregation/what-is-cost-segregation) — and why the entire analysis compresses into one question: which systems serve the IT load, and which serve the building?
+
+<KeyTakeaway>
+  <p>Power and cooling dedicated to IT load are Section 1245 property under the primary-use doctrine; power and cooling serving occupants and life safety are 39-year building systems. Every major asset in a data center — generator, UPS, chiller plant, even the raised floor — sits somewhere on that line, and load allocation is the study's real work product.</p>
+</KeyTakeaway>
+
+## The building-systems boundary
+
+The [Cost Segregation Audit Techniques Guide](https://www.irs.gov/businesses/cost-segregation-audit-techniques-guide) classifies electrical and mechanical systems by what they primarily serve — the framework courts built in cases like *Scott Paper Co. v. Commissioner*, 74 T.C. 137 (1980). Applied to a data center:
+
+- **Power chain.** Utility service, switchgear, generators, UPS, batteries, and PDUs are allocated by load. In a purpose-built facility, IT load dominates — often upward of 80–90% of design capacity — so most of the chain classifies as 5- or 7-year Section 1245 property. The slice sized for life safety, lighting, and office load stays at 39 years, and examiners expect to see the one-line diagram and load calculations behind the split.
+- **Cooling.** CRAC/CRAH units, in-row cooling, containment, and the chilled-water plant serving heat rejection from equipment follow the equipment. Comfort HVAC for offices and NOC space is structural. Shared central plants get allocated — the contested middle ground.
+- **Raised floors.** Pedestal-and-panel access floors routing air and cable to machines are argued as personal property on movability and function grounds; a floor with any structural role is not. Documentation of removability and reuse carries the position.
+- **Fire suppression and security.** Clean-agent suppression protecting equipment rooms has been classified with the equipment; building-wide sprinklers are structural. Access control and monitoring dedicated to the data hall is 5-year property.
+
+Recovery periods track Rev. Proc. 87-56 classes via [Pub 946](https://www.irs.gov/publications/p946) — commonly 5-year for computer-adjacent equipment and 7-year for other machinery, with the shell and office at 39.
+
+## An illustrative allocation
+
+**Illustrative allocation for a $60M enterprise data center (shell plus electrical/mechanical fit-out, IT hardware excluded), land excluded:**
+
+<BarChart
+  title="Data center basis after cost segregation"
+  unit="%"
+  note="Illustrative; hyperscale fit-outs where the owner's basis is mostly plant run higher, mixed office/data buildings lower."
+  highlight={0}
+  data={[
+    { label: "5/7-year power & cooling serving IT load", value: 40 },
+    { label: "15-year site improvements", value: 5 },
+    { label: "39-year shell, office, building systems", value: 55 },
+  ]}
+/>
+
+All of the short-life property is eligible for [100% bonus depreciation](/cost-segregation/cost-segregation-bonus-depreciation) when acquired after January 19, 2025 — on a $60M basis, roughly $27M of year-one deduction at these illustrative percentages.
+
+## The trap: capacity is not use
+
+The recurring exam failure is allocating the *whole* power chain to IT because the facility is "a data center." Generators sized with life-safety capacity, UPS feeding building controls, chillers cooling office space — every shared system needs a documented allocation, and a study that claims 100% of shared infrastructure invites the examiner to reopen everything else. The inverse trap is commercial: in powered-shell leases, owners sometimes study systems the *tenant* paid for and owns under the lease. Basis follows ownership; read the lease before the engineer reads the one-line diagram. Comparative context across asset types is in [cost seg by property type](/cost-segregation/cost-seg-by-property-type).

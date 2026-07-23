@@ -1,0 +1,54 @@
+---
+title: "Stock options and RSUs as qualified research expenses: the W-2 Box 1 rule"
+description: "Section 41 wages mean Section 3401(a) wages — essentially W-2 Box 1 — so NSO exercises and RSU vesting enter the QRE base in the year they hit the W-2, while ISO exercises never do. The Sun Microsystems principle, and how a spike year of option income distorts the ASC average for years afterward."
+date: "2026-07-09"
+type: "brief"
+level: "pro"
+tags: ["section-41", "equity-comp", "qres"]
+faq:
+  - q: "Do stock options count as wages for the R&D credit?"
+    a: "Nonqualified stock options do. Section 41(b)(2)(D) defines wages by reference to Section 3401(a) — income-tax-withholding wages, essentially W-2 Box 1 — and the spread on an NSO exercise is Box 1 income in the exercise year. Sun Microsystems v. Commissioner (T.C. Memo 1995-69) confirmed the treatment. Incentive stock options never qualify: a qualifying ISO exercise produces no Section 3401(a) wages, and even a disqualifying disposition's income is statutorily exempt from withholding."
+  - q: "When are RSUs included in qualified research expenses?"
+    a: "In the year the RSU income lands in W-2 Box 1 — generally vesting (or settlement, for deferred-settlement units), when the fair market value of the shares is wages subject to withholding. The QRE is then the Box 1 amount multiplied by the employee's qualified-services percentage for that year, and the substantially-all rule (80% or more qualified time counts 100% of wages) applies to the equity income along with cash salary."
+  - q: "How does a large option exercise affect the ASC calculation?"
+    a: "Twice, in opposite directions. In the exercise year, the extra wage QREs increase the credit. For the next three years, the spike sits in the ASC's prior-three-year average, raising the 50%-of-average base and depressing the credit even though research activity never changed. A one-time $10 million exercise spike adds roughly $1.67 million to each of the next three years' bases — about $700,000 of foregone ASC credit over the period at 14%."
+---
+
+Equity compensation enters the research credit through a definitional cross-reference. Section 41(b)(2)(D) defines "wages" as wages under Section 3401(a) — the income-tax-withholding base, which is essentially W-2 Box 1. So the question for options and RSUs is never whether equity is "really" research spending; it is whether, and when, the instrument produces Box 1 income. Nonqualified options (NSOs) do, at exercise. RSUs do, at vesting or settlement. Incentive stock options (ISOs) do not — ever — and that asymmetry, confirmed a generation ago in *Sun Microsystems, Inc. v. Commissioner*, T.C. Memo 1995-69, still drives both the QRE build and the audit findings.
+
+<KeyTakeaway>
+  <p>Equity income is a wage QRE in the year it appears in W-2 Box 1, multiplied by that year's qualified-services percentage — NSO spreads and RSU vesting qualify, ISO exercises never do. The spike years this creates flow into the ASC's three-year average and suppress the following three years' credits, so exercise-heavy years deserve a regular-method comparison.</p>
+</KeyTakeaway>
+
+## The Box 1 rule, instrument by instrument
+
+**When each instrument produces Section 3401(a) wages eligible for the QRE base:**
+
+| Instrument | Box 1 event | QRE treatment |
+| --- | --- | --- |
+| NSO | Exercise (spread over strike) | Qualifies in exercise year |
+| RSU | Vesting/settlement (FMV of shares) | Qualifies in that year |
+| ISO, qualifying disposition | None | Never a QRE |
+| ISO, disqualifying disposition | Box 1 income, but exempt from withholding under §421(b) | Not §3401(a) wages — excluded |
+| Restricted stock with §83(b) election | Grant-year FMV in Box 1 | Qualifies in grant year |
+
+*Sun Microsystems* established the principle for NSOs: the spread is Section 3401(a) wages, so it is a Section 41 wage. The ISO rows are the mirror image and the recurring exam adjustment — payroll systems report disqualifying-disposition income in Box 1, and studies that harvest Box 1 mechanically sweep in amounts that are statutorily outside the withholding base. The regulatory wage definition sits in Treas. Reg. §31.3401(a)-1 at [eCFR Title 26](https://www.ecfr.gov/current/title-26); the QRE framework is summarized in the IRS's [research credit overview](https://www.irs.gov/credits-deductions/businesses/research-credit).
+
+Timing follows Box 1, not the service period. An engineer who did qualified research from 2022 to 2025 and exercises in 2026 after moving to a management role generates 2026 wages — multiplied by the 2026 qualified-services percentage, which may be zero. The credit looks at the year the income lands, not the years the options were earned; there is no tracing back to the vesting-period activities. That cuts both ways: exercises by current researchers are fully countable even if the options were granted for pre-research service.
+
+## The percentage and the substantially-all rule
+
+Equity income is aggregated with cash compensation before applying the employee's qualified-services fraction for the year, exactly as for salary — see [qualified research expenses](/rd-tax-credit/qualified-research-expenses) for the framework. The substantially-all rule of Treas. Reg. §1.41-2(d)(2) then matters more than usual: an employee at 80%+ qualified time counts 100% of wages, equity included, so a large exercise by a hands-on-keyboard engineer is fully in, while the same exercise by a 50%-qualified engineering VP comes in at half. Because a single executive exercise can exceed the rest of the department's payroll, the time-tracking support for that one percentage can carry more dollars than everything else in the [audit file](/rd-tax-credit/rd-credit-audit-defense).
+
+## Spike years and the ASC average
+
+The ASC computes 14% of current QREs over 50% of the prior-three-year average. A one-time equity spike inflates the current year's credit, then sits in the denominator for three years. Suppose exercises add $10 million of wage QREs in 2026:
+
+- 2026 credit rises by 14% × $10 million = $1.4 million (before the base effect of prior years).
+- 2027–2029 bases each rise by 50% × ($10M ÷ 3) ≈ $1.67 million, costing about $233,000 of credit per year — roughly $700,000 over the window, against research activity that never changed.
+
+Planning responses are limited but real: compare the regular method in post-spike years (its base ignores QRE history — see [the computation guide](/rd-tax-credit/how-to-calculate-the-rd-credit) and the [switching brief](/rd-tax-credit/asc-vs-regular-switching)), and model IPO-year RSU settlement waves before assuming the credit trajectory.
+
+<Callout label="Watch out">
+  <p>Consistency is mandatory. Section 41(c)(5) requires QREs in the base years to be determined on the same basis as the credit year — a taxpayer that starts counting equity wages in 2026 must add the equity wages back into 2023–2025 for the ASC average. Harvesting the spike year's exercises while leaving prior years' out of the average overstates the credit and is an easy adjustment for an examiner armed with three years of W-2 data.</p>
+</Callout>

@@ -1,0 +1,55 @@
+---
+title: "Cost segregation for manufacturing facilities"
+description: "Manufacturing plants reclassify 30–60% of basis because so much of the 'building' exists to serve the process: heavy power distribution, process piping, reinforced foundations, cranes. The primary-use analysis from Scott Paper does the heavy lifting."
+date: "2026-06-30"
+type: "brief"
+level: "working"
+tags: ["cost-segregation", "manufacturing", "depreciation", "macrs", "section-1245"]
+faq:
+  - q: "How much of a manufacturing facility can cost segregation reclassify?"
+    a: "Commonly 30% to 60% of depreciable basis, with process-intensive plants at the high end. Beyond the machinery itself, the electrical distribution, process piping, ventilation, and specialized foundations that primarily serve production equipment classify as Section 1245 personal property with the equipment — typically 5- or 7-year recovery — rather than as 39-year structural components."
+  - q: "Can electrical systems in a factory be personal property?"
+    a: "The share that primarily serves production can. Following the primary-use analysis courts applied in cases like Scott Paper Co. v. Commissioner, studies allocate electrical load between process equipment and general building use; feeders, switchgear capacity, and transformers attributable to production classify with the machinery. Load studies documenting the allocation are what make the position defensible on exam."
+  - q: "What recovery period applies to manufacturing equipment?"
+    a: "It depends on the industry's MACRS asset class in Rev. Proc. 87-56 — most manufacturing activities fall in classes with 7-year recovery (for example, much of fabricated metals or food production), while some are 5-year. The building shell remains 39-year nonresidential real property. Pub 946 carries the class-life tables that govern."
+---
+
+In most commercial buildings, the systems serve the people inside. In a factory, much of the building serves the machines — and that inversion is why manufacturing facilities reclassify 30–60% of depreciable basis in a [cost segregation study](/cost-segregation/what-is-cost-segregation), among the widest ranges of any asset class. The machinery was never in question; the money is in the infrastructure around it.
+
+<KeyTakeaway>
+  <p>The governing idea is primary use: electrical distribution, piping, ventilation, and even foundations that exist primarily to serve production equipment are Section 1245 property recovered with the equipment, not 39-year structural components. Documented load and use studies — not assertions — are what carry the position.</p>
+</KeyTakeaway>
+
+## The primary-use analysis
+
+The doctrinal root is the line of cases applying a primary-use test to utility systems — *Scott Paper Co. v. Commissioner*, 74 T.C. 137 (1980), being the standard citation — under which an electrical or plumbing system is classified by what it predominantly serves. The [Cost Segregation Audit Techniques Guide](https://www.irs.gov/businesses/cost-segregation-audit-techniques-guide) absorbed this into its framework: a system serving production machinery is an accessory to the machinery; a system serving building occupancy is a structural component. In practice a study allocates:
+
+- **Electrical**: switchgear, transformers, bus duct, and feeders by connected load — the production share follows the equipment (often the large majority in heavy plants); lighting and convenience power stay at 39 years.
+- **Process piping**: compressed air, process water, gas, steam, and drainage dedicated to production are equipment.
+- **HVAC and ventilation**: dust collection, fume exhaust, and process cooling classify with the process; comfort conditioning of offices does not. Systems doing both get allocated.
+- **Foundations**: equipment pads, pits, and specially reinforced slabs required by specific machines can qualify as Section 1245 property; the general floor slab cannot.
+- **Cranes**: bridge cranes and hoists are equipment, and crane rails and, in the right facts, the crane-supporting columns designed for the crane loads have been successfully classified with them — one of the more aggressive, fact-dependent calls in the discipline.
+
+Recovery periods follow the taxpayer's industry class under Rev. Proc. 87-56 — commonly 7-year, sometimes 5 — as tabulated in [Pub 946](https://www.irs.gov/publications/p946).
+
+## An illustrative allocation
+
+**Illustrative allocation for a $25M owner-built production facility, land excluded (machinery purchased separately and already excluded):**
+
+<BarChart
+  title="Manufacturing facility basis after cost segregation"
+  unit="%"
+  note="Illustrative; process-intensive plants (food, chemicals) trend higher on reclassified systems, light assembly lower."
+  highlight={0}
+  data={[
+    { label: "5/7-year process systems & foundations", value: 30 },
+    { label: "15-year land improvements", value: 8 },
+    { label: "39-year building", value: 62 },
+  ]}
+/>
+
+The 15-year layer is the yard: heavy paving, rail spurs, fencing, exterior lighting, and stormwater work. Both short-life layers take [100% bonus depreciation](/cost-segregation/cost-segregation-bonus-depreciation) for property acquired after January 19, 2025 — and note the OBBBA also created 100% expensing for qualified production property itself, a separate analysis that can reach portions of the building a study cannot.
+
+## The trap: percentages without load studies
+
+Manufacturing studies fail on exam in one predictable way: the provider applies a benchmark percentage — "60% of electrical is process" — without a load study behind it. The primary-use doctrine is fact-intensive by nature; examiners following the ATG ask for the panel schedules, the connected-load analysis, and the walk-through documentation. A plant that changed products since construction may also have systems whose *current* primary use no longer matches the study's assumption. Insist on engineering work papers that trace each allocated system to named equipment. The broader classification landscape is in [asset classes and recovery periods](/cost-segregation/asset-classes-recovery-periods).
