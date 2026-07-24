@@ -1,0 +1,119 @@
+---
+title: "Asset sale vs stock sale: how the structure decides who pays the tax"
+description: "Asset sales give buyers a stepped-up basis but can tax C corporation sellers twice; stock sales tax sellers once at capital gain rates but leave buyers with carryover basis. Here is how the math actually works."
+date: "2026-05-06"
+type: "guide"
+level: "intro"
+tags: ["exits-ma", "asset-sale", "stock-sale", "section-1060"]
+faq:
+  - q: "Why do buyers prefer asset purchases over stock purchases?"
+    a: "In an asset purchase the buyer takes a basis in each asset equal to the price paid for it under Section 1060, creating fresh depreciation and amortization deductions — including 15-year amortization of goodwill under Section 197. In a stock purchase the target's asset basis carries over unchanged, so the buyer inherits old, often depleted, depreciation schedules and any hidden liabilities."
+  - q: "Why is an asset sale worse for a C corporation seller?"
+    a: "A C corporation asset sale is taxed twice: the corporation pays 21% federal tax on gain from selling its assets, and shareholders pay capital gains tax (typically 20% plus 3.8% net investment income tax) when the remaining cash is distributed. A stock sale skips the corporate-level tax entirely — shareholders pay one capital gains tax on their shares."
+  - q: "What is a Section 1060 purchase price allocation?"
+    a: "Section 1060 requires buyer and seller in an applicable asset acquisition to allocate the purchase price across seven asset classes — cash, marketable securities, receivables, inventory, other tangible assets, Section 197 intangibles, and goodwill — using the residual method, and to report the allocation on Form 8594. The allocation controls the seller's gain character and the buyer's future deductions."
+  - q: "What is depreciation recapture in an asset sale?"
+    a: "Gain on depreciated equipment is taxed as ordinary income under Section 1245 up to the depreciation previously claimed; only gain above original cost is capital. Real property recapture under Section 1250 is narrower, but unrecaptured Section 1250 gain is taxed at up to 25% for individuals. Recapture often converts a surprising share of asset-sale gain to ordinary income."
+  - q: "Does an S corporation avoid double tax in an asset sale?"
+    a: "Generally yes. An S corporation's asset-sale gain passes through to shareholders once, and the gain increases stock basis so the liquidating distribution is largely tax-free. The exceptions: built-in gains tax under Section 1374 if the company converted from C status within the prior five years, and ordinary income items like depreciation recapture still pass through as ordinary."
+---
+
+The structure of a business sale — assets or stock — usually moves more money between buyer and seller than any negotiated price term. An asset sale gives the buyer a fresh, stepped-up tax basis in everything purchased, generating depreciation and amortization deductions worth real money; but for a C corporation seller it triggers two levels of tax, first at the corporate level and again when the proceeds are distributed. A stock sale taxes the seller once, at long-term capital gain rates, but hands the buyer a company whose inside asset basis carries over untouched, along with its history and liabilities.
+
+That asymmetry — buyers want assets, sellers want stock — drives nearly every deal-structure negotiation, and it is why buyers routinely pay more for asset deals than stock deals for the same business. This guide walks the mechanics: the two levels of tax, the [Section 1060](https://uscode.house.gov/browse/prelim@title26&edition=prelim) allocation classes, depreciation recapture, and a worked example showing what each structure nets the seller.
+
+<KeyTakeaway>
+  <p>Asset sales create buyer basis step-up but can cost a C corporation seller two layers of tax; stock sales tax the seller once but deny the buyer new deductions. The tax value of the step-up — roughly the present value of amortizing goodwill over 15 years and depreciating tangible assets faster — is the number both sides should price.</p>
+</KeyTakeaway>
+
+## What actually gets sold in each structure
+
+In a **stock sale**, shareholders sell their shares. The corporation itself is untouched: its EIN, contracts, tax attributes, asset basis, and liabilities (known and unknown) all continue inside the same legal entity, now owned by the buyer. The seller's gain is the share price minus stock basis, generally long-term capital gain.
+
+In an **asset sale**, the corporation sells its assets — equipment, inventory, receivables, intangibles, goodwill — to the buyer, then typically liquidates and distributes the after-tax proceeds to shareholders. The buyer picks which assets and which liabilities it takes; everything else stays behind with the seller.
+
+Partnerships and single-member LLCs blur the line: a sale of 100% of LLC interests is treated for tax purposes as an asset sale (Rev. Rul. 99-6), so the buyer gets a step-up while the sellers report interest-sale gain. That is one reason LLC targets command simpler deals than corporate targets.
+
+## Why one level of tax versus two matters so much
+
+A C corporation pays federal tax at 21% on gain from selling its assets. When it distributes what remains, shareholders pay tax again — typically 20% long-term capital gain plus the 3.8% net investment income tax under Section 1411, ignoring state tax. Two layers compound: on a fully appreciated business, the combined federal take can approach 45% of the gain in an asset sale, against roughly 23.8% in a stock sale.
+
+S corporations and partnerships mostly escape the double layer. Gain passes through to owners once, and under Section 1367 (or Section 705 for partnerships) it increases the owner's basis, so the follow-on distribution is largely untaxed. This is why pass-through sellers are far more willing to sign asset deals — and why buyers of S corporations push for asset treatment through mechanisms like the Section 338(h)(10) election or a pre-closing F reorganization, covered in our briefs on [F reorganizations](/exits-ma/f-reorganizations-s-corps) and elections that treat stock sales as asset sales.
+
+<Callout label="Watch out">
+  <p>An S corporation that converted from C status within the last five years faces the Section 1374 built-in gains tax: a corporate-level 21% tax on gain that was built in at conversion. For a recently converted target, an asset sale can look uncomfortably like a C corporation sale.</p>
+</Callout>
+
+## How Section 1060 allocates the price
+
+Any "applicable asset acquisition" — a transfer of assets constituting a trade or business where the buyer's basis is determined by what it paid — must allocate the purchase price under the residual method of Treas. Reg. §1.1060-1, using the seven classes defined in Treas. Reg. §1.338-6. Both sides report the allocation on [Form 8594](https://www.irs.gov/forms-pubs/about-form-8594), and inconsistent filings invite examination.
+
+**The seven allocation classes, in the order the price is absorbed:**
+
+| Class | Assets | Seller's gain character | Buyer's recovery |
+|---|---|---|---|
+| I | Cash and deposit accounts | None | None (dollar for dollar) |
+| II | Marketable securities, CDs | Capital | On disposition |
+| III | Accounts receivable, some debt | Ordinary | As collected |
+| IV | Inventory | Ordinary | Cost of goods sold |
+| V | Equipment, real estate, other tangibles | Capital/§1231, with recapture | Depreciation (MACRS) |
+| VI | §197 intangibles except goodwill (non-competes, customer lists, licenses) | Mostly ordinary or capital by asset | 15-year amortization |
+| VII | Goodwill and going-concern value | Capital | 15-year amortization |
+
+The residual method fills Classes I through VI at fair market value; whatever is left lands in Class VII goodwill. Because the classes carry different gain character for the seller and different recovery speeds for the buyer, the allocation itself is negotiated — a fight we cover in [purchase price allocation negotiations](/exits-ma/purchase-price-allocation-negotiations). And the Class V allocation the parties agree at closing constrains what a later cost segregation study can do, as explained in [purchase price allocation vs cost segregation](/cost-segregation/purchase-price-allocation-vs-cost-seg).
+
+## Depreciation recapture: the ordinary-income surprise
+
+Sellers often assume all asset-sale gain is capital. It is not. Under Section 1245, gain on personal property is ordinary income up to all depreciation previously claimed — and after years of bonus depreciation at 100%, most equipment has zero basis, so the entire equipment allocation is ordinary income. Section 1250 recapture on buildings is narrower, but individuals pay up to 25% on unrecaptured Section 1250 gain attributable to straight-line depreciation.
+
+For a pass-through seller, recapture passes through as ordinary income at rates up to 37%. Recapture also cannot be deferred on the installment method under Section 453(i) — it is taxed entirely in the year of sale even if payments arrive later, a trap detailed in our brief on [installment sales in business exits](/exits-ma/installment-sale-business-exits).
+
+## What the step-up is worth to the buyer
+
+The buyer's benefit is timing: deductions now instead of never (stock deal) or later. Fresh Class V basis is depreciable under MACRS — and with 100% bonus depreciation permanently restored for property acquired after January 19, 2025, much of the equipment allocation can be deducted in year one (see [Form 4562](https://www.irs.gov/forms-pubs/about-form-4562) and [Pub 946](https://www.irs.gov/publications/p946)). Class VI and VII intangibles amortize straight-line over 15 years under Section 197.
+
+A common rule of thumb: at a 21% corporate rate and an 8% discount rate, a step-up is worth roughly 15–20% of the stepped-up amount in present-value terms — more when bonus-eligible equipment dominates, less when the price is nearly all goodwill. Sophisticated buyers model this explicitly and will share part of it as a purchase-price gross-up when a seller's structure makes asset treatment costly. Buyers should also remember what a stock deal *does* preserve: the target's tax attributes, including NOLs, credit carryforwards, and Section 174-era R&E balances — subject to the Section 382 limits covered in [credits and carryforwards at exit](/exits-ma/credits-carryforwards-at-exit).
+
+## A worked comparison: $10 million deal, C corporation target
+
+Assume a C corporation with $1 million aggregate asset basis, $200,000 shareholder stock basis, a $10 million price either way, all gain long-term, 21% corporate rate, 23.8% shareholder rate, and no state tax.
+
+**Seller's net proceeds under each structure:**
+
+| Line | Asset sale | Stock sale |
+|---|---|---|
+| Purchase price | $10,000,000 | $10,000,000 |
+| Corporate gain | $9,000,000 | — |
+| Corporate tax (21%) | ($1,890,000) | — |
+| Cash distributed | $8,110,000 | $10,000,000 |
+| Shareholder gain | $7,910,000 | $9,800,000 |
+| Shareholder tax (23.8%) | ($1,882,580) | ($2,332,400) |
+| **Net to seller** | **$6,227,420** | **$7,667,600** |
+
+The structure swing is about $1.44 million — 14% of the deal — before the buyer's step-up value is priced in. If the step-up is worth, say, $1.6 million in present value to the buyer, a gross-up can leave both sides better off than a stock deal; if it is worth less than the seller's incremental tax, stock wins.
+
+<BarChart
+  title="Seller's after-tax proceeds on a $10M sale of a C corporation"
+  unit="$"
+  note="Illustrative: $1M asset basis, $200K stock basis, 21% corporate and 23.8% shareholder federal rates, no state tax or recapture."
+  highlight={1}
+  data={[
+    { label: "Asset sale, no gross-up", value: 6227420, display: "$6.23M" },
+    { label: "Stock sale", value: 7667600, display: "$7.67M" },
+    { label: "Asset sale + $1.6M gross-up", value: 7447420, display: "$7.45M" },
+  ]}
+/>
+
+For an S corporation seller the gap nearly vanishes: one level of tax either way, and the fight shifts to gain character (recapture and Class IV/VI ordinary income versus capital) and state sourcing rather than double taxation.
+
+## When each structure does not make sense
+
+An asset sale is often impractical regardless of tax when the business depends on non-assignable contracts, licenses, or permits — pharmacy licenses, government contracts, and franchise agreements frequently cannot move to a new entity. A stock sale is unattractive to buyers when the target carries litigation, environmental, or tax exposure, since carryover treatment means carryover liability; representation-and-warranty insurance mitigates but does not eliminate this.
+
+Nor is the seller's preference always stock. A seller with high stock basis but low asset basis (rare, but it happens after a recent purchase or basis step-up at death) may net more from an asset deal. A seller holding qualified small business stock has the opposite pull: the Section 1202 exclusion applies only to a sale of *stock*, so an asset sale forfeits it — see [QSBS exit planning](/exits-ma/qsbs-exit-planning). And where value sits in the founder personally rather than the company, a [personal goodwill sale](/exits-ma/personal-goodwill-sales) can extract a single-tax slice even from a C corporation asset deal.
+
+## What the IRS looks at
+
+The IRS's leverage points are consistency and character. Mismatched Form 8594 filings between buyer and seller are an audit flag; allocations that stuff value into whichever class suits each side (seller-favoring goodwill, buyer-favoring equipment and non-competes) draw scrutiny when they depart from any appraisal in the file. Amounts recharacterized as compensation — consulting agreements and non-competes priced above their economics — are ordinary income to the seller and may be deferred deductions to the buyer. Finally, diligence teams should confirm the target's incentive positions before pricing attributes at all; our guide to [tax incentive due diligence in M&A](/fundamentals/tax-incentive-due-diligence-mna) covers what survives closing and what does not.
+
+The structure choice is not a formality to settle after price. It *is* price. Model both structures, value the step-up, and negotiate the gross-up with the same energy as the headline number.

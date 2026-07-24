@@ -71,6 +71,60 @@ export const clusters: Cluster[] = [
       "Credits versus deductions, depreciation and basis, accounting-method changes, amended returns and statutes of limitations, audit readiness, and how to evaluate the advisors who sell specialty tax work.",
     order: 5,
   },
+  {
+    slug: "real-estate-tax",
+    name: "Real Estate Tax",
+    shortName: "Real Estate",
+    tagline: "The rules around the building, beyond depreciation",
+    description:
+      "Cost segregation is one chapter of real estate taxation. The rest — like-kind exchanges, passive activity rules, dealer versus investor status, QBI for rentals, opportunity zones, and partnership structures — decides whether the depreciation ever matters.",
+    order: 8,
+  },
+  {
+    slug: "entity-tax",
+    name: "Entity Tax",
+    shortName: "Entity Tax",
+    tagline: "S corps, partnerships, and C corps — where credits live or die",
+    description:
+      "Every incentive flows through an entity, and the entity's own rules — S elections, basis, reasonable compensation, partnership allocations, QSBS, state PTETs — determine what a credit or deduction is actually worth to its owners.",
+    order: 9,
+  },
+  {
+    slug: "exits-ma",
+    name: "Exits & M&A",
+    shortName: "Exits & M&A",
+    tagline: "What happens to the tax attributes when the business sells",
+    description:
+      "Deal structure decides tax outcomes: asset versus stock, 338(h)(10) and F-reorganizations, earnouts and installment sales, purchase price allocations — and what becomes of credit carryforwards, 174 balances, and depreciation history at closing.",
+    order: 10,
+  },
+  {
+    slug: "irs-controversy",
+    name: "IRS Controversy",
+    shortName: "Controversy",
+    tagline: "When the government disagrees — procedure, leverage, and defense",
+    description:
+      "Past the exam basics: information document requests and summonses, collection due process, liens and levies, offers in compromise, trust fund penalties, privilege, and the Taxpayer Advocate — the procedural terrain where specialty claims are defended.",
+    order: 11,
+  },
+  {
+    slug: "tax-research",
+    name: "Tax Research",
+    shortName: "Research",
+    tagline: "How to find the answer yourself — and know when you have it",
+    description:
+      "The method behind every article on this site: reading statutes and regulations, weighing rulings and cases, tracing legislative history, using citators, and building a research file that supports a position under Circular 230 standards.",
+    order: 12,
+  },
+  {
+    slug: "practice-management",
+    name: "Practice Management",
+    shortName: "Practice",
+    tagline: "Running specialty tax work inside a CPA practice",
+    description:
+      "For the practitioners who sign the returns: engagement letters and fee structures, preparer penalty exposure, workpaper standards, vetting and pricing specialty providers, quality control for credit claims, and professional liability.",
+    order: 13,
+  },
 ].sort((a, b) => a.order - b.order);
 
 export function getCluster(slug: string): Cluster | undefined {

@@ -1,0 +1,49 @@
+---
+title: "Rollover equity taxation: deferring gain on the stake you keep"
+description: "Sellers rolling 10–30% into the buyer's structure can defer tax on that slice through Section 721 or 351 — if the structure cooperates. Boot, blocker corporations, and QSBS preservation are where rollovers go wrong."
+date: "2026-07-01"
+type: "brief"
+level: "working"
+tags: ["exits-ma", "rollover-equity", "section-721", "section-351"]
+faq:
+  - q: "Is rollover equity taxable at closing?"
+    a: "Not necessarily. If the seller's retained interest is received in exchange for property under Section 721 (buyer vehicle is a partnership) or Section 351 (corporate buyer, with the seller group in 80% control after the exchange), gain on the rolled portion is deferred. Cash and other boot received alongside is taxable, and a poorly sequenced structure can make the entire rollover taxable."
+  - q: "Why is Section 351 harder to satisfy than Section 721 in a rollover?"
+    a: "Section 721 has no control requirement — any contribution of property to a partnership for an interest qualifies. Section 351 requires the transferors, as a group, to control 80% of the corporation immediately after the exchange. A management team rolling into a PE-controlled corporate topco rarely has 80%; the deferral then depends on being part of the same integrated exchange as the sponsor's cash contribution."
+  - q: "Does rolled equity keep QSBS status?"
+    a: "Rolling into a partnership ends Section 1202 eligibility for that slice — a partnership interest is not stock. Rolling into acquirer stock in a Section 368 reorganization or qualifying 351 exchange can preserve the exclusion, generally frozen at the built-in gain existing at the exchange unless the new stock independently qualifies as QSBS. Sellers with QSBS should decide which shares to sell for cash and which to roll accordingly."
+---
+
+Buyers, especially private equity, want sellers to keep skin in the game — typically 10–30% rolled into the acquisition structure. Done right, the rolled slice defers tax until the next exit: the seller pays on the cash portion only, and the retained equity compounds pre-tax. Done wrong — wrong entity, wrong sequence, disguised-sale mechanics — the seller pays tax at closing on equity that produced no cash to pay it with.
+
+<KeyTakeaway>
+  <p>Rollover deferral rides Section 721 (partnership topco — flexible, no control test) or Section 351 (corporate topco — 80% control group required). Cash, debt relief beyond basis, and disguised-sale traps are boot; QSBS survives only on corporate paths.</p>
+</KeyTakeaway>
+
+## The two deferral paths
+
+**Section 721 — partnership topco.** Most PE structures hold operating companies under an LLC taxed as a partnership. A seller contributing assets or equity in exchange for topco units defers gain under [Section 721](https://uscode.house.gov/browse/prelim@title26&edition=prelim) with no control requirement, which is why the [F-reorg structure](/exits-ma/f-reorganizations-s-corps) pairs so naturally with partnership buyers: NewCo sells 75% of LLC interests for cash and simply retains 25%, or contributes to the buyer holdco for units. Watch the disguised-sale rules of Section 707(a)(2)(B) and Treas. Reg. §1.707-3 (see [eCFR Title 26](https://www.ecfr.gov/current/title-26)) — cash distributed to the contributor within two years is presumed sale proceeds — and Section 752 debt-shift boot where liabilities assumed exceed basis.
+
+**Section 351 — corporate topco.** Deferral requires the transferor group to hold 80% of vote and value *immediately after* the exchange. Rolling managers alone flunk it; the cure is the "accommodation" structure where the sponsor's cash contribution and the sellers' equity contribution close as one integrated plan, making the sponsor a co-transferor whose ownership counts toward control. Sequencing documents matter: if the sponsor is treated as already owning topco before the sellers contribute, control fails and the roll is fully taxable. Alternatively, sellers may receive acquirer stock in a Section 368 reorganization, with its own continuity requirements.
+
+**How a $10 million position splits in a typical 75/25 rollover (illustrative):**
+
+| Component | Amount | Tax at closing |
+|---|---|---|
+| Cash for 75% | $7,500,000 | Capital gain on this portion |
+| Rolled units/stock (25%) | $2,500,000 | Deferred |
+| Boot (debt shift, cash out of topco) | varies | Taxable, up to gain |
+
+## Boot, basis, and the second exit
+
+Whatever the path, the seller's basis in the rollover interest is a carryover of old basis (adjusted for gain recognized and boot), so the deferred gain resurfaces at the sponsor's exit — often three to seven years later at a bigger number. Partnership rollovers add Section 704(c): the built-in gain on contributed property is tracked to the contributor and allocated back on a later sale. None of this is avoidance; it is timing, and it stacks with whatever the next deal's structure imposes. Sellers should also confirm the character of the rolled instrument — preferred units with guaranteed returns can generate ordinary income along the way, and profits-interest sweeteners for continuing managers live under entirely different (Rev. Proc. 93-27) rules than the rollover itself.
+
+## The QSBS question
+
+For founders holding qualified small business stock, the rollover decision interacts with Section 1202. A partnership roll forfeits the exclusion on the rolled shares. A corporate roll under 368 or 351 can preserve it under Section 1202(h)(4), but generally frozen at the closing-date built-in gain unless the topco stock independently qualifies — which, given the $50 million gross asset test, it usually cannot after a leveraged acquisition. The clean play is often to *sell* the QSBS shares for cash up to the exclusion cap and roll other shares; the fuller analysis is in [QSBS exit planning](/exits-ma/qsbs-exit-planning).
+
+<Callout label="Watch out">
+  <p>Rollover deferral does not make sense to chase when the seller's blended rate today is lower than expected at the next exit, when the rolled security is structurally junior to sponsor preferred (deferring tax on equity that may be worthless), or when state tax on the eventual gain will be sourced worse later. And a rollover valued above the cash price per share is partly compensation for continued employment in the IRS's eyes — paper the values.</p>
+</Callout>
+
+Rollover terms belong in the letter of intent, not the closing week. The deferral depends on structure the buyer controls, and buyers accommodate tax-efficient rolls readily — but only when asked before the structure chart is frozen; the same early-diligence logic applies to the target's attributes generally, per [tax incentive due diligence in M&A](/fundamentals/tax-incentive-due-diligence-mna).

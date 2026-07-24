@@ -1,0 +1,48 @@
+---
+title: "Escrows and basis at closing: when held-back proceeds become income"
+description: "Indemnity escrows are usually taxed as installment payments when released, with an imputed-interest slice — not at closing. But the details turn on who owns the escrow, whether the seller elects out of Section 453, and what claims actually get paid."
+date: "2026-07-21"
+type: "brief"
+level: "working"
+tags: ["exits-ma", "escrow", "installment-sale", "imputed-interest"]
+faq:
+  - q: "Is an indemnity escrow taxable in the year of sale or when released?"
+    a: "Usually when released. An escrow subject to substantial restrictions and genuine claim risk is not constructively received at closing, so under the installment method the seller reports gain as amounts are actually released. But a seller who elects out of Section 453 — or an escrow the seller controls, with investment earnings taxed to the seller and release essentially certain — is taxed in the year of sale on the full amount."
+  - q: "Who pays tax on the interest an escrow account earns?"
+    a: "Typically the seller. Deal escrows are usually structured so escrow earnings belong to the seller (the arrangement is a trust or agency for the seller's benefit), making the seller taxable on the account's income each year even before release. Separately, the release payments themselves carry imputed interest under Section 483 or 1274, recharacterizing part of each release as ordinary interest."
+  - q: "What happens tax-wise when an indemnity claim is paid out of escrow?"
+    a: "Amounts paid to the buyer are generally treated as a purchase price adjustment: the seller never reports that portion as sale proceeds (or reverses previously reported gain under the contingent-price installment rules), and the buyer reduces basis in what it bought rather than reporting income. Supplemental Form 8594 filings adjust the allocation in asset deals."
+---
+
+A 5–15% indemnity escrow is standard closing furniture, and its tax treatment follows a default most sellers would choose anyway: escrowed amounts genuinely at risk are not income at closing, and each release is taxed as an installment payment in the year received, part gain and part imputed interest. The exceptions — constructive receipt, elections out of Section 453, and the yearly tax on escrow earnings — are where returns get filed wrong.
+
+<KeyTakeaway>
+  <p>A real indemnity escrow defers gain until release under Section 453; escrow earnings are the seller's income annually; each release carries an ordinary-interest slice under Sections 483/1274; and claims paid to the buyer are price adjustments, not seller income and not buyer income.</p>
+</KeyTakeaway>
+
+## Year of sale or year of release?
+
+The controlling question is constructive receipt: an amount is income when the seller's right to it is not subject to substantial limitations. An escrow securing indemnity obligations, held by an independent agent, with the buyer's bona fide right to claim against it, is substantially limited — so under [Section 453](https://uscode.house.gov/browse/prelim@title26&edition=prelim) the seller includes escrow amounts in the installment computation as payments only when released. Contrast an escrow that exists solely to bridge a timing formality, where no claims can realistically reach it: the IRS treats that as received at closing. The gross profit ratio is computed treating the escrow as part of the total contract price; if claims later reduce what is released, the contingent-price rules of Treas. Reg. §15A.453-1(c) (see [eCFR Title 26](https://www.ecfr.gov/current/title-26)) recompute so the seller is not taxed on money never received.
+
+A seller who **elects out** of installment treatment reports the full price — escrow included, at fair value — in the sale year. Sellers do this to absorb expiring losses, to fix the Section 1202 exclusion in one year, or to escape the Section 453A interest charge on large deferrals; the tradeoffs mirror those in [installment sales in business exits](/exits-ma/installment-sale-business-exits). Electing out and *also* deferring the escrow is not on the menu.
+
+**Illustrative treatment of a $1.5 million escrow released 18 months after closing (no claims, 4% AFR, 80% gross profit ratio):**
+
+| Component | Amount | Character | Year taxed |
+|---|---|---|---|
+| Imputed interest | $90,000 | Ordinary | Release year |
+| Installment gain | $1,128,000 | Capital | Release year |
+| Basis recovery | $282,000 | None | — |
+| Escrow account earnings | ~$60,000 | Ordinary | Each year accrued |
+
+## Interest, actual and imputed
+
+Two interest streams run in parallel. The escrow account's actual earnings are taxed annually to whichever party owns them under the escrow agreement — customarily the seller, even though the cash sits with the agent. And because the release is a deferred payment on a sale, Sections 483/1274 impute interest at the applicable federal rate from closing to release unless the agreement states adequate interest; that slice is ordinary income ineligible for capital rates or the QSBS exclusion — a drafting point flagged in [QSBS exit planning](/exits-ma/qsbs-exit-planning). Escrow agreements should say explicitly who reports the account earnings and whether releases carry stated interest; silence produces 1099s that match nobody's return.
+
+## Claims, basis, and the paper trail
+
+When the buyer collects an indemnity claim from escrow, the payment is in substance a reduction of purchase price: the seller's total contract price drops (with installment-method recomputation or, if gain was already fully reported, a capital loss under the *Arrowsmith* doctrine keyed to the original sale's character), and the buyer reduces basis in the acquired stock or assets rather than recognizing income. In asset deals both parties file supplemental [Form 8594](https://www.irs.gov/forms-pubs/about-form-8594) reflecting the adjusted price — typically against Class VII goodwill, consistent with the original [allocation schedule](/exits-ma/purchase-price-allocation-negotiations). Indemnity payments for items the buyer deducted, or that compensate for lost profits rather than impaired value, can instead be income — the agreement should characterize payments and the parties should report accordingly.
+
+<Callout label="Watch out">
+  <p>Depreciation recapture is taxed entirely in the year of sale under Section 453(i) even though part of the price sits in escrow — a seller with heavy recapture can owe closing-year tax on cash still locked with the agent. Model the year-one liability against year-one cash before agreeing the escrow size.</p>
+</Callout>

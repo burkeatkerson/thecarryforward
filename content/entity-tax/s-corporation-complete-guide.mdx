@@ -1,0 +1,118 @@
+---
+title: "The S corporation, end to end: election, eligibility, and the traps that terminate it"
+description: "An S election converts a corporation into a pass-through: one level of tax, income and credits flowing to shareholders. Eligibility is narrow, Form 2553 timing is strict, and a single class of stock violation can quietly end it."
+date: "2026-05-06"
+type: "guide"
+level: "intro"
+tags: ["entity-tax", "s-corp", "elections"]
+faq:
+  - q: "What is an S corporation and how is it different from a C corporation?"
+    a: "An S corporation is a corporation (or LLC taxed as one) that has elected under Section 1362 to pass its income, losses, deductions, and credits through to shareholders, who report them on personal returns. A C corporation pays its own entity-level tax at 21%, and shareholders pay a second tax on dividends. The S election eliminates that second layer but imposes strict eligibility limits."
+  - q: "When is Form 2553 due for an S election?"
+    a: "Form 2553 is due no later than two months and 15 days after the start of the tax year the election is to take effect — March 15 for a calendar-year entity wanting the election effective January 1. It can also be filed any time during the preceding year. Late elections are frequently rescued under Rev. Proc. 2013-30 with a reasonable-cause statement."
+  - q: "Who can be an S corporation shareholder?"
+    a: "Only U.S. citizens and residents, estates, certain trusts (grantor trusts, QSSTs, ESBTs), and certain tax-exempt organizations. Partnerships, corporations, and nonresident aliens cannot hold S corporation stock. The shareholder count is capped at 100, with family members electing to be counted as one under Section 1361(c)(1)."
+  - q: "What terminates an S election?"
+    a: "Acquiring an ineligible shareholder (a partnership, corporation, or nonresident alien), exceeding 100 shareholders, creating a second class of stock, or affirmatively revoking with consent of shareholders holding more than half the shares. Passive investment income above 25% of gross receipts for three consecutive years terminates the election only if the corporation has accumulated C corporation earnings and profits."
+  - q: "Does an S corporation pay any entity-level tax?"
+    a: "Sometimes. A former C corporation that elects S status pays the built-in gains tax under Section 1374 at 21% on appreciation that existed at conversion and is recognized within five years. S corporations with C corporation earnings and profits can also owe the Section 1375 passive investment income tax. Otherwise, tax is paid at the shareholder level."
+---
+
+An S corporation is not a kind of entity. It is a tax status — an election under Section 1362 that lets a corporation (or an LLC that chooses corporate classification) skip the entity-level income tax and pass income, losses, deductions, and credits directly to its shareholders. One level of tax instead of two. In exchange, the Code imposes some of its most rigid eligibility rules: no more than 100 shareholders, no entity or foreign owners, and exactly one class of stock, forever, or the election dies.
+
+That trade is the whole subject. This guide walks the S election end to end: who qualifies, how and when to file [Form 2553](https://www.irs.gov/forms-pubs/about-form-2553), what quietly terminates the election and how to fix it, the built-in gains tax that follows former C corporations, and when the S corporation actually beats a partnership or a C corporation — which, since the OBBBA, is a closer call than the conventional wisdom admits.
+
+<KeyTakeaway>
+  <p>The S election under Section 1362 delivers single-level taxation, but only for corporations that stay inside a narrow box: 100 or fewer eligible shareholders and one class of stock. Most terminations are accidental, most are curable, and the eligibility rules — not the tax math — are where practitioners earn their fee.</p>
+</KeyTakeaway>
+
+## Who can elect S status?
+
+Section 1361(b) defines a "small business corporation." Every requirement must be met on the day of election and every day thereafter:
+
+- **A domestic corporation** (or an eligible entity, typically an LLC, electing corporate classification).
+- **No more than 100 shareholders.** Members of a family — up to six generations from a common ancestor — count as one shareholder under Section 1361(c)(1), which makes the cap far less binding than it sounds.
+- **Only eligible shareholders**: U.S. citizen or resident individuals, estates, certain trusts (grantor trusts, qualified subchapter S trusts, electing small business trusts, and testamentary trusts for two years), and certain exempt organizations. No partnerships. No corporations. No nonresident aliens. One venture fund on the cap table and the election is gone.
+- **One class of stock.** All outstanding shares must confer identical rights to distributions and liquidation proceeds. Voting differences are fine — voting and nonvoting common coexist happily. Economic differences do not.
+- **Not an ineligible corporation** — certain banks, insurance companies, and DISCs.
+
+The IRS maintains a plain-language overview at its [S corporations page](https://www.irs.gov/businesses/small-businesses-self-employed/s-corporations); the statutory detail lives in Sections 1361–1379 of the [Internal Revenue Code](https://uscode.house.gov/browse/prelim@title26&edition=prelim).
+
+## How and when do you file Form 2553?
+
+The election is made on [Form 2553](https://www.irs.gov/forms-pubs/about-form-2553), signed by an officer and consented to by every shareholder who held stock at any point in the election year before the filing. Timing under Section 1362(b):
+
+- **For the current year**: file within two months and 15 days after the year begins. Calendar-year entity, election effective January 1 — the deadline is March 15.
+- **For the following year**: file any time during the preceding tax year.
+
+Two details generate most of the malpractice claims. First, a brand-new corporation's first tax year begins when it first has shareholders, assets, or business activity — not necessarily the incorporation date — so the two-month-and-15-day clock can start earlier than founders think. Second, every person who was a shareholder during the pre-election portion of the year must consent, including a spouse with a community property interest. A missing consent invalidates the election.
+
+An LLC electing S status can file Form 2553 alone; a timely S election is treated as also making the entity-classification election, so a separate Form 8832 is unnecessary.
+
+Miss the deadline and all is usually not lost. Rev. Proc. 2013-30 grants automatic relief for elections filed up to three years and 75 days late where the failure was due to reasonable cause and the entity has behaved like an S corporation throughout. We cover the mechanics in [late S elections and Rev. Proc. 2013-30 relief](/entity-tax/late-s-elections-relief).
+
+## What terminates an S election — and can you undo it?
+
+Terminations come in three flavors under Section 1362(d):
+
+**Voluntary revocation.** Shareholders holding more than half of the shares consent to revoke. Filed by the 15th day of the third month, the revocation can be retroactive to the year's start; otherwise it takes effect on a specified prospective date. Post-OBBBA, some credit-rich companies are revoking deliberately — more on that below.
+
+**Ceasing to qualify.** The election terminates on the day the corporation stops being a small business corporation: the day a partnership acquires a share, the 101st unrelated shareholder appears, or a second class of stock is created. The tax year splits into a short S year and a short C year.
+
+**Excess passive investment income.** If the corporation has accumulated earnings and profits from C corporation years and passive investment income exceeds 25% of gross receipts for three consecutive years, the election terminates. Corporations that were never C corporations, or that purged their E&P, cannot trip this wire.
+
+**Inadvertent termination relief.** Section 1362(f) lets the IRS treat a termination as never having happened if it was inadvertent, the corporation corrects the defect promptly, and everyone agrees to whatever adjustments the IRS requires. Relief historically required a private letter ruling, but Rev. Proc. 2022-19 now permits self-correction of several common foot-faults — notably certain one-class-of-stock issues arising from governing documents that were never acted on — without a ruling. The pattern in practice: terminations are common, inadvertent, and fixable, but fixing them costs time and sometimes a six-figure ruling process. Prevention is cheaper.
+
+## The single class of stock trap
+
+The one-class-of-stock requirement is the most litigated eligibility rule because it turns on economics, not labels. Treas. Reg. §1.1361-1(l) tests whether the governing provisions — charter, bylaws, state law, and binding shareholder agreements — confer identical distribution and liquidation rights. Things that create a second class:
+
+- Preferred stock, participating or otherwise.
+- Shareholder agreements guaranteeing one owner a distribution preference.
+- Convertible debt or instruments reclassified as equity with different rights.
+- In some fact patterns, disproportionate distributions that reflect a binding side arrangement rather than sloppiness.
+
+Things that do not: differences in voting rights, buy-sell agreements at fair market value, and — critically — *non-pro-rata distributions by themselves*, so long as the governing documents require pro rata treatment. The regulation looks at rights, not payments. But sustained disproportionate distributions invite the argument that an unwritten agreement exists. The full anatomy of these fact patterns, and how to cure them, is in [single class of stock traps](/entity-tax/single-class-of-stock-traps).
+
+<Callout label="Watch out">
+  <p>SAFEs, convertible notes, and profits-interest-style arrangements imported from partnership practice are the modern killers. A startup that takes a priced preferred round has terminated its S election on the day the preferred issues — often unnoticed until diligence for the next round or an exit.</p>
+</Callout>
+
+## The built-in gains tax: the toll for former C corporations
+
+A corporation that operated as a C corporation and then elects S status does not escape the double tax on value that accrued during the C years. Section 1374 imposes a corporate-level tax — at the 21% C corporation rate — on "net recognized built-in gain": appreciation existing on the conversion date that the corporation recognizes during the five-year recognition period. Sell the appreciated building in year three, pay 21% at the entity level, and the shareholders still pay tax on the gain that passes through (reduced by the entity tax).
+
+Planning is mostly about the calendar and the appraisal. A conversion-date valuation fixes the built-in gain ceiling; holding appreciated assets past year five eliminates the tax entirely. The tax also cannot exceed the tax that would apply if the corporation were still a C corporation with taxable income for the year — so loss years can defer recognition. Corporations converting the other direction, and the OBBBA-era reasons some do, are covered in [entity conversions and tax attributes](/entity-tax/entity-conversions-tax).
+
+## How does the S corporation actually behave day to day?
+
+The S corporation files [Form 1120-S](https://www.irs.gov/forms-pubs/about-form-1120-s), and each shareholder receives a Schedule K-1 reporting a pro rata share of every item — ordinary income, capital gains, Section 199A information, and credits, including the research credit, which passes through on the K-1 and lands on the shareholder's Form 3800. Allocations are rigidly per-share, per-day: no special allocations, no targeted waterfalls. That rigidity is the price of simplicity, and it is the sharpest contrast with partnerships.
+
+Three shareholder-level systems then govern what the K-1 items are worth:
+
+1. **Basis.** Losses and deductions are deductible only to the extent of stock and debt basis; distributions are tax-free only to the extent of stock basis. See [S corporation basis rules](/entity-tax/s-corp-basis-rules).
+2. **Reasonable compensation.** Shareholder-employees must take wages before distributions, and the IRS polices comp that is set low to dodge payroll tax. See [reasonable compensation for S corporation owners](/entity-tax/s-corp-reasonable-compensation).
+3. **At-risk and passive activity rules**, which sit on top of basis and can further defer losses.
+
+## When does S beat partnership or C?
+
+**The choice is a three-way trade, and the answer moved after the OBBBA.** The table compares the regimes on the dimensions that decide real elections:
+
+| Dimension | S corporation | Partnership (LLC) | C corporation |
+| --- | --- | --- | --- |
+| Levels of tax | One | One | Two (21% + dividend tax) |
+| Owner limits | 100, individuals/trusts only | None | None |
+| Allocations | Rigid pro rata | Flexible (§704(b)) | N/A — dividends |
+| Self-employment/payroll tax | Wages only; distributions exempt | Often full SE tax for active members | FICA on wages only |
+| R&D credit to owners | Passes through on K-1 | Passes through on K-1 | Stays at entity |
+| QSBS (§1202) eligibility | No | No | Yes |
+| Equity for investors/employees | One class of stock only | Profits interests, preferred | Preferred, options, full menu |
+| Exit flexibility | Stock or asset sale; 338(h)(10)/336(e) | Asset-style basis step-up (§743) | Stock sale; QSBS exclusion |
+
+The S corporation's core constituency is the profitable, closely held operating business with active owner-operators: single-level tax plus the payroll tax arbitrage on distributions, honestly assessed in [self-employment tax across entities](/entity-tax/partnership-vs-s-corp-selfemployment). Partnerships win when owners need special allocations, foreign or entity investors, or profits interests. C corporations win for venture-backed companies — investors demand preferred stock, which an S corporation cannot issue — and for founders playing the Section 1202 QSBS exclusion, which requires C corporation stock from issuance.
+
+The OBBBA sharpened the C side of the ledger. With Section 174A restoring immediate deduction of domestic research costs for years beginning after 2024, a research-heavy C corporation can pair full expensing, a permanently reasonable 21% rate, and QSBS. Meanwhile pass-through owners of credit-generating businesses still face the general business credit limitations at the individual level. The full decision framework, including how credits flow (and stall) in each form, is in [entity choice and tax credits](/fundamentals/entity-choice-tax-credits).
+
+## When the S election does not make sense
+
+Neutrality requires the list. Skip the S election when: investors will ever demand preferred equity or a fund will hold shares; owners want non-pro-rata economics; the business will retain substantial earnings for growth (the C corporation's 21% retained-earnings rate beats top individual rates, though see the [accumulated earnings tax](/entity-tax/c-corp-accumulated-earnings-tax)); QSBS is realistically in play; or the owners are in states where the entity-level franchise treatment of S corporations erases the federal benefit. And the IRS does challenge S corporations — reasonable compensation is a perennial exam issue, and disproportionate distributions draw one-class-of-stock scrutiny. An election made by default, without modeling the exit, is the most common unforced error in closely held tax practice.

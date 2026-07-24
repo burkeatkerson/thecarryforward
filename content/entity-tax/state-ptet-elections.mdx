@@ -1,0 +1,47 @@
+---
+title: "State pass-through entity tax elections: the SALT-cap workaround, mechanics and traps"
+description: "PTET elections let partnerships and S corporations pay state income tax at the entity level — deductible federally without the individual SALT cap. The mechanics differ by state, the election windows are unforgiving, and state R&D credits complicate the math."
+date: "2026-07-01"
+type: "brief"
+level: "working"
+tags: ["entity-tax", "ptet", "state-credits", "s-corp", "partnerships"]
+faq:
+  - q: "How does a pass-through entity tax election work?"
+    a: "The partnership or S corporation elects to pay state income tax itself on the owners' shares of its income. The entity deducts that tax in computing federal ordinary income — a deduction not subject to the individual SALT cap, a result the IRS blessed in Notice 2020-75. Owners then receive either a state credit for their share of the entity tax or an exclusion of the entity's income from their state returns, depending on the state."
+  - q: "What is the difference between credit states and exclusion states?"
+    a: "In credit states (New York, California, and most others), owners still report the pass-through income on their state returns and claim a credit for the entity-level tax paid. In exclusion states, the electing entity's income is simply removed from the owners' state tax base. Credit states raise residency and other-state-credit questions for nonresident owners; exclusion states can strand deductions and complicate loss years."
+  - q: "Can a PTET election reduce the value of a state R&D credit?"
+    a: "It can complicate it. State research credits earned by a pass-through normally flow to owners against their individual state tax; once a PTET election moves the tax to the entity, the credit is only useful if the state allows it against the entity-level tax or preserves the flow-through. Some states coordinate cleanly, others do not, and an election that strands a nonrefundable credit can cost more than the federal deduction saves."
+---
+
+A pass-through entity tax (PTET) election converts owners' nondeductible state income tax into the entity's deductible expense. The partnership or S corporation elects to pay state tax at the entity level on the owners' shares of income; the entity deducts the payment under Section 164 in computing federal ordinary income — outside the individual SALT cap — and the owners receive a state credit or income exclusion so the same income is not taxed twice at the state level. The IRS confirmed the structure in Notice 2020-75, and roughly three dozen states have enacted a version as of mid-2026, each with its own election window, base, and rate. The OBBBA ([H.R. 1, 119th Congress](https://www.congress.gov/bill/119th-congress/house-bill/1)) modified but preserved the individual SALT cap, so the workaround remains live — verify each state's current terms before relying, since legislatures adjust these annually.
+
+<KeyTakeaway>
+  <p>PTET elections deliver a federal deduction for state taxes the owners would have paid anyway — often worth 30-plus cents per dollar of state tax for top-bracket owners. But the elections are annual, deadline-rigid, and state-specific, and they can strand state R&D credits or mistreat nonresident owners when made reflexively.</p>
+</KeyTakeaway>
+
+## The mechanics, and the two state designs
+
+The federal leg is uniform: entity pays, entity deducts, owners' K-1 ordinary income shrinks. The state leg splits into two designs. **Credit states** — the majority, including New York and California — keep the income on the owners' state returns and grant a credit for the owner's share of PTET paid; some credit less than 100% (California's is 9.3% against a top rate above 12%, leaving residual owner-level tax). **Exclusion states** remove the electing entity's income from the owners' state base entirely. The design drives the edge cases: in credit states, a nonresident owner must confirm the home state grants an other-state-tax credit for an *entity-level* tax (most now do, not all); in exclusion states, owner-level losses and deductions can be orphaned.
+
+**Illustrative math for a top-bracket owner with $1,000,000 of pass-through income in a 9% PTET state (assumes the owner's SALT cap is already absorbed by property and residence-state taxes):**
+
+| Line | Without PTET | With PTET |
+| --- | --- | --- |
+| State tax on the income | $90,000 (owner, nondeductible) | $90,000 (entity, deductible) |
+| Federal taxable income from entity | $1,000,000 | $910,000 |
+| Federal tax saved at 37% | — | $33,300 |
+
+The deduction also reduces qualified business income, so Section 199A-eligible owners lose part of the benefit — the net for a full-deduction QBI owner is closer to 29.6 cents than 37 cents per state-tax dollar.
+
+## Election timing and payment traps
+
+Nothing about PTET is self-executing. Elections are generally annual, some are irrevocable once made, and windows vary wildly — New York's election is due March 15 *of the tax year* (not the filing year), California requires a June 15 prepayment of the prior-year amount or a floor payment to keep the election alive, and several states elect on the timely filed return. Federal deductibility also depends on when the tax is *paid or accrued*: cash-method entities must fund the PTET by year-end to deduct it that year, and Notice 2020-75's coverage of estimated payments makes December, not April, the operative deadline. Missed window, missed year — there is no Rev. Proc. 2013-30 analog for state PTET elections.
+
+## The state R&D credit interaction
+
+For readers of this site, the sharpest trap is credit coordination. A pass-through's state research credit ordinarily flows to owners against their individual state liability. A PTET election relocates the liability to the entity — and whether the credit follows depends on the state. Some allow the R&D credit against the PTET or preserve owner-level use alongside the credit-for-PTET; others leave a nonrefundable owner-level credit with no liability to offset, deferring or stranding it. Before electing, confirm three things with the state's own guidance: whether entity-level credits offset the PTET, whether owner-level credits survive, and how carryforwards behave across electing and non-electing years. The landscape of state credit designs — refundability, carryforwards, entity-level restrictions — is mapped in [how state R&D credits differ](/state-rd-credits/how-state-credits-differ), and the multistate ordering problem in [multistate R&D credit strategy](/state-rd-credits/multistate-rd-credit-strategy).
+
+## When the election is a mistake
+
+Skip or defer the election when owners are in low brackets or the entity is in a loss year (a deduction against nothing); when significant nonresident owners face credit mismatch in their home states; when it would strand a state research credit worth more than the federal deduction; when trusts, IRAs, or corporate partners — often outside PTET regimes entirely — hold large interests; or when QBI and AMT effects at the owner level erase the margin. The IRS has accepted the structure, but state auditors police the details: late payments void elections, and consent or notification requirements for owners are enforced. The election is a yearly modeling exercise across every owner, not a standing instruction — treat it that way, alongside the broader entity-level analysis in [entity choice and tax credits](/fundamentals/entity-choice-tax-credits).

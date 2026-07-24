@@ -1,0 +1,51 @@
+---
+title: "How to read a Schedule K-1: the boxes that matter and the questions to ask"
+description: "The K-1 reports your share of a partnership's or S corporation's income, deductions, and credits — including research credits buried in the codes. Here is what each region of the form means, why the capital account is not your basis, and what to ask the preparer."
+date: "2026-07-15"
+type: "brief"
+level: "intro"
+tags: ["entity-tax", "partnerships", "s-corp", "k-1"]
+faq:
+  - q: "Where does the R&D credit appear on a Schedule K-1?"
+    a: "On a partnership K-1 (Form 1065), credits appear in box 15 with letter codes; on an S corporation K-1 (Form 1120-S), in box 13. The research credit carries its own code with an attached statement, and the owner reports it on Form 3800 (with Form 6765 detail flowing from the entity). If you expected a credit and the box is empty, ask the preparer before filing — amending later is far harder."
+  - q: "Is the capital account on my K-1 the same as my basis?"
+    a: "No. The partnership K-1's capital account is now reported on a tax-basis method, which brings it closer, but it still omits your share of entity liabilities (which add to outside basis) and any basis adjustments from purchasing your interest. S corporation shareholders must track stock and debt basis themselves on Form 7203. Deducting losses based on the capital account number alone is a common and expensive error."
+  - q: "Do I owe tax on the cash I received or the income on my K-1?"
+    a: "The income. Pass-through owners are taxed on their allocated share whether or not it was distributed — the phantom income problem. Distributions themselves are generally tax-free returns of basis. A K-1 showing $80,000 of income and $10,000 of distributions means tax on $80,000; a K-1 showing zero income and large distributions may still mean capital gain if distributions exceeded basis."
+---
+
+A Schedule K-1 is not a bill and not a paycheck stub. It is your allocated share of every tax item a partnership ([Form 1065](https://www.irs.gov/forms-pubs/about-form-1065)) or S corporation ([Form 1120-S](https://www.irs.gov/forms-pubs/about-form-1120-s)) generated — income you owe tax on whether or not cash followed, deductions and credits you may or may not be able to use, and reference data (capital accounts, liability shares) that feeds computations the K-1 itself does not perform. Reading one is mostly knowing which boxes carry money, which carry codes pointing to statements, and which numbers are *not* what they appear to be.
+
+<KeyTakeaway>
+  <p>Three habits cover most K-1 literacy: tax follows the income boxes, not the distributions; credits hide in coded boxes (15 for partnerships, 13 for S corporations) with the detail in attached statements; and the capital account is not your basis — you or your preparer must maintain that separately.</p>
+</KeyTakeaway>
+
+## A tour of the boxes
+
+**The regions of the form, and what to do with each:**
+
+| Region | Partnership K-1 | S corp K-1 | What it means for you |
+| --- | --- | --- | --- |
+| Ordinary business income | Box 1 | Box 1 | Taxable now, distributed or not; SE tax may apply to partners |
+| Rental, interest, dividends, capital gain | Boxes 2–9 | Boxes 2–8 | Each keeps its character on your return |
+| Guaranteed payments | Box 4 | — | Ordinary, SE-taxable service/capital pay |
+| Deductions (incl. §179, charitable) | Boxes 12–13 | Boxes 11–12 | Subject to your basis, at-risk, passive limits |
+| **Credits** | **Box 15, coded** | **Box 13, coded** | Research credit and siblings; statement gives detail; goes to Form 3800 |
+| Self-employment earnings | Box 14 | — | Feeds Schedule SE |
+| AMT, §199A, other info | Boxes 17–20 | Boxes 15–17 | Code soup; §199A (code Z / V) and excess business interest matter most |
+| Liability shares | Part II, item K | — | Adds to a partner's outside basis |
+| Capital account | Part II, item L | — | Tax-basis method; still not outside basis |
+
+Two structural differences to keep straight. Partnership allocations can be special — your percentage of income need not match your percentage of capital, per the machinery in [partnership allocations explained](/entity-tax/partnership-allocations-explained) — while S corporation K-1s are strictly per-share, per-day. And partners get basis credit for entity debt (item K); S corporation shareholders do not, which is why their loss limits are tighter, per [S corporation basis rules](/entity-tax/s-corp-basis-rules).
+
+## The credit boxes, specifically
+
+Research credits earned by the entity pass through pro rata (S corporation) or per the credit allocation rules (partnership) and arrive as a code in box 15/13 with an attached statement — then flow to your Form 3800 general business credit, where your own limitations, the passive activity credit rules if you do not materially participate, and the one-year-back, twenty-year-forward rule of Section 39 take over. The entity-side computation and the owner-side limits are walked through in [R&D credit pass-through mechanics](/rd-tax-credit/rd-credit-passthrough-mechanics). A credit on a K-1 you cannot use this year is not lost; it carries on *your* Form 3800, not the entity's books — keep your own carryforward schedule.
+
+## What to ask the preparer
+
+Five questions catch most problems before filing: (1) *Why is box 1 so different from my distributions?* — you are entitled to understand the phantom income. (2) *Where is the research credit?* — if the company claimed one, confirm your share and the attached statement before assuming it was consumed by a Section 280C election or an entity-level decision. (3) *What is my basis?* — ask for the schedule (Form 7203 for S corporation owners; a partner basis worksheet otherwise) rather than the capital account. (4) *What do these statement codes mean?* — Section 199A detail, excess business interest under Section 163(j), and state-source income each drive separate filings, including nonresident state returns and composite or [PTET](/entity-tax/state-ptet-elections) elections made on your behalf. (5) *Is this K-1 final or amended?* — an amended K-1 after you filed usually means amending your return.
+
+<Callout label="Watch out">
+  <p>K-1s arrive late — entities on extension issue them in August or September — and filing your return from an estimate, then ignoring the real K-1, is how mismatches with IRS matching programs begin. Extend your own return rather than guessing; the statutory framework for all of it is Subchapters K and S of the [Internal Revenue Code](https://uscode.house.gov/browse/prelim@title26&edition=prelim).</p>
+</Callout>

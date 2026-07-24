@@ -1,0 +1,54 @@
+---
+title: "Personal goodwill sales: the Martin Ice Cream route to a single tax"
+description: "When a business's value sits in the shareholder's own relationships and reputation rather than corporate assets, the shareholder can sell that goodwill directly — capital gain, one level of tax, even out of a C corporation. The doctrine is real; the substantiation bar is high."
+date: "2026-07-08"
+type: "brief"
+level: "pro"
+tags: ["exits-ma", "personal-goodwill", "goodwill", "c-corporation"]
+faq:
+  - q: "What is a personal goodwill sale?"
+    a: "In an asset sale of a closely held C corporation, part of the price is paid directly to the shareholder for goodwill the shareholder personally owns — customer relationships, reputation, know-how never transferred to the corporation. That portion bypasses the corporation entirely: one level of capital gain to the shareholder instead of corporate tax plus dividend tax, following Martin Ice Cream Co. v. Commissioner."
+  - q: "When does goodwill belong to the shareholder instead of the corporation?"
+    a: "When the relationships and reputation reside in the individual and were never conveyed to the company — critically, when the shareholder has no non-compete or employment agreement transferring them. Martin Ice Cream and Bross Trucking found personal goodwill where owners had no covenants with their corporations; a pre-existing non-compete generally means the corporation already owns the goodwill."
+  - q: "What documentation does a personal goodwill allocation need?"
+    a: "An independent valuation separating personal from enterprise goodwill, a purchase agreement in which the buyer pays the shareholder directly under a separate contract, a new non-compete from the shareholder to the buyer, evidence the corporation never had a covenant capturing the goodwill, and consistent Form 8594 reporting. Courts have rejected allocations invented after the price was struck."
+---
+
+A C corporation asset sale is taxed twice — unless part of what is sold never belonged to the corporation. Where a business's customers follow the founder personally, *Martin Ice Cream Co. v. Commissioner*, 110 T.C. 189 (1998), holds that the founder's relationships and distribution rights are the founder's own asset, salable directly to the buyer for a single level of capital gain. On a C corporation deal taxed at roughly 45% combined, shifting dollars to a 23.8% shareholder-level sale is worth about 21 cents per dollar shifted — which is precisely why the IRS examines these allocations hard.
+
+<KeyTakeaway>
+  <p>Personal goodwill exists only where it was never transferred to the corporation — no non-compete, no employment agreement conveying relationships. It must be valued independently, sold under a separate agreement with a fresh covenant to the buyer, and papered before the price is struck, not after.</p>
+</KeyTakeaway>
+
+## The doctrine
+
+In *Martin Ice Cream*, the Tax Court held that a shareholder's personal relationships with supermarket chains and his ice-cream distribution expertise were never corporate assets because he had no employment agreement or covenant not to compete with his own company; the corporation could not be taxed on the sale of assets it did not own. *Bross Trucking, Inc. v. Commissioner*, T.C. Memo 2014-107, reached the same result on similar facts — the owner's relationships and reputation stayed personal absent any transfer. The through-line is [Section 1060](https://uscode.house.gov/browse/prelim@title26&edition=prelim)'s basic premise that only assets the seller owns get allocated: the shareholder is simply a second seller at the closing table, delivering a distinct asset under a distinct contract.
+
+The negative case law defines the edge. In *Howard v. United States*, 106 A.F.T.R.2d 2010-5533 (E.D. Wash. 2010), aff'd (9th Cir. 2011), a dentist's long-standing non-compete with his own professional corporation meant the goodwill was corporate; the personal-goodwill allocation failed. Covenants signed years earlier, even boilerplate in an old employment agreement, are the doctrine's most common fatality.
+
+## What the structure looks like
+
+The buyer signs two agreements: an asset purchase with the corporation, and a personal goodwill purchase (plus a new non-compete and often a consulting agreement at market rates) with the shareholder. Proceeds split per an independent valuation that isolates personal from enterprise goodwill — typically by testing what the business would earn if the shareholder competed. The buyer is largely indifferent: purchased personal goodwill is a Section 197 intangible amortizable over 15 years either way, so the shift is nearly free to concede, though allocations are reported consistently on [Form 8594](https://www.irs.gov/forms-pubs/about-form-8594) and in the [allocation schedule](/exits-ma/purchase-price-allocation-negotiations).
+
+**Illustrative effect of shifting $2 million of a $10 million C corporation asset deal to personal goodwill:**
+
+<BarChart
+  title="Combined federal tax on $2M of goodwill value"
+  unit="$"
+  note="Illustrative: 21% corporate rate plus 23.8% on the distribution versus 23.8% direct shareholder capital gain; no state tax."
+  highlight={1}
+  data={[
+    { label: "Sold by the corporation", value: 796040, display: "$796K" },
+    { label: "Sold as personal goodwill", value: 476000, display: "$476K" },
+  ]}
+/>
+
+## Substantiation, and where it fails
+
+The IRS challenges personal goodwill on three recurring grounds. **Ownership**: any pre-existing covenant or assignment to the corporation defeats it — audit the founder's old employment agreements before the letter of intent, because nothing signed later can un-transfer goodwill. **Valuation**: allocations reverse-engineered to soak up price, without a contemporaneous appraisal distinguishing personal from enterprise value (trained workforce, systems, brand — all corporate), get recharacterized as corporate proceeds followed by a dividend. **Substance**: payments contingent on the shareholder's future services look like compensation, the same [comp-versus-price fight](/exits-ma/earnout-taxation) earnouts face; a market-rate consulting agreement paid separately keeps the goodwill payment clean.
+
+<Callout label="When it does not apply">
+  <p>Personal goodwill adds nothing in an S corporation or partnership sale — there is already only one tax layer, though character and state sourcing can still differ modestly. It is also implausible for businesses whose value sits in contracts, technology, or a workforce rather than an individual: a 200-employee SaaS company has no Martin Ice Cream story, whatever its founder's charisma. And in a stock sale the doctrine is unnecessary; the double tax it solves belongs to <a href="/exits-ma/asset-vs-stock-sale-taxation">C corporation asset deals</a>.</p>
+</Callout>
+
+Treat the doctrine as a fact pattern, not an election. If the facts are genuinely there — founder-held relationships, no covenant, a buyer paying for the founder's cooperation — paper them early and value them independently. If they are not, the allocation is a 21-cent-per-dollar audit wager with published losses.

@@ -1,0 +1,49 @@
+---
+title: "How earnouts are taxed: installment reporting, imputed interest, and the compensation trap"
+description: "Earnout payments are usually contingent purchase price reported under the installment method with an imputed interest slice — unless the facts make them compensation, which the IRS and buyers each have reasons to argue."
+date: "2026-05-13"
+type: "brief"
+level: "working"
+tags: ["exits-ma", "earnout", "installment-sale", "section-453"]
+faq:
+  - q: "Are earnout payments capital gain or ordinary income?"
+    a: "If the earnout is genuinely contingent purchase price for the business, payments are capital gain under the installment method of Section 453, minus an imputed interest component taxed as ordinary income. If the earnout is tied to the seller's continued employment or services, the IRS — and often the buyer, who prefers a deduction — will treat it as compensation: ordinary income subject to payroll tax."
+  - q: "What is the open transaction doctrine for earnouts?"
+    a: "Where contingent payments have no ascertainable value, Burnet v. Logan lets the seller recover full basis before reporting any gain. The regulations under Section 453 confine it to 'rare and extraordinary' cases; the default is installment reporting with basis spread over the payment period — over a 15-year recovery if there is no stated maximum or fixed term."
+  - q: "How is interest imputed on earnout payments?"
+    a: "Deferred contingent payments carry an interest component under Sections 483 or 1274 even if the contract states none. A slice of each payment is recharacterized as ordinary interest income to the seller (and deductible interest to the buyer), computed at the applicable federal rate from closing to payment. Stating adequate interest in the agreement controls the amount and avoids surprises."
+---
+
+An earnout — additional purchase price contingent on the business hitting post-closing targets — is taxed under one of three regimes, and the parties' paperwork largely determines which. The default, and usually the best answer for sellers, is contingent-payment *installment reporting* under Section 453: each payment is part capital gain, part basis recovery, part imputed interest. The bad answer is *compensation*: ordinary income plus employment taxes. The rare answer is *open transaction* treatment, where basis comes back first.
+
+<KeyTakeaway>
+  <p>Draft the earnout as contingent stock or asset price, payable regardless of continued employment, with adequate stated interest — and it is installment-method capital gain. Tie it to showing up for work, and it is wages.</p>
+</KeyTakeaway>
+
+## Installment mechanics for contingent price
+
+Treas. Reg. §15A.453-1(c) (see [eCFR Title 26](https://www.ecfr.gov/current/title-26)) sorts contingent deals into three boxes. With a **stated maximum selling price**, gain is computed as if the maximum will be paid; if the earnout falls short, the overpaid gain is corrected in later years. With a **fixed period** but no maximum, basis is allocated ratably over the payment years. With **neither**, basis spreads over 15 years. The seller can also elect out of Section 453 entirely and report the earnout's closing-date fair value in the year of sale — sensible when rates are expected to rise or losses are expiring, covered further in [installment sales in business exits](/exits-ma/installment-sale-business-exits).
+
+Two overlays bite. Depreciation recapture is taxed in full in the sale year under Section 453(i) whatever the payment schedule. And the deferred payments carry **imputed interest**: under Sections 483 and 1274, each contingent payment received more than roughly six months (or one year, depending on the regime) after closing includes an interest slice at the applicable federal rate — ordinary income, not eligible for capital rates or the QSBS exclusion. Stating adequate interest in the purchase agreement fixes the split on the parties' terms.
+
+**How a $3 million earnout payment received three years after closing typically divides (illustrative, 4% AFR, low remaining basis):**
+
+| Component | Amount | Character |
+|---|---|---|
+| Imputed interest | $330,000 | Ordinary income |
+| Basis recovery | $270,000 | Return of capital |
+| Installment gain | $2,400,000 | Capital gain |
+
+## Open versus closed transaction
+
+Under *Burnet v. Logan*, 283 U.S. 404 (1931), a contingent right with no ascertainable value keeps the transaction "open": the seller recovers basis first and reports gain only afterward. The regulations call this treatment available only in "rare and extraordinary" circumstances, and the IRS resists it because it front-loads basis and defers all gain. Electing out of installment treatment instead produces a "closed" transaction: the earnout right is valued at closing and taxed then, with later payments measured against that value. Most sellers are best served by the ordinary installment default; open-transaction claims draw examination.
+
+## The comp-versus-price fight
+
+Character is where earnouts are litigated. Indicators of *compensation*: payment forfeits if the seller quits, amounts are proportional to service time rather than shareholdings, targets are individual rather than enterprise metrics, and the seller's sale price without the earnout looks below market. Indicators of *purchase price*: payments run to all sellers pro rata (including non-employees), survive termination, and the seller is separately paid a market salary. The buyer's incentives cut the other way — compensation is deductible; purchase price is capitalized into basis — so the parties should agree characterization in the purchase agreement and report consistently, including on the [asset-sale allocation](/exits-ma/purchase-price-allocation-negotiations) where applicable. Consistent reporting will not bind the IRS, but inconsistent reporting practically invites it in.
+
+<Callout label="Watch out">
+  <p>Earnouts on QSBS deserve special drafting: payments characterized as purchase price for the stock can retain the Section 1202 exclusion, while anything recharacterized as compensation or interest cannot. See <a href="/exits-ma/qsbs-exit-planning">QSBS exit planning</a>.</p>
+</Callout>
+
+Earnouts do not make sense as tax planning where the seller needs certainty — the deferred gain floats with future rates and the $5 million installment interest charge can apply to large notes — or where the target metrics are within the buyer's control, which is a commercial problem no tax treatment fixes.

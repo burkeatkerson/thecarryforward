@@ -1,0 +1,51 @@
+---
+title: "Shareholder loans to S corporations: back-to-back loans, open account debt, and the repayment income trap"
+description: "Only direct, bona fide loans from shareholder to S corporation create debt basis. Back-to-back structures can work; guarantees do not; and repaying basis-reduced debt triggers income — ordinary if the debt is open account."
+date: "2026-06-10"
+type: "brief"
+level: "working"
+tags: ["entity-tax", "s-corp", "basis", "loans"]
+faq:
+  - q: "Does guaranteeing my S corporation's bank loan give me debt basis?"
+    a: "No. Under Treas. Reg. §1.1366-2, a guarantee creates basis only when and to the extent the shareholder actually performs — pays the lender. Until payment, the corporation owes the bank, not the shareholder. To create basis before a default, the shareholder must borrow personally and re-lend the funds to the corporation in a bona fide back-to-back loan."
+  - q: "What is open account debt and why does it matter?"
+    a: "Open account debt is shareholder advances not evidenced by a written note, treated under Treas. Reg. §1.1367-2 as a single running balance — but only up to $25,000 per shareholder. Repayment of basis-reduced open account debt produces ordinary income, while repayment of a basis-reduced written note produces capital gain. Papering advances as notes is the difference between rates."
+  - q: "Why does repaying a shareholder loan create taxable income?"
+    a: "If pass-through losses reduced the debt's basis below face, part of every repayment is recovery of value the shareholder already deducted. Section 1367 restores debt basis from later income before stock basis, but if repayment comes first, the excess of payment over remaining basis is income — capital gain for a note, ordinary income for open account debt."
+---
+
+A shareholder who wants an S corporation's losses currently deductible often has one lever: lend the company money, because under Section 1366(d) losses flow against stock basis first and then against basis in debt the corporation owes *directly to the shareholder*. The rule sounds simple and is litigated constantly, because taxpayers keep trying to get basis from arrangements that are almost, but not actually, direct loans — and because the loans that do work carry a delayed sting when repaid.
+
+<KeyTakeaway>
+  <p>Debt basis requires a bona fide loan running straight from shareholder to corporation — guarantees and affiliate loans fail. And once losses have eaten the debt's basis, repayment is a taxable event: capital gain on a written note, ordinary income on open account debt above the $25,000 regulatory cushion.</p>
+</KeyTakeaway>
+
+## What creates debt basis — and what does not
+
+Treas. Reg. §1.1366-2(a)(2), tightened in 2014, requires "bona fide indebtedness of the S corporation that runs directly to the shareholder," judged under general tax principles — documentation, interest, a maturity date, and actual expectation of repayment all matter, though no single one is dispositive. The recurring failures:
+
+- **Guarantees.** No basis until the shareholder pays the lender. Decades of case law (*Estate of Leavitt*, *Selfe* narrowly excepted on its facts) hold the line.
+- **Loans from a related entity.** Money lent by the shareholder's other corporation or partnership belongs to that entity, not the shareholder. An "incorporated pocketbook" argument occasionally survives, as in *Yates* and the facts blessed in the 2014 regulations' examples, but only where the entity habitually pays the shareholder's obligations.
+- **Circular year-end wires.** Funds that loop bank-to-corporation-to-shareholder-to-corporation in days, with no economic substance, fail the bona fide test — the pattern in *Oren v. Commissioner* (8th Cir. 2004).
+
+**Back-to-back loans done properly work.** The shareholder borrows personally from the bank or the related entity, then re-lends to the S corporation on real terms. The 2014 regulations confirm the structure's validity if each leg is bona fide; the shareholder must genuinely be the debtor on leg one and the creditor on leg two, with paper and payments to match. Restructuring an existing entity-level loan into a back-to-back arrangement mid-stream is possible but is scrutinized for substance.
+
+## The repayment trap
+
+Losses that absorb debt basis leave the note's face amount unchanged while its basis falls — creating deferred income that springs on repayment. Under Section 1367(b)(2), later net income restores debt basis (before stock basis), but if repayment arrives first, the excess over remaining basis is taxable. Character depends on form:
+
+| Debt form | Basis-reduced repayment produces | Authority |
+| --- | --- | --- |
+| Written note | Capital gain (sale/exchange of the note) | Rev. Rul. 64-162 |
+| Open account debt ≤ $25,000 balance | Netted within the year; income only on year-end shortfall | Treas. Reg. §1.1367-2 |
+| Open account debt > $25,000 | Treated as a note going forward; ordinary income on repayment of the excess advances | Treas. Reg. §1.1367-2(a)(2) |
+
+The $25,000 open-account threshold (per shareholder, per corporation) is the practical planning line: advances above it should be papered as notes promptly, since ordinary rates on repayment can double the cost of sloppiness. Partial repayments are prorated between basis recovery and income. The regulations live at [eCFR Title 26](https://www.ecfr.gov/current/title-26); the statutory frame is Sections 1366–1367 of the [Internal Revenue Code](https://uscode.house.gov/browse/prelim@title26&edition=prelim).
+
+<Callout label="Watch out">
+  <p>The trap usually detonates in a good year: the company recovers, sweeps cash to the shareholder as "loan repayment" instead of salary or distribution, and the K-1 season reveals income on debt everyone had forgotten was basis-reduced. Before repaying shareholder debt, check whether the year's pass-through income has already restored basis — timing the repayment after restoration can eliminate the income entirely.</p>
+</Callout>
+
+## When lending is the wrong tool
+
+A capital contribution adds stock basis with no repayment trap and no bona fide-debt exposure — the better route when the shareholder does not need the money back soon, since getting it out later as a distribution only requires stock basis, per [S corporation basis rules](/entity-tax/s-corp-basis-rules). Debt wins when the shareholder wants a priority claim, interest, or a defined exit. And if losses are the driver, remember basis is only gate one — at-risk and passive rules still follow, and credits never needed basis at all, as covered in [the S corporation complete guide](/entity-tax/s-corporation-complete-guide). Loans engineered each December 31 and unwound each January buy an exam, not a deduction.

@@ -1,0 +1,93 @@
+---
+title: "QSBS exit planning: protecting the Section 1202 exclusion through a sale"
+description: "Section 1202 can exclude tens of millions of gain from a qualified small business stock sale — but only if the exit is structured as a stock sale, the holding period is complete, and earnouts, escrows, and rollovers are handled with the exclusion in mind."
+date: "2026-06-03"
+type: "guide"
+level: "pro"
+tags: ["exits-ma", "qsbs", "section-1202", "stock-sale"]
+faq:
+  - q: "Does Section 1202 apply to an asset sale?"
+    a: "No. Section 1202 excludes gain on the sale or exchange of qualified small business stock — the shareholder must sell the stock itself. If the corporation sells its assets and liquidates, the corporate-level gain is fully taxable and the liquidating distribution does not qualify for the exclusion. Sellers holding QSBS should push hard for stock-sale structures, including resisting 336(e) elections."
+  - q: "What if my QSBS holding period is short of five years at exit?"
+    a: "Section 1045 allows a shareholder who has held QSBS more than six months to roll sale proceeds into replacement QSBS within 60 days, deferring the gain and tacking the holding period toward the five-year requirement. Alternatively, deal terms that defer closing, use convertible instruments carefully, or stage the sale can complete the period — but a binding contract to sell can effectively end the holding period, so timing must be genuine."
+  - q: "Can gifting QSBS to family members or trusts multiply the exclusion?"
+    a: "Gifted QSBS keeps its character and tacks the donor's holding period under Section 1202(h), and each taxpayer — including a properly structured non-grantor trust — has its own per-issuer exclusion cap. Multiplying the cap this way has real statutory support but is aggressive at scale; the IRS has litigation positions against abusive stacking, and as of mid-2026 practitioners treat multi-trust arrangements as requiring genuine independent trusts with real beneficiaries, not cap-cloning shells."
+  - q: "How do earnouts and escrows interact with the Section 1202 exclusion?"
+    a: "Payments that are truly purchase price for the stock — including escrow releases and earnout payments under the installment rules — generally retain QSBS character and exclusion eligibility, measured by the stock's status at the closing sale. Payments recharacterized as compensation, consulting fees, or interest lose the exclusion entirely, so sellers should document earnouts as contingent stock price and avoid tying them to continued employment."
+  - q: "How much gain can Section 1202 exclude?"
+    a: "Per issuer, the cap is the greater of $10 million (reduced by prior exclusions on that issuer's stock) or 10 times the shareholder's aggregate basis in the stock sold that year. For stock acquired after the original enactment tiers, 100% exclusion applies to stock acquired after September 27, 2010, held more than five years, with the excluded gain also exempt from AMT and the 3.8% net investment income tax."
+---
+
+For a founder or early investor holding qualified small business stock, the exit structure is not a preference — it is the whole ballgame. [Section 1202](https://uscode.house.gov/browse/prelim@title26&edition=prelim) excludes up to the greater of $10 million or 10 times basis of gain per issuer, at 100% for stock acquired after September 27, 2010 and held more than five years, and the exclusion applies only to a *sale of the stock itself*. An asset sale, a deemed asset sale election, a payment recharacterized as compensation, or a holding period that comes up sixty days short can each vaporize an eight-figure benefit.
+
+This guide covers the exit-side mechanics: completing the holding period, Section 1045 rollovers when you cannot, earnout and escrow complications, exclusion stacking through gifts and trusts, and the deal terms that quietly forfeit the exclusion. For the qualification rules themselves — the $50 million gross asset test, original issuance, qualified trade or business — see [QSBS under Section 1202](/entity-tax/qsbs-section-1202).
+
+<KeyTakeaway>
+  <p>Section 1202 rewards patience and structure: a stock sale after five years, with earnouts documented as contingent stock price and escrows preserved as purchase price. Where the holding period is short, Section 1045 rollovers tack it; where the gain exceeds one cap, gifts to genuinely independent trusts can add caps — with real, and rising, IRS attention.</p>
+</KeyTakeaway>
+
+## The structure requirement: sell the stock
+
+Section 1202(a) speaks of gain "from the sale or exchange of qualified small business stock." Three consequences follow.
+
+First, resist asset-sale structures. If the buyer insists on asset treatment, the corporation recognizes fully taxable gain and the shareholders' liquidating distribution gets no exclusion. The buyer's step-up value rarely exceeds the seller's forfeited exclusion on a large QSBS position — model both and make the buyer pay for asset treatment if it truly needs it, as with any [asset-versus-stock decision](/exits-ma/asset-vs-stock-sale-taxation).
+
+Second, watch deemed-asset-sale elections. A Section 336(e) election on a C corporation target converts the stock disposition into a deemed asset sale; whether shareholders retain 1202 benefits on the actual stock transfer becomes murky at best. QSBS holders should refuse such elections absent compelling compensation. (A 338(h)(10) requires an S corporation or consolidated subsidiary target, so it rarely collides with QSBS — S corporation stock is never QSBS.)
+
+Third, tax-free reorganizations get partial protection: under Section 1202(h)(4), stock received in a Section 368 reorganization for QSBS carries the exclusion, but gain accrued *after* the exchange qualifies only if the acquirer's stock is itself QSBS — otherwise the exclusion is frozen at the exchange-date value. Founders taking acquirer stock in a merger should get that frozen amount appraised and documented at closing.
+
+## Completing the holding period
+
+The five-year clock runs from original issuance (with tacking for gifts, death, and certain conversions — the holding period of converted preferred, exercised options starting at exercise, and restricted stock at vesting or an 83(b) election date). Common near-miss situations:
+
+**Deferring the sale.** If the exit lands at year four and a half, a delayed closing, a two-stage sale, or seller paper can bridge the gap — but substance matters. A binding commitment that fixes price and shifts benefits and burdens can be treated as the sale date. An option granted to the buyer, a genuine walk-away right, or a tender structure closing after the anniversary is safer than a signed-and-closing-later contract dressed as deferral.
+
+**Section 1045 rollover.** A noncorporate holder of QSBS held more than six months may elect under Section 1045 to defer gain by purchasing replacement QSBS within 60 days; basis carries over and the holding periods *tack* for both the five-year test and later 1045 rollovers. This is the pressure valve for early exits: a founder forced out at year three can roll proceeds into a new qualifying C corporation (including, with care, one the founder controls and operates) and finish the clock. The 60-day window is unforgiving and the replacement issuer must satisfy the active-business rules for substantially all of the holder's holding period.
+
+<Callout label="Watch out">
+  <p>Only the gain attributable to amounts reinvested is deferred — spend less than the full proceeds on replacement stock and the shortfall is currently taxable. And the 60 days run from the date of sale, not from when escrows release or earnouts pay; contingent proceeds received later cannot retroactively fund a rollover.</p>
+</Callout>
+
+## Earnouts, escrows, and the exclusion
+
+Contingent consideration does not by itself spoil Section 1202, but it complicates it.
+
+**Escrows.** Amounts escrowed at closing and later released to the seller are generally additional stock sale proceeds — capital gain eligible for the exclusion, reported under the installment rules when received. The imputed-interest rules of Sections 483 and 1274 carve an interest component out of deferred payments, and *interest is never excludable* under 1202. The timing and interest mechanics are covered in [escrows and basis at closing](/exits-ma/escrows-and-basis-at-closing).
+
+**Earnouts.** An earnout paid as contingent purchase price for the stock retains QSBS character; qualification is tested at the closing-date sale, so post-closing changes at the company do not undo it. But earnouts tied to the seller's continued employment invite recharacterization as compensation — ordinary income, no exclusion, payroll taxes — the classic comp-versus-price fight described in our brief on [earnout taxation](/exits-ma/earnout-taxation). Cap-exceeding sellers face a second wrinkle: installment reporting spreads gain across years, and the per-issuer cap applies per taxpayer, so sequencing which years absorb excluded versus taxable gain deserves modeling before signing, including whether to elect out of installment treatment under Section 453(d).
+
+**Rollover equity.** Buyers often want sellers to roll 10–30% into the acquirer. A rollover into a partnership under Section 721 ends QSBS status for the rolled portion — partnership interests are not stock. A rollover into acquirer C corporation stock in a qualifying reorganization preserves the frozen exclusion described above. Sellers should decide which shares to roll and which to sell with the exclusion in mind; see [rollover equity taxation](/exits-ma/rollover-equity-taxation).
+
+## Stacking: gifts, trusts, and honest limits
+
+Each *taxpayer* has a separate per-issuer cap. Because Section 1202(h)(1)–(2) provides that gifted QSBS keeps its character and tacks the donor's holding period, founders can move stock — before a deal is in sight — to family members or non-grantor trusts, each with its own $10 million cap.
+
+The technique is real but has edges. As of mid-2026, the practical guardrails practitioners observe: complete the gifts well before any binding sale agreement (a gift on the eve of closing risks assignment-of-income treatment, taxing the donor anyway); use *non-grantor* trusts, since a grantor trust is the same taxpayer as the grantor and adds no cap; give each trust genuinely different beneficiaries, independent trustees, and real dispositive terms, because a fan of identical trusts differing only in name is the pattern the IRS has signaled it will attack under substance-over-form and the multiple-trust rule of Section 643(f); and remember the gift consumes gift/estate exemption at pre-sale value. Congress has repeatedly floated statutory limits on stacking; nothing enacted as of mid-2026 curbs it directly, but the trajectory argues for restraint and contemporaneous non-tax reasons for each trust.
+
+**Illustrative exclusion capacity for a founder with $38 million of gain in one issuer:**
+
+<BarChart
+  title="Excluded gain by planning posture, $38M gain, $1M basis"
+  unit="$"
+  note="Illustrative; assumes 100% exclusion stock, valid non-grantor trusts funded well before sale, and no 10x-basis benefit beyond the founder's own."
+  highlight={2}
+  data={[
+    { label: "No planning (one cap)", value: 10000000, display: "$10M" },
+    { label: "Founder + spouse caps", value: 20000000, display: "$20M" },
+    { label: "Founder + spouse + 2 children's trusts", value: 38000000, display: "$38M" },
+  ]}
+/>
+
+The 10x-basis alternative cap rewards high-basis stock: a holder who invested $5 million of cash basis can exclude up to $50 million on that stock without any stacking. Founders with multiple funding rounds should track basis by block and choose which certificates to sell.
+
+## Sequencing a multi-block position
+
+Founders rarely hold one clean block. A typical cap table position mixes founder shares from 2019, exercised options from 2022, and converted SAFE or note shares from a 2023 round — each block with its own issuance date, basis, and five-year clock, and some blocks failing qualification outright (shares issued after gross assets crossed $50 million). Exit planning is therefore block-level arithmetic. At a 2026 closing, the 2019 founder shares are past five years and fully excludable; the 2022 option shares (clock starts at exercise) are not, making them the natural candidates for a Section 1045 rollover or, in a partial sale, the shares to *hold* rather than sell. Where the buyer permits the seller to designate which certificates are sold — and specific identification is worth negotiating into the deal mechanics — the seller should sell qualified, seasoned, low-basis blocks up to the cap and defer or roll the rest.
+
+Two documentation habits pay for themselves at exam. First, obtain a company-level QSBS attestation during the deal: a statement of gross assets at each issuance date, the active-business posture, and any redemptions near issuance, signed while the finance team that knows the answers still exists. Section 1202(d)(1)(C) conditions the exclusion on the corporation agreeing to submit required reports, and buyers routinely cooperate. Second, keep the basis file: for the 10x-basis cap, contributed-property basis is measured at fair market value at contribution under Section 1202(i), a quirk that can enlarge the cap for founders who contributed appreciated IP at formation — but only if the contribution-date value was documented then.
+
+## When 1202 planning does not apply
+
+No exclusion survives if the underlying stock never qualified — S corporation stock, stock of an excluded service business under 1202(e)(3), stock issued when gross assets exceeded $50 million, or stock bought from another shareholder rather than at original issuance. Redemptions near the issuance date can retroactively disqualify whole issuances under Treas. Reg. §1.1202-2 (see [eCFR Title 26](https://www.ecfr.gov/current/title-26)). Corporate shareholders get nothing; the exclusion is for noncorporate taxpayers. And where the exit must be an asset sale for commercial reasons, the honest answer is that 1202 is lost and the planning shifts to purchase price allocation and, where the facts support it, [personal goodwill](/exits-ma/personal-goodwill-sales).
+
+What the IRS challenges, in rough order of frequency: qualification itself (gross assets and active business documentation is often thin a decade after issuance), holding-period starts for converted and option stock, eve-of-sale gifts, cookie-cutter trust stacks, and earnouts that walk and talk like compensation. The defense in every case is a paper file built at issuance and at closing — not at audit.

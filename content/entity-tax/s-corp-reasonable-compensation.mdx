@@ -1,0 +1,43 @@
+---
+title: "Reasonable compensation for S corporation owners: the payroll tax fight, and the R&D credit angle nobody models"
+description: "S corporation shareholder-employees must take reasonable wages before distributions. Low salary saves payroll tax but invites reclassification — and it also shrinks the wage base for the research credit, a tension few owners price."
+date: "2026-05-13"
+type: "brief"
+level: "working"
+tags: ["entity-tax", "s-corp", "compensation", "qres"]
+faq:
+  - q: "What is reasonable compensation for an S corporation shareholder?"
+    a: "It is the wage an unrelated employer would pay for the services the shareholder actually performs, judged by training, duties, time devoted, comparable salaries, and what the business can bear. There is no safe-harbor number or percentage. The IRS can recharacterize distributions as wages when salary is unreasonably low, assessing employment taxes, penalties, and interest against the corporation."
+  - q: "Does taking a low S corporation salary reduce the R&D tax credit?"
+    a: "Yes. Qualified research expenses under Section 41 include only taxable wages reported on Form W-2 for qualified services. Distributions are not wages, so a founder-engineer who takes $60,000 in salary instead of $200,000 forfeits the credit on the difference — roughly $14,000 to $28,000 of federal credit per year at typical rates, before state credits."
+  - q: "What happens if the IRS reclassifies S corporation distributions as wages?"
+    a: "The corporation owes both halves of FICA on the recharacterized amount, plus failure-to-deposit and information-return penalties and interest. Cases such as Radtke and Watson v. United States confirm the IRS's authority. Reclassification is employment-tax only — it does not retroactively add QREs to a research credit claim, so the credit forgone in low-salary years is simply lost."
+---
+
+An S corporation shareholder who works in the business must be paid reasonable W-2 wages before taking distributions. Wages bear FICA; distributions bear neither FICA nor self-employment tax — and that gap is the S corporation's signature payroll tax advantage, policed by a single fuzzy standard: compensation must be *reasonable* for the services performed. Set salary too low and the IRS recharacterizes distributions as wages, with employment taxes and penalties following.
+
+What almost nobody models is the second cost of a low salary. For a research-performing company, the Section 41 credit is computed on W-2 wages for qualified services. Every dollar of salary a founder-engineer forgoes in favor of distributions is a dollar removed from the QRE base. The payroll tax saved and the credit forfeited move in opposite directions, and for hands-on technical owners the credit side frequently wins.
+
+<KeyTakeaway>
+  <p>Reasonable compensation is a facts-and-circumstances floor with no safe harbor, and the payroll tax saved by a low salary is partly — sometimes wholly — clawed back through a smaller research credit wage base. Model both sides before setting owner comp.</p>
+</KeyTakeaway>
+
+## The employment tax stakes and the factors that decide the fight
+
+The arbitrage is straightforward: 15.3% combined FICA on wages up to the Social Security base ($176,100 in 2025), 2.9% Medicare above it plus the 0.9% additional Medicare tax, versus zero on distributions. Courts have upheld reclassification since *Radtke v. United States* (accountant paid all distributions, no salary) and, most cited, *Watson v. United States* (8th Cir. 2012), where a CPA's $24,000 salary against roughly $200,000 of distributions was reset to about $93,000 based on compensation surveys. The IRS's own [S corporation guidance](https://www.irs.gov/businesses/small-businesses-self-employed/s-corporations) lists the factors: training and experience, duties and responsibilities, time and effort devoted, dividend history, payments to non-shareholder employees, comparable businesses, and compensation agreements. Zero-salary years with distributions are the reflexively audited fact pattern; a defensible number is one supported by contemporaneous comparables, not one reverse-engineered from the FICA wage base.
+
+## How low comp shrinks the credit
+
+Section 41(b) defines wage QREs by reference to Section 3401(a) — amounts subject to income tax withholding, i.e., the W-2 box 1 number — for employees performing, directly supervising, or supporting qualified research. Distributions, however labeled, are outside the definition; the detail is in [qualified services and wages](/rd-tax-credit/qualified-services-wages). For the shareholder who is the lead engineer, the arithmetic is stark:
+
+| Owner-engineer salary strategy | W-2 wages (80% qualified) | Wage QREs | Credit at 14% ASC (marginal) | Employer FICA cost |
+| --- | --- | --- | --- | --- |
+| Aggressive low salary | $60,000 | $48,000 | $6,720 | $4,590 |
+| Defensible midpoint | $140,000 | $112,000 | $15,680 | $10,710 |
+| Market salary | $200,000 | $160,000 | $22,400 | $14,048 |
+
+**Illustrative, assuming the incremental QREs are fully credit-generating at the 14% ASC marginal rate; actual credit math depends on base amounts — see [how to calculate the R&D credit](/rd-tax-credit/how-to-calculate-the-rd-credit).** Moving from $60,000 to $200,000 costs roughly $9,500 in additional employer-side FICA (plus the employee share, which is the owner's own money either way) and adds roughly $15,700 of federal credit — before any state credit, and before pricing the audit risk of the low number. For a qualified small business taking the payroll tax offset via [Form 8974](https://www.irs.gov/forms-pubs/about-form-8974), the credit even offsets the very payroll taxes the low salary was designed to avoid.
+
+## When the low salary still wins — and the trap either way
+
+The tension resolves the other way when the owner performs little qualified research (a pure-management CEO generates few QREs at any salary), when the company has no credit appetite, or when Section 280C and base-amount effects mute the marginal credit. And reasonable compensation is a *floor* argument only for the IRS in the payroll context — inflating salary above reasonable to manufacture QREs invites the mirror-image challenge, since Section 41 itself disallows unreasonable amounts. The planning failure is not choosing either number; it is choosing the payroll number without ever running the credit math. Basis and distribution mechanics add a third dimension, covered in [S corporation basis rules](/entity-tax/s-corp-basis-rules).

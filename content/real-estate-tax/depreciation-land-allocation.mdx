@@ -1,0 +1,56 @@
+---
+title: "Allocating purchase price to land: the first depreciation decision"
+description: "Land never depreciates, so every property purchase requires splitting the price between land and building. Assessor ratios, appraisals, and replacement-cost studies are the accepted methods — and an aggressively low land allocation undermines every depreciation deduction built on top of it."
+date: "2026-05-05"
+type: "brief"
+level: "intro"
+tags: ["real-estate", "depreciation", "land-allocation", "cost-segregation"]
+faq:
+  - q: "How do I split a property's purchase price between land and building?"
+    a: "Use a reasonable method based on relative fair market values at purchase: the county assessor's land-to-building ratio applied to your price, a qualified appraisal that separately values the land, or a replacement-cost analysis. The IRS accepts assessor ratios as a defensible default; a contemporaneous appraisal is stronger. Allocating by gut feel — or copying a prior owner's numbers — is neither."
+  - q: "What is a typical land allocation percentage?"
+    a: "There is no safe-harbor percentage. Ratios run from under 10% for rural and industrial property to 20–30% for typical suburban rentals to well over 50% in high-value urban and coastal markets. The right number is the one the local evidence supports — assessor data, land comps, and appraisals — documented at acquisition, not reverse-engineered from a target deduction."
+  - q: "Does land ever generate any depreciation?"
+    a: "Raw land, never — it has no determinable useful life. But land improvements do: sidewalks, parking lots, fencing, landscaping adjacent to buildings, and site utilities are 15-year MACRS property, distinct from both the land and the building. A cost segregation study separates these out; a simple land/building split typically buries them in the non-depreciable land number, wasting deductions."
+---
+
+Land does not depreciate — Treas. Reg. §1.167(a)-2 has said so since the beginning — so the first tax decision on any property purchase is how much of the price is land. Buy a rental for $1,000,000 and the land allocation directly sets the depreciable base: a 20% allocation leaves $800,000 to recover; 40% leaves $600,000. Nothing else in the depreciation chain — recovery periods, bonus, [cost segregation](/cost-segregation/what-is-cost-segregation) — matters until this split is defensible, because every downstream deduction is computed on the building number.
+
+<KeyTakeaway>
+  <p>Allocate land by relative fair market value using assessor ratios or an appraisal, document it at acquisition, and resist the temptation to lowball — an indefensible land number is the cheapest attack an examiner has on an otherwise sound depreciation schedule or cost segregation study.</p>
+</KeyTakeaway>
+
+## The accepted methods
+
+The regulation's rule is relative fair market value at acquisition (Treas. Reg. §1.61-6(a) for the allocation principle; [Publication 527](https://www.irs.gov/publications/p527) restates it for landlords). Three evidentiary routes, in ascending order of strength:
+
+1. **Assessor ratio.** Apply the county assessment's land-to-total ratio to your purchase price. Cheap, contemporaneous, third-party — and the method courts and examiners most often accept as reasonable, even while acknowledging assessments lag markets.
+2. **Qualified appraisal.** A purchase appraisal that separately states land value is the strongest support, especially where assessments are stale or the market's land share is unusual.
+3. **Replacement cost.** Value the improvements at depreciated replacement cost and treat the residual as land — common inside formal studies, useful as a cross-check.
+
+What fails: copying the seller's schedule, using the mortgage appraisal's insurance value (which excludes land entirely and proves nothing), or picking a percentage because it was fine on the last deal three states away.
+
+**Illustrative land shares by setting — local evidence controls, not these ranges.**
+
+<BarChart
+  title="Typical land share of purchase price by property setting"
+  unit="%"
+  note="Illustrative mid-points; actual ratios vary widely within each category and by market cycle."
+  highlight={1}
+  data={[
+    { label: "Rural / industrial", value: 10 },
+    { label: "Suburban rental", value: 25 },
+    { label: "Urban infill", value: 40 },
+    { label: "Coastal high-value", value: 60 },
+  ]}
+/>
+
+## Why aggressive allocations sink studies
+
+A cost segregation study reallocates the *building* basis among 5-, 15-, and 39-year classes — it inherits the land split rather than fixing it. An examiner working the [Cost Segregation Audit Techniques Guide](https://www.irs.gov/businesses/cost-segregation-audit-techniques-guide) checks the land allocation early, because it is the easiest adjustment in the file: no engineering dispute, just an assessor printout showing 35% land where the return claimed 15%. The adjustment then cascades — every class's basis shrinks pro rata, bonus depreciation reverses in part, and the understatement can carry [accuracy-related penalty](/fundamentals/accuracy-penalties-6662) exposure. Quality studies document the land number for exactly this reason; a study that accepts the client's unexamined split is a marker of the [study-quality problems](/cost-segregation/cost-seg-study-quality) worth screening for.
+
+## Land improvements are not land
+
+The intro-level trap runs the other direction too. Paving, curbs, sidewalks, fencing, exterior lighting poles, storm drainage, and landscaping are **land improvements** — 15-year MACRS property under Asset Class 00.3, eligible for bonus depreciation — not part of the non-depreciable land at all. A bare land/building split typically leaves them stranded in the land bucket; identifying and pricing them is one of the core deliverables of a study, detailed in [land improvements explained](/cost-segregation/land-improvements-explained). Only genuinely permanent site work — general grading, clearing — stays with the land. The classification rules and recovery tables are in [Publication 946](https://www.irs.gov/publications/p946).
+
+One last neutrality note: sometimes the honest land number is simply large. High-land-value markets are where depreciation strategies underperform on arithmetic alone — a 60%-land San Francisco duplex has little basis to accelerate, and that fact belongs in the [is-it-worth-it analysis](/cost-segregation/when-cost-segregation-doesnt-make-sense) before any study is commissioned.

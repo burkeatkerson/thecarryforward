@@ -1,0 +1,52 @@
+---
+title: "Negotiating the purchase price allocation: Form 8594, contested classes, and cost seg downstream"
+description: "Buyer and seller must report the same Section 1060 allocation on Form 8594, but their interests collide on equipment, non-competes, and goodwill. How the allocation is fought, papered, and what it does to a later cost segregation study."
+date: "2026-06-24"
+type: "brief"
+level: "working"
+tags: ["exits-ma", "section-1060", "form-8594", "purchase-price-allocation"]
+faq:
+  - q: "Do buyer and seller have to file matching Form 8594 allocations?"
+    a: "Both parties in an applicable asset acquisition must file Form 8594 reporting the allocation under Section 1060. A written allocation agreed in the purchase agreement is binding on the parties (though not on the IRS) under Section 1060(a). Mismatched filings are a recognized audit flag — the IRS can see both forms and pursue whichever party's position it prefers."
+  - q: "Why do buyers and sellers fight over the equipment allocation?"
+    a: "Every dollar allocated to Class V equipment gives the buyer fast depreciation — often immediate under 100% bonus — instead of 15-year goodwill amortization, but for the seller it typically produces ordinary depreciation recapture instead of capital gain. Non-competes cut the same way: ordinary income to the seller, 15-year amortization to the buyer, so buyers gain little and sellers lose a lot."
+  - q: "Can a buyer do a cost segregation study after agreeing an allocation?"
+    a: "Yes, but the agreed allocation constrains it. A cost seg study can reclassify components within the real property the buyer acquired, but Peco Foods v. Commissioner held that a buyer who agreed to a specific, itemized allocation in the purchase agreement could not later recharacterize those line items. Broad, aggregated classes in the agreement preserve cost seg flexibility."
+---
+
+In an asset deal, price is only half the negotiation; how the price is allocated across the seven classes of Treas. Reg. §1.338-6 decides the seller's tax character and the buyer's deduction speed. [Section 1060](https://uscode.house.gov/browse/prelim@title26&edition=prelim) requires both parties to use the residual method and report on [Form 8594](https://www.irs.gov/forms-pubs/about-form-8594) — and a written allocation in the purchase agreement binds the parties, though never the IRS. The negotiation is zero-sum in character even when it is positive-sum in total tax, which is why sophisticated deals attach an allocation schedule or an agreed methodology before signing.
+
+<KeyTakeaway>
+  <p>Agree the allocation (or a methodology) in the purchase agreement, file consistent Forms 8594, and draft the real property classes broadly if the buyer plans a cost segregation study — an itemized agreed allocation forecloses later reclassification under Peco Foods.</p>
+</KeyTakeaway>
+
+## Where the classes fight
+
+Classes I–IV (cash, securities, receivables, inventory) are usually mechanical — face or book value, with inventory occasionally contested where markup exists. The fights concentrate in three places:
+
+**Equipment (Class V).** The buyer wants dollars here: MACRS recovery, and 100% bonus depreciation for property acquired after January 19, 2025, means much of the allocation deducts immediately (see [Form 4562](https://www.irs.gov/forms-pubs/about-form-4562)). The seller wants dollars *out*: allocation up to prior depreciation is Section 1245 ordinary recapture. An appraisal is the usual referee.
+
+**Non-competes and consulting (Class VI).** Ordinary income to the seller, 15-year Section 197 amortization to the buyer regardless of the covenant's actual term — so a big non-compete allocation hurts the seller without much helping the buyer. Modern practice allocates a defensible token amount; the IRS challenges both zero (where the covenant plainly has value) and inflated figures (as disguised price or compensation).
+
+**Goodwill (Class VII).** The seller's favorite: capital gain, and by the residual method it absorbs whatever the appraisals leave over. Buyers accept goodwill more readily than they once did — 15-year amortization is respectable — but every goodwill dollar is a dollar not in bonus-eligible equipment.
+
+**The character/recovery collision, class by class:**
+
+| Contested item | Seller wants | Buyer wants | Usual resolution |
+|---|---|---|---|
+| Equipment | Low (recapture) | High (bonus/MACRS) | Appraised FMV |
+| Inventory | Book | Stepped to FMV | FMV, negotiated markup |
+| Non-compete | Near zero | Modest | Small defensible figure |
+| Goodwill | High (capital) | Residual | Residual after appraisals |
+
+## Consistency, reporting, and what the IRS does
+
+Both sides file Form 8594 with their returns for the year of sale, and amend it when the price later changes — earnout payments and escrow adjustments flow through supplemental filings, usually landing in Class VII. Under Section 1060(a), a written agreement binds the parties unless they can disavow it under the exacting *Danielson* standard; the IRS remains free to challenge either side. Exam teams compare the two forms first. Consistent filings backed by a contemporaneous appraisal survive; a seller reporting all-goodwill against a buyer reporting heavy equipment is an invitation.
+
+## The cost segregation interaction
+
+Buyers acquiring real estate should think one step ahead: a post-closing cost segregation study reclassifies building components into 5-, 7-, and 15-year property, but only within whatever the purchase agreement left open. In *[Peco Foods, Inc. v. Commissioner](/case-law/peco-foods-v-commissioner)*, the Tax Court (affirmed by the Eleventh Circuit) held a buyer to the detailed, itemized allocation it had agreed — no later carve-up of "processing plant building" line items it had specifically priced. The drafting lesson: describe real property in broad aggregates ("land and improvements — $X") and reserve the component detail for the study. The full interaction, including how the agreed Class V number seeds the study, is in [purchase price allocation vs cost segregation](/cost-segregation/purchase-price-allocation-vs-cost-seg), and the same class mechanics govern deemed asset sales under the elections covered in [338(h)(10) and 336(e)](/exits-ma/section-338h10-336e-elections).
+
+<Callout label="Watch out">
+  <p>Allocation is not a place for silent disagreement. Leaving the schedule "to be agreed post-closing" invites a dispute with no closing leverage left, and unilateral filings that mismatch are the single easiest M&A audit trigger. Agree at least a methodology and a dispute mechanism before signing.</p>
+</Callout>

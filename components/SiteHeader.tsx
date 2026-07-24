@@ -78,7 +78,7 @@ export function SiteHeader({
         aria-label="Topics"
         className="border-t border-line-faint"
       >
-        <div className="kicker mx-auto flex max-w-[1120px] gap-5 overflow-x-auto px-5 py-2 text-[11px] font-semibold tracking-[0.12em] sm:justify-center sm:gap-7 sm:px-10">
+        <div className="kicker mx-auto flex max-w-[1120px] gap-5 overflow-x-auto px-5 py-2 text-[11px] font-semibold tracking-[0.12em] sm:flex-wrap sm:justify-center sm:gap-x-6 sm:gap-y-1.5 sm:overflow-visible sm:px-10">
           {clusters.map((c) => (
             <Link
               key={c.slug}

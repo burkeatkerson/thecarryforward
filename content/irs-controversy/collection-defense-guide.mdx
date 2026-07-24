@@ -1,0 +1,118 @@
+---
+title: "IRS collection defense: the notice stream, liens, levies, and your exits"
+description: "How the IRS collection machine works from the first CP14 balance-due notice to levy, and the defensive tools available: CDP hearings, installment agreements, currently-not-collectible status, offers in compromise, and the 10-year collection statute."
+date: "2026-06-03"
+type: "guide"
+level: "intro"
+tags: ["controversy", "collections", "liens-levies", "installment-agreements"]
+faq:
+  - q: "What is the order of IRS collection notices?"
+    a: "After a tax is assessed, the IRS sends a CP14 balance-due notice, then a series of reminder notices (CP501, CP503), then a CP504 intent-to-levy notice, and finally a Final Notice of Intent to Levy (such as LT11 or Letter 1058). Only the final notice triggers the 30-day window to request a Collection Due Process hearing, which pauses most levy action."
+  - q: "What is the difference between a tax lien and a levy?"
+    a: "A federal tax lien is a legal claim that attaches to all of a taxpayer's property when a tax is assessed and unpaid — it secures the debt but takes nothing. A levy is the actual seizure of property: a bank account freeze, a wage garnishment, or taking a receivable. The lien establishes priority; the levy collects."
+  - q: "How long can the IRS collect a tax debt?"
+    a: "Generally ten years from the date of assessment, under Section 6502 — the collection statute expiration date, or CSED. Certain events suspend the clock, including a pending offer in compromise, a bankruptcy stay, a timely Collection Due Process hearing, and time living outside the United States, so the real date is often later than assessment plus ten years."
+  - q: "Can you stop an IRS levy?"
+    a: "Usually, yes. Requesting a Collection Due Process hearing within 30 days of the final notice bars most levies while the hearing is pending. Entering an installment agreement, being placed in currently-not-collectible status, or submitting a processable offer in compromise also generally stops levy action. The common thread: the IRS levies taxpayers who ignore it, not taxpayers engaged in a resolution process."
+  - q: "Does an installment agreement stop IRS collection?"
+    a: "A pending or active installment agreement generally bars levies, though a filed Notice of Federal Tax Lien may remain. Individuals owing $50,000 or less in combined tax, penalties, and interest can typically qualify for a streamlined agreement of up to 72 months without full financial disclosure; larger balances require Form 433-series financial statements."
+---
+
+Once a tax is assessed and unpaid, the IRS collection function takes over from the audit function — and it runs on an almost entirely mechanical track: a fixed sequence of notices, then a lien, then levies. The good news for taxpayers is that the machine is predictable, every consequential step comes with advance warning, and there is a defensive tool matched to nearly every stage. This guide maps the notice stream, explains liens versus levies, and walks through the exits: Collection Due Process hearings, installment agreements, currently-not-collectible status, offers in compromise, and simply outlasting the 10-year collection statute.
+
+<KeyTakeaway>
+  <p>IRS collection escalates on a published schedule, and the final levy notice opens a 30-day window to demand a hearing that freezes seizure. Nearly every resolution path — payment plan, hardship status, offer in compromise — works better invoked early; the machine punishes silence, not inability to pay.</p>
+</KeyTakeaway>
+
+## How a balance becomes a collection case
+
+Collection begins with assessment — the formal recording of the liability. That can happen three ways: the taxpayer files a return showing a balance and does not pay; an exam ends in an agreed or defaulted deficiency (the exam side of the process is covered in [how an IRS exam works](/fundamentals/irs-exam-process-overview)); or the IRS files a substitute return for a non-filer. Interest under Section 6601 and the failure-to-pay penalty under Section 6651 start running from the original due date and continue throughout, which is why identical debts resolved at different speeds cost very different amounts.
+
+Speed matters more than most taxpayers realize. The failure-to-pay penalty runs at 0.5% per month (capped at 25%), and interest compounds daily on top:
+
+<BarChart
+  title="What a $100,000 assessed balance grows to if simply ignored"
+  unit="$"
+  note="Illustrative: 0.5%/month failure-to-pay penalty plus 8% annual interest, compounded; actual rates adjust quarterly."
+  highlight={3}
+  data={[
+    { label: "At assessment", value: 100000, display: "$100,000" },
+    { label: "After 1 year", value: 114300, display: "≈$114,000" },
+    { label: "After 2 years", value: 129600, display: "≈$130,000" },
+    { label: "After 4 years", value: 158000, display: "≈$158,000" },
+  ]}
+/>
+
+## The notice stream, from CP14 to final notice
+
+The IRS cannot lawfully levy until it has sent a final notice and the taxpayer's hearing rights have run. The sequence, for a typical individual case:
+
+**The collection notice stream escalates over roughly four to six months, and only the last step opens formal hearing rights.**
+
+| Stage | Notice | What it says | What it legally changes |
+| --- | --- | --- | --- |
+| 1 | CP14 | You owe; pay within 21 days | Starts the collection cycle |
+| 2 | CP501 / CP503 | Reminder; balance growing | Nothing new legally |
+| 3 | CP504 | "Intent to levy" | Permits levy on state tax refunds only |
+| 4 | Final notice (LT11 / Letter 1058 / CP90) | Intent to levy; your right to a hearing | Opens the 30-day CDP window; after it closes, most property is leviable |
+| 5 | Post-notice | Lien filing, levies, possible revenue officer assignment | Enforcement begins |
+
+Two traps in the sequence. First, the CP504 *looks* like the final notice — it says "intent to levy" in bold — but it is not the notice that carries Collection Due Process rights; many taxpayers panic at CP504 and then, exhausted, ignore the notice that actually matters. Second, the timeline compresses sharply for payroll tax debts and repeat balances, and a case assigned to a field revenue officer moves at the officer's pace, not the notice cycle's.
+
+## Liens versus levies
+
+A **federal tax lien** arises automatically under Section 6321 when tax is assessed, demanded, and unpaid. It attaches to everything the taxpayer owns and later acquires. The IRS makes it public — and effective against other creditors — by filing a Notice of Federal Tax Lien. The lien takes nothing; it secures. Its real-world damage runs through financing and real estate transactions, covered in detail in [federal tax liens explained](/irs-controversy/federal-tax-liens-explained).
+
+A **levy** under Section 6331 is seizure: a one-time grab of a bank account balance (banks hold funds 21 days before remitting, a last window to act), a continuing garnishment of wages, or a demand on a customer to pay the taxpayer's receivable to the IRS instead. Certain items are exempt — a modest amount of wages, unemployment benefits, some personal effects — but the exemptions are thin. For business taxpayers, an accounts-receivable levy is often the existential event, because customers who receive one rarely stay customers.
+
+<Callout label="Watch out">
+  <p>For unpaid payroll taxes, collection does not stop at the business. The trust-fund portion can be assessed personally against owners, officers, and anyone else who "willfully" failed to pay it over — see the <a href="/irs-controversy/trust-fund-recovery-penalty">trust fund recovery penalty</a>. Payroll debt is the one category where the corporate shield is largely irrelevant.</p>
+</Callout>
+
+## CDP and equivalent hearings: the brake pedal
+
+The final levy notice — and separately, the first lien filing under Section 6320 — gives the taxpayer 30 days to request a **Collection Due Process (CDP) hearing** before the IRS Independent Office of [Appeals](https://www.irs.gov/appeals). A timely request generally suspends levy action while the hearing is pending and preserves the right to Tax Court review of the outcome. At the hearing, the taxpayer can propose collection alternatives (installment agreement, offer, hardship status), challenge the appropriateness of the collection action, and — if there was never a prior opportunity to dispute it — challenge the underlying liability itself.
+
+Miss the 30 days and an **equivalent hearing** is available for about a year: same conversation, but no levy suspension and no Tax Court review. The mechanics, deadlines, and what each hearing preserves are detailed in [CDP hearings explained](/irs-controversy/cdp-hearings-explained), and the judicial-review side in [Tax Court versus the refund forum](/fundamentals/tax-court-vs-refund-forum).
+
+## The resolution menu
+
+### Installment agreements
+
+The workhorse. Under [IRS payment plan procedures](https://www.irs.gov/payments/payment-plans-installment-agreements), individuals owing $50,000 or less (tax, penalty, and interest combined) can generally get a streamlined agreement of up to 72 months with no financial statement; short-term plans of up to 180 days exist for smaller balances. Above the streamlined thresholds, the IRS requires Form 433-series financial disclosure and negotiates payment based on ability to pay. A pending or active agreement generally bars levies. Interest and the failure-to-pay penalty continue to accrue — an installment agreement is financing, not forgiveness.
+
+### Currently not collectible (CNC)
+
+If financial disclosure shows that paying anything would prevent the taxpayer from meeting basic living expenses, the IRS can place the account in currently-not-collectible status. Levies stop; the debt does not. The IRS revisits the account when income rises, a lien typically stays or gets filed, and — critically — the 10-year collection clock keeps running. For genuinely insolvent taxpayers late in the statute, CNC is often the best outcome available, better than an offer they would struggle to fund.
+
+### Offer in compromise (OIC)
+
+An [offer in compromise](https://www.irs.gov/payments/offer-in-compromise) settles the debt for less than the full amount, almost always on *doubt as to collectibility*: the taxpayer offers at least their **reasonable collection potential** — net realizable equity in assets plus a multiple of monthly disposable income. The formula, the acceptance realities, and the gap between them and late-night radio advertising are covered in [offers in compromise: the reality](/irs-controversy/offers-in-compromise-reality). Two side effects worth knowing here: a pending offer suspends the collection statute, and a rejected offer means the IRS now holds a complete map of your finances.
+
+### Penalty relief
+
+Distinct from resolving the tax itself: first-year penalties may qualify for [first-time abatement](/fundamentals/first-time-penalty-abatement), and a [reasonable cause defense](/fundamentals/reasonable-cause-defense) can remove failure-to-file and failure-to-pay penalties where facts support it. Removing penalties shrinks the balance every other tool must address.
+
+**Choosing among the exits is mostly a function of two variables — ability to pay and time left on the collection statute.**
+
+| Your situation | Usually the right tool |
+| --- | --- |
+| Can pay in full within months | Short-term plan; request penalty abatement |
+| Can pay monthly; balance ≤ $50,000 | Streamlined installment agreement |
+| Can pay something; balance larger | Negotiated installment agreement with Form 433 disclosure |
+| Cannot pay basic living expenses | Currently not collectible |
+| Assets and income far below the debt, permanently | Offer in compromise |
+| CSED within 2–3 years, modest ability to pay | Often CNC or a small agreement — an OIC's statute suspension can backfire |
+| Levy imminent or in place | CDP request if window open; otherwise immediate contact with a proposal |
+
+## The 10-year clock: the CSED
+
+Under Section 6502, the IRS generally has ten years from assessment to collect — the collection statute expiration date, or CSED. When it passes, the debt and its lien evaporate. But the clock suspends during a pending offer in compromise (plus 30 days), a timely CDP hearing, bankruptcy (plus six months), certain innocent-spouse claims, and periods abroad. Every resolution decision should start with a CSED calculation, because the same offer that makes sense with nine years left can be a serious mistake with eighteen months left. Note the asymmetry with the *assessment* statute: extending the assessment period on [Form 872](/irs-controversy/statute-extensions-form-872) is a different clock entirely.
+
+## When the machine misfires
+
+Collection is high-volume and error-prone: payments misapplied, CNC determinations lost, levies issued despite pending agreements. When normal channels fail and the taxpayer faces economic hardship or a systemic breakdown, the [Taxpayer Advocate Service](https://www.taxpayeradvocate.irs.gov) can intervene — including with orders that halt collection while a problem is fixed. When and how to use it, and its limits, are covered in [the Taxpayer Advocate Service](/irs-controversy/taxpayer-advocate-service). The [Taxpayer Bill of Rights](https://www.irs.gov/taxpayer-bill-of-rights) frames the whole area: the rights to challenge the IRS's position, to appeal, and to a fair and just tax system are at their most concrete in collection, where the stakes are a bank account rather than a legal theory.
+
+<Callout label="The honest summary">
+  <p>None of these tools erases a debt a taxpayer can actually afford to pay. Installment agreements are financing; CNC is deferral; offers require handing over everything the formula says you can pay. Collection defense is about protecting assets and cash flow while resolving the debt on the schedule the law allows — not about making the debt disappear.</p>
+</Callout>

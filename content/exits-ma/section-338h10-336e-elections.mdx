@@ -1,0 +1,103 @@
+---
+title: "Section 338(h)(10) and 336(e) elections: stock sales taxed as asset sales"
+description: "A 338(h)(10) or 336(e) election lets a buyer acquire stock while both parties treat the deal as an asset sale for tax — buyer gets the step-up, seller reports asset gain. Here is who qualifies, how ADSP and AGUB work, and when sellers should demand a gross-up."
+date: "2026-05-20"
+type: "guide"
+level: "pro"
+tags: ["exits-ma", "section-338", "stock-sale", "s-corporation"]
+faq:
+  - q: "What is a Section 338(h)(10) election?"
+    a: "A joint election by buyer and seller to treat a qualifying stock purchase as a deemed asset sale for tax purposes. The target is treated as selling all its assets at the aggregate deemed sale price, the seller reports asset-level gain instead of stock gain, and the buyer takes a stepped-up basis in the target's assets. Legally, the deal remains a stock purchase."
+  - q: "Which targets qualify for a 338(h)(10) election?"
+    a: "Only two: an S corporation whose shareholders all consent, or a domestic corporate subsidiary sold out of a consolidated group (or by an 80% affiliated seller). The buyer must be a single corporation making a qualified stock purchase — at least 80% of vote and value within 12 months. Partnerships, individuals, and funds buying directly cannot make a 338(h)(10) election; they use 336(e) or an F reorganization instead."
+  - q: "How does a Section 336(e) election differ from 338(h)(10)?"
+    a: "Section 336(e), implemented by Treas. Reg. §1.336-2, reaches deals 338(h)(10) cannot: the purchaser need not be a corporation, and qualifying dispositions include certain distributions. The seller must still be a domestic corporate parent or S corporation shareholders disposing of 80% of the target. The election is made by the seller and target (not the buyer), but the deemed-asset-sale results are broadly parallel."
+  - q: "What are ADSP and AGUB?"
+    a: "ADSP (aggregate deemed sale price) is the price the target is deemed to receive for its assets — roughly the grossed-up stock price plus the target's liabilities — and it measures the seller's gain. AGUB (adjusted grossed-up basis) is the buyer side: the stock cost plus liabilities, allocated across asset classes under Treas. Reg. §1.338-6 to set the new basis."
+  - q: "When should an S corporation seller demand a gross-up for a 338(h)(10) election?"
+    a: "Whenever the deemed asset sale costs the shareholders more tax than a straight stock sale would — typically because depreciation recapture and other ordinary items pass through at rates up to 37%, state taxes hit differently, or built-in gains tax applies. The seller should model both structures and negotiate an increase in price that makes shareholders whole, plus the tax on the gross-up itself."
+---
+
+Buyers want asset basis; sellers and regulators often need the deal to be a stock transfer. Sections 338(h)(10) and 336(e) split the difference: the parties close a stock sale, but for tax purposes the target is deemed to sell all its assets at fair value, liquidate, and hand the buyer a company holding freshly stepped-up assets. The seller reports asset-level gain (character and all); the buyer gets depreciable and amortizable basis without disturbing a single contract, license, or EIN.
+
+For S corporation targets and consolidated subsidiaries this is standard technology. The traps are in qualification, the ADSP/AGUB computations, and the incremental tax the deemed asset sale imposes on sellers — which disciplined sellers convert into a negotiated gross-up.
+
+<KeyTakeaway>
+  <p>A 338(h)(10) or 336(e) election converts a stock sale into a deemed asset sale: one level of tax for qualifying sellers, full step-up for the buyer. The seller's incremental cost — recapture, state tax, ineligible shareholders — should be modeled precisely and recovered through a purchase-price gross-up.</p>
+</KeyTakeaway>
+
+## Who qualifies, and for which election
+
+**Section 338(h)(10)** requires three things. First, a *qualified stock purchase* (QSP): a corporate purchaser acquires, by purchase, at least 80% of the target's vote and value within a 12-month period (Section 338(d)(3)). Second, an eligible target: either an S corporation, or a domestic subsidiary sold by a consolidated group or an 80% affiliated corporate seller. Third, a joint election by purchaser and seller on Form 8023 ([about Form 8023](https://www.irs.gov/forms-pubs/about-form-8023)) by the 15th day of the 9th month after the acquisition month.
+
+The purchaser must be a *corporation*. A private equity fund buying through an LLC taxed as a partnership cannot make a QSP; funds either interpose a corporate acquisition vehicle, use 336(e), or — increasingly for S corporation targets — use the [pre-closing F reorganization](/exits-ma/f-reorganizations-s-corps), which achieves asset treatment without any 80% corporate purchaser requirement and tolerates rollover equity.
+
+**Section 336(e)**, under Treas. Reg. §1.336-2 (see [eCFR Title 26](https://www.ecfr.gov/current/title-26)), relaxes the buyer-side constraints: any purchaser qualifies, and a "qualified stock disposition" includes sales, exchanges, and certain distributions of 80% of the target's stock within 12 months. But the *seller* side is still restricted — a domestic corporate parent or S corporation shareholders. The election is made by seller and target in a written agreement attached to their returns, not jointly with the buyer, so buyers who need the step-up must contract for the seller's cooperation.
+
+<Callout label="Watch out">
+  <p>A 338(h)(10) fails entirely if the target's S election was invalid or had terminated — a second class of stock, an ineligible shareholder, a defective trust election. Then the "deemed asset sale" collapses into a C corporation stock sale with no step-up, or worse, a taxable asset sale inside a C corporation. Buyers should treat S corporation validity diligence as a condition of relying on the election, and consider F-reorg structures that are more forgiving.</p>
+</Callout>
+
+Note the contrast with a *regular* Section 338(g) election: there the target pays a full corporate-level tax on the deemed sale on top of the seller's stock gain. Outside of foreign targets (where the tax hits offshore and generates attribute benefits), a straight 338(g) is rarely rational for domestic deals.
+
+## The deemed transaction, step by step
+
+On election, the tax fiction runs: (1) "old target" sells all its assets to "new target" at the close of the acquisition date for the ADSP; (2) old target liquidates into its seller — tax-free under Sections 332/337 for a consolidated parent, or as the final S corporation return with gain passing through to shareholders; (3) the actual stock sale is ignored for tax purposes. The shareholders' stock basis increases by the passed-through gain (Section 1367), so the deemed liquidation itself typically produces little additional gain — the tax cost shows up as *character*, not a second layer.
+
+**ADSP** (Treas. Reg. §1.338-4) equals the grossed-up amount realized on the stock plus the target's liabilities, including the tax liability generated by the deemed sale itself — a circular computation with a mechanical solution. **AGUB** (§1.338-5) is the buyer's mirror: grossed-up stock basis plus liabilities. Both are allocated across the seven asset classes of Treas. Reg. §1.338-6 under the residual method — the same class system that governs [Section 1060 allocations](/exits-ma/asset-vs-stock-sale-taxation), with the same negotiation dynamics over equipment, non-competes, and goodwill, reported on Form 8883 rather than Form 8594.
+
+## Worked example: S corporation target, $20 million price
+
+Target S corporation: asset basis $4 million, of which $2 million is fully depreciated equipment now worth $3 million; shareholder stock basis $4 million; price $20 million; target liabilities negligible for simplicity.
+
+**Straight stock sale.** Gain $16 million, all long-term capital: federal tax at 23.8% ≈ $3.81 million. Net ≈ $16.19 million.
+
+**With a 338(h)(10).** ADSP ≈ $20 million, deemed asset gain $16 million. Of that, $2 million is Section 1245 recapture on the equipment — ordinary income taxed at 37%, and note ordinary income also escapes the 23.8% preferential stack differently by state. Remaining $14 million is capital at 23.8%.
+
+**Shareholder tax under each structure:**
+
+| Item | Stock sale | 338(h)(10) deemed asset sale |
+|---|---|---|
+| Capital gain | $16,000,000 | $14,000,000 |
+| Ordinary (recapture) | — | $2,000,000 |
+| Tax on capital @ 23.8% | $3,808,000 | $3,332,000 |
+| Tax on ordinary @ 37% | — | $740,000 |
+| **Total federal tax** | **$3,808,000** | **$4,072,000** |
+
+The election costs the sellers $264,000. The buyer's step-up — $16 million of new basis, including $3 million of bonus-eligible equipment and roughly $13 million of 15-year Section 197 intangibles — is worth perhaps $2.5–3 million in present value at a 21% rate. The rational bargain: the buyer grosses up the price by enough to cover the sellers' $264,000 plus the tax on the gross-up itself — about $349,000 at a blended rate — and keeps the rest of the step-up value. Sellers who sign the election without running this math are donating it.
+
+<BarChart
+  title="Who gains from the 338(h)(10) in the worked example"
+  unit="$"
+  note="Illustrative present values; buyer step-up value assumes 21% rate and 8% discount rate."
+  highlight={2}
+  data={[
+    { label: "Seller incremental tax", value: 264000, display: "$264K" },
+    { label: "Gross-up needed to hold seller harmless", value: 349000, display: "$349K" },
+    { label: "Buyer step-up PV", value: 2750000, display: "~$2.75M" },
+  ]}
+/>
+
+## The seller-side issues that change the math
+
+**Built-in gains tax.** An S corporation within its five-year Section 1374 recognition period pays corporate-level tax at 21% on built-in gain triggered by the deemed sale — often enough to kill the election's economics outright.
+
+**State taxes.** The deemed asset sale sources gain to the states where the business operates, at entity or composite rates, while a stock sale is often sourced to shareholder residences. For a founder in a no-tax state selling a company operating in high-tax states, the state swing can dwarf the federal recapture cost.
+
+**Installment notes.** Deferred payments in a 338(h)(10) deal can still qualify for installment reporting on the deemed asset sale under Treas. Reg. §1.338(h)(10)-1(d)(8), but recapture is taxed immediately under Section 453(i) — see [installment sales in business exits](/exits-ma/installment-sale-business-exits).
+
+**Attributes vanish.** Old target's NOLs, credit carryforwards, and Section 174-era R&E balances do not carry to new target — the deemed sale consumes or extinguishes them. A target whose attributes are valuable to the buyer may argue *against* the election; the tradeoffs are mapped in [credits and carryforwards at exit](/exits-ma/credits-carryforwards-at-exit).
+
+**QSBS.** Section 1202 applies to sales of C corporation *stock*; a 338(h)(10) target is an S corporation, so QSBS is not in play — but sellers of C corporation subsidiaries should remember the exclusion belongs to noncorporate holders and rarely intersects these elections.
+
+## Mechanics and paper: getting the election made
+
+The 338(h)(10) election is jointly made on Form 8023, signed by the purchasing corporation and, for an S corporation target, by *every* shareholder — including non-selling minority holders, whose consent the purchase agreement must therefore compel. The deadline is the 15th day of the 9th month after the month of acquisition, and it is jurisdictional in effect: Section 9100 relief for late elections is available in principle but slow, expensive, and discretionary. Well-drafted purchase agreements make the election an express covenant, appoint the buyer as preparer with seller review rights, agree the ADSP/AGUB allocation methodology (or a schedule) up front, and require consistent Form 8883 filings — the deemed-sale analog of the Form 8594 consistency discipline in [purchase price allocation negotiations](/exits-ma/purchase-price-allocation-negotiations).
+
+A 336(e) election runs on different paper: a written, binding agreement between the seller(s) and target, plus an election statement attached to the relevant returns for the disposition year — no buyer signature at all. That asymmetry is a genuine deal risk for buyers: a seller who signs a covenant but never attaches the statement leaves the buyer without a step-up and with only a contract claim. Buyers should require delivery of the executed election agreement at closing and a copy of the filed statement afterward.
+
+State conformity deserves its own line item in both cases. Most states follow the federal deemed-sale characterization, but a meaningful minority do not, or apply their own entity-level taxes to the deemed sale. The gross-up model should be run federal-plus-state, per shareholder, before the exclusivity period ends — after signing, the seller's leverage to reprice the election is gone.
+
+## When the election does not make sense
+
+Skip it when the target has built-in gains tax exposure; when state sourcing punishes the sellers and the buyer will not pay the freight; when the step-up is mostly goodwill amortized over 15 years and the buyer's discount rate makes it worth little; when the S election's validity is doubtful (use an F reorganization instead); or when sellers want rollover equity, which a 338(h)(10) handles badly — rollover shareholders recognize gain on their retained stake because the deemed sale is all-or-nothing, another argument for the [F-reorg structure](/exits-ma/f-reorganizations-s-corps) and careful [rollover equity planning](/exits-ma/rollover-equity-taxation). The IRS's pressure points are the QSP mechanics, S election validity, ADSP/AGUB allocation consistency, and timely Form 8023 filing — miss the deadline and there is no election, whatever the purchase agreement says.

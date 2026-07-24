@@ -1,0 +1,50 @@
+---
+title: "Credits and carryforwards at exit: what survives the closing"
+description: "NOLs, research credit carryforwards, and Section 174 R&E balances survive a stock sale but arrive shackled by Sections 382 and 383 — and vanish entirely in asset deals. A structure-by-structure map and a diligence checklist."
+date: "2026-07-15"
+type: "brief"
+level: "working"
+tags: ["exits-ma", "section-382", "carryforwards", "section-174"]
+faq:
+  - q: "Do NOLs and tax credits survive an acquisition?"
+    a: "In a stock sale, yes — they stay with the target corporation — but the ownership change triggers Section 382, which caps the NOLs usable each year at the target's equity value times the long-term tax-exempt rate, and Section 383 applies the equivalent cap to research and other credit carryforwards. In an asset sale or deemed asset sale, the attributes stay with the selling corporation and never reach the buyer."
+  - q: "What happens to Section 174 R&E balances in a deal?"
+    a: "Unamortized domestic 2022–2024 Section 174 balances (and 15-year foreign balances) are asset-basis, not carryforwards: in a stock sale they carry into the buyer's group and keep amortizing, unlimited by Section 382. In an asset sale they accelerate into the seller's final computations, and the buyer takes fair-value basis instead. Foreign R&E capitalization continues under Section 174 post-OBBBA."
+  - q: "How is the Section 382 annual limitation computed?"
+    a: "Equity value of the loss corporation immediately before the ownership change multiplied by the long-term tax-exempt rate — roughly 3–4% in recent periods. A $20 million target thus supports only about $700,000 of NOL use per year, subject to adjustments for built-in gains (which can increase usable amounts over the first five years) and the Section 269 anti-abuse rule."
+---
+
+A target's tax attributes — net operating losses, research credit carryforwards under Section 39, and unamortized Section 174 balances — are assets a buyer will pay for, but only after asking two questions: does the deal structure carry them across, and how fast can they actually be used? Stock deals preserve attributes but invoke [Section 382](https://uscode.house.gov/browse/prelim@title26&edition=prelim) and its credit-side twin Section 383; asset deals and deemed asset sales leave attributes behind with the seller.
+
+<KeyTakeaway>
+  <p>Attributes survive only stock acquisitions, and then at a metered rate: equity value times the long-term tax-exempt rate per year for NOLs (Section 382), with credits limited in tandem (Section 383). Section 174 balances are different — they are basis, they carry over without limitation, and they should be diligenced separately.</p>
+</KeyTakeaway>
+
+## Structure decides survival
+
+**What each structure does to the target's attributes:**
+
+| Structure | NOLs & credit carryforwards | §174 R&E balances |
+|---|---|---|
+| Stock sale | Survive; §382/§383 limited | Carry over, keep amortizing |
+| Stock sale + 338(h)(10)/336(e) | Extinguished (deemed sale) | Consumed in deemed sale |
+| Asset sale / F-reorg LLC sale | Stay with seller | Accelerate to seller; buyer gets FMV basis |
+| Tax-free reorganization (§368) | Carry over under §381; §382 still applies | Carry over |
+
+The election deals deserve emphasis: a buyer who wants both the step-up *and* the target's NOLs cannot have both — the [deemed asset sale](/exits-ma/section-338h10-336e-elections) consumes the attributes (they offset the deemed-sale gain, which is worth something) but delivers none to the buyer. Where attributes are the target's main tax asset, a straight stock purchase often beats the election.
+
+## The 382/383 meter
+
+An ownership change — more than 50 percentage points of shift among 5% shareholders over three years, tested under Treas. Reg. §1.382-2T (see [eCFR Title 26](https://www.ecfr.gov/current/title-26)) — caps annual NOL use at pre-change equity value times the long-term tax-exempt rate. At recent rates near 3.5%, a $30 million target supports roughly $1.05 million of NOL absorption a year; a $150 million NOL pile behind that meter is worth a fraction of face. Adjustments matter: a net unrealized built-in gain adds recognized built-in gains to the limit for five years, while a built-in loss position restricts even post-change depreciation of pre-change assets. Section 383 then applies the same limitation, translated through tax equivalence, to research credit and other credit carryforwards — with credits absorbing limitation only after NOLs, which frequently strands credits well past their 20-year Section 39 life. Continuity of business enterprise for two years is a further condition, and Section 269 lets the IRS disallow attributes where tax avoidance was the principal purpose of the acquisition. The full limitation mechanics live in [business tax credits' general limitations](/fundamentals/business-tax-credits-general-limitations).
+
+## Section 174 balances are not carryforwards
+
+The 2022–2024 capitalization era left many targets with large unamortized domestic SRE balances — and under OBBBA, remaining domestic balances are deductible over one or two years beginning with the first tax year after 2024, while foreign research stays on 15-year recovery. These are *basis*, not attributes: no 382 limit, ordinary amortization or the OBBBA catch-up in the buyer's hands after a stock deal, acceleration into the seller's final return in an asset deal. Pricing them wrong is common; the structure-by-structure treatment, including short-period timing traps, is detailed in [174 balances in M&A](/section-174/174-balances-in-mna).
+
+## Diligence checklist
+
+Before pricing any attribute: (1) obtain the NOL and credit schedules by year with expiration dates and prior 382 studies — serial financings mean prior ownership changes with their own layered limits; (2) compute the expected new 382 limitation at deal equity value, plus any built-in gain uplift; (3) confirm research credit carryforwards survive Section 383 modeling before crediting them in the model, and verify the credits themselves would survive exam (Form 6765 support, business components); (4) tie out 174/174A balances, domestic versus foreign, and model the OBBBA catch-up deduction timing; (5) check state conformity — many states have their own, tighter, 382 analogs or simply disallow acquired NOLs; (6) confirm no 338/336(e) election or F-reorg step will extinguish what the model assumes survives. The broader playbook is in [tax incentive due diligence in M&A](/fundamentals/tax-incentive-due-diligence-mna).
+
+<Callout label="Watch out">
+  <p>Attributes are routinely double-counted at the letter-of-intent stage — once in the seller's "tax assets" schedule at face value and again implicitly in the buyer's effective-rate assumptions. A 382-limited NOL is worth its discounted usable stream, often 20–40 cents on the dollar; price it that way or not at all.</p>
+</Callout>

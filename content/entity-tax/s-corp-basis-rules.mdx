@@ -1,0 +1,48 @@
+---
+title: "S corporation basis rules: why losses need basis but credits do not"
+description: "Stock and debt basis determine whether S corporation losses are deductible and distributions tax-free. Credits pass through regardless of basis — a distinction that changes planning for credit-heavy companies."
+date: "2026-05-27"
+type: "brief"
+level: "working"
+tags: ["entity-tax", "s-corp", "basis"]
+faq:
+  - q: "What is the ordering of S corporation basis adjustments?"
+    a: "Under Section 1367 and the regulations, stock basis is adjusted each year in this order: increased by income items (including tax-exempt income); decreased by distributions; decreased by nondeductible, noncapital expenses; and finally decreased by losses and deductions. Because distributions come before losses, a shareholder can take a tax-free distribution in the same year losses are suspended for lack of basis."
+  - q: "Do I need basis to claim the R&D credit passed through from my S corporation?"
+    a: "No. Section 1366(d) limits only losses and deductions to the shareholder's stock and debt basis. Credits, including the Section 41 research credit, pass through pro rata and are claimed regardless of basis — subject instead to the shareholder's own general business credit limitations, at-risk, and passive activity rules. A zero-basis shareholder can still use the credit."
+  - q: "Does an S corporation shareholder get basis from company debt?"
+    a: "Only for debt the shareholder personally lends to the corporation under a bona fide obligation. Guaranteeing a bank loan creates no basis until the shareholder actually pays on the guarantee. This is the opposite of partnership treatment, where entity-level liabilities are allocated into partners' outside basis under Section 752."
+---
+
+Every S corporation shareholder runs two ledgers: stock basis and debt basis. Together they answer three questions — whether passed-through losses are deductible now or suspended, whether distributions are tax-free returns of capital or capital gain, and what gain arises when the stock is sold. One thing they do *not* control: credits. The research credit and other general business credits pass through and are usable with zero basis, because Section 1366(d)'s limitation applies only to losses and deductions.
+
+<KeyTakeaway>
+  <p>Basis limits losses and shelters distributions; it never gates credits. The annual ordering — income up, then distributions, then nondeductibles, then losses — decides whether the same dollars come out tax-free or trap losses for the future.</p>
+</KeyTakeaway>
+
+## The annual ordering, and why it matters
+
+Section 1367 adjusts stock basis every year in a fixed sequence: (1) up for income items, including tax-exempt income; (2) down for distributions; (3) down for nondeductible, noncapital expenses; (4) down for losses and deductions. Distributions beating losses in the queue is the practical headline. A shareholder with $50,000 of beginning basis in a year with a $60,000 pass-through loss and a $40,000 distribution takes the distribution tax-free (basis drops to $10,000), deducts $10,000 of loss, and suspends $50,000 under Section 1366(d)(2) — carried forward indefinitely, but only for that shareholder while she holds the stock. Suspended losses do not transfer with gifted or sold shares.
+
+Distributions in excess of stock basis are capital gain, not a loan against the future. And shareholders — not the corporation — are responsible for tracking basis; Form 7203 now forces the computation onto the individual return whenever losses, distributions, or stock dispositions occur. Statutory text is at Sections 1366–1368 of the [Internal Revenue Code](https://uscode.house.gov/browse/prelim@title26&edition=prelim); the ordering regulation is Treas. Reg. §1.1367-1 at [eCFR Title 26](https://www.ecfr.gov/current/title-26).
+
+## Debt basis: only real loans count
+
+Debt basis exists only for bona fide indebtedness from the corporation *directly to the shareholder* (Treas. Reg. §1.1366-2). A personal guarantee of the company's bank line creates nothing until the shareholder pays. Once losses have absorbed stock basis, they absorb debt basis; later income restores debt basis first. Repayment of basis-reduced debt triggers income — ordinary for open account debt, capital gain for a note — a trap with enough moving parts that we give it its own brief: [shareholder loans to S corporations](/entity-tax/shareholder-loans-s-corps). Partnerships work differently: entity debt allocates into partner basis under Section 752, one of the structural reasons leveraged businesses often prefer partnership form, per [the S corporation complete guide](/entity-tax/s-corporation-complete-guide).
+
+## Credits ride free — mostly
+
+The pass-through of credits is basis-blind. A startup S corporation generating research credits while burning cash can hand shareholders usable credits even as its losses pile up in suspense. **The distinction across pass-through items looks like this:**
+
+| Pass-through item | Basis required? | What limits it instead |
+| --- | --- | --- |
+| Ordinary loss / deductions | Yes — §1366(d) | Then at-risk (§465), then passive (§469) |
+| Section 179 expense | Yes | Same stack |
+| Distributions (tax-free) | Yes — stock basis only | Excess is capital gain |
+| R&D and other general business credits | No | §38/§39 limits, passive credit rules |
+
+"Mostly" free: the shareholder's own general business credit limitation, passive activity credit rules for non-material participants, and the [pass-through mechanics covered here](/rd-tax-credit/rd-credit-passthrough-mechanics) still apply. And one indirect basis interaction is easy to miss — if the corporation elects the full credit without the Section 280C reduced-credit election, the required expense disallowance is a nondeductible item that *reduces* basis at step three. A credit that needs no basis can still consume some.
+
+## Where shareholders get it wrong
+
+The recurring failures: no basis records at all until an exam or a sale forces reconstruction; deducting losses against guaranteed-but-unpaid debt; and treating distributions as safe because "the company has retained earnings" — AAA is the corporation's ledger, basis is the shareholder's, and only basis protects a distribution. Reconstructing fifteen years of basis from K-1s is billable archaeology. Keep the schedule current from year one.

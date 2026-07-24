@@ -1,0 +1,54 @@
+---
+title: "Entity conversions: what survives when you change tax form"
+description: "LLC to S corporation, S to C, C to S, and F-reorganization conversions each carry different tax costs and attribute consequences. Post-OBBBA, Section 174A expensing and QSBS are pushing some pass-throughs toward C status — here is what travels and what dies."
+date: "2026-07-08"
+type: "brief"
+level: "pro"
+tags: ["entity-tax", "conversions", "s-corp", "c-corp"]
+faq:
+  - q: "Is converting an LLC to an S corporation taxable?"
+    a: "Usually not. An LLC taxed as a partnership that elects corporate classification (or merges into a corporation) is treated as contributing its assets to a corporation under Section 351, generally tax-free if liabilities do not exceed basis. A single-member LLC's election is an incorporation of a disregarded entity. The S election then follows on Form 2553 — often filed simultaneously, effective the same day."
+  - q: "Why would an S corporation revoke its election and become a C corporation after the OBBBA?"
+    a: "The C corporation package improved: a permanent 21% rate, Section 174A immediate expensing of domestic research, research credits usable at the entity level instead of scattered across shareholder returns, and eligibility to issue QSBS on newly issued stock going forward. Owners of research-heavy businesses retaining earnings for growth increasingly find the C side wins — though the second layer of tax on eventual distributions and sale remains the price."
+  - q: "What is an F reorganization and why is it used before an S corporation sale?"
+    a: "A Section 368(a)(1)(F) reorganization is a mere change in identity or form — commonly, shareholders form a new holding corporation, contribute the S corporation's stock, and the target becomes a QSub, then converts to an LLC. The S election and tax attributes carry to the new parent, and a buyer can purchase the LLC interests, getting an asset-basis step-up without a Section 338(h)(10) election or risking a defective historic S election."
+---
+
+Changing tax form is an exchange of attribute sets. Some conversions are tax-free and some trigger gain; more importantly, each direction has its own rules for what happens to basis, earnings and profits, loss carryforwards, credit carryforwards, and elections. Since the OBBBA, the traffic has a new pattern: research-heavy pass-throughs weighing C status for the combination of the 21% rate, Section 174A expensing, entity-level credit use, and prospective QSBS — while former C corporations still queue in the other direction for single-level tax, paying the built-in gains toll.
+
+<KeyTakeaway>
+  <p>LLC-to-S is generally a tax-free Section 351 incorporation; S-to-C is a one-page revocation with a five-year re-election lockout; C-to-S triggers the Section 1374 built-in gains regime and LIFO recapture; and the F reorganization moves an S corporation under a new holding company with every attribute intact. Credits survive most conversions — but who can use them changes.</p>
+</KeyTakeaway>
+
+## The four conversions, briefly
+
+**LLC (partnership) → S corporation.** A classification election or statutory conversion is an assumed Section 351 incorporation — tax-free unless liabilities exceed aggregate basis (Section 357(c) gain) or the investment-company rules apply. Depreciation schedules carry over; partnership attributes like Section 704(c) layers disappear into corporate carryover basis; suspended partner-level losses generally stay with the former partners. A timely [Form 2553](https://www.irs.gov/forms-pubs/about-form-2553) makes the S election effective at conversion — miss it and relief mechanics apply, per [late S elections](/entity-tax/late-s-elections-relief). Note the one-way door: once inside a corporation, appreciated assets cannot come back out tax-free.
+
+**S → C.** A revocation with majority-shareholder consent (or a deliberate disqualifying act, which is worse form). Post-termination, the corporation keeps its asset basis and depreciation; shareholder loss carryforwards under Section 1366(d) get only the limited post-termination transition period to be absorbed against basis; and the corporation cannot re-elect S status for five years without consent. The OBBBA-era motivations — [Section 174A](/section-174/section-174a-explained) expensing at a flat 21%, credits concentrated at the entity, future QSBS on newly issued shares (existing shares never qualify) — are real but asymmetric: the second tax layer returns permanently, and the five-year lockout removes the undo button.
+
+**C → S.** Eligibility first (one class of stock, eligible shareholders), then the Section 1374 built-in gains tax at 21% on conversion-date appreciation recognized within five years, LIFO recapture under Section 1363(d) payable over four years, and the Section 1375 passive-income tax if C-year E&P remains undistributed. Get the conversion-date appraisal; it is the ceiling on the entire 1374 exposure. Detail in [the S corporation complete guide](/entity-tax/s-corporation-complete-guide).
+
+**F reorganization.** Under Section 368(a)(1)(F) and Rev. Rul. 2008-18: new holding company, stock contribution, QSub election for the target, target converts to an LLC. Nothing is deemed sold; the S election, EIN planning, and attributes travel to the parent. It is the standard pre-sale package because the buyer acquires a disregarded LLC — asset treatment for tax, stock mechanics for contracts — without relying on the seller's possibly defective S history.
+
+## What survives: the attribute table
+
+**Attribute survival by conversion direction (general rules; consolidated-return and ownership-change overlays can modify all of them):**
+
+| Attribute | LLC → S | S → C | C → S | F reorg |
+| --- | --- | --- | --- | --- |
+| Asset basis / depreciation schedules | Carry over | Carry over | Carry over | Carry over |
+| NOL carryforwards | None exist (losses passed through) | None come along; C builds new | Frozen — usable only against §1374 BIG tax | Carry over |
+| Research credit carryforwards | Partner-level; stay with owners | Shareholder-level; stay with owners | Corporate carryforwards frozen except against §1374/E&P-era taxes | Carry over |
+| E&P | None | S-year AAA distributable in transition period | C E&P persists (§1375 exposure) | Carries over |
+| §704(c) layers / special allocations | Eliminated | — | — | — |
+| S election | New | Terminated; 5-year wait | New | Continues uninterrupted |
+
+The credit rows deserve emphasis for this site's readers. Credits already passed through to owners never return to the entity — an S corporation converting to C does not repatriate the shareholders' Section 39 carryforwards, and shareholders may lack liability to absorb them once the income stays at the corporate level. Conversely, a C corporation's own credit carryforwards do not pass to shareholders upon an S election; under Section 1371 they sit largely dormant, creditable only against the corporation's Section 1374-type taxes. Timing a conversion without mapping stranded credits is the classic modeling failure; the framework is in [entity choice and tax credits](/fundamentals/entity-choice-tax-credits) and the pass-through plumbing in [R&D credit pass-through mechanics](/rd-tax-credit/rd-credit-passthrough-mechanics).
+
+<Callout label="Watch out">
+  <p>State law and federal tax law convert on different clocks. A statutory conversion effective January 1 with a Form 2553 or 8832 filed late, a mid-year classification election creating short years, or a state that does not follow the federal characterization can each produce a stub period nobody planned to file for. Sequence the documents before the effective date, not after.</p>
+</Callout>
+
+## When not to convert
+
+The honest checklist: do not convert to C for Section 174A alone — pass-throughs get the same expensing, just at owner rates; do not convert to S with a large appreciated asset sale plausible within five years; do not break an S election casually, because the five-year re-election bar under Section 1362(g) outlasts most strategic fads; and do not run an F reorganization without confirming the historic election is valid first, since the structure inherits whatever defect it was meant to insulate. Statutes at Sections 351, 368, 1362, 1371, and 1374 of the [Internal Revenue Code](https://uscode.house.gov/browse/prelim@title26&edition=prelim).
